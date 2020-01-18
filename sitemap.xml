@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/10/25/hexohelpdoc/</loc>
+    
+    <lastmod>2020-01-18T13:32:46.907Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/18/onGit/</loc>
+    
+    <lastmod>2020-01-18T13:31:03.818Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2019-10-27T13:09:13.019Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>http://yoursite.com/categories/index.html</loc>
     
     <lastmod>2019-10-26T15:38:40.069Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/10/25/hello-world/</loc>
-    
-    <lastmod>2019-10-25T11:54:01.687Z</lastmod>
     
   </url>
   
