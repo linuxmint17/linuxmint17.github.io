@@ -2,23 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2020/01/18/onGit/</loc>
+    <loc>http://yoursite.com/2020/01/19/about_emacs/</loc>
     
-    <lastmod>2020-01-18T14:04:00.569Z</lastmod>
+    <lastmod>2020-01-19T13:57:37.894Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/10/25/hexohelpdoc/</loc>
+    <loc>http://yoursite.com/2020/01/19/about_vim/</loc>
     
-    <lastmod>2020-01-18T13:33:40.370Z</lastmod>
+    <lastmod>2020-01-19T13:57:28.245Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/18/about_git/</loc>
+    
+    <lastmod>2020-01-19T13:53:36.911Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/tags/index.html</loc>
     
-    <lastmod>2019-10-27T13:09:13.019Z</lastmod>
+    <lastmod>2020-01-19T13:16:41.729Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/10/25/hexo_doc/</loc>
+    
+    <lastmod>2020-01-18T13:33:40.370Z</lastmod>
     
   </url>
   

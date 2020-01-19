@@ -1,16 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>onGit</title>
-    <url>/2020/01/18/onGit/</url>
-    <content><![CDATA[<h2 id="git-不是版本控制工具"><a href="#git-不是版本控制工具" class="headerlink" title="git 不是版本控制工具"></a>git 不是版本控制工具</h2>]]></content>
+    <title>About Emacs</title>
+    <url>/2020/01/19/about_emacs/</url>
+    <content><![CDATA[]]></content>
       <tags>
-        <tag>tools</tag>
+        <tag>Tool</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About Vim</title>
+    <url>/2020/01/19/about_vim/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>Tool</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About Git</title>
+    <url>/2020/01/18/about_git/</url>
+    <content><![CDATA[<h1 id="git-the-stupid-content-tracker"><a href="#git-the-stupid-content-tracker" class="headerlink" title="git - the stupid content tracker"></a>git - the stupid content tracker</h1><p>  Git is a fast, scalable, distributed revision control system<br>with an unusually rich command set that provides<br>both high-level operations and full access to internals.</p>
+<h2 id="git的基本配置"><a href="#git的基本配置" class="headerlink" title="git的基本配置"></a>git的基本配置</h2><ul>
+<li><p>设置用户名</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"Your Name"</span></span><br></pre></td></tr></table></figure></li>
+<li><p>设置邮箱</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.email <span class="string">"your_email@whatever.com"</span></span><br></pre></td></tr></table></figure></li>
+<li><p>设置换行符</p>
+<ul>
+<li><p>linux/unix/Mac 用户</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global core.autocrlf input; git config --global core.safecrlf <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>windows 用户</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global core.autocrlf <span class="literal">true</span>; git config --global core.safecrlf <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>配置文件 ~/.gitconfig</p>
+</li>
+</ul>
+<p><a href="http://www.google.com/" target="_blank" rel="noopener">github</a></p>
+<h2 id="git-的基础操作"><a href="#git-的基础操作" class="headerlink" title="git 的基础操作"></a>git 的基础操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mkdir code</span><br></pre></td></tr></table></figure>
+<p>初始化git仓库</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init -c code</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> code</span><br></pre></td></tr></table></figure>
+<p>使用最喜欢(emacs/vim/nano/notepad++/sublime/vscode)的编辑器编辑文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$emacs</span> hello.c</span><br></pre></td></tr></table></figure>
+<p>添加文件到暂存区</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git add hello.c</span><br></pre></td></tr></table></figure>
+<p>检查git仓库状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git commit -s <span class="string">" init commit of repo"</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+<h2 id="git-小技巧"><a href="#git-小技巧" class="headerlink" title="git 小技巧"></a>git 小技巧</h2><h3 id="暂存"><a href="#暂存" class="headerlink" title="暂存"></a>暂存</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git stash</span><br></pre></td></tr></table></figure>
+<h3 id="挑选"><a href="#挑选" class="headerlink" title="挑选"></a>挑选</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git  cherry-pick commit-id</span><br></pre></td></tr></table></figure>
+<h3 id="变基"><a href="#变基" class="headerlink" title="变基"></a>变基</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git rebase -i commit-id</span><br></pre></td></tr></table></figure>
+<h3 id="查看文件变更"><a href="#查看文件变更" class="headerlink" title="查看文件变更"></a>查看文件变更</h3><p>查看 hello.c 文件中的10到20行的修改记录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git blame -L 10,20 hello.c</span><br></pre></td></tr></table></figure>
+<h3 id="从历史版本中取出某个文件"><a href="#从历史版本中取出某个文件" class="headerlink" title="从历史版本中取出某个文件"></a>从历史版本中取出某个文件</h3><p>从历史版本(commit-id)中取出hello.c</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$  git checkout  commit-id  hello.c</span><br></pre></td></tr></table></figure>
+
+<h2 id="git-底层命令"><a href="#git-底层命令" class="headerlink" title="git 底层命令"></a>git 底层命令</h2>]]></content>
+      <tags>
+        <tag>Tool</tag>
       </tags>
   </entry>
   <entry>
     <title>Hexo Quick Manual</title>
-    <url>/2019/10/25/hexohelpdoc/</url>
+    <url>/2019/10/25/hexo_doc/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
