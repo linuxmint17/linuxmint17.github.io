@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>About Shell</title>
+    <url>/2020/01/19/about_shell/</url>
+    <content><![CDATA[]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>About Emacs</title>
     <url>/2020/01/19/about_emacs/</url>
     <content><![CDATA[]]></content>
@@ -35,15 +43,15 @@
 </ul>
 </li>
 <li><p>配置文件 ~/.gitconfig</p>
+<p>  <a href="https://github.com/linuxmint17/confs/blob/master/gitconfig" target="_blank" rel="noopener">github/linuxmint17/confs/blob/master/gitconfig</a></p>
 </li>
 </ul>
-<p><a href="http://www.google.com/" target="_blank" rel="noopener">github</a></p>
-<h2 id="git-的基础操作"><a href="#git-的基础操作" class="headerlink" title="git 的基础操作"></a>git 的基础操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mkdir code</span><br></pre></td></tr></table></figure>
+<h2 id="git-的基础操作"><a href="#git-的基础操作" class="headerlink" title="git 的基础操作"></a>git 的基础操作</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ mkdir code</span><br></pre></td></tr></table></figure>
 <p>初始化git仓库</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init -c code</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> code</span><br></pre></td></tr></table></figure>
 <p>使用最喜欢(emacs/vim/nano/notepad++/sublime/vscode)的编辑器编辑文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="variable">$emacs</span> hello.c</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ emacs hello.c</span><br></pre></td></tr></table></figure>
 <p>添加文件到暂存区</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git add hello.c</span><br></pre></td></tr></table></figure>
 <p>检查git仓库状态</p>
@@ -57,8 +65,13 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git blame -L 10,20 hello.c</span><br></pre></td></tr></table></figure>
 <h3 id="从历史版本中取出某个文件"><a href="#从历史版本中取出某个文件" class="headerlink" title="从历史版本中取出某个文件"></a>从历史版本中取出某个文件</h3><p>从历史版本(commit-id)中取出hello.c</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$  git checkout  commit-id  hello.c</span><br></pre></td></tr></table></figure>
-
-<h2 id="git-底层命令"><a href="#git-底层命令" class="headerlink" title="git 底层命令"></a>git 底层命令</h2>]]></content>
+<h3 id="我在哪个分支，merge是否成功，rebase-是否成功，cherry-pick是否成功？"><a href="#我在哪个分支，merge是否成功，rebase-是否成功，cherry-pick是否成功？" class="headerlink" title="我在哪个分支，merge是否成功，rebase 是否成功，cherry-pick是否成功？"></a>我在哪个分支，merge是否成功，rebase 是否成功，cherry-pick是否成功？</h3><p>配置shell的命令提示符可以帮你解决这个问题</p>
+<h3 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. git <span class="built_in">clone</span> git://git.kernel.org/pub/scm/git/git.git</span><br><span class="line">2. cp git/contrib/completion/git-completion.bash ~/.git-completion.bash</span><br><span class="line">3. cp git/contrib/completion/git-prompt.sh  ~/.git-prompt.sh</span><br><span class="line">4. vi ~/.bashrc 插入</span><br><span class="line"><span class="built_in">export</span> GIT_PS1_SHOWDIRTYSTATE=1</span><br><span class="line"><span class="built_in">export</span> GIT_PS1_SHOWSTASHSTATE=1</span><br><span class="line"><span class="built_in">export</span> GIT_PS1_SHOWUNTRACKEDFILES=1</span><br><span class="line"><span class="built_in">export</span> GIT_PS1_SHOWUPSTREAM=”verbose git svn”</span><br><span class="line"><span class="built_in">export</span> PS1=<span class="string">'\[\033[0;32m\]\D&#123;%Y/%m/%d&#125; \t\[\033[0m\]\[\033[0;35m\]\u@\h\[\033[0m\]\[\033[0;33m\]\w\[\033[36m\]$(__git_ps1 " (%s)")\[\033[0m\]\n\$'</span></span><br><span class="line">5. <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+<h2 id="git-底层命令"><a href="#git-底层命令" class="headerlink" title="git 底层命令"></a>git 底层命令</h2><p>挖坑 想起来再填</p>
+<h2 id="学习git的资源"><a href="#学习git的资源" class="headerlink" title="学习git的资源"></a>学习git的资源</h2><ul>
+<li>git的官方网站 <a href="https://git-scm.com/" target="_blank" rel="noopener">git-scm.com</a></li>
+</ul>
+]]></content>
       <tags>
         <tag>Tool</tag>
       </tags>

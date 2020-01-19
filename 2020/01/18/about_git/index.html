@@ -58,7 +58,7 @@
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
 <meta property="og:description" content="git - the stupid content tracker  Git is a fast, scalable, distributed revision control systemwith an unusually rich command set that providesboth high-level operations and full access to internals. g">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-01-19T13:53:36.911Z">
+<meta property="og:updated_time" content="2020-01-19T16:13:40.789Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/01/18/about_git/">
@@ -152,7 +152,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">1</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">2</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -162,7 +162,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">4</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">5</span></a>
 
   </li>
   </ul>
@@ -224,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-19 21:53:36" itemprop="dateModified" datetime="2020-01-19T21:53:36+08:00">2020-01-19</time>
+                <time title="Modified: 2020-01-20 00:13:40" itemprop="dateModified" datetime="2020-01-20T00:13:40+08:00">2020-01-20</time>
               </span>
 
           
@@ -254,15 +254,15 @@
 </ul>
 </li>
 <li><p>配置文件 ~/.gitconfig</p>
+<p>  <a href="https://github.com/linuxmint17/confs/blob/master/gitconfig" target="_blank" rel="noopener">github/linuxmint17/confs/blob/master/gitconfig</a></p>
 </li>
 </ul>
-<p><a href="http://www.google.com/" target="_blank" rel="noopener">github</a></p>
-<h2 id="git-的基础操作"><a href="#git-的基础操作" class="headerlink" title="git 的基础操作"></a>git 的基础操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir code</span><br></pre></td></tr></table></figure>
+<h2 id="git-的基础操作"><a href="#git-的基础操作" class="headerlink" title="git 的基础操作"></a>git 的基础操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir code</span><br></pre></td></tr></table></figure>
 <p>初始化git仓库</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init -c code</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> code</span><br></pre></td></tr></table></figure>
 <p>使用最喜欢(emacs/vim/nano/notepad++/sublime/vscode)的编辑器编辑文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$emacs</span> hello.c</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ emacs hello.c</span><br></pre></td></tr></table></figure>
 <p>添加文件到暂存区</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add hello.c</span><br></pre></td></tr></table></figure>
 <p>检查git仓库状态</p>
@@ -276,8 +276,13 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git blame -L 10,20 hello.c</span><br></pre></td></tr></table></figure>
 <h3 id="从历史版本中取出某个文件"><a href="#从历史版本中取出某个文件" class="headerlink" title="从历史版本中取出某个文件"></a>从历史版本中取出某个文件</h3><p>从历史版本(commit-id)中取出hello.c</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  git checkout  commit-id  hello.c</span><br></pre></td></tr></table></figure>
+<h3 id="我在哪个分支，merge是否成功，rebase-是否成功，cherry-pick是否成功？"><a href="#我在哪个分支，merge是否成功，rebase-是否成功，cherry-pick是否成功？" class="headerlink" title="我在哪个分支，merge是否成功，rebase 是否成功，cherry-pick是否成功？"></a>我在哪个分支，merge是否成功，rebase 是否成功，cherry-pick是否成功？</h3><p>配置shell的命令提示符可以帮你解决这个问题</p>
+<h3 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1. git <span class="built_in">clone</span> git://git.kernel.org/pub/scm/git/git.git</span><br><span class="line">2. cp git/contrib/completion/git-completion.bash ~/.git-completion.bash</span><br><span class="line">3. cp git/contrib/completion/git-prompt.sh  ~/.git-prompt.sh</span><br><span class="line">4. vi ~/.bashrc 插入</span><br><span class="line"><span class="built_in">export</span> GIT_PS1_SHOWDIRTYSTATE=1</span><br><span class="line"><span class="built_in">export</span> GIT_PS1_SHOWSTASHSTATE=1</span><br><span class="line"><span class="built_in">export</span> GIT_PS1_SHOWUNTRACKEDFILES=1</span><br><span class="line"><span class="built_in">export</span> GIT_PS1_SHOWUPSTREAM=”verbose git svn”</span><br><span class="line"><span class="built_in">export</span> PS1=<span class="string">'\[\033[0;32m\]\D&#123;%Y/%m/%d&#125; \t\[\033[0m\]\[\033[0;35m\]\u@\h\[\033[0m\]\[\033[0;33m\]\w\[\033[36m\]$(__git_ps1 " (%s)")\[\033[0m\]\n\$'</span></span><br><span class="line">5. <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+<h2 id="git-底层命令"><a href="#git-底层命令" class="headerlink" title="git 底层命令"></a>git 底层命令</h2><p>挖坑 想起来再填</p>
+<h2 id="学习git的资源"><a href="#学习git的资源" class="headerlink" title="学习git的资源"></a>学习git的资源</h2><ul>
+<li>git的官方网站 <a href="https://git-scm.com/" target="_blank" rel="noopener">git-scm.com</a></li>
+</ul>
 
-<h2 id="git-底层命令"><a href="#git-底层命令" class="headerlink" title="git 底层命令"></a>git 底层命令</h2>
     </div>
 
     
@@ -342,7 +347,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git-the-stupid-content-tracker"><span class="nav-number">1.</span> <span class="nav-text">git - the stupid content tracker</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#git的基本配置"><span class="nav-number">1.1.</span> <span class="nav-text">git的基本配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-的基础操作"><span class="nav-number">1.2.</span> <span class="nav-text">git 的基础操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-小技巧"><span class="nav-number">1.3.</span> <span class="nav-text">git 小技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#暂存"><span class="nav-number">1.3.1.</span> <span class="nav-text">暂存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#挑选"><span class="nav-number">1.3.2.</span> <span class="nav-text">挑选</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变基"><span class="nav-number">1.3.3.</span> <span class="nav-text">变基</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看文件变更"><span class="nav-number">1.3.4.</span> <span class="nav-text">查看文件变更</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从历史版本中取出某个文件"><span class="nav-number">1.3.5.</span> <span class="nav-text">从历史版本中取出某个文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-底层命令"><span class="nav-number">1.4.</span> <span class="nav-text">git 底层命令</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git-the-stupid-content-tracker"><span class="nav-number">1.</span> <span class="nav-text">git - the stupid content tracker</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#git的基本配置"><span class="nav-number">1.1.</span> <span class="nav-text">git的基本配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-的基础操作"><span class="nav-number">1.2.</span> <span class="nav-text">git 的基础操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-小技巧"><span class="nav-number">1.3.</span> <span class="nav-text">git 小技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#暂存"><span class="nav-number">1.3.1.</span> <span class="nav-text">暂存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#挑选"><span class="nav-number">1.3.2.</span> <span class="nav-text">挑选</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变基"><span class="nav-number">1.3.3.</span> <span class="nav-text">变基</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看文件变更"><span class="nav-number">1.3.4.</span> <span class="nav-text">查看文件变更</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从历史版本中取出某个文件"><span class="nav-number">1.3.5.</span> <span class="nav-text">从历史版本中取出某个文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我在哪个分支，merge是否成功，rebase-是否成功，cherry-pick是否成功？"><span class="nav-number">1.3.6.</span> <span class="nav-text">我在哪个分支，merge是否成功，rebase 是否成功，cherry-pick是否成功？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作方法"><span class="nav-number">1.3.7.</span> <span class="nav-text">操作方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-底层命令"><span class="nav-number">1.4.</span> <span class="nav-text">git 底层命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习git的资源"><span class="nav-number">1.5.</span> <span class="nav-text">学习git的资源</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -358,12 +363,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>

@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/01/18/about_git/</loc>
+    
+    <lastmod>2020-01-19T16:13:40.789Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/19/about_shell/</loc>
+    
+    <lastmod>2020-01-19T14:07:34.229Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/01/19/about_emacs/</loc>
     
     <lastmod>2020-01-19T13:57:37.894Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>http://yoursite.com/2020/01/19/about_vim/</loc>
     
     <lastmod>2020-01-19T13:57:28.245Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/01/18/about_git/</loc>
-    
-    <lastmod>2020-01-19T13:53:36.911Z</lastmod>
     
   </url>
   
