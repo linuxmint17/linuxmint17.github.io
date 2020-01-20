@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/01/20/about_gcc/</loc>
+    
+    <lastmod>2020-01-20T15:19:51.265Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/20/about_linux/</loc>
+    
+    <lastmod>2020-01-20T14:48:22.769Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/20/about_inline/</loc>
+    
+    <lastmod>2020-01-20T14:36:36.463Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2020-01-20T13:55:24.692Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/01/18/about_git/</loc>
     
     <lastmod>2020-01-19T16:13:40.789Z</lastmod>
@@ -26,13 +54,6 @@
     <loc>http://yoursite.com/2020/01/19/about_vim/</loc>
     
     <lastmod>2020-01-19T13:57:28.245Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
-    
-    <lastmod>2020-01-19T13:16:41.729Z</lastmod>
     
   </url>
   
