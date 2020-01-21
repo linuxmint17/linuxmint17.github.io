@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>aboutalgorithm</title>
+    <url>/2020/01/21/about_algorithm/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>aboutlinux</title>
     <url>/2020/01/20/about_linux/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h2 id="Linux-的作用范围"><a href="#Linux-的作用范围" class="headerlink" title="Linux 的作用范围"></a>Linux 的作用范围</h2><p>linux 本来仅仅是指一种<strong>类Unix系统</strong>(和unix比较像的操作系统称为<strong>类Unix系统</strong>)的kernel, 不包括 shell等其它实用工具.</br><br>随着linux的日益壮大或者人们的口口相传，原本应该是GNU/Linux 指代整个操作系统，后来渐渐Linux 也指代整个操作系统. </br><br>但是在具体的上下文环境中还是可以分清楚是指代内核还是整个操作系统</p>
+<h2 id="Linux-的常见发行版本"><a href="#Linux-的常见发行版本" class="headerlink" title="Linux 的常见发行版本"></a>Linux 的常见发行版本</h2><p>首先解释什么是发行版本：发行版本是开源社区或者公司，甚至是个人把Linuxkernel拿过来，整合其它的使用工具，以及软件管理工具装配的一个便于终端用户使用的操作系统<br>根据软件包管理工具的不同大概分为两个系列 :Debian 系列和 Redhat 系列,还有一些特立独行的发行版本使用的是其他的软件包管理工具(比如说 arch,和 gentoo)</p>
+<h2 id="为什么要了解Linux"><a href="#为什么要了解Linux" class="headerlink" title="为什么要了解Linux"></a>为什么要了解Linux</h2><ul>
+<li>实用</li>
+<li>好用</li>
+<li>免费</li>
+</ul>
+]]></content>
       <tags>
         <tag>Linux</tag>
       </tags>
@@ -46,7 +58,11 @@
   <entry>
     <title>About Shell</title>
     <url>/2020/01/19/about_shell/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="shell-直译为壳"><a href="#shell-直译为壳" class="headerlink" title="shell 直译为壳"></a>shell 直译为壳</h1><p>有个著名的油气公司 叫做壳牌 荷兰皇家壳牌（英語：Royal Dutch Shell Plc）是世界第二大石油公司，公司在英國註冊，总部位于荷兰海牙。<br>外国人什么都叫做壳， 蛋壳，地壳，都是shell 有种包裹什么东西在里面的感觉<br>操作系统分为内核和外壳 这个壳叫做shell, shell 用来和内核交流，shell 有CUI(命令行的), GUI (图形化的).<br>unix/linux/freebsd 操作系统上最通用的人机交互界面就是命令行，典型 windows上最常用的是 图形化界面(忘记了一个gui系统的几个基本元素mouse ,window, focus,)<br>下面主要讨论 命令行shell</p>
+<h1 id="格式各样的shell"><a href="#格式各样的shell" class="headerlink" title="格式各样的shell"></a>格式各样的shell</h1><p>常见的bash，sh, zsh,fish (经常听说 bash 4.xx 有什么命令注入漏洞)<br>ash :<br>bash(Bourne-Again SHell) :比较流行的一个shell基本各大linux发行版本都默认设置bash为shell<br>zsh ：号称最后一个shell 因为字母 z是最后一个了。。<br>fish : 灵活的交互式shell, 自动补全的特性很强大</p>
+<p>Bash is the shell, or command language interpreter, for the GNU operating system. The name is an acronym for the ‘ Bourne-Again SHell ‘, a pun on Stephen Bourne, the author of the direct ancestor of the current Unix shell sh , which appeared in the Seventh Edition Bell Labs Research version of Unix.<br>The C shell (csh or the improved version, tcsh) is a Unix shell created by Bill Joy while he was a graduate student at University of California, Berkeley in the late 1970s.<br>The Bourne shell (sh) is a shell, or command-line interpreter, for computer operating systems.<br>The Bourne shell was the default shell for Version 7 Unix. Many Unix-like systems continue to have /bin/sh—which will be the Bourne shell, or a symbolic link or hard link to a compatible shell—even when other shells are used by most users.<br>KornShell (ksh) is a Unix shell which was developed by David Korn at Bell Labs in the early 1980s and announced at USENIX on July 14, 1983.[1][2] The initial development was based on Bourne shell source code.[7]</p>
+<p>dash (Debian Almquist shell)</p>
+]]></content>
       <tags>
         <tag>Linux</tag>
       </tags>
