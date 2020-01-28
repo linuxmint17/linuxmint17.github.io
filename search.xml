@@ -1,9 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>aboutalgorithm</title>
-    <url>/2020/01/21/about_algorithm/</url>
+    <title>aboutthread</title>
+    <url>/2020/01/24/about_thread/</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>aboutcodestyle</title>
+    <url>/2020/01/24/about_codestyle/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>About sizeof</title>
+    <url>/2020/01/24/about_sizeof/</url>
+    <content><![CDATA[<h1 id="sizeof-的误解，sizeof-不是函数-function-，是运算符-operator"><a href="#sizeof-的误解，sizeof-不是函数-function-，是运算符-operator" class="headerlink" title="sizeof 的误解，sizeof 不是函数(function)，是运算符(operator)"></a>sizeof 的误解，sizeof 不是函数(function)，是运算符(operator)</h1><p>函数在程序运行的时候起作用，运算符求出来的大小是在编译时就确定下来的</p>
+<h2 id="常见的sizeof操作"><a href="#常见的sizeof操作" class="headerlink" title="常见的sizeof操作"></a>常见的sizeof操作</h2><ul>
+<li>对变量求大小</li>
+<li>对类型求大小</li>
+<li>对结构体类型求大小</li>
+<li>对字符串常量求大小   sizeof(“mute”);</li>
+<li>对指针变量、类型求大小</li>
+<li>对含有虚函数的class求大小<h2 id="sizeof-的原理"><a href="#sizeof-的原理" class="headerlink" title="sizeof 的原理"></a>sizeof 的原理</h2></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About Makefile</title>
+    <url>/2020/01/24/about_makefile/</url>
+    <content><![CDATA[<h1 id="make-是用来组织大型工程必不可少的工具"><a href="#make-是用来组织大型工程必不可少的工具" class="headerlink" title="make 是用来组织大型工程必不可少的工具"></a>make 是用来组织大型工程必不可少的工具</h1><p>  make 有各种变体: Qt的qmake, 跨平台的 cmake, 微软的 nmake</p>
+<h1 id="make-menuconfig"><a href="#make-menuconfig" class="headerlink" title="make menuconfig"></a>make menuconfig</h1><p>  好像最早是在linux kernel 中使用到的, 在构建kernel 之前使用这个命令会<br>  根据kernel目录下的Makefile和其他的文件以及kconfig语法生成命令行的gui菜单可以勾选，依赖 ncurses</p>
+<h1 id="make-n"><a href="#make-n" class="headerlink" title="make -n"></a>make -n</h1><p>  make 调试使用的命令，空跑一次，不执行实际操作，把要执行的动作打印出来</p>
+<h1 id="make-f-filename"><a href="#make-f-filename" class="headerlink" title="make -f filename"></a>make -f filename</h1><p>  指定makefile 文件，不默认寻找 Makefile,makefile</p>
+<h1 id="make"><a href="#make" class="headerlink" title="make"></a>make</h1><p> 假设当前目录下有 hello.c 执行make hello 会尝试编译 hello.c 到hello</p>
+]]></content>
+      <tags>
+        <tag>Tool</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About Algorithm</title>
+    <url>/2020/01/21/about_algorithm/</url>
+    <content><![CDATA[<h2 id="关于算法的思考"><a href="#关于算法的思考" class="headerlink" title="关于算法的思考"></a>关于算法的思考</h2><pre><code>算法出现的比计算机要早很多:比如说 最大公约数(Greatest common divisor 简写为GCD)的求法,早在</code></pre><p>公元前300年出版的《几何原本》中已经有算法，至今仍然是很实用的方法.</p>
+<h2 id="算法我之见"><a href="#算法我之见" class="headerlink" title="算法我之见"></a>算法我之见</h2><p>   我的看法就是求解某类或者某个问题的固定方法：按照方法做就一定能在有限的时间内得到结果.<br>算法要理解必须有自己的思路，否则当时学会或者记住了，过一阵子就会忘记(记忆天才除外吧).</p>
+<h2 id="算法学习-推导的过程"><a href="#算法学习-推导的过程" class="headerlink" title="算法学习/推导的过程"></a>算法学习/推导的过程</h2><pre><code>把自己思路教给计算机,使用计算机的语言准确描述描述。
+将你的想法交给计算机去执行，首先要了解一个算法手动是怎样计算的，</code></pre><p>手动推演两到3步然后归纳出规律，使用while和if将你的想法写出来伪代码(伪代码甚至可以有一些逻辑错误)，<br>有一点小错误，不要紧，<br>    然后开始将伪代码转为C++代码，调试各种特殊情况和一般情况(测试)<br>    最后自己的(烂)算法大功告成，进行优化和分析确保逻辑上不会有大漏洞</p>
+<h2 id="推演的技巧"><a href="#推演的技巧" class="headerlink" title="推演的技巧"></a>推演的技巧</h2><pre><code>可以从简单的情况入手,尝试解决问题保证自己理解了算法的需求背景，</code></pre><p>特殊推导一般(情形越特殊越简单,高中数学老师讲的),代码中可能有专门用于特殊情况处理的if分支可以考虑<br>是否可以用一般涵盖特殊;</p>
+]]></content>
   </entry>
   <entry>
     <title>aboutlinux</title>
@@ -12,7 +57,6 @@
 <h2 id="Linux-的常见发行版本"><a href="#Linux-的常见发行版本" class="headerlink" title="Linux 的常见发行版本"></a>Linux 的常见发行版本</h2><p>首先解释什么是发行版本：发行版本是开源社区或者公司，甚至是个人把Linuxkernel拿过来，整合其它的使用工具，以及软件管理工具装配的一个便于终端用户使用的操作系统<br>根据软件包管理工具的不同大概分为两个系列 :Debian 系列和 Redhat 系列,还有一些特立独行的发行版本使用的是其他的软件包管理工具(比如说 arch,和 gentoo)</p>
 <h2 id="为什么要了解Linux"><a href="#为什么要了解Linux" class="headerlink" title="为什么要了解Linux"></a>为什么要了解Linux</h2><ul>
 <li>实用</li>
-<li>好用</li>
 <li>免费</li>
 </ul>
 ]]></content>
@@ -23,8 +67,9 @@
   <entry>
     <title>gcc</title>
     <url>/2020/01/20/about_gcc/</url>
-    <content><![CDATA[<h2 id="gcc-基本操作"><a href="#gcc-基本操作" class="headerlink" title="gcc 基本操作"></a>gcc 基本操作</h2><h3 id="神奇的a-out"><a href="#神奇的a-out" class="headerlink" title="神奇的a.out"></a>神奇的a.out</h3><p>是汇编(assemble)输出(output)的意思<br>在freebsd 中 man a.out 可以看到相关信息</p>
-<h3 id="编译基本操作"><a href="#编译基本操作" class="headerlink" title="编译基本操作"></a>编译基本操作</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gcc hello.c byebye.c -o hellobye</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h1 id="gcc-short-for"><a href="#gcc-short-for" class="headerlink" title="gcc short for"></a>gcc short for</h1><h2 id="gcc-基本操作"><a href="#gcc-基本操作" class="headerlink" title="gcc 基本操作"></a>gcc 基本操作</h2><h3 id="神奇的a-out"><a href="#神奇的a-out" class="headerlink" title="神奇的a.out"></a>神奇的a.out</h3><p>是汇编(assemble)输出(output)的意思<br>在freebsd 中 man a.out 可以看到相关信息</p>
+<h3 id="编译基本操作"><a href="#编译基本操作" class="headerlink" title="编译基本操作"></a>编译基本操作</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gcc hello.c byebye.c -o helloworld</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <tags>
         <tag>Tool</tag>
@@ -62,7 +107,7 @@
 <h1 id="格式各样的shell"><a href="#格式各样的shell" class="headerlink" title="格式各样的shell"></a>格式各样的shell</h1><p>常见的bash，sh, zsh,fish (经常听说 bash 4.xx 有什么命令注入漏洞)<br>ash :<br>bash(Bourne-Again SHell) :比较流行的一个shell基本各大linux发行版本都默认设置bash为shell<br>zsh ：号称最后一个shell 因为字母 z是最后一个了。。<br>fish : 灵活的交互式shell, 自动补全的特性很强大</p>
 <p>Bash is the shell, or command language interpreter, for the GNU operating system. The name is an acronym for the ‘ Bourne-Again SHell ‘, a pun on Stephen Bourne, the author of the direct ancestor of the current Unix shell sh , which appeared in the Seventh Edition Bell Labs Research version of Unix.<br>The C shell (csh or the improved version, tcsh) is a Unix shell created by Bill Joy while he was a graduate student at University of California, Berkeley in the late 1970s.<br>The Bourne shell (sh) is a shell, or command-line interpreter, for computer operating systems.<br>The Bourne shell was the default shell for Version 7 Unix. Many Unix-like systems continue to have /bin/sh—which will be the Bourne shell, or a symbolic link or hard link to a compatible shell—even when other shells are used by most users.<br>KornShell (ksh) is a Unix shell which was developed by David Korn at Bell Labs in the early 1980s and announced at USENIX on July 14, 1983.[1][2] The initial development was based on Bourne shell source code.[7]</p>
 <p>dash (Debian Almquist shell)</p>
-]]></content>
+<h2 id="bash-的奇技淫巧"><a href="#bash-的奇技淫巧" class="headerlink" title="bash 的奇技淫巧"></a>bash 的奇技淫巧</h2>]]></content>
       <tags>
         <tag>Linux</tag>
       </tags>
@@ -78,7 +123,8 @@
   <entry>
     <title>About Vim</title>
     <url>/2020/01/19/about_vim/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="vim-vs-Emacs"><a href="#vim-vs-Emacs" class="headerlink" title="vim vs Emacs"></a>vim vs Emacs</h1><p>文本编辑器的圣战: vim 被称为编辑器之神，emacs被称为神之编辑器(伪装成编辑器的操作系统).<br>这两个文本编辑器中有不同的学习曲线，vim 刚开始入坑很难，甚至都无法输入一个字符，无法退出vim,只有 alt +F4 关闭中断大法。随着熟练程度的提升，逐渐的会从不同的<br>编辑模式中获得飞快的输入速度，也会告别上下左右四个方将箭头(Esc to death). emacs也学习曲线也不是很平和，刚上手的时候不知道怎么保存文件，怎么退出编辑文件。渐<br>渐的熟悉之后会ctrl到死</p>
+<h2 id="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"><a href="#本文章主要讲解vim的学习路径和常用配置及基本介绍和操作" class="headerlink" title="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"></a>本文章主要讲解vim的学习路径和常用配置及基本介绍和操作</h2>]]></content>
       <tags>
         <tag>Tool</tag>
       </tags>

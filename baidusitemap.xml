@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://yoursite.com/2020/01/20/about_linux/</loc>
-    <lastmod>2020-01-21</lastmod>
-  </url>  <url>
     <loc>http://yoursite.com/2020/01/21/about_algorithm/</loc>
-    <lastmod>2020-01-21</lastmod>
+    <lastmod>2020-01-28</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2020/01/19/about_shell/</loc>
-    <lastmod>2020-01-21</lastmod>
+    <loc>http://yoursite.com/2020/01/24/about_makefile/</loc>
+    <lastmod>2020-01-28</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/01/20/about_linux/</loc>
+    <lastmod>2020-01-28</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/20/about_gcc/</loc>
-    <lastmod>2020-01-20</lastmod>
+    <lastmod>2020-01-28</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/01/19/about_shell/</loc>
+    <lastmod>2020-01-28</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/01/24/about_thread/</loc>
+    <lastmod>2020-01-24</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/01/24/about_codestyle/</loc>
+    <lastmod>2020-01-24</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/01/24/about_sizeof/</loc>
+    <lastmod>2020-01-24</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/01/19/about_vim/</loc>
+    <lastmod>2020-01-24</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/20/about_inline/</loc>
     <lastmod>2020-01-20</lastmod>
@@ -20,9 +35,6 @@
     <lastmod>2020-01-19</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/19/about_emacs/</loc>
-    <lastmod>2020-01-19</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/01/19/about_vim/</loc>
     <lastmod>2020-01-19</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/10/25/hexo_doc/</loc>
