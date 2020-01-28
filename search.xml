@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>aboutthread</title>
+    <title>About pwd</title>
+    <url>/2020/01/28/about_pwd/</url>
+    <content><![CDATA[<h1 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">pwd</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/linuxmint17/MarkdownPictures/tree/master/pictures/windows_powershell_pwd_output.png" alt="avatar"></p>
+]]></content>
+      <tags>
+        <tag>Linux/C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About Thread</title>
     <url>/2020/01/24/about_thread/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="多线程编程是实用程序必然要用到的工具-没有多线程、进程编程就不是现代编程人员做的事情"><a href="#多线程编程是实用程序必然要用到的工具-没有多线程、进程编程就不是现代编程人员做的事情" class="headerlink" title="多线程编程是实用程序必然要用到的工具 没有多线程、进程编程就不是现代编程人员做的事情"></a>多线程编程是实用程序必然要用到的工具 没有多线程、进程编程就不是现代编程人员做的事情</h1>]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
   </entry>
   <entry>
     <title>aboutcodestyle</title>
@@ -46,7 +60,7 @@
     <content><![CDATA[<h2 id="关于算法的思考"><a href="#关于算法的思考" class="headerlink" title="关于算法的思考"></a>关于算法的思考</h2><pre><code>算法出现的比计算机要早很多:比如说 最大公约数(Greatest common divisor 简写为GCD)的求法,早在</code></pre><p>公元前300年出版的《几何原本》中已经有算法，至今仍然是很实用的方法.</p>
 <h2 id="算法我之见"><a href="#算法我之见" class="headerlink" title="算法我之见"></a>算法我之见</h2><p>   我的看法就是求解某类或者某个问题的固定方法：按照方法做就一定能在有限的时间内得到结果.<br>算法要理解必须有自己的思路，否则当时学会或者记住了，过一阵子就会忘记(记忆天才除外吧).</p>
 <h2 id="算法学习-推导的过程"><a href="#算法学习-推导的过程" class="headerlink" title="算法学习/推导的过程"></a>算法学习/推导的过程</h2><pre><code>把自己思路教给计算机,使用计算机的语言准确描述描述。
-将你的想法交给计算机去执行，首先要了解一个算法手动是怎样计算的，</code></pre><p>手动推演两到3步然后归纳出规律，使用while和if将你的想法写出来伪代码(伪代码甚至可以有一些逻辑错误)，<br>有一点小错误，不要紧，<br>    然后开始将伪代码转为C++代码，调试各种特殊情况和一般情况(测试)<br>    最后自己的(烂)算法大功告成，进行优化和分析确保逻辑上不会有大漏洞</p>
+将你的想法交给计算机去执行，首先要了解一个算法手动是怎样计算的，</code></pre><p>手动推演两到三步然后归纳出规律，使用while和if将你的想法写出来伪代码(伪代码甚至可以有一些逻辑错误)，<br>有一点小错误，不要紧，<br>    然后开始将伪代码转为C++代码，调试各种特殊情况和一般情况(测试)<br>    最后自己的(烂)算法大功告成，进行优化和分析确保逻辑上不会有大漏洞</p>
 <h2 id="推演的技巧"><a href="#推演的技巧" class="headerlink" title="推演的技巧"></a>推演的技巧</h2><pre><code>可以从简单的情况入手,尝试解决问题保证自己理解了算法的需求背景，</code></pre><p>特殊推导一般(情形越特殊越简单,高中数学老师讲的),代码中可能有专门用于特殊情况处理的if分支可以考虑<br>是否可以用一般涵盖特殊;</p>
 ]]></content>
   </entry>
