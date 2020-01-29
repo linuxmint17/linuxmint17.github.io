@@ -148,7 +148,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">4</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">5</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -279,7 +279,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-24 13:12:42" itemprop="dateModified" datetime="2020-01-24T13:12:42+08:00">2020-01-24</time>
+                <time title="Modified: 2020-01-29 21:43:16" itemprop="dateModified" datetime="2020-01-29T21:43:16+08:00">2020-01-29</time>
               </span>
 
           
@@ -293,8 +293,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="vim-vs-Emacs"><a href="#vim-vs-Emacs" class="headerlink" title="vim vs Emacs"></a>vim vs Emacs</h1><p>文本编辑器的圣战: vim 被称为编辑器之神，emacs被称为神之编辑器(伪装成编辑器的操作系统).<br>这两个文本编辑器中有不同的学习曲线，vim 刚开始入坑很难，甚至都无法输入一个字符，无法退出vim,只有 alt +F4 关闭中断大法。随着熟练程度的提升，逐渐的会从不同的<br>编辑模式中获得飞快的输入速度，也会告别上下左右四个方将箭头(Esc to death). emacs也学习曲线也不是很平和，刚上手的时候不知道怎么保存文件，怎么退出编辑文件。渐<br>渐的熟悉之后会ctrl到死</p>
-<h2 id="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"><a href="#本文章主要讲解vim的学习路径和常用配置及基本介绍和操作" class="headerlink" title="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"></a>本文章主要讲解vim的学习路径和常用配置及基本介绍和操作</h2>
+          <h1 id="vim-vs-Emacs"><a href="#vim-vs-Emacs" class="headerlink" title="vim vs Emacs"></a>vim vs Emacs</h1><p>　　文本编辑器的圣战: vim 被称为编辑器之神，emacs被称为神之编辑器(伪装成编辑器的操作系统).<br>这两个文本编辑器中有不同的学习曲线，vim 刚开始入坑很难，甚至都无法输入一个字符，无法退出vim,只有 alt +F4 关闭中断大法。随着熟练程度的提升，逐渐的会从不同的<br>编辑模式中获得飞快的输入速度，也会告别上下左右四个方将箭头(Esc to death). emacs也学习曲线也不是很平和，刚上手的时候不知道怎么保存文件，怎么退出编辑文件。渐<br>渐的熟悉之后会ctrl到死</p>
+<h2 id="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"><a href="#本文章主要讲解vim的学习路径和常用配置及基本介绍和操作" class="headerlink" title="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"></a>本文章主要讲解vim的学习路径和常用配置及基本介绍和操作</h2><p>　　挖坑待填</p>
+
       
     </div>
 
@@ -344,7 +345,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-20 00:13:40" itemprop="dateModified" datetime="2020-01-20T00:13:40+08:00">2020-01-20</time>
+                <time title="Modified: 2020-01-29 21:42:41" itemprop="dateModified" datetime="2020-01-29T21:42:41+08:00">2020-01-29</time>
               </span>
 
           
@@ -392,13 +393,13 @@
 <h2 id="git-小技巧"><a href="#git-小技巧" class="headerlink" title="git 小技巧"></a>git 小技巧</h2><h3 id="暂存"><a href="#暂存" class="headerlink" title="暂存"></a>暂存</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git stash</span><br></pre></td></tr></table></figure>
 <h3 id="挑选"><a href="#挑选" class="headerlink" title="挑选"></a>挑选</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git  cherry-pick commit-id</span><br></pre></td></tr></table></figure>
 <h3 id="变基"><a href="#变基" class="headerlink" title="变基"></a>变基</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rebase -i commit-id</span><br></pre></td></tr></table></figure>
-<h3 id="查看文件变更"><a href="#查看文件变更" class="headerlink" title="查看文件变更"></a>查看文件变更</h3><p>查看 hello.c 文件中的10到20行的修改记录</p>
+<h3 id="查看文件变更"><a href="#查看文件变更" class="headerlink" title="查看文件变更"></a>查看文件变更</h3><p>　　查看 hello.c 文件中的10到20行的修改记录</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git blame -L 10,20 hello.c</span><br></pre></td></tr></table></figure>
-<h3 id="从历史版本中取出某个文件"><a href="#从历史版本中取出某个文件" class="headerlink" title="从历史版本中取出某个文件"></a>从历史版本中取出某个文件</h3><p>从历史版本(commit-id)中取出hello.c</p>
+<h3 id="从历史版本中取出某个文件"><a href="#从历史版本中取出某个文件" class="headerlink" title="从历史版本中取出某个文件"></a>从历史版本中取出某个文件</h3><p>　　从历史版本(commit-id)中取出hello.c</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  git checkout  commit-id  hello.c</span><br></pre></td></tr></table></figure>
-<h3 id="我在哪个分支，merge是否成功，rebase-是否成功，cherry-pick是否成功？"><a href="#我在哪个分支，merge是否成功，rebase-是否成功，cherry-pick是否成功？" class="headerlink" title="我在哪个分支，merge是否成功，rebase 是否成功，cherry-pick是否成功？"></a>我在哪个分支，merge是否成功，rebase 是否成功，cherry-pick是否成功？</h3><p>配置shell的命令提示符可以帮你解决这个问题</p>
+<h3 id="我在哪个分支，merge是否成功，rebase-是否成功，cherry-pick是否成功？"><a href="#我在哪个分支，merge是否成功，rebase-是否成功，cherry-pick是否成功？" class="headerlink" title="我在哪个分支，merge是否成功，rebase 是否成功，cherry-pick是否成功？"></a>我在哪个分支，merge是否成功，rebase 是否成功，cherry-pick是否成功？</h3><p>　　配置shell的命令提示符可以帮你解决这个问题</p>
 <h3 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1. git <span class="built_in">clone</span> git://git.kernel.org/pub/scm/git/git.git</span><br><span class="line">2. cp git/contrib/completion/git-completion.bash ~/.git-completion.bash</span><br><span class="line">3. cp git/contrib/completion/git-prompt.sh  ~/.git-prompt.sh</span><br><span class="line">4. vi ~/.bashrc 插入</span><br><span class="line"><span class="built_in">export</span> GIT_PS1_SHOWDIRTYSTATE=1</span><br><span class="line"><span class="built_in">export</span> GIT_PS1_SHOWSTASHSTATE=1</span><br><span class="line"><span class="built_in">export</span> GIT_PS1_SHOWUNTRACKEDFILES=1</span><br><span class="line"><span class="built_in">export</span> GIT_PS1_SHOWUPSTREAM=”verbose git svn”</span><br><span class="line"><span class="built_in">export</span> PS1=<span class="string">'\[\033[0;32m\]\D&#123;%Y/%m/%d&#125; \t\[\033[0m\]\[\033[0;35m\]\u@\h\[\033[0m\]\[\033[0;33m\]\w\[\033[36m\]$(__git_ps1 " (%s)")\[\033[0m\]\n\$'</span></span><br><span class="line">5. <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
-<h2 id="git-底层命令"><a href="#git-底层命令" class="headerlink" title="git 底层命令"></a>git 底层命令</h2><p>挖坑 想起来再填</p>
+<h2 id="git-底层命令"><a href="#git-底层命令" class="headerlink" title="git 底层命令"></a>git 底层命令</h2><p>　　挖坑 想起来再填</p>
 <h2 id="学习git的资源"><a href="#学习git的资源" class="headerlink" title="学习git的资源"></a>学习git的资源</h2><ul>
 <li>git的官方网站 <a href="https://git-scm.com/" target="_blank" rel="noopener">git-scm.com</a></li>
 </ul>
@@ -549,7 +550,7 @@
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
