@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2020/02/02/about_uml/</loc>
+    <lastmod>2020-02-02</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/01/24/about_codestyle/</loc>
+    <lastmod>2020-01-30</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2020/01/28/about_pwd/</loc>
     <lastmod>2020-01-29</lastmod>
   </url>  <url>
@@ -26,9 +32,6 @@
     <lastmod>2020-01-29</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/20/about_gcc/</loc>
-    <lastmod>2020-01-29</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/01/24/about_codestyle/</loc>
     <lastmod>2020-01-29</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/24/about_thread/</loc>

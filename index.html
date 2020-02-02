@@ -158,7 +158,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">14</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">15</span></a>
 
   </li>
   </ul>
@@ -186,6 +186,89 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/02/about_uml/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
+      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Linuxmint17's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/02/about_uml/" class="post-title-link" itemprop="url">About UML</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-02-02 20:47:07 / Modified: 20:49:42" itemprop="dateCreated datePublished" datetime="2020-02-02T20:47:07+08:00">2020-02-02</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="UML-是啥"><a href="#UML-是啥" class="headerlink" title="UML 是啥"></a>UML 是啥</h1><p>　　The Unified Modeling Language (UML) is a general-purpose, developmental, modeling language in the field of software engineering<br>that is intended to provide a standard way to visualize the design of a system.</p>
+<h1 id="UML-中的十种图"><a href="#UML-中的十种图" class="headerlink" title="UML 中的十种图"></a>UML 中的十种图</h1><ul>
+<li>静态模型图： 描述系统的静态结构<ul>
+<li><strong>类图</strong></li>
+<li>对象图</li>
+<li>包图</li>
+<li>组件图</li>
+<li>部署图</li>
+</ul>
+</li>
+<li>动态模型图： 描述系统行为的各个方面<ul>
+<li><strong>用例图</strong></li>
+<li><strong>时序图</strong></li>
+<li><strong>活动图</strong></li>
+<li>协作图</li>
+<li>状态图</li>
+</ul>
+</li>
+</ul>
+<h1 id="UML-中的四种关系"><a href="#UML-中的四种关系" class="headerlink" title="UML 中的四种关系"></a>UML 中的四种关系</h1><ul>
+<li><strong>关联关系(association)</strong></li>
+<li><strong>依赖关系(dependency)</strong></li>
+<li><strong>泛化关系(generalization)</strong></li>
+<li><strong>实现关系(realization/implementation)</strong></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -354,7 +437,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-29 21:09:49" itemprop="dateModified" datetime="2020-01-29T21:09:49+08:00">2020-01-29</time>
+                <time title="Modified: 2020-01-30 19:17:04" itemprop="dateModified" datetime="2020-01-30T19:17:04+08:00">2020-01-30</time>
               </span>
 
           
@@ -368,9 +451,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="什么是-codestyle"><a href="#什么是-codestyle" class="headerlink" title="什么是 codestyle?"></a>什么是 codestyle?</h1><pre><code>codesytle 包括变量、函数命名规范，回车换行的使用，以及空格对齐，还是tab对齐，对齐两个空格，还是四个空格.</code></pre><h1 id="为什么团队需要统一codestyle"><a href="#为什么团队需要统一codestyle" class="headerlink" title="为什么团队需要统一codestyle?"></a>为什么团队需要统一codestyle?</h1><pre><code>自己写代码只给自己看还可以，爱怎么写就怎么写，只要编译通过跑的起来就ok, 但是涉及到多人协作，就要考虑其他</code></pre><p>人可能要阅读你的代码.当多人协作使用一套代码时，代码风格不统一就像书法作品中一会儿行书，一会草书，一会儿楷书，<br>一会儿小篆一样，造成风格的混乱会降低阅读效率. 代码是写给人看，顺便给计算机执行的. 人都没法看, 没法维护.</p>
-<h1 id="为什么会有-codestyle"><a href="#为什么会有-codestyle" class="headerlink" title="为什么会有 codestyle?"></a>为什么会有 codestyle?</h1><pre><code>刚开始的编程语言的编译要求是比较宽松的，比如说C/c++/Java中对于多余的空格(回车换行等留白)，对indent没有</code></pre><p>特殊的要求，分号分割就认为是一个语句.python 就是对空格、tab留白要求比较严格的语言，不同的缩进可能会导致不同的<br>语义，也可能编译、执行失败, 我认为空格和回车的使用是导致风格之间差异的重要因素.</p>
-<h1 id="我自己的感受"><a href="#我自己的感受" class="headerlink" title="我自己的感受"></a>我自己的感受</h1><pre><code>在公司求严格的codesytle之后，刚开始还不太习惯，习惯之后回头看自己之前写的代码，忍不住想动手改一下codestyle，不改两下看不下去。。。</code></pre><h1 id="有趣的比赛-IOCCC"><a href="#有趣的比赛-IOCCC" class="headerlink" title="有趣的比赛 IOCCC"></a>有趣的比赛 IOCCC</h1><pre><code>IOCCC (International Obfuscated C Code Contest) 是国际混淆C代码大赛，看谁的代码写的更令人看不懂，但功能又很</code></pre><p>有趣或者实用, 比赛的目的是从反面告诉人们要注意code style , 同时参赛者也在展示自己对C语言的理解和其他编程功力 <br><br><a href="https://www.ioccc.org/years.html" target="_blank" rel="noopener">历年获奖的作品</a></p>
+          <h1 id="什么是-codestyle"><a href="#什么是-codestyle" class="headerlink" title="什么是 codestyle?"></a>什么是 codestyle?</h1><p>　　codesytle 包括变量、函数命名规范，回车换行的使用，以及空格对齐，还是tab对齐，对齐两个空格，还是四个空格.</p>
+<h1 id="为什么团队需要统一codestyle"><a href="#为什么团队需要统一codestyle" class="headerlink" title="为什么团队需要统一codestyle?"></a>为什么团队需要统一codestyle?</h1><p>　　自己写代码只给自己看还可以，爱怎么写就怎么写，只要编译通过跑的起来就ok, 但是涉及到多人协作，就要考虑其他<br>人可能要阅读你的代码.当多人协作使用一套代码时，代码风格不统一就像书法作品中一会儿行书，一会草书，一会儿楷书，<br>一会儿小篆一样，造成风格的混乱会降低阅读效率. 代码是写给人看，顺便给计算机执行的. 人都没法看, 没法维护.</p>
+<h1 id="为什么会有-codestyle"><a href="#为什么会有-codestyle" class="headerlink" title="为什么会有 codestyle?"></a>为什么会有 codestyle?</h1><p>　　刚开始的编程语言的编译要求是比较宽松的，比如说C/c++/Java中对于多余的空格(回车换行等留白)，对indent没有<br>特殊的要求，分号分割就认为是一个语句.python 就是对空格、tab留白要求比较严格的语言，不同的缩进可能会导致不同的<br>语义，也可能编译、执行失败, 我认为空格和回车的使用是导致风格之间差异的重要因素.</p>
+<h1 id="我自己的感受"><a href="#我自己的感受" class="headerlink" title="我自己的感受"></a>我自己的感受</h1><p>　　在公司求严格的codesytle之后，刚开始还不太习惯，习惯之后回头看自己之前写的代码，忍不住想动手改一下codestyle，不改两下看不下去。。。</p>
+<h1 id="有趣的比赛-IOCCC"><a href="#有趣的比赛-IOCCC" class="headerlink" title="有趣的比赛 IOCCC"></a>有趣的比赛 IOCCC</h1><p>　　IOCCC (International Obfuscated C Code Contest) 是国际混淆C代码大赛，看谁的代码写的更令人看不懂，但功能又很<br>有趣或者实用, 比赛的目的是从反面告诉人们要注意code style , 同时参赛者也在展示自己对C语言的理解和其他编程功力 <br><br><a href="https://www.ioccc.org/years.html" target="_blank" rel="noopener">历年获奖的作品</a></p>
 
       
     </div>
@@ -844,75 +929,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/19/about_shell/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
-      <meta itemprop="name" content="Linuxmint17">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/19/about_shell/" class="post-title-link" itemprop="url">About Shell</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-19 22:06:50" itemprop="dateCreated datePublished" datetime="2020-01-19T22:06:50+08:00">2020-01-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-29 21:44:29" itemprop="dateModified" datetime="2020-01-29T21:44:29+08:00">2020-01-29</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="shell-直译为壳"><a href="#shell-直译为壳" class="headerlink" title="shell 直译为壳"></a>shell 直译为壳</h1><p>　　有个著名的油气公司叫做荷兰皇家壳牌（英語：Royal Dutch Shell Plc）是世界第二大石油公司，公司在英國註冊，总部位于荷兰海牙。<br>外国人什么都叫做壳，蛋壳，地壳，都是shell 有种包裹什么东西在里面的感觉<br>操作系统分为内核和外壳 这个壳叫做shell, shell 用来和内核交流，shell 有CUI(命令行的), GUI (图形化的).<br>unix/linux/freebsd 操作系统上最通用的人机交互界面就是命令行，典型 windows上最常用的是 图形化界面(忘记了一个gui系统的几个基本元素mouse ,window, focus,)<br>下面主要讨论 命令行shell</p>
-<h1 id="格式各样的shell"><a href="#格式各样的shell" class="headerlink" title="格式各样的shell"></a>格式各样的shell</h1><p>　　常见的bash，sh, zsh,fish (经常听说 bash 4.xx 有什么命令注入漏洞)<br>ash :<br>bash(Bourne-Again SHell) :比较流行的一个shell基本各大linux发行版本都默认设置bash为shell<br>zsh ：号称最后一个shell 因为字母 z是最后一个了。。<br>fish : 灵活的交互式shell, 自动补全的特性很强大</p>
-<p>Bash is the shell, or command language interpreter, for the GNU operating system. The name is an acronym for the ‘ Bourne-Again SHell ‘, a pun on Stephen Bourne, the author of the direct ancestor of the current Unix shell sh , which appeared in the Seventh Edition Bell Labs Research version of Unix.<br>The C shell (csh or the improved version, tcsh) is a Unix shell created by Bill Joy while he was a graduate student at University of California, Berkeley in the late 1970s.<br>The Bourne shell (sh) is a shell, or command-line interpreter, for computer operating systems.<br>The Bourne shell was the default shell for Version 7 Unix. Many Unix-like systems continue to have /bin/sh—which will be the Bourne shell, or a symbolic link or hard link to a compatible shell—even when other shells are used by most users.<br>KornShell (ksh) is a Unix shell which was developed by David Korn at Bell Labs in the early 1980s and announced at USENIX on July 14, 1983.[1][2] The initial development was based on Bourne shell source code.[7]</p>
-<p>dash (Debian Almquist shell)</p>
-<h2 id="bash-的奇技淫巧"><a href="#bash-的奇技淫巧" class="headerlink" title="bash 的奇技淫巧"></a>bash 的奇技淫巧</h2><p>　　挖坑待填</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -963,7 +979,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
