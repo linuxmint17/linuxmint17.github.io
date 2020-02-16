@@ -50,15 +50,15 @@
   };
 </script>
 
-  <meta name="description" content="关于工作路径　shell 命令 pwd 能显示用户的工作路径C语言程序可以使用 getcwd, getwd, get_current_dir_name函数获取当前工作路径，一般来说大家写代码不会关注这个东西 问题发生场景　　一个程序想要读取与之同一级目录的配置文件，这个时候是采用绝对路径，还是相对路径项目中的程序位于  &#x2F;system&#x2F;bin 下配置文件也在同一级文件目录中。程序开机由系统脚本拉起">
+  <meta name="description" content="关于工作路径情境(situation)、任务(task)、行动(action)、结果(result)　shell 命令 pwd 能显示用户的工作路径C语言程序可以使用 getcwd, getwd, get_current_dir_name函数获取当前工作路径，一般来说大家写代码不会关注这个东西s:T:A:R: 情形　　为了适配不同的厂商或者版本，想要后台程序通过读取配置文件方法来，减少某个组件编译">
 <meta name="keywords" content="Linux&#x2F;C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="About pwd">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;28&#x2F;about_pwd&#x2F;index.html">
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
-<meta property="og:description" content="关于工作路径　shell 命令 pwd 能显示用户的工作路径C语言程序可以使用 getcwd, getwd, get_current_dir_name函数获取当前工作路径，一般来说大家写代码不会关注这个东西 问题发生场景　　一个程序想要读取与之同一级目录的配置文件，这个时候是采用绝对路径，还是相对路径项目中的程序位于  &#x2F;system&#x2F;bin 下配置文件也在同一级文件目录中。程序开机由系统脚本拉起">
+<meta property="og:description" content="关于工作路径情境(situation)、任务(task)、行动(action)、结果(result)　shell 命令 pwd 能显示用户的工作路径C语言程序可以使用 getcwd, getwd, get_current_dir_name函数获取当前工作路径，一般来说大家写代码不会关注这个东西s:T:A:R: 情形　　为了适配不同的厂商或者版本，想要后台程序通过读取配置文件方法来，减少某个组件编译">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-01-29T13:52:31.626Z">
+<meta property="og:updated_time" content="2020-02-16T10:04:22.272Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/01/28/about_pwd/">
@@ -152,7 +152,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">5</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">6</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -162,7 +162,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">15</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">20</span></a>
 
   </li>
   </ul>
@@ -224,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-29 21:52:31" itemprop="dateModified" datetime="2020-01-29T21:52:31+08:00">2020-01-29</time>
+                <time title="Modified: 2020-02-16 18:04:22" itemprop="dateModified" datetime="2020-02-16T18:04:22+08:00">2020-02-16</time>
               </span>
 
           
@@ -238,8 +238,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="关于工作路径"><a href="#关于工作路径" class="headerlink" title="关于工作路径"></a>关于工作路径</h1><p>　shell 命令 pwd 能显示用户的工作路径<br>C语言程序可以使用 getcwd, getwd, get_current_dir_name<br>函数获取当前工作路径，一般来说大家写代码不会关注这个东西</p>
-<h1 id="问题发生场景"><a href="#问题发生场景" class="headerlink" title="问题发生场景"></a>问题发生场景</h1><p>　　一个程序想要读取与之同一级目录的配置文件，这个时候是采用绝对路径，还是相对路径<br>项目中的程序位于  /system/bin 下配置文件也在同一级文件目录中。<br>程序开机由系统脚本拉起后常驻后台，检测其他进程.</p>
+        <h1 id="关于工作路径"><a href="#关于工作路径" class="headerlink" title="关于工作路径"></a>关于工作路径</h1><p>情境(situation)、任务(task)、行动(action)、结果(result)<br>　shell 命令 pwd 能显示用户的工作路径<br>C语言程序可以使用 getcwd, getwd, get_current_dir_name<br>函数获取当前工作路径，一般来说大家写代码不会关注这个东西<br>s:<br>T:<br>A:<br>R:</p>
+<h2 id="情形"><a href="#情形" class="headerlink" title="情形"></a>情形</h2><p>　　为了适配不同的厂商或者版本，想要后台程序通过读取配置文件方法来，减少某个组件编译次数, 每次厂商变更只需要改下配置文件中的厂商名字就行了，不必要在代码中写死，每次都要换个厂都要加个宏，在代码中加入一个常量</p>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>　　Android(Linux变种)后台程序(为方便设置为daemon.exe位于/system/bin/目录下)daemon.exe开机启动的时候要读取/system/bin/下的product.conf文配置文件.</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><pre><code class="cpp"></code></pre>
+<p>，这个时候是采用绝对路径，还是相对路径<br>项目中的程序位于 /system/bin 下配置文件也在同一级文件目录中。<br>程序开机由系统脚本拉起后常驻后台，检测其他进程.</p>
 <p>首先设为绝对路径，./exe 拉起 测试ok,系统脚本拉起也ok,但是有个同事认为同一级目录下 直接读取文件名就可以了，<br>听命令改，./exe 测试ok ,然而系统脚本拉起NG,无法去读配置文件。</p>
 <p>经过测试，Android init.rc 中拉起的程序工作路径是/ ，而非程序所在目录，当使用 ./exe 拉起程序的时候工作路径在当前目录<br>使用相对路径自然找到配置文件</p>
 
@@ -307,7 +310,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于工作路径"><span class="nav-number">1.</span> <span class="nav-text">关于工作路径</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题发生场景"><span class="nav-number">2.</span> <span class="nav-text">问题发生场景</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于工作路径"><span class="nav-number">1.</span> <span class="nav-text">关于工作路径</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#情形"><span class="nav-number">1.1.</span> <span class="nav-text">情形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需求"><span class="nav-number">1.2.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码实现"><span class="nav-number">1.3.</span> <span class="nav-text">代码实现</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -323,12 +326,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>

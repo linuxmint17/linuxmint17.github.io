@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2020/01/28/about_pwd/</loc>
+    <lastmod>2020-02-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/16/c-array/</loc>
+    <lastmod>2020-02-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/15/c-main/</loc>
+    <lastmod>2020-02-16</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/01/24/about_sizeof/</loc>
+    <lastmod>2020-02-15</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/14/about_ffmpeg/</loc>
+    <lastmod>2020-02-14</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/14/about-bash/</loc>
+    <lastmod>2020-02-14</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/14/mysql/</loc>
+    <lastmod>2020-02-14</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/10/25/hexo_doc/</loc>
+    <lastmod>2020-02-02</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2020/02/02/about_uml/</loc>
     <lastmod>2020-02-02</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/24/about_codestyle/</loc>
     <lastmod>2020-01-30</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/01/28/about_pwd/</loc>
-    <lastmod>2020-01-29</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/20/about_inline/</loc>
     <lastmod>2020-01-29</lastmod>
@@ -20,9 +41,6 @@
     <lastmod>2020-01-29</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/18/about_git/</loc>
-    <lastmod>2020-01-29</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/01/24/about_sizeof/</loc>
     <lastmod>2020-01-29</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/24/about_makefile/</loc>
@@ -42,8 +60,5 @@
   </url>  <url>
     <loc>http://yoursite.com/2020/01/19/about_emacs/</loc>
     <lastmod>2020-01-19</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/10/25/hexo_doc/</loc>
-    <lastmod>2020-01-18</lastmod>
   </url>
 </urlset>

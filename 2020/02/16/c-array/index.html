@@ -50,14 +50,17 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Linuxmint17&#39;s Blog">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2020&#x2F;02&#x2F;index.html">
+  <meta name="description" content="数组的奇葩  C语言中x[i]的计算方法 *(x + i)  x是个数组名，一般写数组的时候，x是常量指针,当x是0的时候没问题 1234int is_big_endian()&amp;#123;    int a = 0xbabe;    return 0[(unsigned char *)&amp;amp;a] == 0xbe;&amp;#125;  123456789101112int i; &#x2F;&#x2F; 未初始化的全局变">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C语言中数组">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;16&#x2F;c-array&#x2F;index.html">
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
+<meta property="og:description" content="数组的奇葩  C语言中x[i]的计算方法 *(x + i)  x是个数组名，一般写数组的时候，x是常量指针,当x是0的时候没问题 1234int is_big_endian()&amp;#123;    int a = 0xbabe;    return 0[(unsigned char *)&amp;amp;a] == 0xbe;&amp;#125;  123456789101112int i; &#x2F;&#x2F; 未初始化的全局变">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-02-16T07:43:59.228Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/archives/2020/02/">
+<link rel="canonical" href="http://yoursite.com/2020/02/16/c-array/">
 
 
 <script id="page-configurations">
@@ -65,13 +68,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
-    isArchive: true
+    isArchive: false
   };
 </script>
 
-  <title>Archive | Linuxmint17's Blog</title>
+  <title>C语言中数组 | Linuxmint17's Blog</title>
   
 
 
@@ -185,149 +188,83 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 20 posts in total. Keep on posting.</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/16/c-array/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
+      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Linuxmint17's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          C语言中数组
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-02-16 12:04:57 / Modified: 15:43:59" itemprop="dateCreated datePublished" datetime="2020-02-16T12:04:57+08:00">2020-02-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
+        <h1 id="数组的奇葩"><a href="#数组的奇葩" class="headerlink" title="数组的奇葩"></a>数组的奇葩</h1><p>  C语言中x[i]的计算方法 *(x + i)  x是个数组名，一般写数组的时候，x是常量指针,当x是0的时候没问题</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">is_big_endian</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">0xbabe</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>[(<span class="keyword">unsigned</span> <span class="keyword">char</span> *)&amp;a] == <span class="number">0xbe</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i; <span class="comment">// 未初始化的全局变量，被初始化成0</span></span><br><span class="line">main ()</span><br><span class="line">&#123;</span><br><span class="line">  <span class="comment">// read 是自定义函数, read(0, i++ + "hello, world!\n", 1); 实际上调用了系统调用write(1,指向hello, world!的指针，每次偏移一,1);</span></span><br><span class="line">  <span class="comment">// i["]&lt;i;++i)&#123;--i;&#125;"] 是判断 *("]&lt;i;++i)&#123;--i;"的地址 偏移 i) 是否为0，"]&lt;i;++i)&#123;--i;" 的长度和 "hello, world!"的长度一样</span></span><br><span class="line">  <span class="comment">// C语言中的字符串常量和数字做运算的时候是 常量指针const char *类型</span></span><br><span class="line">  <span class="keyword">for</span> (; i[<span class="string">"]&lt;i;++i)&#123;--i;&#125;"</span>]; read (<span class="string">'-'</span> - <span class="string">'-'</span>, i++ + <span class="string">"hello, world!\n"</span>, <span class="string">'/'</span> / <span class="string">'/'</span>));</span><br><span class="line">&#125;</span><br><span class="line">read (j, i, p)</span><br><span class="line">&#123;</span><br><span class="line">  write (j / p + p, i-- - j, i / i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-16T12:04:57+08:00"
-              content="2020-02-16">
-          02-16
-        </time>
-      </div>
+      <footer class="post-footer">
 
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/02/16/c-array/" itemprop="url">
-            <span itemprop="name">C语言中数组</span>
-          </a>
-      </h2>
+        
 
-    </header>
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2020/02/15/c-main/" rel="next" title="C 语言中的main函数">
+                  <i class="fa fa-chevron-left"></i> C 语言中的main函数
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
   </article>
+  
+  
+  
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-15T23:48:28+08:00"
-              content="2020-02-15">
-          02-15
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/02/15/c-main/" itemprop="url">
-            <span itemprop="name">C 语言中的main函数</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-14T18:10:06+08:00"
-              content="2020-02-14">
-          02-14
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/02/14/about-bash/" itemprop="url">
-            <span itemprop="name">About Bash</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-14T17:20:24+08:00"
-              content="2020-02-14">
-          02-14
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/02/14/mysql/" itemprop="url">
-            <span itemprop="name">mysql</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-14T15:55:52+08:00"
-              content="2020-02-14">
-          02-14
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/02/14/about_ffmpeg/" itemprop="url">
-            <span itemprop="name">About FFmpeg</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-02T20:47:07+08:00"
-              content="2020-02-02">
-          02-02
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2020/02/02/about_uml/" itemprop="url">
-            <span itemprop="name">About UML</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-
-    </div>
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
@@ -356,6 +293,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数组的奇葩"><span class="nav-number">1.</span> <span class="nav-text">数组的奇葩</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
