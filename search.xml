@@ -63,7 +63,8 @@ Without question, this C program is the most obfuscated C program that has ever 
     <title>About FFmpeg</title>
     <url>/2020/02/14/about_ffmpeg/</url>
     <content><![CDATA[<h1 id="FFmpeg-是开源音视频解码库"><a href="#FFmpeg-是开源音视频解码库" class="headerlink" title="FFmpeg 是开源音视频解码库"></a>FFmpeg 是开源音视频解码库</h1><p>　　很多音视频软件都使用到了ffmpeg的解码库</p>
-<h1 id="把图片从raw-data-转换成jpg的命令"><a href="#把图片从raw-data-转换成jpg的命令" class="headerlink" title="把图片从raw data 转换成jpg的命令"></a>把图片从raw data 转换成jpg的命令</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ffmpeg -i inputrawdata -s 512x800  -f rgb565   -f image2 -o out.jpeg</span><br></pre></td></tr></table></figure>]]></content>
+<h1 id="把图片从raw-data-转换成jpg的命令"><a href="#把图片从raw-data-转换成jpg的命令" class="headerlink" title="把图片从raw data 转换成jpg的命令"></a>把图片从raw data 转换成jpg的命令</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ffmpeg -i inputrawdata -s 512x800  -f rgb565   -f image2 -o out.jpeg</span><br></pre></td></tr></table></figure>
+<h1 id="音视频合并-从网站上下载的视频可能音频和视频分开的为了方便观看需要合并"><a href="#音视频合并-从网站上下载的视频可能音频和视频分开的为了方便观看需要合并" class="headerlink" title="音视频合并 从网站上下载的视频可能音频和视频分开的为了方便观看需要合并"></a>音视频合并 从网站上下载的视频可能音频和视频分开的为了方便观看需要合并</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ffmpeg -i inputaudio -i inputvideo  output.mp4</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>Tools</tag>
       </tags>

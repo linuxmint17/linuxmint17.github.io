@@ -484,10 +484,16 @@ Without question, this C program is the most obfuscated C program that has ever 
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-02-14 15:55:52 / Modified: 18:37:39" itemprop="dateCreated datePublished" datetime="2020-02-14T15:55:52+08:00">2020-02-14</time>
+              <time title="Created: 2020-02-14 15:55:52" itemprop="dateCreated datePublished" datetime="2020-02-14T15:55:52+08:00">2020-02-14</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-17 17:39:58" itemprop="dateModified" datetime="2020-02-17T17:39:58+08:00">2020-02-17</time>
+              </span>
 
           
 
@@ -502,6 +508,7 @@ Without question, this C program is the most obfuscated C program that has ever 
       
           <h1 id="FFmpeg-是开源音视频解码库"><a href="#FFmpeg-是开源音视频解码库" class="headerlink" title="FFmpeg 是开源音视频解码库"></a>FFmpeg 是开源音视频解码库</h1><p>　　很多音视频软件都使用到了ffmpeg的解码库</p>
 <h1 id="把图片从raw-data-转换成jpg的命令"><a href="#把图片从raw-data-转换成jpg的命令" class="headerlink" title="把图片从raw data 转换成jpg的命令"></a>把图片从raw data 转换成jpg的命令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ffmpeg -i inputrawdata -s 512x800  -f rgb565   -f image2 -o out.jpeg</span><br></pre></td></tr></table></figure>
+<h1 id="音视频合并-从网站上下载的视频可能音频和视频分开的为了方便观看需要合并"><a href="#音视频合并-从网站上下载的视频可能音频和视频分开的为了方便观看需要合并" class="headerlink" title="音视频合并 从网站上下载的视频可能音频和视频分开的为了方便观看需要合并"></a>音视频合并 从网站上下载的视频可能音频和视频分开的为了方便观看需要合并</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ffmpeg -i inputaudio -i inputvideo  output.mp4</span><br></pre></td></tr></table></figure>
       
     </div>
 
