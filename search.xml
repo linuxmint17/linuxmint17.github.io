@@ -9,8 +9,20 @@
 <li>动态类型</li>
 <li>脚本(解释型)语言</li>
 <li>类C语法</li>
-<li>语法块按照对齐产生</li>
+<li>语法块按照对齐产生<h1 id="python-三种实现"><a href="#python-三种实现" class="headerlink" title="python 三种实现"></a>python 三种实现</h1></li>
+<li>cpython C </li>
+<li>jpython Java</li>
+<li>IronPython .NET</li>
 </ul>
+<p>#python 优化方法</p>
+<ol>
+<li>使用pypy python版的python解释器</li>
+<li>shed skin 将python代码转换成c++的代码</li>
+</ol>
+<p>#python 工具<br>pyvenv</p>
+<p>#python中的不可变类型<br>Interger ,string, tuple</p>
+<p>#变量名没有类型，对象有类型<br>slice切片操作<br>list [],<br>tuple（）</p>
+<p>#创建自测试的模块<br>在模块的尾部加入以下代码<br>if <strong>name</strong> == ‘<strong>main</strong>‘:<br>    import doctest<br>    doctest.testmod()<br>此模块在python解释器中直接运行时候就能进行doctest</p>
 ]]></content>
       <tags>
         <tag>others</tag>
