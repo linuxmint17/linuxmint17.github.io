@@ -210,7 +210,7 @@
 <li>禁用所有软件源<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo zypper mr -da</span><br></pre></td></tr></table></figure></li>
 <li>添加阿里镜像源<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo zypper ar -<span class="built_in">fc</span> https://mirrors.aliyun.com/opensuse/distribution/leap/15.1/repo/oss openSUSE-Aliyun-OSS ;</span><br><span class="line">$ sudo zypper ar -<span class="built_in">fc</span> https://mirrors.aliyun.com/opensuse/distribution/leap/15.1/repo/non-oss openSUSE-Aliyun-NON-OSS ;</span><br><span class="line">$ sudo zypper ar -<span class="built_in">fc</span> https://mirrors.aliyun.com/opensuse/update/leap/15.1/oss openSUSE-Aliyun-UPDATE-OSS ;</span><br><span class="line">$ sudo zypper ar -<span class="built_in">fc</span> https://mirrors.aliyun.com/opensuse/update/leap/15.1/non-oss openSUSE-Aliyun-UPDATE-NON-OSS ;</span><br></pre></td></tr></table></figure></li>
 <li>手动刷新软件源<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo zypper ref</span><br></pre></td></tr></table></figure>
-</li>
+<h2 id="core-file-无法生成"><a href="#core-file-无法生成" class="headerlink" title="core file 无法生成"></a>core file 无法生成</h2>opensuse 默认无法产生 core file 需要查找官方文档 设置<h2 id="git-commit-failed"><a href="#git-commit-failed" class="headerlink" title="git commit failed"></a>git commit failed</h2>openusse  git 默认无配置文件， git commit 阻塞， 或者是使用了 奇怪的 编辑器。</li>
 </ol>
 ]]></content>
       <tags>
@@ -263,7 +263,7 @@ Without question, this C program is the most obfuscated C program that has ever 
     <title>About Bash</title>
     <url>/2020/02/14/about-bash/</url>
     <content><![CDATA[<h2 id="Bash的环境变量"><a href="#Bash的环境变量" class="headerlink" title="Bash的环境变量"></a>Bash的环境变量</h2><ul>
-<li>PROMPT_DIRTRIM<br>修改PS1中dir的个数 trim 留下几层目录</li>
+<li>PROMPT_DIRTRIM<br>修改PS1中dir的个数 trim 留下几层目录<h2 id="bashrc-检查错误"><a href="#bashrc-检查错误" class="headerlink" title="bashrc 检查错误"></a>bashrc 检查错误</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ bash -n ~/.bashrc</span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
       <tags>
@@ -452,7 +452,7 @@ Without question, this C program is the most obfuscated C program that has ever 
 </ul>
 </li>
 <li>实用</li>
-<li>免费</li>
+<li>免费<h2 id="linux各式各样，为了加强linux的兼容性Linux基金会成立的一个-项目-LSB-规范linux发行版的一些行为"><a href="#linux各式各样，为了加强linux的兼容性Linux基金会成立的一个-项目-LSB-规范linux发行版的一些行为" class="headerlink" title="linux各式各样，为了加强linux的兼容性Linux基金会成立的一个 项目 LSB 规范linux发行版的一些行为"></a>linux各式各样，为了加强linux的兼容性Linux基金会成立的一个 项目 LSB 规范linux发行版的一些行为</h2><a href="https://wiki.linuxfoundation.org/lsb/start" target="_blank" rel="noopener">Linux Standard Base (LSB)</a>规定各个目录的作用等</li>
 </ul>
 ]]></content>
       <tags>
@@ -523,8 +523,35 @@ Without question, this C program is the most obfuscated C program that has ever 
   <entry>
     <title>About Vim</title>
     <url>/2020/01/19/about_vim/</url>
-    <content><![CDATA[<h1 id="vim-vs-Emacs"><a href="#vim-vs-Emacs" class="headerlink" title="vim vs Emacs"></a>vim vs Emacs</h1><p>　　文本编辑器的圣战: vim 被称为编辑器之神，emacs被称为神之编辑器(伪装成编辑器的操作系统).<br>这两个文本编辑器中有不同的学习曲线，vim 刚开始入坑很难，甚至都无法输入一个字符，无法退出vim,只有 alt +F4 关闭中断大法。随着熟练程度的提升，逐渐的会从不同的<br>编辑模式中获得飞快的输入速度，也会告别上下左右四个方将箭头(Esc to death). emacs也学习曲线也不是很平和，刚上手的时候不知道怎么保存文件，怎么退出编辑文件。渐<br>渐的熟悉之后会ctrl到死</p>
+    <content><![CDATA[<h2 id="vim-vs-Emacs"><a href="#vim-vs-Emacs" class="headerlink" title="vim vs Emacs"></a>vim vs Emacs</h2><p>　　文本编辑器的圣战: vim 被称为编辑器之神，emacs被称为神之编辑器(伪装成编辑器的操作系统).<br>这两个文本编辑器中有不同的学习曲线，vim 刚开始入坑很难，甚至都无法输入一个字符，无法退出vim,只有 alt +F4 关闭中断大法。随着熟练程度的提升，逐渐的会从不同的<br>编辑模式中获得飞快的输入速度，也会告别上下左右四个方将箭头(Esc to death). emacs也学习曲线也不是很平和，刚上手的时候不知道怎么保存文件，怎么退出编辑文件。渐<br>渐的熟悉之后会ctrl到死</p>
 <h2 id="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"><a href="#本文章主要讲解vim的学习路径和常用配置及基本介绍和操作" class="headerlink" title="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"></a>本文章主要讲解vim的学习路径和常用配置及基本介绍和操作</h2><p>　　挖坑待填</p>
+<h2 id="vim-打开没有权限的文件-忘记使用sudo打开-之后如何强制保存"><a href="#vim-打开没有权限的文件-忘记使用sudo打开-之后如何强制保存" class="headerlink" title="vim 打开没有权限的文件(忘记使用sudo打开) 之后如何强制保存"></a>vim 打开没有权限的文件(忘记使用sudo打开) 之后如何强制保存</h2><p>　　在vim的命令模式中输入:w !sudo tee %</p>
+<h3 id="how-this-works-摘自stack-overflow"><a href="#how-this-works-摘自stack-overflow" class="headerlink" title="how this works 摘自stack overflow"></a>how this works 摘自<a href="https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work" target="_blank" rel="noopener">stack overflow</a></h3><p>
+in :w !sudo tee %...
+
+<p>% means “the current file”<br>As eugene y pointed out, % does indeed mean “the current file name”, which is passed to tee so that it knows which file to overwrite.</p>
+<p>(In substitution commands, it’s slightly different; as :help :% shows, it’s equal to 1,$ (the entire file) (thanks to @Orafu for pointing out that this does not evaluate to the filename). For example, :%s/foo/bar means “in the current file, replace occurrences of foo with bar.” If you highlight some text before typing :s, you’ll see that the highlighted lines take the place of % as your substitution range.)</p>
+<p>:w isn’t updating your file<br>One confusing part of this trick is that you might think :w is modifying your file, but it isn’t. If you opened and modified file1.txt, then ran :w file2.txt, it would be a “save as”; file1.txt wouldn’t be modified, but the current buffer contents would be sent to file2.txt.</p>
+<p>Instead of file2.txt, you can substitute a shell command to receive the buffer contents. For instance, :w !cat will just display the contents.</p>
+<p>If Vim wasn’t run with sudo access, its :w can’t modify a protected file, but if it passes the buffer contents to the shell, a command in the shell can be run with sudo. In this case, we use tee.</p>
+<p>Understanding tee<br><a href="https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work" target="_blank" rel="noopener">https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work</a><br>As for tee, picture the tee command as a T-shaped pipe in a normal bash piping situation: it directs output to specified file(s) and also sends it to standard output, which can be captured by the next piped command.</p>
+<p>For example, in ps -ax | tee processes.txt | grep ‘foo’, the list of processes will be written to a text file and passed along to grep.</p>
+<pre><code>+-----------+    tee     +------------+
+|           |  --------  |            |
+| ps -ax    |  --------  | grep &apos;foo&apos; |
+|           |     ||     |            |
++-----------+     ||     +------------+
+                  ||   
+          +---------------+
+          |               |
+          | processes.txt |
+          |               |
+          +---------------+</code></pre><p>(Diagram created with Asciiflow.)</p>
+<p>See the tee man page for more info.</p>
+<p>Tee as a hack<br>In the situation your question describes, using tee is a hack because we’re ignoring half of what it does. sudo tee writes to our file and also sends the buffer contents to standard output, but we ignore standard output. We don’t need to pass anything to another piped command in this case; we’re just using tee as an alternate way of writing a file and so that we can call it with sudo.</p>
+<p>Making this trick easy<br>You can add this to your .vimrc to make this trick easy-to-use: just type :w!!.</p>
+<p>“ Allow saving of files as sudo when I forgot to start vim using sudo.<br>cmap w!! w !sudo tee &gt; /dev/null %<br>The &gt; /dev/null part explicitly throws away the standard output, since, as I said, we don’t need to pass anything to another piped command.</p>
+</p>
 ]]></content>
       <tags>
         <tag>Tool</tag>
@@ -574,7 +601,7 @@ Without question, this C program is the most obfuscated C program that has ever 
 <h3 id="我在哪个分支，merge是否成功，rebase-是否成功，cherry-pick是否成功？"><a href="#我在哪个分支，merge是否成功，rebase-是否成功，cherry-pick是否成功？" class="headerlink" title="我在哪个分支，merge是否成功，rebase 是否成功，cherry-pick是否成功？"></a>我在哪个分支，merge是否成功，rebase 是否成功，cherry-pick是否成功？</h3><p>　　配置shell的命令提示符可以帮你解决这个问题</p>
 <h3 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. git <span class="built_in">clone</span> git://git.kernel.org/pub/scm/git/git.git</span><br><span class="line">2. cp git/contrib/completion/git-completion.bash ~/.git-completion.bash</span><br><span class="line">3. cp git/contrib/completion/git-prompt.sh  ~/.git-prompt.sh</span><br><span class="line">4. vi ~/.bashrc 插入</span><br><span class="line"><span class="built_in">export</span> GIT_PS1_SHOWDIRTYSTATE=1</span><br><span class="line"><span class="built_in">export</span> GIT_PS1_SHOWSTASHSTATE=1</span><br><span class="line"><span class="built_in">export</span> GIT_PS1_SHOWUNTRACKEDFILES=1</span><br><span class="line"><span class="built_in">export</span> GIT_PS1_SHOWUPSTREAM=”verbose git svn”</span><br><span class="line"><span class="built_in">export</span> PS1=<span class="string">'\[\033[0;32m\]\D&#123;%Y/%m/%d&#125; \t\[\033[0m\]\[\033[0;35m\]\u@\h\[\033[0m\]\[\033[0;33m\]\w\[\033[36m\]$(__git_ps1 " (%s)")\[\033[0m\]\n\$'</span></span><br><span class="line">5. <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
 <h2 id="git-底层命令"><a href="#git-底层命令" class="headerlink" title="git 底层命令"></a>git 底层命令</h2><p>　　挖坑 想起来再填</p>
-<h2 id="学习git的资源"><a href="#学习git的资源" class="headerlink" title="学习git的资源"></a>学习git的资源</h2><ul>
+<h2 id="git-的detached-head"><a href="#git-的detached-head" class="headerlink" title="git 的detached head"></a>git 的detached head</h2><pre><code>很有趣</code></pre><h2 id="学习git的资源"><a href="#学习git的资源" class="headerlink" title="学习git的资源"></a>学习git的资源</h2><ul>
 <li>git的官方网站 <a href="https://git-scm.com/" target="_blank" rel="noopener">git-scm.com</a></li>
 </ul>
 ]]></content>
