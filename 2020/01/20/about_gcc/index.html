@@ -53,12 +53,12 @@
   <meta name="description" content="gcc　　gcc 是 GNU Compiler Collection 的缩写，不仅支持 C&#x2F;C++的编译，还支持Java等 gcc 基本操作1gcc hello.c -o hello 　　会编译输出 hello 可执行文件，如果不使用-o选项指定输出的文件名怎会生成 a.out文件 神奇的a.out　　是汇编(assemble)输出(output)的意思在freebsd 中 man a.out 可">
 <meta name="keywords" content="Tool">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gcc">
+<meta property="og:title" content="About GCC">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;20&#x2F;about_gcc&#x2F;index.html">
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
 <meta property="og:description" content="gcc　　gcc 是 GNU Compiler Collection 的缩写，不仅支持 C&#x2F;C++的编译，还支持Java等 gcc 基本操作1gcc hello.c -o hello 　　会编译输出 hello 可执行文件，如果不使用-o选项指定输出的文件名怎会生成 a.out文件 神奇的a.out　　是汇编(assemble)输出(output)的意思在freebsd 中 man a.out 可">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-01-29T13:41:08.636Z">
+<meta property="og:updated_time" content="2020-02-21T04:26:57.513Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/01/20/about_gcc/">
@@ -75,7 +75,7 @@
   };
 </script>
 
-  <title>gcc | Linuxmint17's Blog</title>
+  <title>About GCC | Linuxmint17's Blog</title>
   
 
 
@@ -152,7 +152,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">8</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags<span class="badge">9</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -162,7 +162,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">26</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">29</span></a>
 
   </li>
   </ul>
@@ -207,7 +207,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          gcc
+          About GCC
         </h1>
 
         <div class="post-meta">
@@ -224,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-29 21:41:08" itemprop="dateModified" datetime="2020-01-29T21:41:08+08:00">2020-01-29</time>
+                <time title="Modified: 2020-02-21 12:26:57" itemprop="dateModified" datetime="2020-02-21T12:26:57+08:00">2020-02-21</time>
               </span>
 
           
@@ -238,10 +238,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="gcc"><a href="#gcc" class="headerlink" title="gcc"></a>gcc</h1><p>　　gcc 是 GNU Compiler Collection 的缩写，不仅支持 C/C++的编译，还支持Java等</p>
+        <h2 id="gcc"><a href="#gcc" class="headerlink" title="gcc"></a>gcc</h2><p>　　gcc 是 GNU Compiler Collection 的缩写，不仅支持 C/C++的编译，还支持Java等</p>
 <h2 id="gcc-基本操作"><a href="#gcc-基本操作" class="headerlink" title="gcc 基本操作"></a>gcc 基本操作</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc hello.c -o hello</span><br></pre></td></tr></table></figure>
 <p>　　会编译输出 hello 可执行文件，如果不使用-o选项指定输出的文件名怎会生成 a.out文件</p>
 <h2 id="神奇的a-out"><a href="#神奇的a-out" class="headerlink" title="神奇的a.out"></a>神奇的a.out</h2><p>　　是汇编(assemble)输出(output)的意思在freebsd 中 man a.out 可以看到相关信息</p>
+<h2 id="gcc的扩展支持语法"><a href="#gcc的扩展支持语法" class="headerlink" title="gcc的扩展支持语法"></a>gcc的扩展支持语法</h2><ol>
+<li>函数内部定义函数<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">foo (<span class="keyword">double</span> a, <span class="keyword">double</span> b)</span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">double</span> <span class="title">square</span> <span class="params">(<span class="keyword">double</span> z)</span> </span>&#123; <span class="keyword">return</span> z * z; &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> square (a) + square (b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
     </div>
 
@@ -307,7 +311,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#gcc"><span class="nav-number">1.</span> <span class="nav-text">gcc</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#gcc-基本操作"><span class="nav-number">1.1.</span> <span class="nav-text">gcc 基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#神奇的a-out"><span class="nav-number">1.2.</span> <span class="nav-text">神奇的a.out</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#gcc"><span class="nav-number">1.</span> <span class="nav-text">gcc</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gcc-基本操作"><span class="nav-number">2.</span> <span class="nav-text">gcc 基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#神奇的a-out"><span class="nav-number">3.</span> <span class="nav-text">神奇的a.out</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gcc的扩展支持语法"><span class="nav-number">4.</span> <span class="nav-text">gcc的扩展支持语法</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -323,12 +327,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>

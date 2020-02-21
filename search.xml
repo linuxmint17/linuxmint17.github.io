@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>About Endianness</title>
+    <url>/2020/02/20/about-endian/</url>
+    <content><![CDATA[<h1 id="大小端问题-big-endian-little-endian"><a href="#大小端问题-big-endian-little-endian" class="headerlink" title="大小端问题(big endian little endian)"></a>大小端问题(big endian little endian)</h1><p>　　In computing, endianness refers to the order of bytes (or sometimes bits) within a binary representation of a number<br>　　In its most common usage, endianness indicates the ordering of bytes within a multi-byte number. A big-endian ordering places the most significant byte first and the least significant byte last,<br>　　while a little-endian ordering does the opposite</p>
+<p>
+Historically, various methods of endianness have been used in computing, including exotic forms such as middle-endianness. Today, however, big-endianness is the dominant ordering in networking protocols (IP, TCP, UDP). Conversely, little-endianness is the dominant ordering for processor architectures (x86, most ARM implementations) and their associated memory. File formats can use either ordering; some formats use a mixture of both.
+</p>
+# 大小端的影响范围
+  1. 文件系统的创建
+  2. 网络传输协议的字节序(一般是大端，也有小端Server_Message_Block) BSD 套接字提供了]]></content>
+      <tags>
+        <tag>other</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>about-java</title>
+    <url>/2020/02/19/about-java/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>about-ssh</title>
+    <url>/2020/02/19/about-ssh/</url>
+    <content><![CDATA[<h1 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h1><p>  Secure Shell (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network</p>
+<h1 id="ssh-也是Linux-命令之一，用于-取代telnet等不安全的协议软件-安全连接访问远程服务器"><a href="#ssh-也是Linux-命令之一，用于-取代telnet等不安全的协议软件-安全连接访问远程服务器" class="headerlink" title="ssh 也是Linux 命令之一，用于(取代telnet等不安全的协议软件)安全连接访问远程服务器."></a>ssh 也是Linux 命令之一，用于(取代telnet等不安全的协议软件)安全连接访问远程服务器.</h1><p>  ssh 基本用法 以root用户通过端口22333登录192.168.23.4主机</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ssh root@192.168.23.4:2233</span><br></pre></td></tr></table></figure>
+<h1 id="ssh的特殊姿势"><a href="#ssh的特殊姿势" class="headerlink" title="ssh的特殊姿势"></a>ssh的特殊姿势</h1><p>  只有你拥有台海外vps并且安装了ssh服务，可以通过ssh动态端口转发实现fq</p>
+<p>  ssh [-D [bind_address:]port root@remotehost:2233</p>
+<p>  一般bind_address 是localhost</p>
+<h1 id="netstat-nat-查看端口使用情况"><a href="#netstat-nat-查看端口使用情况" class="headerlink" title="netstat -nat 查看端口使用情况"></a>netstat -nat 查看端口使用情况</h1><h1 id="ssh-相关命令"><a href="#ssh-相关命令" class="headerlink" title="ssh 相关命令"></a>ssh 相关命令</h1><p>ssh-agent</p>
+<p>ssh-keygen</p>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>About python</title>
     <url>/2020/02/18/about-python/</url>
     <content><![CDATA[<h1 id="Python-是Guido-van-Rossum-圣诞节无聊发明的一种编程语言"><a href="#Python-是Guido-van-Rossum-圣诞节无聊发明的一种编程语言" class="headerlink" title="Python 是Guido van Rossum 圣诞节无聊发明的一种编程语言"></a>Python 是Guido van Rossum 圣诞节无聊发明的一种编程语言</h1><p>特征</p>
@@ -14,15 +49,14 @@
 <li>jpython Java</li>
 <li>IronPython .NET</li>
 </ul>
-<p>#python 优化方法</p>
-<ol>
+<h1 id="python-优化方法"><a href="#python-优化方法" class="headerlink" title="python 优化方法"></a>python 优化方法</h1><ol>
 <li>使用pypy python版的python解释器</li>
 <li>shed skin 将python代码转换成c++的代码</li>
 </ol>
-<p>#python 工具<br>pyvenv</p>
-<p>#python中的不可变类型<br>Interger ,string, tuple</p>
-<p>#变量名没有类型，对象有类型<br>slice切片操作<br>list [],<br>tuple（）</p>
-<p>#创建自测试的模块<br>在模块的尾部加入以下代码<br>if <strong>name</strong> == ‘<strong>main</strong>‘:<br>    import doctest<br>    doctest.testmod()<br>此模块在python解释器中直接运行时候就能进行doctest</p>
+<h1 id="python-工具"><a href="#python-工具" class="headerlink" title="python 工具"></a>python 工具</h1><p>pyvenv</p>
+<h1 id="python中的不可变类型"><a href="#python中的不可变类型" class="headerlink" title="python中的不可变类型"></a>python中的不可变类型</h1><p>Interger, string, tuple</p>
+<h1 id="变量名没有类型，对象有类型"><a href="#变量名没有类型，对象有类型" class="headerlink" title="变量名没有类型，对象有类型"></a>变量名没有类型，对象有类型</h1><p>slice切片操作<br>list [],<br>tuple（）</p>
+<h1 id="创建自测试的模块"><a href="#创建自测试的模块" class="headerlink" title="创建自测试的模块"></a>创建自测试的模块</h1><p>在模块的尾部加入以下代码<br>if <strong>name</strong> == ‘<strong>main</strong>‘:<br>    import doctest<br>    doctest.testmod()<br>此模块在python解释器中直接运行时候就能进行doctest</p>
 ]]></content>
       <tags>
         <tag>others</tag>
@@ -460,12 +494,16 @@ Without question, this C program is the most obfuscated C program that has ever 
       </tags>
   </entry>
   <entry>
-    <title>gcc</title>
+    <title>About GCC</title>
     <url>/2020/01/20/about_gcc/</url>
-    <content><![CDATA[<h1 id="gcc"><a href="#gcc" class="headerlink" title="gcc"></a>gcc</h1><p>　　gcc 是 GNU Compiler Collection 的缩写，不仅支持 C/C++的编译，还支持Java等</p>
+    <content><![CDATA[<h2 id="gcc"><a href="#gcc" class="headerlink" title="gcc"></a>gcc</h2><p>　　gcc 是 GNU Compiler Collection 的缩写，不仅支持 C/C++的编译，还支持Java等</p>
 <h2 id="gcc-基本操作"><a href="#gcc-基本操作" class="headerlink" title="gcc 基本操作"></a>gcc 基本操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gcc hello.c -o hello</span><br></pre></td></tr></table></figure>
 <p>　　会编译输出 hello 可执行文件，如果不使用-o选项指定输出的文件名怎会生成 a.out文件</p>
 <h2 id="神奇的a-out"><a href="#神奇的a-out" class="headerlink" title="神奇的a.out"></a>神奇的a.out</h2><p>　　是汇编(assemble)输出(output)的意思在freebsd 中 man a.out 可以看到相关信息</p>
+<h2 id="gcc的扩展支持语法"><a href="#gcc的扩展支持语法" class="headerlink" title="gcc的扩展支持语法"></a>gcc的扩展支持语法</h2><ol>
+<li>函数内部定义函数<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">foo (<span class="keyword">double</span> a, <span class="keyword">double</span> b)</span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">double</span> <span class="title">square</span> <span class="params">(<span class="keyword">double</span> z)</span> </span>&#123; <span class="keyword">return</span> z * z; &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> square (a) + square (b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 ]]></content>
       <tags>
         <tag>Tool</tag>

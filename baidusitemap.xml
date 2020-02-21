@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2020/01/20/about_gcc/</loc>
+    <lastmod>2020-02-21</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/18/about-python/</loc>
+    <lastmod>2020-02-21</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/19/about-ssh/</loc>
+    <lastmod>2020-02-20</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/20/about-endian/</loc>
+    <lastmod>2020-02-20</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/19/about-java/</loc>
+    <lastmod>2020-02-19</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2020/01/19/about_vim/</loc>
     <lastmod>2020-02-18</lastmod>
   </url>  <url>
@@ -14,9 +29,6 @@
     <lastmod>2020-02-18</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/02/18/about-opensuse/</loc>
-    <lastmod>2020-02-18</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/02/18/about-python/</loc>
     <lastmod>2020-02-18</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/02/18/about-vm/</loc>
@@ -65,9 +77,6 @@
     <lastmod>2020-01-29</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/24/about_makefile/</loc>
-    <lastmod>2020-01-29</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/01/20/about_gcc/</loc>
     <lastmod>2020-01-29</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/24/about_thread/</loc>
