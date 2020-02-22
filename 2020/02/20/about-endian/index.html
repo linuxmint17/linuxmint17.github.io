@@ -58,7 +58,7 @@
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
 <meta property="og:description" content="大小端问题(big endian little endian)　　In computing, endianness refers to the order of bytes (or sometimes bits) within a binary representation of a number　　In its most common usage, endianness indicates th">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-20T03:15:57.721Z">
+<meta property="og:updated_time" content="2020-02-22T05:33:00.096Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/02/20/about-endian/">
@@ -162,7 +162,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">29</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">30</span></a>
 
   </li>
   </ul>
@@ -216,10 +216,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-02-20 09:56:50 / Modified: 11:15:57" itemprop="dateCreated datePublished" datetime="2020-02-20T09:56:50+08:00">2020-02-20</time>
+              <time title="Created: 2020-02-20 09:56:50" itemprop="dateCreated datePublished" datetime="2020-02-20T09:56:50+08:00">2020-02-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-22 13:33:00" itemprop="dateModified" datetime="2020-02-22T13:33:00+08:00">2020-02-22</time>
+              </span>
 
           
 
@@ -236,9 +242,12 @@
 <p>
 Historically, various methods of endianness have been used in computing, including exotic forms such as middle-endianness. Today, however, big-endianness is the dominant ordering in networking protocols (IP, TCP, UDP). Conversely, little-endianness is the dominant ordering for processor architectures (x86, most ARM implementations) and their associated memory. File formats can use either ordering; some formats use a mixture of both.
 </p>
-# 大小端的影响范围
-  1. 文件系统的创建
-  2. 网络传输协议的字节序(一般是大端，也有小端Server_Message_Block) BSD 套接字提供了
+
+<h1 id="大小端的影响范围"><a href="#大小端的影响范围" class="headerlink" title="大小端的影响范围"></a>大小端的影响范围</h1><ol>
+<li>文件系统的创建</li>
+<li>网络传输协议的字节序(一般是大端，也有小端Server_Message_Block) BSD 套接字提供了</li>
+</ol>
+
     </div>
 
     
@@ -300,7 +309,7 @@ Historically, various methods of endianness have been used in computing, includi
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#大小端问题-big-endian-little-endian"><span class="nav-number">1.</span> <span class="nav-text">大小端问题(big endian little endian)</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#大小端问题-big-endian-little-endian"><span class="nav-number">1.</span> <span class="nav-text">大小端问题(big endian little endian)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#大小端的影响范围"><span class="nav-number">2.</span> <span class="nav-text">大小端的影响范围</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -316,7 +325,7 @@ Historically, various methods of endianness have been used in computing, includi
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

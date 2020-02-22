@@ -7,9 +7,12 @@
 <p>
 Historically, various methods of endianness have been used in computing, including exotic forms such as middle-endianness. Today, however, big-endianness is the dominant ordering in networking protocols (IP, TCP, UDP). Conversely, little-endianness is the dominant ordering for processor architectures (x86, most ARM implementations) and their associated memory. File formats can use either ordering; some formats use a mixture of both.
 </p>
-# 大小端的影响范围
-  1. 文件系统的创建
-  2. 网络传输协议的字节序(一般是大端，也有小端Server_Message_Block) BSD 套接字提供了]]></content>
+
+<h1 id="大小端的影响范围"><a href="#大小端的影响范围" class="headerlink" title="大小端的影响范围"></a>大小端的影响范围</h1><ol>
+<li>文件系统的创建</li>
+<li>网络传输协议的字节序(一般是大端，也有小端Server_Message_Block) BSD 套接字提供了</li>
+</ol>
+]]></content>
       <tags>
         <tag>other</tag>
       </tags>
@@ -252,13 +255,58 @@ Historically, various methods of endianness have been used in computing, includi
       </tags>
   </entry>
   <entry>
-    <title>位运算</title>
+    <title>位运算、原码、反码、补码</title>
     <url>/2020/02/18/bit-opteration/</url>
-    <content><![CDATA[<h1 id="从一题开始"><a href="#从一题开始" class="headerlink" title="从一题开始"></a>从一题开始</h1><p>1.一个int类型的数字取相反数,再取反（～）等于–<br>~3== -4?<br>2’complement<br>-4 = -8+4 = (1100) 2进制<br>现代计算机中存储的永远是补码<br>运算的时候也是用 补码在运算<br>负数补码的计算方法<br>0000 0100,相应的正整数<br>1111 1011,按位取反<br>1111 1100 (从最低有效位)加一</p>
+    <content><![CDATA[<h1 id="位运算的地位"><a href="#位运算的地位" class="headerlink" title="位运算的地位"></a>位运算的地位</h1><p>　以下内容摘自《枕边算法书》感觉对于位运算描述的很形象</p>
+<blockquote>
+<p>　　对于程序员来说,”位” 相当于现实世界中构成水和空气的粒子。<br>编程世界的所有东西都会从位开始，以位结束。刚步入编程世界的<br>初学者看到整数就是整数，看到字符串就是字符串。但功力深厚的<br>程序员眼中无论整数还是字符串，它们都是位。</p>
+</blockquote>
+<blockquote>
+<p>　　与系统编程不同，一般应用程序的编程对位运算的要求并不高。<br>即使如此，很少有程序员不懂位运算，因为在不懂位运算的情况下<br>编程写程序，就像在现实世界中不呼吸、不喝水一样，几乎不可能。</p>
+</blockquote>
+<h1 id="位运算的类型"><a href="#位运算的类型" class="headerlink" title="位运算的类型"></a>位运算的类型</h1><table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&amp;</td>
+<td align="center">按位与:全1才1,否则都0</td>
+</tr>
+<tr>
+<td align="center">|</td>
+<td align="center">按位或:有1得1,全0才0</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="center">按位异或:相异为真,相同为假</td>
+</tr>
+<tr>
+<td align="center">&gt;&gt;</td>
+<td align="center">右移:对于有符号数的右移分为算术右移和逻辑右移</td>
+</tr>
+<tr>
+<td align="center">&lt;&lt;</td>
+<td align="center">左移:比较简单不论是否有符号整数</td>
+</tr>
+<tr>
+<td align="center">~</td>
+<td align="center">取反:每个位1变0,0变1</td>
+</tr>
+</tbody></table>
+<h1 id="原码"><a href="#原码" class="headerlink" title="原码"></a>原码</h1><p>  一个数的二进制表示加上正负号</p>
+<h1 id="反码-Ones’-complement-一的补码"><a href="#反码-Ones’-complement-一的补码" class="headerlink" title="反码(Ones’ complement /一的补码)"></a>反码(Ones’ complement /一的补码)</h1><p>定义<br><img src="https://i.loli.net/2020/02/22/6YB31Gx5nUwsVbv.png" alt="bit-fanma.png"><br>式中，N为真值，n为编码的位数</p>
+<p>反码，正数的反码等于其原码，而负数的反码则可以通过保留其符号位，将原码的数值位取反得到。 </p>
+<h1 id="补码"><a href="#补码" class="headerlink" title="补码"></a>补码</h1><p>1.一个int类型的数字取相反数,再取反（～）等于–<br>~3== -4?<br>2’complement<br>-4 = -8+4 = (1100) 2进制<br>现代计算机中存储的永远是补码<br>运算的时候也是用 补码在运算<br>负数补码的计算方法<br>0000 0100,相应的正整数<br>1111 1011,按位取反<br>1111 1100 (从最低有效位)加一</p>
 <p>根据补码求真值<br>1111 1100  拿到补码<br>1111 1011  (从最低有效位减)去一<br>0000 0100  按位取反，得到原来负数的 绝对值，因为是负数，所以是 -1</p>
 <p>3 = （0011)</p>
 <p><del>(-4) = 3<br>e.g.<br>int cat = 13;<br> cat - ~-cat;//this experssion’s value is 1<br> putchar (</del>-<del>-</del>-cat);//this line equal to putchar(‘\n’); \n 的ascii code<br> 十进制的值为10</p>
 ]]></content>
+      <tags>
+        <tag>C/C++</tag>
+      </tags>
   </entry>
   <entry>
     <title>C语言中数组</title>
@@ -320,8 +368,55 @@ Without question, this C program is the most obfuscated C program that has ever 
 ]]></content>
   </entry>
   <entry>
+    <title>Linux commands</title>
+    <url>/2020/02/14/linux-cmd/</url>
+    <content><![CDATA[<h1 id="linux-命令列表"><a href="#linux-命令列表" class="headerlink" title="linux 命令列表"></a>linux 命令列表</h1><ol>
+<li><p>systemctl (Control the systemd system and service manager)</p>
+<p> systemd 系统用来替代之前的linux 中的system V 目的在于统一系统服务,<br> 并行启动系统服务程序,加快系统启动,大部分现代linux使用此程序引导系统.<br> <strong>常用命令如下</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#    systemctl enable service_name</span></span><br><span class="line"><span class="comment">#    systemctl start service_name</span></span><br><span class="line"><span class="comment">#    systemctl status service_name</span></span><br><span class="line"><span class="comment">#    systemctl restart service_name</span></span><br><span class="line"><span class="comment">#    systemctl disable service_name</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>pushd  popd</p>
+</li>
+</ol>
+<p>　　pushd dir_name 切换目录的同时把当前目录圧入栈,方便后续使用popd 弹出栈切换目录  </p>
+<p>　　popd 弹出上一次的目录栈，相当于cd -<br>    popd 可以多次使用，直到目录栈为空，cd - 多次使用只会在两个目录之间来回切换</p>
+<ol start="3">
+<li><p>grep  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ grep -nrw getPower --include=<span class="string">"*.h,*.c"</span></span><br></pre></td></tr></table></figure>
+<p>　　递归的查找当前目录中c文件和头文件，全词匹配 getPower -n 显示行号， -w 全词匹配 -r递归</p>
+</li>
+<li><p>sed(stream editor for filtering and transforming text)  </p>
+<p> 流文本编辑器，执行格式匹配和替换 -i 输出到源文件</p>
+</li>
+<li><p>firewall-cmd 取代 ipfilter  </p>
+</li>
+</ol>
+<p>　　debian系的 可以通过sudo apt-get -y install firewalld安装<br>    * 开放端口<br>sudo firewall-cmd –permanent –add-port=22444/udp &amp;&amp; sudo firewall-cmd –permanent –add-port=22444/tcp &amp;&amp; sudo firewall-cmd –reload<br>    * 关闭端口<br>sudo firewall-cmd –permanent –remove-port=22444/udp &amp;&amp; sudo firewall-cmd –permanent –remove-port=22444/tcp &amp;&amp; sudo firewall-cmd –reload<br>    * 将80端口的流量转发至192.168.0.1的8080端口<br>sudo firewall-cmd –permanent –add-forward-port=port=80:proto=tcp:toaddr=192.168.0.1:toport=8080<br>    *使防火墙规则生效 </br><br>    firewall-cmd –reload<br>    * 列出所有的防火墙规则 </br><br>    firewall-cmd  –list-all<br>    * 列出所有的防火墙允许通过的服务规则</br><br>    firewall-cmd –list-services<br>    * 列出所有的防火墙开放端口规则</br> firewall-cmd –list-ports<br>6. yum install python-pip python34-pip </br><br>　　centos 安装pip 管理python包</p>
+<h2 id="cetnos-selinux-下开启-变更-ssh-端口"><a href="#cetnos-selinux-下开启-变更-ssh-端口" class="headerlink" title="cetnos selinux 下开启/变更 ssh 端口"></a>cetnos selinux 下开启/变更 ssh 端口</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># yum provides semanage 查询哪个软件包提供 semanage ,debian系的 用apt-cache search semanage</span></span><br><span class="line"><span class="comment"># yum -y install policycoreutils-python</span></span><br><span class="line"><span class="comment"># semanage port -a -t ssh_port_t -p tcp #PORTNUMBER</span></span><br></pre></td></tr></table></figure>
+<h2 id="linux-安装-libsodium"><a href="#linux-安装-libsodium" class="headerlink" title="linux 安装 libsodium"></a>linux 安装 libsodium</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz</span><br><span class="line">tar xfz LATEST.tar.gz &amp;&amp; <span class="built_in">cd</span> libsodium-stable/</span><br></pre></td></tr></table></figure>
+<h2 id="centos-安装epel软件源"><a href="#centos-安装epel软件源" class="headerlink" title="centos 安装epel软件源"></a>centos 安装epel软件源</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># yum -y update &amp;&amp; yum -y install epel-release</span></span><br></pre></td></tr></table></figure>
+<h2 id="opensuse-搜索软件组"><a href="#opensuse-搜索软件组" class="headerlink" title="opensuse 搜索软件组"></a>opensuse 搜索软件组</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># zypper install -t pattern</span></span><br></pre></td></tr></table></figure>
+<h2 id="opensuse-中文指导文档"><a href="#opensuse-中文指导文档" class="headerlink" title="opensuse 中文指导文档"></a>opensuse 中文指导文档</h2><p><a href="https://opensuse-guide.ustclug.org/srvlamp.php" target="_blank" rel="noopener">文档链接</a></p>
+<h2 id="查看linux运行级别"><a href="#查看linux运行级别" class="headerlink" title="查看linux运行级别"></a>查看linux运行级别</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ who -r</span><br><span class="line">$ runlevel</span><br></pre></td></tr></table></figure>
+<h2 id="查看linux的默认网关"><a href="#查看linux的默认网关" class="headerlink" title="查看linux的默认网关"></a>查看linux的默认网关</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ route -n</span><br><span class="line">$ netstat -nr</span><br></pre></td></tr></table></figure>
+<h1 id="install-ssh"><a href="#install-ssh" class="headerlink" title="install ssh"></a>install ssh</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install ssh</span><br></pre></td></tr></table></figure>
+<h1 id="install-man-pages"><a href="#install-man-pages" class="headerlink" title="install man pages"></a>install man pages</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install manpages-posix-dev</span><br><span class="line">apt-get install glibc-doc</span><br></pre></td></tr></table></figure>
+<h1 id="install-git"><a href="#install-git" class="headerlink" title="install git"></a>install git</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install git-core gitk</span><br></pre></td></tr></table></figure>
+<h1 id="install-build-essential"><a href="#install-build-essential" class="headerlink" title="install build-essential"></a>install build-essential</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">atp-get build-essential gcc-doc</span><br></pre></td></tr></table></figure>
+<h1 id="what-todo-whit-DHCP-timeout-is-taking-so-long"><a href="#what-todo-whit-DHCP-timeout-is-taking-so-long" class="headerlink" title="what todo whit DHCP timeout is taking so long."></a>what todo whit DHCP timeout is taking so long.</h1><p> Edit /etc/sysconfig/network/dhcp and change the values for DHCLIENT_WAIT_AT_BOOT and DHCLIENT6_WAIT_AT_BOOT</p>
+<h1 id="目录介绍"><a href="#目录介绍" class="headerlink" title="目录介绍"></a>目录介绍</h1><ol>
+<li>/usr/local/ 一般安装自己编译的软件</li>
+<li>debian系的/lib/systemd/system 目录下有各种service文件和系统运行级别的target文件</li>
+<li>debian系的 /usr/lib/systemd/usr/ 目录一般存放用户定义的service</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>About FFmpeg</title>
-    <url>/2020/02/14/about_ffmpeg/</url>
+    <url>/2020/02/14/about-ffmpeg/</url>
     <content><![CDATA[<h1 id="FFmpeg-是开源音视频解码库"><a href="#FFmpeg-是开源音视频解码库" class="headerlink" title="FFmpeg 是开源音视频解码库"></a>FFmpeg 是开源音视频解码库</h1><p>　　很多音视频软件都使用到了ffmpeg的解码库</p>
 <h1 id="把图片从raw-data-转换成jpg的命令"><a href="#把图片从raw-data-转换成jpg的命令" class="headerlink" title="把图片从raw data 转换成jpg的命令"></a>把图片从raw data 转换成jpg的命令</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ffmpeg -i inputrawdata -s 512x800  -f rgb565   -f image2 -o out.jpeg</span><br></pre></td></tr></table></figure>
 <h1 id="音视频合并-从网站上下载的视频可能音频和视频分开的为了方便观看需要合并"><a href="#音视频合并-从网站上下载的视频可能音频和视频分开的为了方便观看需要合并" class="headerlink" title="音视频合并 从网站上下载的视频可能音频和视频分开的为了方便观看需要合并"></a>音视频合并 从网站上下载的视频可能音频和视频分开的为了方便观看需要合并</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ffmpeg -i inputaudio -i inputvideo  output.mp4</span><br></pre></td></tr></table></figure>]]></content>
@@ -331,7 +426,7 @@ Without question, this C program is the most obfuscated C program that has ever 
   </entry>
   <entry>
     <title>About UML</title>
-    <url>/2020/02/02/about_uml/</url>
+    <url>/2020/02/02/about-uml/</url>
     <content><![CDATA[<h1 id="UML-是啥"><a href="#UML-是啥" class="headerlink" title="UML 是啥"></a>UML 是啥</h1><p>　　The Unified Modeling Language (UML) is a general-purpose, developmental, modeling language in the field of software engineering<br>that is intended to provide a standard way to visualize the design of a system.</p>
 <h1 id="UML-中的十种图"><a href="#UML-中的十种图" class="headerlink" title="UML 中的十种图"></a>UML 中的十种图</h1><ul>
 <li>静态模型图： 描述系统的静态结构<ul>
@@ -361,7 +456,7 @@ Without question, this C program is the most obfuscated C program that has ever 
   </entry>
   <entry>
     <title>About pwd</title>
-    <url>/2020/01/28/about_pwd/</url>
+    <url>/2020/01/28/about-pwd/</url>
     <content><![CDATA[<h1 id="关于工作路径"><a href="#关于工作路径" class="headerlink" title="关于工作路径"></a>关于工作路径</h1><p>情境(situation)、任务(task)、行动(action)、结果(result)<br>　shell 命令 pwd 能显示用户的工作路径<br>C语言程序可以使用 getcwd, getwd, get_current_dir_name<br>函数获取当前工作路径，一般来说大家写代码不会关注这个东西<br>s:<br>T:<br>A:<br>R:</p>
 <h2 id="情形"><a href="#情形" class="headerlink" title="情形"></a>情形</h2><p>　　为了适配不同的厂商或者版本，想要后台程序通过读取配置文件方法来，减少某个组件编译次数, 每次厂商变更只需要改下配置文件中的厂商名字就行了，不必要在代码中写死，每次都要换个厂都要加个宏，在代码中加入一个常量</p>
 <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>　　Android(Linux变种)后台程序(为方便设置为daemon.exe位于/system/bin/目录下)daemon.exe开机启动的时候要读取/system/bin/下的product.conf文配置文件.</p>
@@ -376,7 +471,7 @@ Without question, this C program is the most obfuscated C program that has ever 
   </entry>
   <entry>
     <title>About Thread</title>
-    <url>/2020/01/24/about_thread/</url>
+    <url>/2020/01/24/about-thread/</url>
     <content><![CDATA[<h1 id="多线程编程是实用程序必然要用到的工具-没有多线程、进程编程就不是现代编程人员做的事情"><a href="#多线程编程是实用程序必然要用到的工具-没有多线程、进程编程就不是现代编程人员做的事情" class="headerlink" title="多线程编程是实用程序必然要用到的工具 没有多线程、进程编程就不是现代编程人员做的事情"></a>多线程编程是实用程序必然要用到的工具 没有多线程、进程编程就不是现代编程人员做的事情</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> * <span class="title">mystrstr</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str,<span class="keyword">const</span> <span class="keyword">char</span> *substr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(str==<span class="literal">NULL</span>||substr==<span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"error NULL\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">strlen</span>(str)&lt;<span class="built_in">strlen</span>(substr))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">char</span> *cp=str;</span><br><span class="line">	<span class="keyword">char</span> *subcp=substr;</span><br><span class="line">	<span class="keyword">while</span>(*cp)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">while</span>(*cp &amp;&amp; *subcp &amp;&amp; !(*cp-*subcp))</span><br><span class="line">		&#123;</span><br><span class="line">			subcp++;</span><br><span class="line">		&#125;</span><br><span class="line">		cp++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
@@ -385,7 +480,7 @@ Without question, this C program is the most obfuscated C program that has ever 
   </entry>
   <entry>
     <title>About codestyle</title>
-    <url>/2020/01/24/about_codestyle/</url>
+    <url>/2020/01/24/about-codestyle/</url>
     <content><![CDATA[<h1 id="什么是-codestyle"><a href="#什么是-codestyle" class="headerlink" title="什么是 codestyle?"></a>什么是 codestyle?</h1><p>　　codesytle 包括变量、函数命名规范，回车换行的使用，以及空格对齐，还是tab对齐，对齐两个空格，还是四个空格.</p>
 <h1 id="为什么团队需要统一codestyle"><a href="#为什么团队需要统一codestyle" class="headerlink" title="为什么团队需要统一codestyle?"></a>为什么团队需要统一codestyle?</h1><p>　　自己写代码只给自己看还可以，爱怎么写就怎么写，只要编译通过跑的起来就ok, 但是涉及到多人协作，就要考虑其他<br>人可能要阅读你的代码.当多人协作使用一套代码时，代码风格不统一就像书法作品中一会儿行书，一会草书，一会儿楷书，<br>一会儿小篆一样，造成风格的混乱会降低阅读效率. 代码是写给人看，顺便给计算机执行的. 人都没法看, 没法维护.</p>
 <h1 id="为什么会有-codestyle"><a href="#为什么会有-codestyle" class="headerlink" title="为什么会有 codestyle?"></a>为什么会有 codestyle?</h1><p>　　刚开始的编程语言的编译要求是比较宽松的，比如说C/c++/Java中对于多余的空格(回车换行等留白)，对indent没有<br>特殊的要求，分号分割就认为是一个语句.python 就是对空格、tab留白要求比较严格的语言，不同的缩进可能会导致不同的<br>语义，也可能编译、执行失败, 我认为空格和回车的使用是导致风格之间差异的重要因素.</p>
@@ -398,7 +493,7 @@ Without question, this C program is the most obfuscated C program that has ever 
   </entry>
   <entry>
     <title>About sizeof</title>
-    <url>/2020/01/24/about_sizeof/</url>
+    <url>/2020/01/24/about-sizeof/</url>
     <content><![CDATA[<h1 id="sizeof-的误解，sizeof-不是函数-function-，是运算符-operator"><a href="#sizeof-的误解，sizeof-不是函数-function-，是运算符-operator" class="headerlink" title="sizeof 的误解，sizeof 不是函数(function)，是运算符(operator)"></a>sizeof 的误解，sizeof 不是函数(function)，是运算符(operator)</h1><p>　　函数在程序运行的时候起作用，运算符求出来的大小是在编译时就确定下来的</p>
 <h2 id="常见的sizeof操作"><a href="#常见的sizeof操作" class="headerlink" title="常见的sizeof操作"></a>常见的sizeof操作</h2><ul>
 <li><p>对结构体类型求大小</p>
@@ -433,7 +528,7 @@ Without question, this C program is the most obfuscated C program that has ever 
   </entry>
   <entry>
     <title>About Makefile</title>
-    <url>/2020/01/24/about_makefile/</url>
+    <url>/2020/01/24/about-makefile/</url>
     <content><![CDATA[<h1 id="make-是用来组织大型工程必不可少的工具"><a href="#make-是用来组织大型工程必不可少的工具" class="headerlink" title="make 是用来组织大型工程必不可少的工具"></a>make 是用来组织大型工程必不可少的工具</h1><p>　　make 有各种变体: Qt的qmake, 跨平台的 cmake, 微软的 nmake</p>
 <h1 id="make-menuconfig"><a href="#make-menuconfig" class="headerlink" title="make menuconfig"></a>make menuconfig</h1><p>　　好像最早是在linux kernel 中使用到的, 在构建kernel 之前使用这个命令会<br>  根据kernel目录下的Makefile和其他的文件以及kconfig语法生成命令行的gui菜单可以勾选，依赖 ncurses</p>
 <h1 id="make-n"><a href="#make-n" class="headerlink" title="make -n"></a>make -n</h1><p>　　make 调试使用的命令，空跑一次，不执行实际操作，把要执行的动作打印出来</p>
@@ -446,7 +541,7 @@ Without question, this C program is the most obfuscated C program that has ever 
   </entry>
   <entry>
     <title>About Algorithm</title>
-    <url>/2020/01/21/about_algorithm/</url>
+    <url>/2020/01/21/about-algorithm/</url>
     <content><![CDATA[<h2 id="关于算法的思考"><a href="#关于算法的思考" class="headerlink" title="关于算法的思考"></a>关于算法的思考</h2><pre><code>算法出现的比计算机要早很多:比如说 最大公约数(Greatest common divisor 简写为GCD)的求法,早在</code></pre><p>公元前300年出版的《几何原本》中已经有算法，至今仍然是很实用的方法.</p>
 <h2 id="算法我之见"><a href="#算法我之见" class="headerlink" title="算法我之见"></a>算法我之见</h2><p>   我的看法就是求解某类或者某个问题的固定方法：按照方法做就一定能在有限的时间内得到结果.<br>算法要理解必须有自己的思路，否则当时学会或者记住了，过一阵子就会忘记(记忆天才除外吧).</p>
 <h2 id="算法学习-推导的过程"><a href="#算法学习-推导的过程" class="headerlink" title="算法学习/推导的过程"></a>算法学习/推导的过程</h2><pre><code>把自己思路教给计算机,使用计算机的语言准确描述描述。
@@ -456,7 +551,7 @@ Without question, this C program is the most obfuscated C program that has ever 
   </entry>
   <entry>
     <title>About Linux</title>
-    <url>/2020/01/20/about_linux/</url>
+    <url>/2020/01/20/about-linux/</url>
     <content><![CDATA[<h2 id="Linux-的作用范围"><a href="#Linux-的作用范围" class="headerlink" title="Linux 的作用范围"></a>Linux 的作用范围</h2><p>　　Linux 本来仅仅是指一种<strong>类Unix系统</strong>(和unix比较像的操作系统称为<strong>类Unix系统</strong>)的kernel, 不包括 shell等其它实用工具.</br><br>随着linux的日益壮大或者人们的口口相传，原本应该是GNU/Linux 指代整个操作系统，后来渐渐Linux 也指代整个操作系统. </br><br>但是在具体的上下文环境中还是可以分清楚是指代内核还是整个操作系统</p>
 <h2 id="Linux-的常见发行版本"><a href="#Linux-的常见发行版本" class="headerlink" title="Linux 的常见发行版本"></a>Linux 的常见发行版本</h2><p>　　首先解释什么是发行版本：发行版本是开源社区或者公司，甚至是个人把Linuxkernel拿过来，整合其它的使用工具，以及软件管理工具装配的一个便于终端用户使用的操作系统<br>根据软件包管理工具的不同大概分为两个系列 :Debian 系列(使用 dpkg 作为底层工具)和 Redhat 系列(使用 rpm 作为底层工具),还有一些特立独行的发行版本使用的是其他的软件包管理工具(比如说 arch,和 gentoo)</p>
 <ul>
@@ -495,7 +590,7 @@ Without question, this C program is the most obfuscated C program that has ever 
   </entry>
   <entry>
     <title>About GCC</title>
-    <url>/2020/01/20/about_gcc/</url>
+    <url>/2020/01/20/about-gcc/</url>
     <content><![CDATA[<h2 id="gcc"><a href="#gcc" class="headerlink" title="gcc"></a>gcc</h2><p>　　gcc 是 GNU Compiler Collection 的缩写，不仅支持 C/C++的编译，还支持Java等</p>
 <h2 id="gcc-基本操作"><a href="#gcc-基本操作" class="headerlink" title="gcc 基本操作"></a>gcc 基本操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gcc hello.c -o hello</span><br></pre></td></tr></table></figure>
 <p>　　会编译输出 hello 可执行文件，如果不使用-o选项指定输出的文件名怎会生成 a.out文件</p>
@@ -511,7 +606,7 @@ Without question, this C program is the most obfuscated C program that has ever 
   </entry>
   <entry>
     <title>About inline function</title>
-    <url>/2020/01/20/about_inline/</url>
+    <url>/2020/01/20/about-inline/</url>
     <content><![CDATA[<p>inline 是C99/C++的关键字之一，目的是取代函数式宏，函数式宏没有类型</p>
 <h2 id="内联函数-vs-函数式宏（待考证，可能有谬误）"><a href="#内联函数-vs-函数式宏（待考证，可能有谬误）" class="headerlink" title="内联函数 vs 函数式宏（待考证，可能有谬误）"></a>内联函数 vs 函数式宏（待考证，可能有谬误）</h2><ul>
 <li>编译中的差别：<br><ul>
@@ -539,7 +634,7 @@ Without question, this C program is the most obfuscated C program that has ever 
   </entry>
   <entry>
     <title>About Shell</title>
-    <url>/2020/01/19/about_shell/</url>
+    <url>/2020/01/19/about-shell/</url>
     <content><![CDATA[<h1 id="shell-直译为壳"><a href="#shell-直译为壳" class="headerlink" title="shell 直译为壳"></a>shell 直译为壳</h1><p>　　有个著名的油气公司叫做荷兰皇家壳牌（英語：Royal Dutch Shell Plc）是世界第二大石油公司，公司在英國註冊，总部位于荷兰海牙。<br>外国人什么都叫做壳，蛋壳，地壳，都是shell 有种包裹什么东西在里面的感觉<br>操作系统分为内核和外壳 这个壳叫做shell, shell 用来和内核交流，shell 有CUI(命令行的), GUI (图形化的).<br>unix/linux/freebsd 操作系统上最通用的人机交互界面就是命令行，典型 windows上最常用的是 图形化界面(忘记了一个gui系统的几个基本元素mouse ,window, focus,)<br>下面主要讨论 命令行shell</p>
 <h1 id="格式各样的shell"><a href="#格式各样的shell" class="headerlink" title="格式各样的shell"></a>格式各样的shell</h1><p>　　常见的bash，sh, zsh,fish (经常听说 bash 4.xx 有什么命令注入漏洞)<br>ash :<br>bash(Bourne-Again SHell) :比较流行的一个shell基本各大linux发行版本都默认设置bash为shell<br>zsh ：号称最后一个shell 因为字母 z是最后一个了。。<br>fish : 灵活的交互式shell, 自动补全的特性很强大</p>
 <p>Bash is the shell, or command language interpreter, for the GNU operating system. The name is an acronym for the ‘ Bourne-Again SHell ‘, a pun on Stephen Bourne, the author of the direct ancestor of the current Unix shell sh , which appeared in the Seventh Edition Bell Labs Research version of Unix.<br>The C shell (csh or the improved version, tcsh) is a Unix shell created by Bill Joy while he was a graduate student at University of California, Berkeley in the late 1970s.<br>The Bourne shell (sh) is a shell, or command-line interpreter, for computer operating systems.<br>The Bourne shell was the default shell for Version 7 Unix. Many Unix-like systems continue to have /bin/sh—which will be the Bourne shell, or a symbolic link or hard link to a compatible shell—even when other shells are used by most users.<br>KornShell (ksh) is a Unix shell which was developed by David Korn at Bell Labs in the early 1980s and announced at USENIX on July 14, 1983.[1][2] The initial development was based on Bourne shell source code.[7]</p>
@@ -552,7 +647,7 @@ Without question, this C program is the most obfuscated C program that has ever 
   </entry>
   <entry>
     <title>About Emacs</title>
-    <url>/2020/01/19/about_emacs/</url>
+    <url>/2020/01/19/about-emacs/</url>
     <content><![CDATA[]]></content>
       <tags>
         <tag>Tool</tag>
@@ -560,7 +655,7 @@ Without question, this C program is the most obfuscated C program that has ever 
   </entry>
   <entry>
     <title>About Vim</title>
-    <url>/2020/01/19/about_vim/</url>
+    <url>/2020/01/19/about-vim/</url>
     <content><![CDATA[<h2 id="vim-vs-Emacs"><a href="#vim-vs-Emacs" class="headerlink" title="vim vs Emacs"></a>vim vs Emacs</h2><p>　　文本编辑器的圣战: vim 被称为编辑器之神，emacs被称为神之编辑器(伪装成编辑器的操作系统).<br>这两个文本编辑器中有不同的学习曲线，vim 刚开始入坑很难，甚至都无法输入一个字符，无法退出vim,只有 alt +F4 关闭中断大法。随着熟练程度的提升，逐渐的会从不同的<br>编辑模式中获得飞快的输入速度，也会告别上下左右四个方将箭头(Esc to death). emacs也学习曲线也不是很平和，刚上手的时候不知道怎么保存文件，怎么退出编辑文件。渐<br>渐的熟悉之后会ctrl到死</p>
 <h2 id="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"><a href="#本文章主要讲解vim的学习路径和常用配置及基本介绍和操作" class="headerlink" title="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"></a>本文章主要讲解vim的学习路径和常用配置及基本介绍和操作</h2><p>　　挖坑待填</p>
 <h2 id="vim-打开没有权限的文件-忘记使用sudo打开-之后如何强制保存"><a href="#vim-打开没有权限的文件-忘记使用sudo打开-之后如何强制保存" class="headerlink" title="vim 打开没有权限的文件(忘记使用sudo打开) 之后如何强制保存"></a>vim 打开没有权限的文件(忘记使用sudo打开) 之后如何强制保存</h2><p>　　在vim的命令模式中输入:w !sudo tee %</p>
@@ -597,7 +692,7 @@ in :w !sudo tee %...
   </entry>
   <entry>
     <title>About Git</title>
-    <url>/2020/01/18/about_git/</url>
+    <url>/2020/01/18/about-git/</url>
     <content><![CDATA[<h1 id="git-the-stupid-content-tracker"><a href="#git-the-stupid-content-tracker" class="headerlink" title="git - the stupid content tracker"></a>git - the stupid content tracker</h1><p>  Git is a fast, scalable, distributed revision control system<br>with an unusually rich command set that provides<br>both high-level operations and full access to internals.</p>
 <h2 id="git的基本配置"><a href="#git的基本配置" class="headerlink" title="git的基本配置"></a>git的基本配置</h2><ul>
 <li><p>设置用户名</p>
@@ -649,7 +744,7 @@ in :w !sudo tee %...
   </entry>
   <entry>
     <title>Hexo Quick Manual</title>
-    <url>/2019/10/25/hexo_doc/</url>
+    <url>/2019/10/25/hexo-doc/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 

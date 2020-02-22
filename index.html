@@ -158,7 +158,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">29</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">30</span></a>
 
   </li>
   </ul>
@@ -213,10 +213,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-02-20 09:56:50 / Modified: 11:15:57" itemprop="dateCreated datePublished" datetime="2020-02-20T09:56:50+08:00">2020-02-20</time>
+              <time title="Created: 2020-02-20 09:56:50" itemprop="dateCreated datePublished" datetime="2020-02-20T09:56:50+08:00">2020-02-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-22 13:33:00" itemprop="dateModified" datetime="2020-02-22T13:33:00+08:00">2020-02-22</time>
+              </span>
 
           
 
@@ -233,9 +239,12 @@
 <p>
 Historically, various methods of endianness have been used in computing, including exotic forms such as middle-endianness. Today, however, big-endianness is the dominant ordering in networking protocols (IP, TCP, UDP). Conversely, little-endianness is the dominant ordering for processor architectures (x86, most ARM implementations) and their associated memory. File formats can use either ordering; some formats use a mixture of both.
 </p>
-# 大小端的影响范围
-  1. 文件系统的创建
-  2. 网络传输协议的字节序(一般是大端，也有小端Server_Message_Block) BSD 套接字提供了
+
+<h1 id="大小端的影响范围"><a href="#大小端的影响范围" class="headerlink" title="大小端的影响范围"></a>大小端的影响范围</h1><ol>
+<li>文件系统的创建</li>
+<li>网络传输协议的字节序(一般是大端，也有小端Server_Message_Block) BSD 套接字提供了</li>
+</ol>
+
       
     </div>
 
@@ -872,7 +881,7 @@ Historically, various methods of endianness have been used in computing, includi
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/18/bit-opteration/" class="post-title-link" itemprop="url">位运算</a>
+            <a href="/2020/02/18/bit-opteration/" class="post-title-link" itemprop="url">位运算、原码、反码、补码</a>
         </h1>
 
         <div class="post-meta">
@@ -881,10 +890,16 @@ Historically, various methods of endianness have been used in computing, includi
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-02-18 17:49:04 / Modified: 18:09:54" itemprop="dateCreated datePublished" datetime="2020-02-18T17:49:04+08:00">2020-02-18</time>
+              <time title="Created: 2020-02-18 17:49:04" itemprop="dateCreated datePublished" datetime="2020-02-18T17:49:04+08:00">2020-02-18</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-22 16:16:51" itemprop="dateModified" datetime="2020-02-22T16:16:51+08:00">2020-02-22</time>
+              </span>
 
           
 
@@ -897,7 +912,49 @@ Historically, various methods of endianness have been used in computing, includi
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="从一题开始"><a href="#从一题开始" class="headerlink" title="从一题开始"></a>从一题开始</h1><p>1.一个int类型的数字取相反数,再取反（～）等于–<br>~3== -4?<br>2’complement<br>-4 = -8+4 = (1100) 2进制<br>现代计算机中存储的永远是补码<br>运算的时候也是用 补码在运算<br>负数补码的计算方法<br>0000 0100,相应的正整数<br>1111 1011,按位取反<br>1111 1100 (从最低有效位)加一</p>
+          <h1 id="位运算的地位"><a href="#位运算的地位" class="headerlink" title="位运算的地位"></a>位运算的地位</h1><p>　以下内容摘自《枕边算法书》感觉对于位运算描述的很形象</p>
+<blockquote>
+<p>　　对于程序员来说,”位” 相当于现实世界中构成水和空气的粒子。<br>编程世界的所有东西都会从位开始，以位结束。刚步入编程世界的<br>初学者看到整数就是整数，看到字符串就是字符串。但功力深厚的<br>程序员眼中无论整数还是字符串，它们都是位。</p>
+</blockquote>
+<blockquote>
+<p>　　与系统编程不同，一般应用程序的编程对位运算的要求并不高。<br>即使如此，很少有程序员不懂位运算，因为在不懂位运算的情况下<br>编程写程序，就像在现实世界中不呼吸、不喝水一样，几乎不可能。</p>
+</blockquote>
+<h1 id="位运算的类型"><a href="#位运算的类型" class="headerlink" title="位运算的类型"></a>位运算的类型</h1><table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&amp;</td>
+<td align="center">按位与:全1才1,否则都0</td>
+</tr>
+<tr>
+<td align="center">|</td>
+<td align="center">按位或:有1得1,全0才0</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="center">按位异或:相异为真,相同为假</td>
+</tr>
+<tr>
+<td align="center">&gt;&gt;</td>
+<td align="center">右移:对于有符号数的右移分为算术右移和逻辑右移</td>
+</tr>
+<tr>
+<td align="center">&lt;&lt;</td>
+<td align="center">左移:比较简单不论是否有符号整数</td>
+</tr>
+<tr>
+<td align="center">~</td>
+<td align="center">取反:每个位1变0,0变1</td>
+</tr>
+</tbody></table>
+<h1 id="原码"><a href="#原码" class="headerlink" title="原码"></a>原码</h1><p>  一个数的二进制表示加上正负号</p>
+<h1 id="反码-Ones’-complement-一的补码"><a href="#反码-Ones’-complement-一的补码" class="headerlink" title="反码(Ones’ complement /一的补码)"></a>反码(Ones’ complement /一的补码)</h1><p>定义<br><img src="https://i.loli.net/2020/02/22/6YB31Gx5nUwsVbv.png" alt="bit-fanma.png"><br>式中，N为真值，n为编码的位数</p>
+<p>反码，正数的反码等于其原码，而负数的反码则可以通过保留其符号位，将原码的数值位取反得到。 </p>
+<h1 id="补码"><a href="#补码" class="headerlink" title="补码"></a>补码</h1><p>1.一个int类型的数字取相反数,再取反（～）等于–<br>~3== -4?<br>2’complement<br>-4 = -8+4 = (1100) 2进制<br>现代计算机中存储的永远是补码<br>运算的时候也是用 补码在运算<br>负数补码的计算方法<br>0000 0100,相应的正整数<br>1111 1011,按位取反<br>1111 1100 (从最低有效位)加一</p>
 <p>根据补码求真值<br>1111 1100  拿到补码<br>1111 1011  (从最低有效位减)去一<br>0000 0100  按位取反，得到原来负数的 绝对值，因为是负数，所以是 -1</p>
 <p>3 = （0011)</p>
 <p><del>(-4) = 3<br>e.g.<br>int cat = 13;<br> cat - ~-cat;//this experssion’s value is 1<br> putchar (</del>-<del>-</del>-cat);//this line equal to putchar(‘\n’); \n 的ascii code<br> 十进制的值为10</p>
@@ -1027,7 +1084,7 @@ Historically, various methods of endianness have been used in computing, includi
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

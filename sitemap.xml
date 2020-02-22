@@ -2,7 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2020/01/20/about_gcc/</loc>
+    <loc>http://yoursite.com/2020/02/18/bit-opteration/</loc>
+    
+    <lastmod>2020-02-22T08:16:51.051Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/14/linux-cmd/</loc>
+    
+    <lastmod>2020-02-22T06:52:24.295Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/20/about-endian/</loc>
+    
+    <lastmod>2020-02-22T05:33:00.096Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/20/about-gcc/</loc>
     
     <lastmod>2020-02-21T04:26:57.513Z</lastmod>
     
@@ -23,13 +44,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/02/20/about-endian/</loc>
-    
-    <lastmod>2020-02-20T03:15:57.721Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2020/02/19/about-java/</loc>
     
     <lastmod>2020-02-19T07:17:39.664Z</lastmod>
@@ -37,21 +51,21 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/01/19/about_vim/</loc>
+    <loc>http://yoursite.com/2020/01/19/about-vim/</loc>
     
     <lastmod>2020-02-18T13:54:38.029Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/01/18/about_git/</loc>
+    <loc>http://yoursite.com/2020/01/18/about-git/</loc>
     
     <lastmod>2020-02-18T13:44:57.473Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/01/20/about_linux/</loc>
+    <loc>http://yoursite.com/2020/01/20/about-linux/</loc>
     
     <lastmod>2020-02-18T13:43:15.484Z</lastmod>
     
@@ -93,21 +107,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/02/18/bit-opteration/</loc>
-    
-    <lastmod>2020-02-18T10:09:54.346Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/02/14/about_ffmpeg/</loc>
+    <loc>http://yoursite.com/2020/02/14/about-ffmpeg/</loc>
     
     <lastmod>2020-02-17T09:39:58.764Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/01/28/about_pwd/</loc>
+    <loc>http://yoursite.com/2020/01/28/about-pwd/</loc>
     
     <lastmod>2020-02-16T10:04:22.272Z</lastmod>
     
@@ -128,7 +135,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/01/24/about_sizeof/</loc>
+    <loc>http://yoursite.com/2020/01/24/about-sizeof/</loc>
     
     <lastmod>2020-02-15T02:25:13.165Z</lastmod>
     
@@ -142,56 +149,56 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/10/25/hexo_doc/</loc>
+    <loc>http://yoursite.com/2019/10/25/hexo-doc/</loc>
     
     <lastmod>2020-02-02T12:55:11.558Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/02/02/about_uml/</loc>
+    <loc>http://yoursite.com/2020/02/02/about-uml/</loc>
     
     <lastmod>2020-02-02T12:49:42.456Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/01/24/about_codestyle/</loc>
+    <loc>http://yoursite.com/2020/01/24/about-codestyle/</loc>
     
     <lastmod>2020-01-30T11:17:04.385Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/01/20/about_inline/</loc>
+    <loc>http://yoursite.com/2020/01/20/about-inline/</loc>
     
     <lastmod>2020-01-29T13:46:50.578Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/01/19/about_shell/</loc>
+    <loc>http://yoursite.com/2020/01/19/about-shell/</loc>
     
     <lastmod>2020-01-29T13:44:29.636Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/01/24/about_makefile/</loc>
+    <loc>http://yoursite.com/2020/01/24/about-makefile/</loc>
     
     <lastmod>2020-01-29T13:41:50.887Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/01/24/about_thread/</loc>
+    <loc>http://yoursite.com/2020/01/24/about-thread/</loc>
     
     <lastmod>2020-01-29T02:15:51.898Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/01/21/about_algorithm/</loc>
+    <loc>http://yoursite.com/2020/01/21/about-algorithm/</loc>
     
     <lastmod>2020-01-28T12:30:47.313Z</lastmod>
     
@@ -205,7 +212,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/01/19/about_emacs/</loc>
+    <loc>http://yoursite.com/2020/01/19/about-emacs/</loc>
     
     <lastmod>2020-01-19T13:57:37.894Z</lastmod>
     
