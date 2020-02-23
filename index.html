@@ -221,7 +221,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-22 13:33:00" itemprop="dateModified" datetime="2020-02-22T13:33:00+08:00">2020-02-22</time>
+                <time title="Modified: 2020-02-22 16:56:18" itemprop="dateModified" datetime="2020-02-22T16:56:18+08:00">2020-02-22</time>
               </span>
 
           
@@ -242,7 +242,7 @@ Historically, various methods of endianness have been used in computing, includi
 
 <h1 id="大小端的影响范围"><a href="#大小端的影响范围" class="headerlink" title="大小端的影响范围"></a>大小端的影响范围</h1><ol>
 <li>文件系统的创建</li>
-<li>网络传输协议的字节序(一般是大端，也有小端Server_Message_Block) BSD 套接字提供了</li>
+<li>网络传输协议的字节序(一般是大端，也有小端Server_Message_Block) BSD 套接字提供了htnl</li>
 </ol>
 
       
@@ -898,7 +898,7 @@ Historically, various methods of endianness have been used in computing, includi
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-22 16:16:51" itemprop="dateModified" datetime="2020-02-22T16:16:51+08:00">2020-02-22</time>
+                <time title="Modified: 2020-02-23 14:28:14" itemprop="dateModified" datetime="2020-02-23T14:28:14+08:00">2020-02-23</time>
               </span>
 
           
@@ -950,14 +950,47 @@ Historically, various methods of endianness have been used in computing, includi
 <td align="center">~</td>
 <td align="center">取反:每个位1变0,0变1</td>
 </tr>
+<tr>
+<td align="center"><strong>对于正整数而言，左移1位就是x2,右移就是除2</strong></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>下图来自《Computer Systems - A Programmer’s Perspective》</strong></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><img src="https://i.loli.net/2020/02/23/PohLeXaVilHCFYq.png" alt="bit-right-shift.PNG"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">算术右移:直接右移n位,左侧空出来的n位全补0</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">逻辑右移:对于有符号数有些不同，对于无符号数没有区别</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">可惜对于右移而言标准c没有规定，应该使用哪种，大多数的编译器都使用算术右移</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">java中明确规定x&gt;&gt;k运算符表示x算术右移k位, x&gt;&gt;&gt;k表示逻辑右移</td>
+<td align="center"></td>
+</tr>
 </tbody></table>
 <h1 id="原码"><a href="#原码" class="headerlink" title="原码"></a>原码</h1><p>  一个数的二进制表示加上正负号</p>
 <h1 id="反码-Ones’-complement-一的补码"><a href="#反码-Ones’-complement-一的补码" class="headerlink" title="反码(Ones’ complement /一的补码)"></a>反码(Ones’ complement /一的补码)</h1><p>定义<br><img src="https://i.loli.net/2020/02/22/6YB31Gx5nUwsVbv.png" alt="bit-fanma.png"><br>式中，N为真值，n为编码的位数</p>
 <p>反码，正数的反码等于其原码，而负数的反码则可以通过保留其符号位，将原码的数值位取反得到。 </p>
-<h1 id="补码"><a href="#补码" class="headerlink" title="补码"></a>补码</h1><p>1.一个int类型的数字取相反数,再取反（～）等于–<br>~3== -4?<br>2’complement<br>-4 = -8+4 = (1100) 2进制<br>现代计算机中存储的永远是补码<br>运算的时候也是用 补码在运算<br>负数补码的计算方法<br>0000 0100,相应的正整数<br>1111 1011,按位取反<br>1111 1100 (从最低有效位)加一</p>
-<p>根据补码求真值<br>1111 1100  拿到补码<br>1111 1011  (从最低有效位减)去一<br>0000 0100  按位取反，得到原来负数的 绝对值，因为是负数，所以是 -1</p>
-<p>3 = （0011)</p>
-<p><del>(-4) = 3<br>e.g.<br>int cat = 13;<br> cat - ~-cat;//this experssion’s value is 1<br> putchar (</del>-<del>-</del>-cat);//this line equal to putchar(‘\n’); \n 的ascii code<br> 十进制的值为10</p>
+<h1 id="补码-Twos’-complement-二的补码"><a href="#补码-Twos’-complement-二的补码" class="headerlink" title="补码(Twos’ complement /二的补码)"></a>补码(Twos’ complement /二的补码)</h1><p>　　<img src="https://i.loli.net/2020/02/23/qIiaTSh3ZgBfKoX.png" alt="bit-buma.PNG"><br>　　计算机中采用补码的原因是原码和反码的时候，0的表示不唯一</p>
+<h1 id="补码的计算方法"><a href="#补码的计算方法" class="headerlink" title="补码的计算方法"></a>补码的计算方法</h1><p>　　正数的补码和原码一致，辅助的补码用用其绝对值的原码按位取反，然后(从LSB(最低有效位))+1</p>
+<h1 id="根据补码-2补数-求真值的方法"><a href="#根据补码-2补数-求真值的方法" class="headerlink" title="根据补码(2补数)求真值的方法"></a>根据补码(2补数)求真值的方法</h1><p>　　设1100为补码, 拿到补码最高位是-(2^3), 然后 + 2^2 得到 -4 </p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>　　1. <strong>现代计算机中存储的永远是补码</strong><br>　　2. <strong>运算的时候也是用补码在运算</strong><br>　　3. <strong>x,y均为整数, 如果有~x = y 成立,则有 x + y = -1 成立</strong></p>
+<h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><ol>
+<li>~3 = ？<br>3 = (0000 0011)按位取反得到(1111 1100) 按照2补数解释为-4</li>
+<li><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> cat = <span class="number">13</span>;</span><br><span class="line">cat - ~-cat; <span class="comment">// this experssion's value is 1</span></span><br><span class="line"><span class="built_in">putchar</span> (~-~-~-cat); <span class="comment">// this line equal to putchar('\n'); \n 的ascii code 十进制的值为 10</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
       
     </div>

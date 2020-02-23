@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://yoursite.com/2020/02/18/bit-opteration/</loc>
+    <lastmod>2020-02-23</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/20/about-endian/</loc>
     <lastmod>2020-02-22</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/02/14/linux-cmd/</loc>
-    <lastmod>2020-02-22</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/02/20/about-endian/</loc>
     <lastmod>2020-02-22</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/20/about-gcc/</loc>
