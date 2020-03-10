@@ -50,12 +50,14 @@
   };
 </script>
 
-  <meta property="og:type" content="article">
-<meta property="og:title" content="about-java">
+  <meta name="description" content="Java是啥？ 　　Java是面向对象编程语言，最早是Sun公司的后来被Oracle收购了，已经有20多年的历史了，是为了针对c++的缺点 Java 编程环境配置 　　java运行依赖于java虚拟机,所以要安装JDK,因为java规范和jvm 规范是公开的，所以jdk有开源实现版本openjdk，JDK 和oracle JDK 　　具体步骤可以参考此链接  安装JDK　　谷歌或者百度，搜索 or">
+<meta property="og:type" content="article">
+<meta property="og:title" content="About Java">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;19&#x2F;about-java&#x2F;index.html">
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
+<meta property="og:description" content="Java是啥？ 　　Java是面向对象编程语言，最早是Sun公司的后来被Oracle收购了，已经有20多年的历史了，是为了针对c++的缺点 Java 编程环境配置 　　java运行依赖于java虚拟机,所以要安装JDK,因为java规范和jvm 规范是公开的，所以jdk有开源实现版本openjdk，JDK 和oracle JDK 　　具体步骤可以参考此链接  安装JDK　　谷歌或者百度，搜索 or">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-19T07:17:39.664Z">
+<meta property="og:updated_time" content="2020-02-23T08:21:55.656Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/02/19/about-java/">
@@ -72,7 +74,7 @@
   };
 </script>
 
-  <title>about-java | Linuxmint17's Blog</title>
+  <title>About Java | Linuxmint17's Blog</title>
   
 
 
@@ -159,7 +161,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">30</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">37</span></a>
 
   </li>
   </ul>
@@ -204,7 +206,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          about-java
+          About Java
         </h1>
 
         <div class="post-meta">
@@ -216,6 +218,13 @@
 
               <time title="Created: 2020-02-19 15:17:39" itemprop="dateCreated datePublished" datetime="2020-02-19T15:17:39+08:00">2020-02-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-23 16:21:55" itemprop="dateModified" datetime="2020-02-23T16:21:55+08:00">2020-02-23</time>
+              </span>
 
           
 
@@ -228,7 +237,25 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h1 id="Java是啥？"><a href="#Java是啥？" class="headerlink" title="Java是啥？"></a>Java是啥？</h1><p> 　　Java是面向对象编程语言，最早是Sun公司的后来被Oracle收购了，已经有20多年的历史了，是为了针对c++的缺点</p>
+<h1 id="Java-编程环境配置"><a href="#Java-编程环境配置" class="headerlink" title="Java 编程环境配置"></a>Java 编程环境配置</h1><p> 　　java运行依赖于java虚拟机,所以要安装JDK,因为java规范和jvm 规范是公开的，所以jdk有开源实现版本openjdk，JDK 和oracle JDK<br> 　　具体步骤可以参考<a href="https://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/" target="_blank" rel="noopener">此链接</a></p>
+<ol>
+<li>安装JDK<br>　　谷歌或者百度，搜索 oracle jdk,下载安装</li>
+<li>配置 <strong>JAVA_HOME</strong>, <strong>CLASSPATH</strong> 和 <strong>PATH</strong> 等环境变量　　</li>
+</ol>
+<p>　　<strong>PATH</strong> 环境变量中是平台可执行文件的所在的路径的集合　　</p>
+<p>　　<strong>JAVA_HOME</strong> 指向JDK software 安装的地方,比如说, D:\Program Files\Java\jdk1.8.0_181　　</p>
+<p>　　<strong>CLASSPATH</strong> variable is one way to tell applications, including the JDK tools, where to look for user classes. (Classes that are part of the JRE, JDK platform, and extensions should be defined through other means, such as the bootstrap class path or the extensions directory.)</p>
+<p>　　The preferred way to specify the class path is by using the -cp command line switch. This allows the CLASSPATH to be set individually for each application without affecting other applications. Setting the CLASSPATH can be tricky and should be performed with care.</p>
+<p>　　The default value of the class path is “.”, meaning that only the current directory is searched. Specifying either the CLASSPATH variable or the -cp command line switch overrides this value.</p>
+<ol start="3">
+<li>配置之后验证　　</li>
+</ol>
+<p>　　在新打开的命令行中输入java -version 查看是否有输出版本号，如果有则成功</p>
+<h1 id="Java-强迫面向对象编程"><a href="#Java-强迫面向对象编程" class="headerlink" title="Java 强迫面向对象编程"></a>Java 强迫面向对象编程</h1><p> 　　即使想写个简单Hello world程序，也很麻烦。必须创建一个Java类，而且类名和文件名还必须一样  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// BitOpt.java</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BitOpt</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = -<span class="number">1</span>;</span><br><span class="line">    System.out.println(<span class="string">"Hello world"</span>);</span><br><span class="line">    System.out.println(a&gt;&gt;&gt;<span class="number">30</span>);</span><br><span class="line">    System.out.println(a&gt;&gt;<span class="number">30</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Java-之JNI-Java-Native-Interface"><a href="#Java-之JNI-Java-Native-Interface" class="headerlink" title="Java 之JNI(Java Native Interface)"></a>Java 之JNI(Java Native Interface)</h1><p>  java 为了吸收和利用现有的C和C++代码提供了JNI接口，用于使用C和C++代码提供了JNI接口，用于使用C和C++<br>  Android应用apk中的.so文件是动态库允许厂商将自己的私有算法封装进入so库，提供一定程度的密码保护.<br>  在一些比较耗时的算法场景，使用jni可以加快程序运行速度</p>
+
     </div>
 
     
@@ -290,6 +317,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java是啥？"><span class="nav-number">1.</span> <span class="nav-text">Java是啥？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-编程环境配置"><span class="nav-number">2.</span> <span class="nav-text">Java 编程环境配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-强迫面向对象编程"><span class="nav-number">3.</span> <span class="nav-text">Java 强迫面向对象编程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-之JNI-Java-Native-Interface"><span class="nav-number">4.</span> <span class="nav-text">Java 之JNI(Java Native Interface)</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -305,7 +333,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

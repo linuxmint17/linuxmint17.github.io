@@ -50,15 +50,15 @@
   };
 </script>
 
-  <meta name="description" content="多线程编程是实用程序必然要用到的工具 没有多线程、进程编程就不是现代编程人员做的事情12345678910111213141516171819202122char * mystrstr(const char *str,const char *substr)&amp;#123;	if(str==NULL||substr==NULL)	&amp;#123;		printf(&quot;error NULL\n&quot;);		retu">
+  <meta name="description" content="多线程编程是实用程序必然要用到的工具 没有多线程、多进程编程就不是现代编程人员做的事情多线程的优缺点**优点** * * **缺点** * *    pthread_cond_wait pthread_cond_signal多线程的同步方法多进程的同步方法原子操作binder 通信RPC 调用12345678910111213141516171819202122char * mystrstr(co">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="About Thread">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;24&#x2F;about-thread&#x2F;index.html">
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
-<meta property="og:description" content="多线程编程是实用程序必然要用到的工具 没有多线程、进程编程就不是现代编程人员做的事情12345678910111213141516171819202122char * mystrstr(const char *str,const char *substr)&amp;#123;	if(str==NULL||substr==NULL)	&amp;#123;		printf(&quot;error NULL\n&quot;);		retu">
+<meta property="og:description" content="多线程编程是实用程序必然要用到的工具 没有多线程、多进程编程就不是现代编程人员做的事情多线程的优缺点**优点** * * **缺点** * *    pthread_cond_wait pthread_cond_signal多线程的同步方法多进程的同步方法原子操作binder 通信RPC 调用12345678910111213141516171819202122char * mystrstr(co">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-01-29T02:15:51.898Z">
+<meta property="og:updated_time" content="2020-02-24T11:37:25.470Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/01/24/about-thread/">
@@ -162,7 +162,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">30</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">37</span></a>
 
   </li>
   </ul>
@@ -224,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-29 10:15:51" itemprop="dateModified" datetime="2020-01-29T10:15:51+08:00">2020-01-29</time>
+                <time title="Modified: 2020-02-24 19:37:25" itemprop="dateModified" datetime="2020-02-24T19:37:25+08:00">2020-02-24</time>
               </span>
 
           
@@ -238,7 +238,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="多线程编程是实用程序必然要用到的工具-没有多线程、进程编程就不是现代编程人员做的事情"><a href="#多线程编程是实用程序必然要用到的工具-没有多线程、进程编程就不是现代编程人员做的事情" class="headerlink" title="多线程编程是实用程序必然要用到的工具 没有多线程、进程编程就不是现代编程人员做的事情"></a>多线程编程是实用程序必然要用到的工具 没有多线程、进程编程就不是现代编程人员做的事情</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> * <span class="title">mystrstr</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str,<span class="keyword">const</span> <span class="keyword">char</span> *substr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(str==<span class="literal">NULL</span>||substr==<span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"error NULL\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">strlen</span>(str)&lt;<span class="built_in">strlen</span>(substr))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">char</span> *cp=str;</span><br><span class="line">	<span class="keyword">char</span> *subcp=substr;</span><br><span class="line">	<span class="keyword">while</span>(*cp)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">while</span>(*cp &amp;&amp; *subcp &amp;&amp; !(*cp-*subcp))</span><br><span class="line">		&#123;</span><br><span class="line">			subcp++;</span><br><span class="line">		&#125;</span><br><span class="line">		cp++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="多线程编程是实用程序必然要用到的工具-没有多线程、多进程编程就不是现代编程人员做的事情"><a href="#多线程编程是实用程序必然要用到的工具-没有多线程、多进程编程就不是现代编程人员做的事情" class="headerlink" title="多线程编程是实用程序必然要用到的工具 没有多线程、多进程编程就不是现代编程人员做的事情"></a>多线程编程是实用程序必然要用到的工具 没有多线程、多进程编程就不是现代编程人员做的事情</h1><h1 id="多线程的优缺点"><a href="#多线程的优缺点" class="headerlink" title="多线程的优缺点"></a>多线程的优缺点</h1><pre><code>**优点**
+*
+*
+**缺点**
+*
+*    pthread_cond_wait pthread_cond_signal</code></pre><h1 id="多线程的同步方法"><a href="#多线程的同步方法" class="headerlink" title="多线程的同步方法"></a>多线程的同步方法</h1><h1 id="多进程的同步方法"><a href="#多进程的同步方法" class="headerlink" title="多进程的同步方法"></a>多进程的同步方法</h1><h1 id="原子操作"><a href="#原子操作" class="headerlink" title="原子操作"></a>原子操作</h1><h1 id="binder-通信"><a href="#binder-通信" class="headerlink" title="binder 通信"></a>binder 通信</h1><h1 id="RPC-调用"><a href="#RPC-调用" class="headerlink" title="RPC 调用"></a>RPC 调用</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> * <span class="title">mystrstr</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str,<span class="keyword">const</span> <span class="keyword">char</span> *substr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(str==<span class="literal">NULL</span>||substr==<span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"error NULL\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">strlen</span>(str)&lt;<span class="built_in">strlen</span>(substr))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">char</span> *cp=str;</span><br><span class="line">	<span class="keyword">char</span> *subcp=substr;</span><br><span class="line">	<span class="keyword">while</span>(*cp)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">while</span>(*cp &amp;&amp; *subcp &amp;&amp; !(*cp-*subcp))</span><br><span class="line">		&#123;</span><br><span class="line">			subcp++;</span><br><span class="line">		&#125;</span><br><span class="line">		cp++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -304,7 +309,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多线程编程是实用程序必然要用到的工具-没有多线程、进程编程就不是现代编程人员做的事情"><span class="nav-number">1.</span> <span class="nav-text">多线程编程是实用程序必然要用到的工具 没有多线程、进程编程就不是现代编程人员做的事情</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多线程编程是实用程序必然要用到的工具-没有多线程、多进程编程就不是现代编程人员做的事情"><span class="nav-number">1.</span> <span class="nav-text">多线程编程是实用程序必然要用到的工具 没有多线程、多进程编程就不是现代编程人员做的事情</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多线程的优缺点"><span class="nav-number">2.</span> <span class="nav-text">多线程的优缺点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多线程的同步方法"><span class="nav-number">3.</span> <span class="nav-text">多线程的同步方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多进程的同步方法"><span class="nav-number">4.</span> <span class="nav-text">多进程的同步方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原子操作"><span class="nav-number">5.</span> <span class="nav-text">原子操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#binder-通信"><span class="nav-number">6.</span> <span class="nav-text">binder 通信</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RPC-调用"><span class="nav-number">7.</span> <span class="nav-text">RPC 调用</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -320,7 +325,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

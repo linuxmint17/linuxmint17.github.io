@@ -61,7 +61,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;23&#x2F;PohLeXaVilHCFYq.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;22&#x2F;6YB31Gx5nUwsVbv.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;23&#x2F;qIiaTSh3ZgBfKoX.png">
-<meta property="og:updated_time" content="2020-02-23T06:28:14.091Z">
+<meta property="og:updated_time" content="2020-03-05T08:51:37.810Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;23&#x2F;PohLeXaVilHCFYq.png">
 
@@ -166,7 +166,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">30</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">37</span></a>
 
   </li>
   </ul>
@@ -228,7 +228,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-23 14:28:14" itemprop="dateModified" datetime="2020-02-23T14:28:14+08:00">2020-02-23</time>
+                <time title="Modified: 2020-03-05 16:51:37" itemprop="dateModified" datetime="2020-03-05T16:51:37+08:00">2020-03-05</time>
               </span>
 
           
@@ -319,6 +319,8 @@
 <h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><ol>
 <li>~3 = ？<br>3 = (0000 0011)按位取反得到(1111 1100) 按照2补数解释为-4</li>
 <li><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> cat = <span class="number">13</span>;</span><br><span class="line">cat - ~-cat; <span class="comment">// this experssion's value is 1</span></span><br><span class="line"><span class="built_in">putchar</span> (~-~-~-cat); <span class="comment">// this line equal to putchar('\n'); \n 的ascii code 十进制的值为 10</span></span><br></pre></td></tr></table></figure>
+<h1 id="位运算可以用来判断整数的奇偶性"><a href="#位运算可以用来判断整数的奇偶性" class="headerlink" title="位运算可以用来判断整数的奇偶性"></a>位运算可以用来判断整数的奇偶性</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输出0 ~ 100 的所有奇数</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (i &amp; <span class="number">1</span>) &#123; <span class="comment">// 基数最低bit位是1</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
 
@@ -386,7 +388,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算的地位"><span class="nav-number">1.</span> <span class="nav-text">位运算的地位</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算的类型"><span class="nav-number">2.</span> <span class="nav-text">位运算的类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原码"><span class="nav-number">3.</span> <span class="nav-text">原码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反码-Ones’-complement-一的补码"><span class="nav-number">4.</span> <span class="nav-text">反码(Ones’ complement /一的补码)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#补码-Twos’-complement-二的补码"><span class="nav-number">5.</span> <span class="nav-text">补码(Twos’ complement /二的补码)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#补码的计算方法"><span class="nav-number">6.</span> <span class="nav-text">补码的计算方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#根据补码-2补数-求真值的方法"><span class="nav-number">7.</span> <span class="nav-text">根据补码(2补数)求真值的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">8.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#例题"><span class="nav-number">9.</span> <span class="nav-text">例题</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算的地位"><span class="nav-number">1.</span> <span class="nav-text">位运算的地位</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算的类型"><span class="nav-number">2.</span> <span class="nav-text">位运算的类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原码"><span class="nav-number">3.</span> <span class="nav-text">原码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反码-Ones’-complement-一的补码"><span class="nav-number">4.</span> <span class="nav-text">反码(Ones’ complement /一的补码)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#补码-Twos’-complement-二的补码"><span class="nav-number">5.</span> <span class="nav-text">补码(Twos’ complement /二的补码)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#补码的计算方法"><span class="nav-number">6.</span> <span class="nav-text">补码的计算方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#根据补码-2补数-求真值的方法"><span class="nav-number">7.</span> <span class="nav-text">根据补码(2补数)求真值的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">8.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#例题"><span class="nav-number">9.</span> <span class="nav-text">例题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算可以用来判断整数的奇偶性"><span class="nav-number">10.</span> <span class="nav-text">位运算可以用来判断整数的奇偶性</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -402,7 +404,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

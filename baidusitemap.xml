@@ -1,11 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2020/02/20/about-endian/</loc>
+    <lastmod>2020-03-08</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/25/c-cpp-extern-static/</loc>
+    <lastmod>2020-03-07</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/01/24/about-sizeof/</loc>
+    <lastmod>2020-03-07</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/03/07/about-lint/</loc>
+    <lastmod>2020-03-07</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2020/02/18/bit-opteration/</loc>
+    <lastmod>2020-03-05</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/28/about-memory/</loc>
+    <lastmod>2020-02-28</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/23/about-preprocess/</loc>
+    <lastmod>2020-02-26</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/24/about-c-cpp/</loc>
+    <lastmod>2020-02-26</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/01/24/about-thread/</loc>
+    <lastmod>2020-02-24</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/23/about-encoding/</loc>
     <lastmod>2020-02-23</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2020/02/20/about-endian/</loc>
-    <lastmod>2020-02-22</lastmod>
+    <loc>http://yoursite.com/2020/02/19/about-java/</loc>
+    <lastmod>2020-02-23</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/23/about-cmd/</loc>
+    <lastmod>2020-02-23</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/02/14/linux-cmd/</loc>
     <lastmod>2020-02-22</lastmod>
@@ -18,9 +48,6 @@
   </url>  <url>
     <loc>http://yoursite.com/2020/02/19/about-ssh/</loc>
     <lastmod>2020-02-20</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/02/19/about-java/</loc>
-    <lastmod>2020-02-19</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/19/about-vim/</loc>
     <lastmod>2020-02-18</lastmod>
@@ -58,9 +85,6 @@
     <loc>http://yoursite.com/2020/02/15/c-main/</loc>
     <lastmod>2020-02-16</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2020/01/24/about-sizeof/</loc>
-    <lastmod>2020-02-15</lastmod>
-  </url>  <url>
     <loc>http://yoursite.com/2020/02/14/mysql/</loc>
     <lastmod>2020-02-14</lastmod>
   </url>  <url>
@@ -80,9 +104,6 @@
     <lastmod>2020-01-29</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/24/about-makefile/</loc>
-    <lastmod>2020-01-29</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/01/24/about-thread/</loc>
     <lastmod>2020-01-29</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/21/about-algorithm/</loc>
