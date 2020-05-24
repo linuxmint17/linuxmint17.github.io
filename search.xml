@@ -1,23 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C++ 11/14/17/20 new feature</title>
+    <url>/2020/05/24/about-C-Cpp-new-feature/</url>
+    <content><![CDATA[<h1 id="自从C-11以来的新特性"><a href="#自从C-11以来的新特性" class="headerlink" title="自从C++11以来的新特性"></a>自从C++11以来的新特性</h1><ul>
+<li>auto 自动类型推导</li>
+<li>constexpr</li>
+<li>nullptr 关键字, 用于取代 NULL, 代表空指针</li>
+<li>for 循环中的 语法糖 for ( a : array) { }</li>
+<li>lambda 表达式， 也就是匿名函数</li>
+</ul>
+<h1 id="自从C99以来的新特性"><a href="#自从C99以来的新特性" class="headerlink" title="自从C99以来的新特性"></a>自从C99以来的新特性</h1><ul>
+<li>变长数组 VLA;</li>
+<li>结构体 按成员初始化</li>
+<li>restrict 关键字</li>
+<li>bool 类型</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>about-interrupt</title>
+    <url>/2020/05/24/about-interrupt/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>namespace</title>
     <url>/2020/05/23/about-namespace/</url>
-    <content><![CDATA[<h1 id="命名空间-namespace-是C-的一个关键字"><a href="#命名空间-namespace-是C-的一个关键字" class="headerlink" title="命名空间 (namespace) 是C++的一个关键字"></a>命名空间 (namespace) 是C++的一个关键字</h1><p>不同的命名空间中标识符可以使用 相同名字的变量或者函数名称，而不会引起冲突</p>
-<h1 id="C-语言的标识符-也有自己的命名空间-（内容来自-C语言规范草案-6-2-3-节"><a href="#C-语言的标识符-也有自己的命名空间-（内容来自-C语言规范草案-6-2-3-节" class="headerlink" title="C 语言的标识符 也有自己的命名空间 （内容来自 C语言规范草案 6.2.3 节)"></a>C 语言的标识符 也有自己的命名空间 （内容来自 C语言规范草案 6.2.3 节)</h1><ul>
-<li>label names 标签名 包括 goto 语句 中用到的标签和  switch case中的 标签</li>
+    <content><![CDATA[<h1 id="namespace-命名空间-是C-的一个关键字"><a href="#namespace-命名空间-是C-的一个关键字" class="headerlink" title="namespace (命名空间) 是C++的一个关键字"></a>namespace (命名空间) 是C++的一个关键字</h1><p>　　不同的命名空间中相同的标识符在编译的时候不会产生错误<br>　　在不同的命名空间中可以使用相同名字的变量或者函数名称</p>
+<h1 id="C-语言的标识符-也有命名空间-（内容来自-C语言规范草案-6-2-3-节"><a href="#C-语言的标识符-也有命名空间-（内容来自-C语言规范草案-6-2-3-节" class="headerlink" title="C 语言的标识符 也有命名空间 （内容来自 C语言规范草案 6.2.3 节)"></a>C 语言的标识符 也有命名空间 （内容来自 C语言规范草案 6.2.3 节)</h1><ul>
+<li>label names<br>标签名 包括 goto 语句 中用到的标签和  switch case中的 标签</li>
 <li>the tags name of structures, unions and enumurations<br>结构、联合、枚举的tag名</li>
 <li>the members of structures or unions; each structure or union has a seperate name space for its number;<br>结构体、联合的成员名</li>
-<li>all other identifiers,called ordinary identifiers (declared in ordinary declarators or as<br>enumeration constants)<br>其他普通的变量，或者枚举常量<h1 id="C-中使用namesapce-关键字可以构造一个命名空间"><a href="#C-中使用namesapce-关键字可以构造一个命名空间" class="headerlink" title="C++中使用namesapce 关键字可以构造一个命名空间"></a>C++中使用namesapce 关键字可以构造一个命名空间</h1><h1 id="C-C-中的-每一对花括号-是一个-命名空间"><a href="#C-C-中的-每一对花括号-是一个-命名空间" class="headerlink" title="C/C++ 中的 每一对花括号 是一个 命名空间"></a>C/C++ 中的 每一对花括号 是一个 命名空间</h1><h1 id="关与-声明-declaration-定义-definition-初始化-initalization"><a href="#关与-声明-declaration-定义-definition-初始化-initalization" class="headerlink" title="关与 声明(declaration),定义(definition),初始化(initalization)"></a>关与 声明(declaration),定义(definition),初始化(initalization)</h1>C 语言中 变量/ 函数的带初始化的声明就是定义<br>不带有初始化的全局对象或者函数 构成了一个 试探性定义</li>
+<li>all other identifiers,called ordinary identifiers (declared in ordinary declarators or as<br>enumeration constants)<br>其他普通的变量，或者枚举常量<h1 id="C-中使用namesapce-关键字可以构造一个命名空间"><a href="#C-中使用namesapce-关键字可以构造一个命名空间" class="headerlink" title="C++中使用namesapce 关键字可以构造一个命名空间"></a>C++中使用namesapce 关键字可以构造一个命名空间</h1>C/C++ 中的 每一对花括号 是一个 命名空间</li>
 </ul>
-<h1 id="C-中类的-copy-constructor-构造函数-的执行就很有意思"><a href="#C-中类的-copy-constructor-构造函数-的执行就很有意思" class="headerlink" title="C++ 中类的 (copy) constructor 构造函数 的执行就很有意思"></a>C++ 中类的 (copy) constructor 构造函数 的执行就很有意思</h1><p>C++ 对于 将一个对象的值 赋给 另一个对象的 场景进行了细分<br>一类就是 赋值；<br>另一类就是 初始化；<br>初始化可能发生的三个场景 ：</p>
+<p>#变量的声明(declaration),定义(definition),初始化(initalization)<br>　　C 语言中变量的带初始化的声明就是定义<br>不带有初始化的全局对象构成了一个 试探性定义<br>这个Tentative definitions 特性仅仅C语言只有，C++是不支持的</p>
+<p>　　在两个C文件中同时声明两个一模一样的未初始化的全局变量的时候，<br>C语言能够编译通过的C++不支持这样的</p>
+<h1 id="C-类copy-constructor-的执行时机就很有趣"><a href="#C-类copy-constructor-的执行时机就很有趣" class="headerlink" title="C++ 类copy constructor 的执行时机就很有趣"></a>C++ 类copy constructor 的执行时机就很有趣</h1><p>C++ 对于 将一个对象的值 赋给 另一个对象的 场景进行了细分<br>一类就是 赋值；赋值的时候使用的是 = 的重载函数<br>另一类就是 初始化；<br>初始化可能发生的三个场景 ：</p>
 <ol>
 <li>在声明变量的同时用另一个对象初始化</li>
 <li>对象的拷贝被当做函数参数传递</li>
-<li>临时对象产生的时候，例如返回值是一个对象的时候<h1 id="全局-局部-函数-变量-定义-声明"><a href="#全局-局部-函数-变量-定义-声明" class="headerlink" title="全局 / 局部  * 函数/ 变量  *定义 / 声明"></a>全局 / 局部  * 函数/ 变量  *定义 / 声明</h1></li>
+<li>临时对象产生的时候，例如返回值是一个对象的时候</li>
 </ol>
-<h1 id="C语言标准规定-不应该-使用-对全局变量使用-register-修饰"><a href="#C语言标准规定-不应该-使用-对全局变量使用-register-修饰" class="headerlink" title="C语言标准规定 不应该 使用 对全局变量使用 register 修饰"></a>C语言标准规定 不应该 使用 对全局变量使用 register 修饰</h1><p>但是gnu C 标准支持这个特性, clang不支持这个特性，同样的代码使用clang编译会报错<br>uboot 代码中 有如下宏<br><a href="https://gcc.gnu.org/onlinedocs/gcc/Global-Register-Variables.html" target="_blank" rel="noopener">https://gcc.gnu.org/onlinedocs/gcc/Global-Register-Variables.html</a><br> using the volatile qualifier does not fully prevent the compiler from optimizing accesses to the register</p>
-<p>uboot-2019.07/arch/riscv/include/asm/global_data.h</p>
+<h1 id="C语言标准规定-不应该-使用-对全局变量使用-register-修饰"><a href="#C语言标准规定-不应该-使用-对全局变量使用-register-修饰" class="headerlink" title="C语言标准规定 不应该 使用 对全局变量使用 register 修饰"></a>C语言标准规定 不应该 使用 对全局变量使用 register 修饰</h1><p>但是gnu C 标准支持这个特性, clang不支持这个特性，同样的代码使用clang编译会报错<br>uboot 代码中 有如下宏<br><a href="https://gcc.gnu.org/onlinedocs/gcc/Global-Register-Variables.html" target="_blank" rel="noopener">https://gcc.gnu.org/onlinedocs/gcc/Global-Register-Variables.html</a><br> using the volatile qualifier does not fully prevent the compiler from optimizing accesses to the register<br>在文件 uboot-2019.07/arch/riscv/include/asm/global_data.h 有如下宏,</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DECLARE_GLOBAL_DATA_PTR register gd_t *gd asm (<span class="meta-string">"gp"</span>)</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
@@ -606,7 +633,7 @@ Without question, this C program is the most obfuscated C program that has ever 
 <h1 id="install-ssh"><a href="#install-ssh" class="headerlink" title="install ssh"></a>install ssh</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install ssh</span><br></pre></td></tr></table></figure>
 <h1 id="install-man-pages"><a href="#install-man-pages" class="headerlink" title="install man pages"></a>install man pages</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install manpages-posix-dev</span><br><span class="line">apt-get install glibc-doc</span><br></pre></td></tr></table></figure>
 <h1 id="install-git"><a href="#install-git" class="headerlink" title="install git"></a>install git</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt-get install git-core gitk</span><br></pre></td></tr></table></figure>
-<h1 id="install-build-essential"><a href="#install-build-essential" class="headerlink" title="install build-essential"></a>install build-essential</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">atp-get build-essential gcc-doc</span><br></pre></td></tr></table></figure>
+<h1 id="install-build-essential"><a href="#install-build-essential" class="headerlink" title="install build-essential"></a>install build-essential</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">atp-get install build-essential gcc-doc</span><br></pre></td></tr></table></figure>
 <h1 id="what-todo-whit-DHCP-timeout-is-taking-so-long"><a href="#what-todo-whit-DHCP-timeout-is-taking-so-long" class="headerlink" title="what todo whit DHCP timeout is taking so long."></a>what todo whit DHCP timeout is taking so long.</h1><p> Edit /etc/sysconfig/network/dhcp and change the values for DHCLIENT_WAIT_AT_BOOT and DHCLIENT6_WAIT_AT_BOOT</p>
 <h1 id="目录介绍"><a href="#目录介绍" class="headerlink" title="目录介绍"></a>目录介绍</h1><ol>
 <li>/usr/local/ 一般安装自己编译的软件</li>
@@ -755,7 +782,8 @@ Without question, this C program is the most obfuscated C program that has ever 
 <h1 id="make-n"><a href="#make-n" class="headerlink" title="make -n"></a>make -n</h1><p>　　make 调试使用的命令，空跑一次，不执行实际操作，把要执行的动作打印出来</p>
 <h1 id="make-f-filename"><a href="#make-f-filename" class="headerlink" title="make -f filename"></a>make -f filename</h1><p>　　指定makefile 文件，不默认寻找 Makefile,makefile</p>
 <h1 id="make"><a href="#make" class="headerlink" title="make"></a>make</h1><p>　　假设当前目录下有 hello.c 执行make hello 会尝试编译 hello.c 到hello</p>
-]]></content>
+<h1 id="make-C-dir-name"><a href="#make-C-dir-name" class="headerlink" title="make -C dir_name"></a>make -C dir_name</h1><p>　　执行make 命令之前 进入到 dir_name 中, 常常在项目中递归的使用</p>
+<h1 id="make-k"><a href="#make-k" class="headerlink" title="make -k"></a>make -k</h1>]]></content>
       <tags>
         <tag>Tool</tag>
       </tags>

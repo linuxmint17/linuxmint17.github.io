@@ -158,7 +158,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">42</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">44</span></a>
 
   </li>
   </ul>
@@ -186,6 +186,155 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/28/about-pwd/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
+      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Linuxmint17's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/28/about-pwd/" class="post-title-link" itemprop="url">About pwd</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-01-28 20:31:17" itemprop="dateCreated datePublished" datetime="2020-01-28T20:31:17+08:00">2020-01-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-04-07 22:54:46" itemprop="dateModified" datetime="2020-04-07T22:54:46+08:00">2020-04-07</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="关于工作路径"><a href="#关于工作路径" class="headerlink" title="关于工作路径"></a>关于工作路径</h1><p>　　工作路径是进程的一个重要的属性，在pcb结构中应该是一项成员，平时和文件交互的比较少的业务很少会关注程序的工作路径的问题</p>
+<h1 id="情形"><a href="#情形" class="headerlink" title="情形"></a>情形</h1><p>　　为了适配不同的厂商或者版本，想要后台程序通过读取配置文件方法来，减少某个组件编译次数, 每次厂商变更只需要改下配置文件中的厂商名字就行了，不必要在代码中写死，每次都要换个厂都要加个宏，在代码中加入一个常量</p>
+<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>　　Android后台程序(为方便设置为daemon.exe位于/system/bin/目录下)daemon.exe开机启动的时候要读取/system/bin/下的product.conf文配置文件.</p>
+<h1 id="代码实现-主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次"><a href="#代码实现-主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次" class="headerlink" title="代码实现 主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次"></a>代码实现 主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Linux 环境中包含 &lt;unistd.h&gt;头文件可以使用</span><br><span class="line">getcwd, getwd, get_current_dir_name 获取程序的当前工作路径</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">char</span> *<span class="title">getcwd</span><span class="params">(<span class="keyword">char</span> *buf, <span class="keyword">size_t</span> size)</span></span>;</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">char</span> *<span class="title">getwd</span><span class="params">(<span class="keyword">char</span> *buf)</span></span>;</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">char</span> *<span class="title">get_current_dir_name</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CONFIG_FILE_PATH <span class="meta-string">"./product.conf"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">app_init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">// 省略若干行代码...</span></span><br><span class="line">  FILE *fp = fopen(CONFIG_FILE_PATH, <span class="string">"r"</span>);</span><br><span class="line">  <span class="keyword">if</span> (fp == <span class="literal">NULL</span>) &#123;</span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">"fopen error"</span>);</span><br><span class="line">     <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">char</span> *current_work_dir = get_current_dir_name();</span><br><span class="line">  <span class="keyword">if</span> (current_work_dir != <span class="literal">NULL</span>) &#123;</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"current working dir is [%s]"</span>, current_work_dir);</span><br><span class="line">      <span class="built_in">free</span>(current_work_dir);</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 省略若干行代码...</span></span><br><span class="line">  <span class="keyword">if</span> (fp != <span class="literal">NULL</span>)</span><br><span class="line">  fclose(fp);</span><br><span class="line"><span class="comment">// 省略若干行代码...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="问题出现之后我的直觉告诉先打印errno-然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径"><a href="#问题出现之后我的直觉告诉先打印errno-然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径" class="headerlink" title="问题出现之后我的直觉告诉先打印errno, 然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径"></a>问题出现之后我的直觉告诉先打印errno, 然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径</h2><p>手里没有root权限的android 手机，就使用linux，linux中开机拉起服务的地方加入自己写的程序的路径</p>
+<p>#附加题：如何创建守护进程？ 参考 APUE</p>
+<ol>
+<li>通过fork 创建子进程</li>
+<li>子进程kill 父进程</li>
+<li>设置自己的工作路径</li>
+<li></li>
+</ol>
+<p>这个时候是采用绝对路径，还是相对路径<br>项目中的程序位于 /system/bin 下配置文件也在同一级文件目录中。<br>程序开机由系统脚本拉起后常驻后台，检测其他进程.</p>
+<p>首先设为绝对路径，./exe 拉起 测试ok,系统脚本拉起也ok,但是同事A认为同一级目录下 直接读取文件名就可以了，<br>听命令改，./exe 测试ok ,然而系统脚本拉起之后整个系统无法正常运行，因为配置文件没有读取到，程序报出错误打印<br>经过测试，Android init.rc 中拉起的程序工作路径是/ ，而非程序所在目录，当使用 ./exe 拉起程序的时候工作路径在当前目录<br>使用相对路径自然找到配置文件</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/24/about-thread/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
+      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Linuxmint17's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/24/about-thread/" class="post-title-link" itemprop="url">About Thread</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-01-24 13:39:12" itemprop="dateCreated datePublished" datetime="2020-01-24T13:39:12+08:00">2020-01-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-24 19:37:25" itemprop="dateModified" datetime="2020-02-24T19:37:25+08:00">2020-02-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="多线程编程是实用程序必然要用到的工具-没有多线程、多进程编程就不是现代编程人员做的事情"><a href="#多线程编程是实用程序必然要用到的工具-没有多线程、多进程编程就不是现代编程人员做的事情" class="headerlink" title="多线程编程是实用程序必然要用到的工具 没有多线程、多进程编程就不是现代编程人员做的事情"></a>多线程编程是实用程序必然要用到的工具 没有多线程、多进程编程就不是现代编程人员做的事情</h1><h1 id="多线程的优缺点"><a href="#多线程的优缺点" class="headerlink" title="多线程的优缺点"></a>多线程的优缺点</h1><pre><code>**优点**
+*
+*
+**缺点**
+*
+*    pthread_cond_wait pthread_cond_signal</code></pre><h1 id="多线程的同步方法"><a href="#多线程的同步方法" class="headerlink" title="多线程的同步方法"></a>多线程的同步方法</h1><h1 id="多进程的同步方法"><a href="#多进程的同步方法" class="headerlink" title="多进程的同步方法"></a>多进程的同步方法</h1><h1 id="原子操作"><a href="#原子操作" class="headerlink" title="原子操作"></a>原子操作</h1><h1 id="binder-通信"><a href="#binder-通信" class="headerlink" title="binder 通信"></a>binder 通信</h1><h1 id="RPC-调用"><a href="#RPC-调用" class="headerlink" title="RPC 调用"></a>RPC 调用</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> * <span class="title">mystrstr</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *str,<span class="keyword">const</span> <span class="keyword">char</span> *substr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(str==<span class="literal">NULL</span>||substr==<span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"error NULL\n"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">strlen</span>(str)&lt;<span class="built_in">strlen</span>(substr))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">char</span> *cp=str;</span><br><span class="line">	<span class="keyword">char</span> *subcp=substr;</span><br><span class="line">	<span class="keyword">while</span>(*cp)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">while</span>(*cp &amp;&amp; *subcp &amp;&amp; !(*cp-*subcp))</span><br><span class="line">		&#123;</span><br><span class="line">			subcp++;</span><br><span class="line">		&#125;</span><br><span class="line">		cp++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -385,7 +534,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-29 21:41:50" itemprop="dateModified" datetime="2020-01-29T21:41:50+08:00">2020-01-29</time>
+                <time title="Modified: 2020-05-24 21:30:59" itemprop="dateModified" datetime="2020-05-24T21:30:59+08:00">2020-05-24</time>
               </span>
 
           
@@ -404,7 +553,8 @@
 <h1 id="make-n"><a href="#make-n" class="headerlink" title="make -n"></a>make -n</h1><p>　　make 调试使用的命令，空跑一次，不执行实际操作，把要执行的动作打印出来</p>
 <h1 id="make-f-filename"><a href="#make-f-filename" class="headerlink" title="make -f filename"></a>make -f filename</h1><p>　　指定makefile 文件，不默认寻找 Makefile,makefile</p>
 <h1 id="make"><a href="#make" class="headerlink" title="make"></a>make</h1><p>　　假设当前目录下有 hello.c 执行make hello 会尝试编译 hello.c 到hello</p>
-
+<h1 id="make-C-dir-name"><a href="#make-C-dir-name" class="headerlink" title="make -C dir_name"></a>make -C dir_name</h1><p>　　执行make 命令之前 进入到 dir_name 中, 常常在项目中递归的使用</p>
+<h1 id="make-k"><a href="#make-k" class="headerlink" title="make -k"></a>make -k</h1>
       
     </div>
 
@@ -808,157 +958,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/19/about-emacs/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
-      <meta itemprop="name" content="Linuxmint17">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/19/about-emacs/" class="post-title-link" itemprop="url">About Emacs</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-01-19 21:54:43 / Modified: 21:57:37" itemprop="dateCreated datePublished" datetime="2020-01-19T21:54:43+08:00">2020-01-19</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/19/about-vim/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
-      <meta itemprop="name" content="Linuxmint17">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/19/about-vim/" class="post-title-link" itemprop="url">About Vim</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-19 21:54:21" itemprop="dateCreated datePublished" datetime="2020-01-19T21:54:21+08:00">2020-01-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-18 21:54:38" itemprop="dateModified" datetime="2020-02-18T21:54:38+08:00">2020-02-18</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="vim-vs-Emacs"><a href="#vim-vs-Emacs" class="headerlink" title="vim vs Emacs"></a>vim vs Emacs</h2><p>　　文本编辑器的圣战: vim 被称为编辑器之神，emacs被称为神之编辑器(伪装成编辑器的操作系统).<br>这两个文本编辑器中有不同的学习曲线，vim 刚开始入坑很难，甚至都无法输入一个字符，无法退出vim,只有 alt +F4 关闭中断大法。随着熟练程度的提升，逐渐的会从不同的<br>编辑模式中获得飞快的输入速度，也会告别上下左右四个方将箭头(Esc to death). emacs也学习曲线也不是很平和，刚上手的时候不知道怎么保存文件，怎么退出编辑文件。渐<br>渐的熟悉之后会ctrl到死</p>
-<h2 id="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"><a href="#本文章主要讲解vim的学习路径和常用配置及基本介绍和操作" class="headerlink" title="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"></a>本文章主要讲解vim的学习路径和常用配置及基本介绍和操作</h2><p>　　挖坑待填</p>
-<h2 id="vim-打开没有权限的文件-忘记使用sudo打开-之后如何强制保存"><a href="#vim-打开没有权限的文件-忘记使用sudo打开-之后如何强制保存" class="headerlink" title="vim 打开没有权限的文件(忘记使用sudo打开) 之后如何强制保存"></a>vim 打开没有权限的文件(忘记使用sudo打开) 之后如何强制保存</h2><p>　　在vim的命令模式中输入:w !sudo tee %</p>
-<h3 id="how-this-works-摘自stack-overflow"><a href="#how-this-works-摘自stack-overflow" class="headerlink" title="how this works 摘自stack overflow"></a>how this works 摘自<a href="https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work" target="_blank" rel="noopener">stack overflow</a></h3><p>
-in :w !sudo tee %...
-
-<p>% means “the current file”<br>As eugene y pointed out, % does indeed mean “the current file name”, which is passed to tee so that it knows which file to overwrite.</p>
-<p>(In substitution commands, it’s slightly different; as :help :% shows, it’s equal to 1,$ (the entire file) (thanks to @Orafu for pointing out that this does not evaluate to the filename). For example, :%s/foo/bar means “in the current file, replace occurrences of foo with bar.” If you highlight some text before typing :s, you’ll see that the highlighted lines take the place of % as your substitution range.)</p>
-<p>:w isn’t updating your file<br>One confusing part of this trick is that you might think :w is modifying your file, but it isn’t. If you opened and modified file1.txt, then ran :w file2.txt, it would be a “save as”; file1.txt wouldn’t be modified, but the current buffer contents would be sent to file2.txt.</p>
-<p>Instead of file2.txt, you can substitute a shell command to receive the buffer contents. For instance, :w !cat will just display the contents.</p>
-<p>If Vim wasn’t run with sudo access, its :w can’t modify a protected file, but if it passes the buffer contents to the shell, a command in the shell can be run with sudo. In this case, we use tee.</p>
-<p>Understanding tee<br><a href="https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work" target="_blank" rel="noopener">https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work</a><br>As for tee, picture the tee command as a T-shaped pipe in a normal bash piping situation: it directs output to specified file(s) and also sends it to standard output, which can be captured by the next piped command.</p>
-<p>For example, in ps -ax | tee processes.txt | grep ‘foo’, the list of processes will be written to a text file and passed along to grep.</p>
-<pre><code>+-----------+    tee     +------------+
-|           |  --------  |            |
-| ps -ax    |  --------  | grep &apos;foo&apos; |
-|           |     ||     |            |
-+-----------+     ||     +------------+
-                  ||   
-          +---------------+
-          |               |
-          | processes.txt |
-          |               |
-          +---------------+</code></pre><p>(Diagram created with Asciiflow.)</p>
-<p>See the tee man page for more info.</p>
-<p>Tee as a hack<br>In the situation your question describes, using tee is a hack because we’re ignoring half of what it does. sudo tee writes to our file and also sends the buffer contents to standard output, but we ignore standard output. We don’t need to pass anything to another piped command in this case; we’re just using tee as an alternate way of writing a file and so that we can call it with sudo.</p>
-<p>Making this trick easy<br>You can add this to your .vimrc to make this trick easy-to-use: just type :w!!.</p>
-<p>“ Allow saving of files as sudo when I forgot to start vim using sudo.<br>cmap w!! w !sudo tee &gt; /dev/null %<br>The &gt; /dev/null part explicitly throws away the standard output, since, as I said, we don’t need to pass anything to another piped command.</p>
-</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1009,7 +1008,7 @@ in :w !sudo tee %...
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-count">44</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

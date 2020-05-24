@@ -58,7 +58,7 @@
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
 <meta property="og:description" content="make 是用来组织大型工程必不可少的工具　　make 有各种变体: Qt的qmake, 跨平台的 cmake, 微软的 nmake make menuconfig　　好像最早是在linux kernel 中使用到的, 在构建kernel 之前使用这个命令会  根据kernel目录下的Makefile和其他的文件以及kconfig语法生成命令行的gui菜单可以勾选，依赖 ncurses make">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-01-29T13:41:50.887Z">
+<meta property="og:updated_time" content="2020-05-24T13:30:59.989Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/01/24/about-makefile/">
@@ -162,7 +162,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">42</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">44</span></a>
 
   </li>
   </ul>
@@ -224,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-29 21:41:50" itemprop="dateModified" datetime="2020-01-29T21:41:50+08:00">2020-01-29</time>
+                <time title="Modified: 2020-05-24 21:30:59" itemprop="dateModified" datetime="2020-05-24T21:30:59+08:00">2020-05-24</time>
               </span>
 
           
@@ -243,7 +243,8 @@
 <h1 id="make-n"><a href="#make-n" class="headerlink" title="make -n"></a>make -n</h1><p>　　make 调试使用的命令，空跑一次，不执行实际操作，把要执行的动作打印出来</p>
 <h1 id="make-f-filename"><a href="#make-f-filename" class="headerlink" title="make -f filename"></a>make -f filename</h1><p>　　指定makefile 文件，不默认寻找 Makefile,makefile</p>
 <h1 id="make"><a href="#make" class="headerlink" title="make"></a>make</h1><p>　　假设当前目录下有 hello.c 执行make hello 会尝试编译 hello.c 到hello</p>
-
+<h1 id="make-C-dir-name"><a href="#make-C-dir-name" class="headerlink" title="make -C dir_name"></a>make -C dir_name</h1><p>　　执行make 命令之前 进入到 dir_name 中, 常常在项目中递归的使用</p>
+<h1 id="make-k"><a href="#make-k" class="headerlink" title="make -k"></a>make -k</h1>
     </div>
 
     
@@ -308,7 +309,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#make-是用来组织大型工程必不可少的工具"><span class="nav-number">1.</span> <span class="nav-text">make 是用来组织大型工程必不可少的工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#make-menuconfig"><span class="nav-number">2.</span> <span class="nav-text">make menuconfig</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#make-n"><span class="nav-number">3.</span> <span class="nav-text">make -n</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#make-f-filename"><span class="nav-number">4.</span> <span class="nav-text">make -f filename</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#make"><span class="nav-number">5.</span> <span class="nav-text">make</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#make-是用来组织大型工程必不可少的工具"><span class="nav-number">1.</span> <span class="nav-text">make 是用来组织大型工程必不可少的工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#make-menuconfig"><span class="nav-number">2.</span> <span class="nav-text">make menuconfig</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#make-n"><span class="nav-number">3.</span> <span class="nav-text">make -n</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#make-f-filename"><span class="nav-number">4.</span> <span class="nav-text">make -f filename</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#make"><span class="nav-number">5.</span> <span class="nav-text">make</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#make-C-dir-name"><span class="nav-number">6.</span> <span class="nav-text">make -C dir_name</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#make-k"><span class="nav-number">7.</span> <span class="nav-text">make -k</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -324,7 +325,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-count">44</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
