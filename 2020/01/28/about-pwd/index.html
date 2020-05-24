@@ -50,15 +50,15 @@
   };
 </script>
 
-  <meta name="description" content="关于工作路径情境(situation)、任务(task)、行动(action)、结果(result)　shell 命令 pwd 能显示用户的工作路径C语言程序可以使用 getcwd, getwd, get_current_dir_name函数获取当前工作路径，一般来说大家写代码不会关注这个东西s:T:A:R: 情形　　为了适配不同的厂商或者版本，想要后台程序通过读取配置文件方法来，减少某个组件编译">
+  <meta name="description" content="关于工作路径　　工作路径是进程的一个重要的属性，在pcb结构中应该是一项成员，平时和文件交互的比较少的业务很少会关注程序的工作路径的问题 情形　　为了适配不同的厂商或者版本，想要后台程序通过读取配置文件方法来，减少某个组件编译次数, 每次厂商变更只需要改下配置文件中的厂商名字就行了，不必要在代码中写死，每次都要换个厂都要加个宏，在代码中加入一个常量 需求　　Android后台程序(为方便设置为da">
 <meta name="keywords" content="Linux&#x2F;C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="About pwd">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;28&#x2F;about-pwd&#x2F;index.html">
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
-<meta property="og:description" content="关于工作路径情境(situation)、任务(task)、行动(action)、结果(result)　shell 命令 pwd 能显示用户的工作路径C语言程序可以使用 getcwd, getwd, get_current_dir_name函数获取当前工作路径，一般来说大家写代码不会关注这个东西s:T:A:R: 情形　　为了适配不同的厂商或者版本，想要后台程序通过读取配置文件方法来，减少某个组件编译">
+<meta property="og:description" content="关于工作路径　　工作路径是进程的一个重要的属性，在pcb结构中应该是一项成员，平时和文件交互的比较少的业务很少会关注程序的工作路径的问题 情形　　为了适配不同的厂商或者版本，想要后台程序通过读取配置文件方法来，减少某个组件编译次数, 每次厂商变更只需要改下配置文件中的厂商名字就行了，不必要在代码中写死，每次都要换个厂都要加个宏，在代码中加入一个常量 需求　　Android后台程序(为方便设置为da">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-16T10:04:22.272Z">
+<meta property="og:updated_time" content="2020-04-07T14:54:46.692Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/01/28/about-pwd/">
@@ -162,7 +162,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">37</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">42</span></a>
 
   </li>
   </ul>
@@ -224,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-16 18:04:22" itemprop="dateModified" datetime="2020-02-16T18:04:22+08:00">2020-02-16</time>
+                <time title="Modified: 2020-04-07 22:54:46" itemprop="dateModified" datetime="2020-04-07T22:54:46+08:00">2020-04-07</time>
               </span>
 
           
@@ -238,13 +238,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="关于工作路径"><a href="#关于工作路径" class="headerlink" title="关于工作路径"></a>关于工作路径</h1><p>情境(situation)、任务(task)、行动(action)、结果(result)<br>　shell 命令 pwd 能显示用户的工作路径<br>C语言程序可以使用 getcwd, getwd, get_current_dir_name<br>函数获取当前工作路径，一般来说大家写代码不会关注这个东西<br>s:<br>T:<br>A:<br>R:</p>
-<h2 id="情形"><a href="#情形" class="headerlink" title="情形"></a>情形</h2><p>　　为了适配不同的厂商或者版本，想要后台程序通过读取配置文件方法来，减少某个组件编译次数, 每次厂商变更只需要改下配置文件中的厂商名字就行了，不必要在代码中写死，每次都要换个厂都要加个宏，在代码中加入一个常量</p>
-<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>　　Android(Linux变种)后台程序(为方便设置为daemon.exe位于/system/bin/目录下)daemon.exe开机启动的时候要读取/system/bin/下的product.conf文配置文件.</p>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><pre><code class="cpp"></code></pre>
-<p>，这个时候是采用绝对路径，还是相对路径<br>项目中的程序位于 /system/bin 下配置文件也在同一级文件目录中。<br>程序开机由系统脚本拉起后常驻后台，检测其他进程.</p>
-<p>首先设为绝对路径，./exe 拉起 测试ok,系统脚本拉起也ok,但是有个同事认为同一级目录下 直接读取文件名就可以了，<br>听命令改，./exe 测试ok ,然而系统脚本拉起NG,无法去读配置文件。</p>
-<p>经过测试，Android init.rc 中拉起的程序工作路径是/ ，而非程序所在目录，当使用 ./exe 拉起程序的时候工作路径在当前目录<br>使用相对路径自然找到配置文件</p>
+        <h1 id="关于工作路径"><a href="#关于工作路径" class="headerlink" title="关于工作路径"></a>关于工作路径</h1><p>　　工作路径是进程的一个重要的属性，在pcb结构中应该是一项成员，平时和文件交互的比较少的业务很少会关注程序的工作路径的问题</p>
+<h1 id="情形"><a href="#情形" class="headerlink" title="情形"></a>情形</h1><p>　　为了适配不同的厂商或者版本，想要后台程序通过读取配置文件方法来，减少某个组件编译次数, 每次厂商变更只需要改下配置文件中的厂商名字就行了，不必要在代码中写死，每次都要换个厂都要加个宏，在代码中加入一个常量</p>
+<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>　　Android后台程序(为方便设置为daemon.exe位于/system/bin/目录下)daemon.exe开机启动的时候要读取/system/bin/下的product.conf文配置文件.</p>
+<h1 id="代码实现-主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次"><a href="#代码实现-主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次" class="headerlink" title="代码实现 主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次"></a>代码实现 主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Linux 环境中包含 &lt;unistd.h&gt;头文件可以使用</span><br><span class="line">getcwd, getwd, get_current_dir_name 获取程序的当前工作路径</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">char</span> *<span class="title">getcwd</span><span class="params">(<span class="keyword">char</span> *buf, <span class="keyword">size_t</span> size)</span></span>;</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">char</span> *<span class="title">getwd</span><span class="params">(<span class="keyword">char</span> *buf)</span></span>;</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">char</span> *<span class="title">get_current_dir_name</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CONFIG_FILE_PATH <span class="meta-string">"./product.conf"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">app_init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">// 省略若干行代码...</span></span><br><span class="line">  FILE *fp = fopen(CONFIG_FILE_PATH, <span class="string">"r"</span>);</span><br><span class="line">  <span class="keyword">if</span> (fp == <span class="literal">NULL</span>) &#123;</span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">"fopen error"</span>);</span><br><span class="line">     <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">char</span> *current_work_dir = get_current_dir_name();</span><br><span class="line">  <span class="keyword">if</span> (current_work_dir != <span class="literal">NULL</span>) &#123;</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"current working dir is [%s]"</span>, current_work_dir);</span><br><span class="line">      <span class="built_in">free</span>(current_work_dir);</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 省略若干行代码...</span></span><br><span class="line">  <span class="keyword">if</span> (fp != <span class="literal">NULL</span>)</span><br><span class="line">  fclose(fp);</span><br><span class="line"><span class="comment">// 省略若干行代码...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="问题出现之后我的直觉告诉先打印errno-然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径"><a href="#问题出现之后我的直觉告诉先打印errno-然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径" class="headerlink" title="问题出现之后我的直觉告诉先打印errno, 然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径"></a>问题出现之后我的直觉告诉先打印errno, 然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径</h2><p>手里没有root权限的android 手机，就使用linux，linux中开机拉起服务的地方加入自己写的程序的路径</p>
+<p>#附加题：如何创建守护进程？ 参考 APUE</p>
+<ol>
+<li>通过fork 创建子进程</li>
+<li>子进程kill 父进程</li>
+<li>设置自己的工作路径</li>
+<li></li>
+</ol>
+<p>这个时候是采用绝对路径，还是相对路径<br>项目中的程序位于 /system/bin 下配置文件也在同一级文件目录中。<br>程序开机由系统脚本拉起后常驻后台，检测其他进程.</p>
+<p>首先设为绝对路径，./exe 拉起 测试ok,系统脚本拉起也ok,但是同事A认为同一级目录下 直接读取文件名就可以了，<br>听命令改，./exe 测试ok ,然而系统脚本拉起之后整个系统无法正常运行，因为配置文件没有读取到，程序报出错误打印<br>经过测试，Android init.rc 中拉起的程序工作路径是/ ，而非程序所在目录，当使用 ./exe 拉起程序的时候工作路径在当前目录<br>使用相对路径自然找到配置文件</p>
 
     </div>
 
@@ -310,7 +318,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于工作路径"><span class="nav-number">1.</span> <span class="nav-text">关于工作路径</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#情形"><span class="nav-number">1.1.</span> <span class="nav-text">情形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#需求"><span class="nav-number">1.2.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码实现"><span class="nav-number">1.3.</span> <span class="nav-text">代码实现</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于工作路径"><span class="nav-number">1.</span> <span class="nav-text">关于工作路径</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#情形"><span class="nav-number">2.</span> <span class="nav-text">情形</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#需求"><span class="nav-number">3.</span> <span class="nav-text">需求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码实现-主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次"><span class="nav-number">4.</span> <span class="nav-text">代码实现 主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题出现之后我的直觉告诉先打印errno-然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径"><span class="nav-number">4.1.</span> <span class="nav-text">问题出现之后我的直觉告诉先打印errno, 然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -326,7 +334,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

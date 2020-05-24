@@ -158,7 +158,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">37</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">42</span></a>
 
   </li>
   </ul>
@@ -186,6 +186,434 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/bit-opteration/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
+      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Linuxmint17's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/18/bit-opteration/" class="post-title-link" itemprop="url">位运算、原码、反码、补码</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-02-18 17:49:04" itemprop="dateCreated datePublished" datetime="2020-02-18T17:49:04+08:00">2020-02-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-03-05 16:51:37" itemprop="dateModified" datetime="2020-03-05T16:51:37+08:00">2020-03-05</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="位运算的地位"><a href="#位运算的地位" class="headerlink" title="位运算的地位"></a>位运算的地位</h1><p>　以下内容摘自《枕边算法书》感觉对于位运算描述的很形象</p>
+<blockquote>
+<p>　　对于程序员来说,”位” 相当于现实世界中构成水和空气的粒子。<br>编程世界的所有东西都会从位开始，以位结束。刚步入编程世界的<br>初学者看到整数就是整数，看到字符串就是字符串。但功力深厚的<br>程序员眼中无论整数还是字符串，它们都是位。</p>
+</blockquote>
+<blockquote>
+<p>　　与系统编程不同，一般应用程序的编程对位运算的要求并不高。<br>即使如此，很少有程序员不懂位运算，因为在不懂位运算的情况下<br>编程写程序，就像在现实世界中不呼吸、不喝水一样，几乎不可能。</p>
+</blockquote>
+<h1 id="位运算的类型"><a href="#位运算的类型" class="headerlink" title="位运算的类型"></a>位运算的类型</h1><table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&amp;</td>
+<td align="center">按位与:全1才1,否则都0</td>
+</tr>
+<tr>
+<td align="center">|</td>
+<td align="center">按位或:有1得1,全0才0</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="center">按位异或:相异为真,相同为假</td>
+</tr>
+<tr>
+<td align="center">&gt;&gt;</td>
+<td align="center">右移:对于有符号数的右移分为算术右移和逻辑右移</td>
+</tr>
+<tr>
+<td align="center">&lt;&lt;</td>
+<td align="center">左移:比较简单不论是否有符号整数</td>
+</tr>
+<tr>
+<td align="center">~</td>
+<td align="center">取反:每个位1变0,0变1</td>
+</tr>
+<tr>
+<td align="center"><strong>对于正整数而言，左移1位就是x2,右移就是除2</strong></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><strong>下图来自《Computer Systems - A Programmer’s Perspective》</strong></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><img src="https://i.loli.net/2020/02/23/PohLeXaVilHCFYq.png" alt="bit-right-shift.PNG"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">算术右移:直接右移n位,左侧空出来的n位全补0</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">逻辑右移:对于有符号数有些不同，对于无符号数没有区别</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">可惜对于右移而言标准c没有规定，应该使用哪种，大多数的编译器都使用算术右移</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">java中明确规定x&gt;&gt;k运算符表示x算术右移k位, x&gt;&gt;&gt;k表示逻辑右移</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="原码"><a href="#原码" class="headerlink" title="原码"></a>原码</h1><p>  一个数的二进制表示加上正负号</p>
+<h1 id="反码-Ones’-complement-一的补码"><a href="#反码-Ones’-complement-一的补码" class="headerlink" title="反码(Ones’ complement /一的补码)"></a>反码(Ones’ complement /一的补码)</h1><p>定义<br><img src="https://i.loli.net/2020/02/22/6YB31Gx5nUwsVbv.png" alt="bit-fanma.png"><br>式中，N为真值，n为编码的位数</p>
+<p>反码，正数的反码等于其原码，而负数的反码则可以通过保留其符号位，将原码的数值位取反得到。 </p>
+<h1 id="补码-Twos’-complement-二的补码"><a href="#补码-Twos’-complement-二的补码" class="headerlink" title="补码(Twos’ complement /二的补码)"></a>补码(Twos’ complement /二的补码)</h1><p>　　<img src="https://i.loli.net/2020/02/23/qIiaTSh3ZgBfKoX.png" alt="bit-buma.PNG"><br>　　计算机中采用补码的原因是原码和反码的时候，0的表示不唯一</p>
+<h1 id="补码的计算方法"><a href="#补码的计算方法" class="headerlink" title="补码的计算方法"></a>补码的计算方法</h1><p>　　正数的补码和原码一致，辅助的补码用用其绝对值的原码按位取反，然后(从LSB(最低有效位))+1</p>
+<h1 id="根据补码-2补数-求真值的方法"><a href="#根据补码-2补数-求真值的方法" class="headerlink" title="根据补码(2补数)求真值的方法"></a>根据补码(2补数)求真值的方法</h1><p>　　设1100为补码, 拿到补码最高位是-(2^3), 然后 + 2^2 得到 -4 </p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>　　1. <strong>现代计算机中存储的永远是补码</strong><br>　　2. <strong>运算的时候也是用补码在运算</strong><br>　　3. <strong>x,y均为整数, 如果有~x = y 成立,则有 x + y = -1 成立</strong></p>
+<h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><ol>
+<li>~3 = ？<br>3 = (0000 0011)按位取反得到(1111 1100) 按照2补数解释为-4</li>
+<li><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> cat = <span class="number">13</span>;</span><br><span class="line">cat - ~-cat; <span class="comment">// this experssion's value is 1</span></span><br><span class="line"><span class="built_in">putchar</span> (~-~-~-cat); <span class="comment">// this line equal to putchar('\n'); \n 的ascii code 十进制的值为 10</span></span><br></pre></td></tr></table></figure>
+<h1 id="位运算可以用来判断整数的奇偶性"><a href="#位运算可以用来判断整数的奇偶性" class="headerlink" title="位运算可以用来判断整数的奇偶性"></a>位运算可以用来判断整数的奇偶性</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输出0 ~ 100 的所有奇数</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (i &amp; <span class="number">1</span>) &#123; <span class="comment">// 基数最低bit位是1</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/16/c-array/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
+      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Linuxmint17's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/16/c-array/" class="post-title-link" itemprop="url">C语言中数组</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-02-16 12:04:57 / Modified: 15:43:59" itemprop="dateCreated datePublished" datetime="2020-02-16T12:04:57+08:00">2020-02-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="数组的奇葩"><a href="#数组的奇葩" class="headerlink" title="数组的奇葩"></a>数组的奇葩</h1><p>  C语言中x[i]的计算方法 *(x + i)  x是个数组名，一般写数组的时候，x是常量指针,当x是0的时候没问题</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">is_big_endian</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">0xbabe</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>[(<span class="keyword">unsigned</span> <span class="keyword">char</span> *)&amp;a] == <span class="number">0xbe</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i; <span class="comment">// 未初始化的全局变量，被初始化成0</span></span><br><span class="line">main ()</span><br><span class="line">&#123;</span><br><span class="line">  <span class="comment">// read 是自定义函数, read(0, i++ + "hello, world!\n", 1); 实际上调用了系统调用write(1,指向hello, world!的指针，每次偏移一,1);</span></span><br><span class="line">  <span class="comment">// i["]&lt;i;++i)&#123;--i;&#125;"] 是判断 *("]&lt;i;++i)&#123;--i;"的地址 偏移 i) 是否为0，"]&lt;i;++i)&#123;--i;" 的长度和 "hello, world!"的长度一样</span></span><br><span class="line">  <span class="comment">// C语言中的字符串常量和数字做运算的时候是 常量指针const char *类型</span></span><br><span class="line">  <span class="keyword">for</span> (; i[<span class="string">"]&lt;i;++i)&#123;--i;&#125;"</span>]; read (<span class="string">'-'</span> - <span class="string">'-'</span>, i++ + <span class="string">"hello, world!\n"</span>, <span class="string">'/'</span> / <span class="string">'/'</span>));</span><br><span class="line">&#125;</span><br><span class="line">read (j, i, p)</span><br><span class="line">&#123;</span><br><span class="line">  write (j / p + p, i-- - j, i / i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/15/c-main/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
+      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Linuxmint17's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/15/c-main/" class="post-title-link" itemprop="url">C 语言中的main函数</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-02-15 23:48:28" itemprop="dateCreated datePublished" datetime="2020-02-15T23:48:28+08:00">2020-02-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-16 15:18:19" itemprop="dateModified" datetime="2020-02-16T15:18:19+08:00">2020-02-16</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="C语言中main写法"><a href="#C语言中main写法" class="headerlink" title="C语言中main写法"></a>C语言中main写法</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 接受任意参数但不起作用</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 明确不接受任何参数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// argc 参数的个数， argv 指向参数字符的首地址</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> **argv)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 同上，第二个参数的不同写法</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 此版本可以打印出环境变量</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[], <span class="keyword">char</span> *env)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="关于main函数"><a href="#关于main函数" class="headerlink" title="关于main函数"></a>关于main函数</h2><ol>
+<li>main函数并非必须存在，只是约定俗成的一个程序启动入口罢了,main函数被crt(C语言运行时)调用可以通过编译器指令来替换入口函数<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// entry.c</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">entry</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello world\n"</span>);</span><br><span class="line"><span class="comment">//  return 0; // this will cause coredump ,因为程序直接entry 开始没有运行环境</span></span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>); <span class="comment">// this works fine</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ gcc -nostartfiles -e entry entry.c -o helloword</span><br><span class="line">$ ./helloword</span><br></pre></td></tr></table></figure></li>
+<li>main 在c语言中还可以自己调用自己<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> counter = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello world"</span>);</span><br><span class="line">    counter++;</span><br><span class="line">    main();</span><br><span class="line">    <span class="keyword">if</span> (counter == <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>main是个符号而已<br>1984年的IOCCC(International Obfuscated C Code Contest/国际C代码混淆大赛)的两位牛人(Sjoerd Mullender</li>
+</ol>
+<p>Robbert van Renesse)通过下面的代码获得了特等奖The Grand Prize, 影响到后来的比赛规则，不鼓励写依赖硬件的代码</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">short</span> main[] = &#123;</span><br><span class="line">	<span class="number">277</span>, <span class="number">04735</span>, <span class="number">-4129</span>, <span class="number">25</span>, <span class="number">0</span>, <span class="number">477</span>, <span class="number">1019</span>, <span class="number">0xbef</span>, <span class="number">0</span>, <span class="number">12800</span>,</span><br><span class="line">	<span class="number">-113</span>, <span class="number">21119</span>, <span class="number">0x52d7</span>, <span class="number">-1006</span>, <span class="number">-7151</span>, <span class="number">0</span>, <span class="number">0x4bc</span>, <span class="number">020004</span>,</span><br><span class="line">	<span class="number">14880</span>, <span class="number">10541</span>, <span class="number">2056</span>, <span class="number">04010</span>, <span class="number">4548</span>, <span class="number">3044</span>, <span class="number">-6716</span>, <span class="number">0x9</span>,</span><br><span class="line">	<span class="number">4407</span>, <span class="number">6</span>, <span class="number">5568</span>, <span class="number">1</span>, <span class="number">-30460</span>, <span class="number">0</span>, <span class="number">0x9</span>, <span class="number">5570</span>, <span class="number">512</span>, <span class="number">-30419</span>,</span><br><span class="line">	<span class="number">0x7e82</span>, <span class="number">0760</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">02400</span>, <span class="number">15</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">1280</span>, <span class="number">4</span>, <span class="number">0</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0x8</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">0</span>, <span class="string">','</span>, <span class="number">0</span>, <span class="number">12</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">0</span>, <span class="string">'#'</span>,</span><br><span class="line">	<span class="number">0</span>, <span class="number">020</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">0</span>, <span class="number">30</span>, <span class="number">0</span>, <span class="number">026</span>, <span class="number">0</span>, <span class="number">0x6176</span>, <span class="number">120</span>, <span class="number">25712</span>,</span><br><span class="line">	<span class="string">'p'</span>, <span class="number">072163</span>, <span class="string">'r'</span>, <span class="number">29303</span>, <span class="number">29801</span>, <span class="string">'e'</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="下面是裁判的评论"><a href="#下面是裁判的评论" class="headerlink" title="下面是裁判的评论"></a>下面是裁判的评论</h3><p>
+Judges' comments:
+Without question, this C program is the most obfuscated C program that has ever been received! Like all great contest entries, they result in a change of rules for the following year. To prevent a flood of similar programs, we requested that programs be non machine specific.
+
+<p>This program was selected for the 1987 t-shirt collection.</p>
+<p>NOTE: If your machine is not a Vax-11 or pdp-11, this program will not execute correctly. In later years, machine dependent code was discouraged.</p>
+<p>The C startup routine (via crt0.o) transfers control to a location named main. In this case, main just happens to be in the data area. The array of shorts, which has been further obfuscated by use of different data types, just happens to form a meaningful set of PDP-11 and Vax instructions. The first word is a PDP-11 branch instruction that branches to the rest of the PDP code. On the Vax main is called with the calls instruction which uses the first word of the subroutine as a mask of registers to be saved. So on the Vax the first word can be anything. The real Vax code starts with the second word. This small program makes direct calls to the write() Unix system call to produce a message on the screen. Can you guess what is printed? We knew you couldn’t! :-)</p>
+</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/14/about-bash/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
+      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Linuxmint17's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/14/about-bash/" class="post-title-link" itemprop="url">About Bash</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-02-14 18:10:06" itemprop="dateCreated datePublished" datetime="2020-02-14T18:10:06+08:00">2020-02-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-18 21:40:28" itemprop="dateModified" datetime="2020-02-18T21:40:28+08:00">2020-02-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Bash的环境变量"><a href="#Bash的环境变量" class="headerlink" title="Bash的环境变量"></a>Bash的环境变量</h2><ul>
+<li>PROMPT_DIRTRIM<br>修改PS1中dir的个数 trim 留下几层目录<h2 id="bashrc-检查错误"><a href="#bashrc-检查错误" class="headerlink" title="bashrc 检查错误"></a>bashrc 检查错误</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bash -n ~/.bashrc</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/14/about-mysql/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
+      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Linuxmint17's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/14/about-mysql/" class="post-title-link" itemprop="url">mysql</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-02-14 17:20:24" itemprop="dateCreated datePublished" datetime="2020-02-14T17:20:24+08:00">2020-02-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-03-28 22:41:40" itemprop="dateModified" datetime="2020-03-28T22:41:40+08:00">2020-03-28</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="mysql-是很流行的一款开源数据库软件"><a href="#mysql-是很流行的一款开源数据库软件" class="headerlink" title="mysql 是很流行的一款开源数据库软件"></a>mysql 是很流行的一款开源数据库软件</h1><p>　　mysql是跨平台的关系型数据库，安装可以参考<a href="https://dev.mysql.com/doc/mysql-sles-repo-quick-guide/en/" target="_blank" rel="noopener">mysql安装官网指导</a> <br><br>mysql好像是从5.7版本之后，安装完会有一个随机的root密码使用grep password /var/log/mysqld.log 查找密码，否则无法登陆<br>安装完成之后要用mysql_secure_instation 设置一下安全属性</p>
+<h1 id="mysql-基本指令"><a href="#mysql-基本指令" class="headerlink" title="mysql 基本指令"></a>mysql 基本指令</h1><ul>
+<li>CREATE DATABASE ssusers; 创建数据库</li>
+<li>DROP DATABASE ssusers; 删除数据库</li>
+<li>SHOW DATABASES; 显示数据库</li>
+<li>CREATE USER ‘ssmanger’@’localhost’ IDENTIFIED BY ‘123456’; 创建用户 ssmanger 本机可以访问 mysql</li>
+<li>GRANT ALL privileges  ON  ssusers.* TO ssmanger@’localhost’; 将数据库所有权限给用户 ssmanager</li>
+<li>SET PASSWORD FOR ‘username’@’host’ = PASSWORD(‘newpassword’); 更新mysql用户密码</li>
+<li>CREATE USER ‘wordpressadmin’@’%’ IDENTIFIED BY ‘123456’; 创建用户 wordpressadmin在所有ip可以访问mysql<h1 id="mysql-多表查询"><a href="#mysql-多表查询" class="headerlink" title="mysql 多表查询"></a>mysql 多表查询</h1></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -473,7 +901,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-16 18:04:22" itemprop="dateModified" datetime="2020-02-16T18:04:22+08:00">2020-02-16</time>
+                <time title="Modified: 2020-04-07 22:54:46" itemprop="dateModified" datetime="2020-04-07T22:54:46+08:00">2020-04-07</time>
               </span>
 
           
@@ -487,13 +915,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="关于工作路径"><a href="#关于工作路径" class="headerlink" title="关于工作路径"></a>关于工作路径</h1><p>情境(situation)、任务(task)、行动(action)、结果(result)<br>　shell 命令 pwd 能显示用户的工作路径<br>C语言程序可以使用 getcwd, getwd, get_current_dir_name<br>函数获取当前工作路径，一般来说大家写代码不会关注这个东西<br>s:<br>T:<br>A:<br>R:</p>
-<h2 id="情形"><a href="#情形" class="headerlink" title="情形"></a>情形</h2><p>　　为了适配不同的厂商或者版本，想要后台程序通过读取配置文件方法来，减少某个组件编译次数, 每次厂商变更只需要改下配置文件中的厂商名字就行了，不必要在代码中写死，每次都要换个厂都要加个宏，在代码中加入一个常量</p>
-<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>　　Android(Linux变种)后台程序(为方便设置为daemon.exe位于/system/bin/目录下)daemon.exe开机启动的时候要读取/system/bin/下的product.conf文配置文件.</p>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><pre><code class="cpp"></code></pre>
-<p>，这个时候是采用绝对路径，还是相对路径<br>项目中的程序位于 /system/bin 下配置文件也在同一级文件目录中。<br>程序开机由系统脚本拉起后常驻后台，检测其他进程.</p>
-<p>首先设为绝对路径，./exe 拉起 测试ok,系统脚本拉起也ok,但是有个同事认为同一级目录下 直接读取文件名就可以了，<br>听命令改，./exe 测试ok ,然而系统脚本拉起NG,无法去读配置文件。</p>
-<p>经过测试，Android init.rc 中拉起的程序工作路径是/ ，而非程序所在目录，当使用 ./exe 拉起程序的时候工作路径在当前目录<br>使用相对路径自然找到配置文件</p>
+          <h1 id="关于工作路径"><a href="#关于工作路径" class="headerlink" title="关于工作路径"></a>关于工作路径</h1><p>　　工作路径是进程的一个重要的属性，在pcb结构中应该是一项成员，平时和文件交互的比较少的业务很少会关注程序的工作路径的问题</p>
+<h1 id="情形"><a href="#情形" class="headerlink" title="情形"></a>情形</h1><p>　　为了适配不同的厂商或者版本，想要后台程序通过读取配置文件方法来，减少某个组件编译次数, 每次厂商变更只需要改下配置文件中的厂商名字就行了，不必要在代码中写死，每次都要换个厂都要加个宏，在代码中加入一个常量</p>
+<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>　　Android后台程序(为方便设置为daemon.exe位于/system/bin/目录下)daemon.exe开机启动的时候要读取/system/bin/下的product.conf文配置文件.</p>
+<h1 id="代码实现-主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次"><a href="#代码实现-主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次" class="headerlink" title="代码实现 主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次"></a>代码实现 主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Linux 环境中包含 &lt;unistd.h&gt;头文件可以使用</span><br><span class="line">getcwd, getwd, get_current_dir_name 获取程序的当前工作路径</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">char</span> *<span class="title">getcwd</span><span class="params">(<span class="keyword">char</span> *buf, <span class="keyword">size_t</span> size)</span></span>;</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">char</span> *<span class="title">getwd</span><span class="params">(<span class="keyword">char</span> *buf)</span></span>;</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">char</span> *<span class="title">get_current_dir_name</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CONFIG_FILE_PATH <span class="meta-string">"./product.conf"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">app_init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">// 省略若干行代码...</span></span><br><span class="line">  FILE *fp = fopen(CONFIG_FILE_PATH, <span class="string">"r"</span>);</span><br><span class="line">  <span class="keyword">if</span> (fp == <span class="literal">NULL</span>) &#123;</span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">"fopen error"</span>);</span><br><span class="line">     <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">char</span> *current_work_dir = get_current_dir_name();</span><br><span class="line">  <span class="keyword">if</span> (current_work_dir != <span class="literal">NULL</span>) &#123;</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"current working dir is [%s]"</span>, current_work_dir);</span><br><span class="line">      <span class="built_in">free</span>(current_work_dir);</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 省略若干行代码...</span></span><br><span class="line">  <span class="keyword">if</span> (fp != <span class="literal">NULL</span>)</span><br><span class="line">  fclose(fp);</span><br><span class="line"><span class="comment">// 省略若干行代码...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="问题出现之后我的直觉告诉先打印errno-然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径"><a href="#问题出现之后我的直觉告诉先打印errno-然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径" class="headerlink" title="问题出现之后我的直觉告诉先打印errno, 然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径"></a>问题出现之后我的直觉告诉先打印errno, 然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径</h2><p>手里没有root权限的android 手机，就使用linux，linux中开机拉起服务的地方加入自己写的程序的路径</p>
+<p>#附加题：如何创建守护进程？ 参考 APUE</p>
+<ol>
+<li>通过fork 创建子进程</li>
+<li>子进程kill 父进程</li>
+<li>设置自己的工作路径</li>
+<li></li>
+</ol>
+<p>这个时候是采用绝对路径，还是相对路径<br>项目中的程序位于 /system/bin 下配置文件也在同一级文件目录中。<br>程序开机由系统脚本拉起后常驻后台，检测其他进程.</p>
+<p>首先设为绝对路径，./exe 拉起 测试ok,系统脚本拉起也ok,但是同事A认为同一级目录下 直接读取文件名就可以了，<br>听命令改，./exe 测试ok ,然而系统脚本拉起之后整个系统无法正常运行，因为配置文件没有读取到，程序报出错误打印<br>经过测试，Android init.rc 中拉起的程序工作路径是/ ，而非程序所在目录，当使用 ./exe 拉起程序的时候工作路径在当前目录<br>使用相对路径自然找到配置文件</p>
 
       
     </div>
@@ -579,408 +1015,11 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/24/about-codestyle/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
-      <meta itemprop="name" content="Linuxmint17">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/24/about-codestyle/" class="post-title-link" itemprop="url">About codestyle</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-24 13:39:00" itemprop="dateCreated datePublished" datetime="2020-01-24T13:39:00+08:00">2020-01-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-30 19:17:04" itemprop="dateModified" datetime="2020-01-30T19:17:04+08:00">2020-01-30</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="什么是-codestyle"><a href="#什么是-codestyle" class="headerlink" title="什么是 codestyle?"></a>什么是 codestyle?</h1><p>　　codesytle 包括变量、函数命名规范，回车换行的使用，以及空格对齐，还是tab对齐，对齐两个空格，还是四个空格.</p>
-<h1 id="为什么团队需要统一codestyle"><a href="#为什么团队需要统一codestyle" class="headerlink" title="为什么团队需要统一codestyle?"></a>为什么团队需要统一codestyle?</h1><p>　　自己写代码只给自己看还可以，爱怎么写就怎么写，只要编译通过跑的起来就ok, 但是涉及到多人协作，就要考虑其他<br>人可能要阅读你的代码.当多人协作使用一套代码时，代码风格不统一就像书法作品中一会儿行书，一会草书，一会儿楷书，<br>一会儿小篆一样，造成风格的混乱会降低阅读效率. 代码是写给人看，顺便给计算机执行的. 人都没法看, 没法维护.</p>
-<h1 id="为什么会有-codestyle"><a href="#为什么会有-codestyle" class="headerlink" title="为什么会有 codestyle?"></a>为什么会有 codestyle?</h1><p>　　刚开始的编程语言的编译要求是比较宽松的，比如说C/c++/Java中对于多余的空格(回车换行等留白)，对indent没有<br>特殊的要求，分号分割就认为是一个语句.python 就是对空格、tab留白要求比较严格的语言，不同的缩进可能会导致不同的<br>语义，也可能编译、执行失败, 我认为空格和回车的使用是导致风格之间差异的重要因素.</p>
-<h1 id="我自己的感受"><a href="#我自己的感受" class="headerlink" title="我自己的感受"></a>我自己的感受</h1><p>　　在公司求严格的codesytle之后，刚开始还不太习惯，习惯之后回头看自己之前写的代码，忍不住想动手改一下codestyle，不改两下看不下去。。。</p>
-<h1 id="有趣的比赛-IOCCC"><a href="#有趣的比赛-IOCCC" class="headerlink" title="有趣的比赛 IOCCC"></a>有趣的比赛 IOCCC</h1><p>　　IOCCC (International Obfuscated C Code Contest) 是国际混淆C代码大赛，看谁的代码写的更令人看不懂，但功能又很<br>有趣或者实用, 比赛的目的是从反面告诉人们要注意code style , 同时参赛者也在展示自己对C语言的理解和其他编程功力 <br><br><a href="https://www.ioccc.org/years.html" target="_blank" rel="noopener">历年获奖的作品</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/24/about-sizeof/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
-      <meta itemprop="name" content="Linuxmint17">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/24/about-sizeof/" class="post-title-link" itemprop="url">About sizeof</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-24 13:20:35" itemprop="dateCreated datePublished" datetime="2020-01-24T13:20:35+08:00">2020-01-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-07 14:34:10" itemprop="dateModified" datetime="2020-03-07T14:34:10+08:00">2020-03-07</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="sizeof-的误解，sizeof-不是函数-function-，是运算符-operator"><a href="#sizeof-的误解，sizeof-不是函数-function-，是运算符-operator" class="headerlink" title="sizeof 的误解，sizeof 不是函数(function)，是运算符(operator)"></a>sizeof 的误解，sizeof 不是函数(function)，是运算符(operator)</h1><p>　　函数在程序运行的时候起作用，运算符求出来的大小是在编译时就确定下来的</p>
-<h2 id="常见的sizeof操作"><a href="#常见的sizeof操作" class="headerlink" title="常见的sizeof操作"></a>常见的sizeof操作</h2><ul>
-<li><p>对结构体类型求大小</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">char</span> a;</span><br><span class="line">    <span class="keyword">int</span> b;</span><br><span class="line">    <span class="keyword">char</span> *ptr;</span><br><span class="line">    <span class="keyword">double</span> c;</span><br><span class="line">    <span class="keyword">char</span> name[<span class="number">19</span>];</span><br><span class="line">&#125; Demo;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结构体的实际所占用内存大小，需要内存对齐，按照4byte或者8byte对齐，</span></span><br><span class="line"><span class="comment">// 对齐的原则整体大小能被4整除，而且每个成员的地址偏移都是4的整数倍</span></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="keyword">sizeof</span>(Demo) &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>对联合体求大小</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="comment">// 联合体的大小是能够容纳最大的成员的大小, 还要考虑一下四字节对齐</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">union</span> &#123;</span><br><span class="line">  <span class="keyword">int</span> a[<span class="number">3</span>];</span><br><span class="line">  <span class="keyword">char</span> b[<span class="number">8</span>] ;</span><br><span class="line">&#125; data;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"sizeof(data)= %d\n"</span>, <span class="keyword">sizeof</span>(data)); <span class="comment">// 12</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>对字符串常量求大小</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *p1 = <span class="string">"abc"</span>;</span><br><span class="line"><span class="keyword">char</span> p2[] = <span class="string">"abc"</span>;</span><br><span class="line"><span class="keyword">int</span> sz1 = <span class="keyword">sizeof</span>(<span class="string">"mute"</span>);</span><br><span class="line"><span class="keyword">int</span> len1 = <span class="built_in">strlen</span>(<span class="string">"mute"</span>);</span><br><span class="line"><span class="keyword">int</span> sz2 = <span class="keyword">sizeof</span>(p1);</span><br><span class="line"><span class="keyword">int</span> sz3 = <span class="keyword">sizeof</span>(p2);</span><br><span class="line"><span class="keyword">int</span> len2 = <span class="built_in">strlen</span>(p1);</span><br><span class="line"><span class="keyword">int</span> len3 = <span class="built_in">strlen</span>(p2);</span><br></pre></td></tr></table></figure></li>
-<li><p>对指针变量、指针类型求大小</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>* ptr = <span class="string">"abcdefg"</span>;</span><br><span class="line"><span class="keyword">int</span> sz1 = <span class="keyword">sizeof</span>(ptr);</span><br><span class="line"><span class="keyword">int</span> sz2 = <span class="keyword">sizeof</span>(<span class="keyword">char</span>*);</span><br><span class="line"><span class="keyword">int</span> sz3 = <span class="keyword">sizeof</span>(*ptr);</span><br><span class="line"><span class="comment">// x64 平台结果是881 指针类型解引用之后的大小就是*前面类型的大小</span></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; sz1 &lt;&lt; sz2 &lt;&lt; sz3 &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"><span class="comment">// 通常来说sizeof 对指针类型(变量)求值x86(32bit)平台就是4Btye,x64平台就算是8Byte</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>对含有虚函数的class求大小</p>
-</li>
-<li><p>求数组的大小 、对变量求大小、 对类型求大小</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> <span class="built_in">array</span>[] = &#123;<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">100</span>, <span class="number">200</span>&#125;;</span><br><span class="line"><span class="comment">// 第一种写法</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">sizeof</span>(<span class="built_in">array</span>) / <span class="keyword">sizeof</span>(<span class="keyword">int</span>); i++) &#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="built_in">array</span>[i] &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 第二种写法</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">sizeof</span>(<span class="built_in">array</span>) / <span class="keyword">sizeof</span>(<span class="built_in">array</span>[<span class="number">0</span>]); i++) &#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="built_in">array</span>[i] &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>sizeof 的一个考题</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">MyStruct</span> &#123;</span></span><br><span class="line">  <span class="keyword">int</span> i;</span><br><span class="line">  <span class="keyword">char</span> str[<span class="number">10</span>];</span><br><span class="line">  <span class="keyword">char</span> *ptr;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> a[<span class="number">3</span>][<span class="number">4</span>];</span><br><span class="line">    <span class="comment">//x86 windows (char *) type 4byte ,x64 windwows (char *)type 8bytes</span></span><br><span class="line">    <span class="keyword">char</span> **b[<span class="number">3</span>][<span class="number">4</span>]; <span class="comment">// 指针数组，12个元素，每个指针大小4或者8</span></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"sizeof(MyStruct)= "</span> &lt;&lt; <span class="keyword">sizeof</span>(MyStruct) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"sizeof(a)"</span> &lt;&lt;<span class="keyword">sizeof</span>(a) &lt;&lt; <span class="built_in">endl</span>; </span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"sizeof(b)"</span> &lt;&lt;<span class="keyword">sizeof</span>(b) &lt;&lt; <span class="built_in">endl</span>; </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="sizeof-的原理"><a href="#sizeof-的原理" class="headerlink" title="sizeof 的原理"></a>sizeof 的原理</h2><p><a href="https://www.zhihu.com/question/26090484" target="_blank" rel="noopener">参考知乎用户<strong><em>蓝色</em></strong>的回答</a></p>
-<h2 id="x按n字节对齐的宏的来源"><a href="#x按n字节对齐的宏的来源" class="headerlink" title="x按n字节对齐的宏的来源"></a>x按n字节对齐的宏的来源</h2><p>x = nq + r, 其中  0 &lt;= r &lt; n                  //最小非负剩余</p>
-</li>
-</ul>
-<p>q, r 是唯一确定的。q = [x/n], r = x - n[x/n]. 这个是带余除法的一个简单形式。在 c 语言中， q, r 容易计算出来： q = x/n, r = x % n.</p>
-<p>所谓把 x 按 n 对齐指的是：若 r=0, 取 qn, 若 r&gt;0, 取 (q+1)n. 这也相当于把 x 表示为：</p>
-<p>x = nq + r’, 其中 -n &lt; r’ &lt;=0                //最大非正剩余   </p>
-<p>nq 是我们所求。关键是如何用 c 语言计算它。由于我们能处理标准的带余除法，所以可以把这个式子转换成一个标准的带余除法，<br>然后加以处理：</p>
-<p>x+n = qn + (n+r’)，其中 0&lt;n+r’&lt;=n            //最大正剩余</p>
-<p>x+n-1 = qn + (n+r’-1), 其中 0&lt;= n+r’-1 &lt;n    //最小非负剩余</p>
-<p>所以 qn = [(x+n-1)/n]n. 用 c 语言计算就是：</p>
-<p>((x+n-1)/n)*n</p>
-<p>若 n 是 2 的方幂, 比如 2^m，则除为右移 m 位，乘为左移 m 位。所以把 x+n-1 的最低 m 个二进制位清 0就可以了。得到：</p>
-<p>(x+n-1) &amp; ~(n-1)</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/24/about-makefile/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
-      <meta itemprop="name" content="Linuxmint17">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/24/about-makefile/" class="post-title-link" itemprop="url">About Makefile</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-24 11:24:17" itemprop="dateCreated datePublished" datetime="2020-01-24T11:24:17+08:00">2020-01-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-29 21:41:50" itemprop="dateModified" datetime="2020-01-29T21:41:50+08:00">2020-01-29</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="make-是用来组织大型工程必不可少的工具"><a href="#make-是用来组织大型工程必不可少的工具" class="headerlink" title="make 是用来组织大型工程必不可少的工具"></a>make 是用来组织大型工程必不可少的工具</h1><p>　　make 有各种变体: Qt的qmake, 跨平台的 cmake, 微软的 nmake</p>
-<h1 id="make-menuconfig"><a href="#make-menuconfig" class="headerlink" title="make menuconfig"></a>make menuconfig</h1><p>　　好像最早是在linux kernel 中使用到的, 在构建kernel 之前使用这个命令会<br>  根据kernel目录下的Makefile和其他的文件以及kconfig语法生成命令行的gui菜单可以勾选，依赖 ncurses</p>
-<h1 id="make-n"><a href="#make-n" class="headerlink" title="make -n"></a>make -n</h1><p>　　make 调试使用的命令，空跑一次，不执行实际操作，把要执行的动作打印出来</p>
-<h1 id="make-f-filename"><a href="#make-f-filename" class="headerlink" title="make -f filename"></a>make -f filename</h1><p>　　指定makefile 文件，不默认寻找 Makefile,makefile</p>
-<h1 id="make"><a href="#make" class="headerlink" title="make"></a>make</h1><p>　　假设当前目录下有 hello.c 执行make hello 会尝试编译 hello.c 到hello</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/21/about-algorithm/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
-      <meta itemprop="name" content="Linuxmint17">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/21/about-algorithm/" class="post-title-link" itemprop="url">About Algorithm</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-21 22:55:58" itemprop="dateCreated datePublished" datetime="2020-01-21T22:55:58+08:00">2020-01-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-01-28 20:30:47" itemprop="dateModified" datetime="2020-01-28T20:30:47+08:00">2020-01-28</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="关于算法的思考"><a href="#关于算法的思考" class="headerlink" title="关于算法的思考"></a>关于算法的思考</h2><pre><code>算法出现的比计算机要早很多:比如说 最大公约数(Greatest common divisor 简写为GCD)的求法,早在</code></pre><p>公元前300年出版的《几何原本》中已经有算法，至今仍然是很实用的方法.</p>
-<h2 id="算法我之见"><a href="#算法我之见" class="headerlink" title="算法我之见"></a>算法我之见</h2><p>   我的看法就是求解某类或者某个问题的固定方法：按照方法做就一定能在有限的时间内得到结果.<br>算法要理解必须有自己的思路，否则当时学会或者记住了，过一阵子就会忘记(记忆天才除外吧).</p>
-<h2 id="算法学习-推导的过程"><a href="#算法学习-推导的过程" class="headerlink" title="算法学习/推导的过程"></a>算法学习/推导的过程</h2><pre><code>把自己思路教给计算机,使用计算机的语言准确描述描述。
-将你的想法交给计算机去执行，首先要了解一个算法手动是怎样计算的，</code></pre><p>手动推演两到三步然后归纳出规律，使用while和if将你的想法写出来伪代码(伪代码甚至可以有一些逻辑错误)，<br>有一点小错误，不要紧，<br>    然后开始将伪代码转为C++代码，调试各种特殊情况和一般情况(测试)<br>    最后自己的(烂)算法大功告成，进行优化和分析确保逻辑上不会有大漏洞</p>
-<h2 id="推演的技巧"><a href="#推演的技巧" class="headerlink" title="推演的技巧"></a>推演的技巧</h2><pre><code>可以从简单的情况入手,尝试解决问题保证自己理解了算法的需求背景，</code></pre><p>特殊推导一般(情形越特殊越简单,高中数学老师讲的),代码中可能有专门用于特殊情况处理的if分支可以考虑<br>是否可以用一般涵盖特殊;</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/20/about-linux/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
-      <meta itemprop="name" content="Linuxmint17">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/20/about-linux/" class="post-title-link" itemprop="url">About Linux</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-01-20 22:47:48" itemprop="dateCreated datePublished" datetime="2020-01-20T22:47:48+08:00">2020-01-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-18 21:43:15" itemprop="dateModified" datetime="2020-02-18T21:43:15+08:00">2020-02-18</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="Linux-的作用范围"><a href="#Linux-的作用范围" class="headerlink" title="Linux 的作用范围"></a>Linux 的作用范围</h2><p>　　Linux 本来仅仅是指一种<strong>类Unix系统</strong>(和unix比较像的操作系统称为<strong>类Unix系统</strong>)的kernel, 不包括 shell等其它实用工具.</br><br>随着linux的日益壮大或者人们的口口相传，原本应该是GNU/Linux 指代整个操作系统，后来渐渐Linux 也指代整个操作系统. </br><br>但是在具体的上下文环境中还是可以分清楚是指代内核还是整个操作系统</p>
-<h2 id="Linux-的常见发行版本"><a href="#Linux-的常见发行版本" class="headerlink" title="Linux 的常见发行版本"></a>Linux 的常见发行版本</h2><p>　　首先解释什么是发行版本：发行版本是开源社区或者公司，甚至是个人把Linuxkernel拿过来，整合其它的使用工具，以及软件管理工具装配的一个便于终端用户使用的操作系统<br>根据软件包管理工具的不同大概分为两个系列 :Debian 系列(使用 dpkg 作为底层工具)和 Redhat 系列(使用 rpm 作为底层工具),还有一些特立独行的发行版本使用的是其他的软件包管理工具(比如说 arch,和 gentoo)</p>
-<ul>
-<li><strong>dpkg 系</strong><ul>
-<li><strong>Debian</strong></li>
-<li><strong>Ubuntu</strong></li>
-<li><strong>Linuxmint</strong></li>
-<li><strong>Deepin</strong></li>
-</ul>
-</li>
-<li><strong>rpm 系</strong><ul>
-<li><strong>Redhat</strong></li>
-<li><strong>CentOS</strong></li>
-<li><strong>Fedora</strong></li>
-<li><strong>SUSE</strong></li>
-<li><strong>OpenSUSE</strong></li>
-</ul>
-</li>
-<li><strong>pacman 系</strong><ul>
-<li><strong>Arch Linux</strong></li>
-<li><strong>Manjaro Linux</strong></li>
-</ul>
-</li>
-<li><strong>其他系列</strong><ul>
-<li>** gentoo Linux 主张一切从源码安装，好像没有包管理工具</li>
-<li>** LFS(Linux from Scratch) 算不上一个系统，从源码装一个可以运行的操作系统<h2 id="为什么要了解Linux"><a href="#为什么要了解Linux" class="headerlink" title="为什么要了解Linux"></a>为什么要了解Linux</h2></li>
-</ul>
-</li>
-<li>实用</li>
-<li>免费<h2 id="linux各式各样，为了加强linux的兼容性Linux基金会成立的一个-项目-LSB-规范linux发行版的一些行为"><a href="#linux各式各样，为了加强linux的兼容性Linux基金会成立的一个-项目-LSB-规范linux发行版的一些行为" class="headerlink" title="linux各式各样，为了加强linux的兼容性Linux基金会成立的一个 项目 LSB 规范linux发行版的一些行为"></a>linux各式各样，为了加强linux的兼容性Linux基金会成立的一个 项目 LSB 规范linux发行版的一些行为</h2><a href="https://wiki.linuxfoundation.org/lsb/start" target="_blank" rel="noopener">Linux Standard Base (LSB)</a>规定各个目录的作用等</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1026,7 +1065,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

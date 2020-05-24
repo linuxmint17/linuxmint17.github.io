@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2020/05/23/about-namespace/</loc>
+    <lastmod>2020-05-24</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/01/28/about-pwd/</loc>
+    <lastmod>2020-04-07</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/25/cpp-keywords/</loc>
+    <lastmod>2020-04-07</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/03/31/about-Qt/</loc>
+    <lastmod>2020-03-30</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/03/30/about-socket/</loc>
+    <lastmod>2020-03-30</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/23/about-preprocess/</loc>
+    <lastmod>2020-03-29</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/03/29/about-IPC/</loc>
+    <lastmod>2020-03-29</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/14/about-mysql/</loc>
+    <lastmod>2020-03-28</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/03/28/about-sqlite3/</loc>
+    <lastmod>2020-03-28</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2020/02/24/about-c-cpp/</loc>
+    <lastmod>2020-03-10</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2020/02/20/about-endian/</loc>
     <lastmod>2020-03-08</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/02/25/c-cpp-extern-static/</loc>
-    <lastmod>2020-03-07</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/24/about-sizeof/</loc>
     <lastmod>2020-03-07</lastmod>
@@ -18,12 +45,6 @@
   </url>  <url>
     <loc>http://yoursite.com/2020/02/28/about-memory/</loc>
     <lastmod>2020-02-28</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/02/23/about-preprocess/</loc>
-    <lastmod>2020-02-26</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/02/24/about-c-cpp/</loc>
-    <lastmod>2020-02-26</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/01/24/about-thread/</loc>
     <lastmod>2020-02-24</lastmod>
@@ -76,17 +97,11 @@
     <loc>http://yoursite.com/2020/02/14/about-ffmpeg/</loc>
     <lastmod>2020-02-17</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2020/01/28/about-pwd/</loc>
-    <lastmod>2020-02-16</lastmod>
-  </url>  <url>
     <loc>http://yoursite.com/2020/02/16/c-array/</loc>
     <lastmod>2020-02-16</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2020/02/15/c-main/</loc>
     <lastmod>2020-02-16</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2020/02/14/mysql/</loc>
-    <lastmod>2020-02-14</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/10/25/hexo-doc/</loc>
     <lastmod>2020-02-02</lastmod>

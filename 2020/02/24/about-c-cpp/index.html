@@ -58,7 +58,7 @@
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
 <meta property="og:description" content="C++ 曾经被叫做C With class, C++ 是兼容C的，并不是100%兼容  C++ 中的C子集是C++的一部分，C语言中允许的东西到C++中可能会不允许    全局变量初始化: C语言中只能使用 constant初始化全局变量 C++可以通过函数初始化123456789101112131415#include &amp;lt;stdio.h&amp;gt;int init()&amp;#123;    pri">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-26T03:17:04.115Z">
+<meta property="og:updated_time" content="2020-03-10T00:19:42.123Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/02/24/about-c-cpp/">
@@ -162,7 +162,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">37</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">42</span></a>
 
   </li>
   </ul>
@@ -224,7 +224,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-26 11:17:04" itemprop="dateModified" datetime="2020-02-26T11:17:04+08:00">2020-02-26</time>
+                <time title="Modified: 2020-03-10 08:19:42" itemprop="dateModified" datetime="2020-03-10T08:19:42+08:00">2020-03-10</time>
               </span>
 
           
@@ -245,6 +245,8 @@
 </ol>
 <h1 id="C-编译器编译之后函数的-mangling-name-和C编译器编出来的函数名称的-namgling-name-不一样"><a href="#C-编译器编译之后函数的-mangling-name-和C编译器编出来的函数名称的-namgling-name-不一样" class="headerlink" title="C++ 编译器编译之后函数的 mangling name 和C编译器编出来的函数名称的 namgling name 不一样,"></a>C++ 编译器编译之后函数的 mangling name 和C编译器编出来的函数名称的 namgling name 不一样,</h1><p>　　当C++代码调用非标准规定的的C库(比如说FFmpeg是一个纯C的库)的时候，先包含C的头文件然后使用 </p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">""</span></span></span><br><span class="line"><span class="keyword">extern</span> <span class="string">"C"</span> &#123; c &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="C-中的-引用reference-vs-指针pointer"><a href="#C-中的-引用reference-vs-指针pointer" class="headerlink" title="C++ 中的 引用reference vs 指针pointer"></a>C++ 中的 引用reference vs 指针pointer</h1><p>　　指针是某个内存对象的地址，通过指针可以间接地修改内存对象的内容<br>　　引用是种隐式(implicit)的指针, 是某个对象的别名，通过以引用可以直接操作该对象</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="comment">// 此函数通过引用直接修改指针i, 使其自增1，指针自增或者自减的大小是指针指向的内存的基本类型的大小sizeof(int)</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span>* &amp; i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    i++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> *i = <span class="number">0</span>;</span><br><span class="line">    func(i);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, i); <span class="comment">// 结果应该是4</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -269,8 +271,8 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/2020/02/25/c-cpp-extern-static/" rel="prev" title="extern vs static">
-                  extern vs static <i class="fa fa-chevron-right"></i>
+                <a href="/2020/02/25/cpp-keywords/" rel="prev" title="keywords">
+                  keywords <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -310,7 +312,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-曾经被叫做C-With-class-C-是兼容C的，并不是100-兼容"><span class="nav-number">1.</span> <span class="nav-text">C++ 曾经被叫做C With class, C++ 是兼容C的，并不是100%兼容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-的C子集-是更好的C，将C中的一些不严格的编译检查，变得相对更严格"><span class="nav-number">2.</span> <span class="nav-text">C++的C子集 是更好的C，将C中的一些不严格的编译检查，变得相对更严格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-编译器编译之后函数的-mangling-name-和C编译器编出来的函数名称的-namgling-name-不一样"><span class="nav-number">3.</span> <span class="nav-text">C++ 编译器编译之后函数的 mangling name 和C编译器编出来的函数名称的 namgling name 不一样,</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-曾经被叫做C-With-class-C-是兼容C的，并不是100-兼容"><span class="nav-number">1.</span> <span class="nav-text">C++ 曾经被叫做C With class, C++ 是兼容C的，并不是100%兼容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-的C子集-是更好的C，将C中的一些不严格的编译检查，变得相对更严格"><span class="nav-number">2.</span> <span class="nav-text">C++的C子集 是更好的C，将C中的一些不严格的编译检查，变得相对更严格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-编译器编译之后函数的-mangling-name-和C编译器编出来的函数名称的-namgling-name-不一样"><span class="nav-number">3.</span> <span class="nav-text">C++ 编译器编译之后函数的 mangling name 和C编译器编出来的函数名称的 namgling name 不一样,</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-中的-引用reference-vs-指针pointer"><span class="nav-number">4.</span> <span class="nav-text">C++ 中的 引用reference vs 指针pointer</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -326,7 +328,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

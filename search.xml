@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>namespace</title>
+    <url>/2020/05/23/about-namespace/</url>
+    <content><![CDATA[<h1 id="命名空间-namespace-是C-的一个关键字"><a href="#命名空间-namespace-是C-的一个关键字" class="headerlink" title="命名空间 (namespace) 是C++的一个关键字"></a>命名空间 (namespace) 是C++的一个关键字</h1><p>不同的命名空间中标识符可以使用 相同名字的变量或者函数名称，而不会引起冲突</p>
+<h1 id="C-语言的标识符-也有自己的命名空间-（内容来自-C语言规范草案-6-2-3-节"><a href="#C-语言的标识符-也有自己的命名空间-（内容来自-C语言规范草案-6-2-3-节" class="headerlink" title="C 语言的标识符 也有自己的命名空间 （内容来自 C语言规范草案 6.2.3 节)"></a>C 语言的标识符 也有自己的命名空间 （内容来自 C语言规范草案 6.2.3 节)</h1><ul>
+<li>label names 标签名 包括 goto 语句 中用到的标签和  switch case中的 标签</li>
+<li>the tags name of structures, unions and enumurations<br>结构、联合、枚举的tag名</li>
+<li>the members of structures or unions; each structure or union has a seperate name space for its number;<br>结构体、联合的成员名</li>
+<li>all other identifiers,called ordinary identifiers (declared in ordinary declarators or as<br>enumeration constants)<br>其他普通的变量，或者枚举常量<h1 id="C-中使用namesapce-关键字可以构造一个命名空间"><a href="#C-中使用namesapce-关键字可以构造一个命名空间" class="headerlink" title="C++中使用namesapce 关键字可以构造一个命名空间"></a>C++中使用namesapce 关键字可以构造一个命名空间</h1><h1 id="C-C-中的-每一对花括号-是一个-命名空间"><a href="#C-C-中的-每一对花括号-是一个-命名空间" class="headerlink" title="C/C++ 中的 每一对花括号 是一个 命名空间"></a>C/C++ 中的 每一对花括号 是一个 命名空间</h1><h1 id="关与-声明-declaration-定义-definition-初始化-initalization"><a href="#关与-声明-declaration-定义-definition-初始化-initalization" class="headerlink" title="关与 声明(declaration),定义(definition),初始化(initalization)"></a>关与 声明(declaration),定义(definition),初始化(initalization)</h1>C 语言中 变量/ 函数的带初始化的声明就是定义<br>不带有初始化的全局对象或者函数 构成了一个 试探性定义</li>
+</ul>
+<h1 id="C-中类的-copy-constructor-构造函数-的执行就很有意思"><a href="#C-中类的-copy-constructor-构造函数-的执行就很有意思" class="headerlink" title="C++ 中类的 (copy) constructor 构造函数 的执行就很有意思"></a>C++ 中类的 (copy) constructor 构造函数 的执行就很有意思</h1><p>C++ 对于 将一个对象的值 赋给 另一个对象的 场景进行了细分<br>一类就是 赋值；<br>另一类就是 初始化；<br>初始化可能发生的三个场景 ：</p>
+<ol>
+<li>在声明变量的同时用另一个对象初始化</li>
+<li>对象的拷贝被当做函数参数传递</li>
+<li>临时对象产生的时候，例如返回值是一个对象的时候<h1 id="全局-局部-函数-变量-定义-声明"><a href="#全局-局部-函数-变量-定义-声明" class="headerlink" title="全局 / 局部  * 函数/ 变量  *定义 / 声明"></a>全局 / 局部  * 函数/ 变量  *定义 / 声明</h1></li>
+</ol>
+<h1 id="C语言标准规定-不应该-使用-对全局变量使用-register-修饰"><a href="#C语言标准规定-不应该-使用-对全局变量使用-register-修饰" class="headerlink" title="C语言标准规定 不应该 使用 对全局变量使用 register 修饰"></a>C语言标准规定 不应该 使用 对全局变量使用 register 修饰</h1><p>但是gnu C 标准支持这个特性, clang不支持这个特性，同样的代码使用clang编译会报错<br>uboot 代码中 有如下宏<br><a href="https://gcc.gnu.org/onlinedocs/gcc/Global-Register-Variables.html" target="_blank" rel="noopener">https://gcc.gnu.org/onlinedocs/gcc/Global-Register-Variables.html</a><br> using the volatile qualifier does not fully prevent the compiler from optimizing accesses to the register</p>
+<p>uboot-2019.07/arch/riscv/include/asm/global_data.h</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DECLARE_GLOBAL_DATA_PTR register gd_t *gd asm (<span class="meta-string">"gp"</span>)</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>about-Qt</title>
+    <url>/2020/03/31/about-Qt/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>about-socket</title>
+    <url>/2020/03/30/about-socket/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>About IPC</title>
+    <url>/2020/03/29/about-IPC/</url>
+    <content><![CDATA[<h1 id="IPC-Inter-Porcess-Communication-进程间通信"><a href="#IPC-Inter-Porcess-Communication-进程间通信" class="headerlink" title="IPC (Inter-Porcess Communication) 进程间通信"></a>IPC (Inter-Porcess Communication) 进程间通信</h1><p>　　多个进程需要协作的时候通信必不可少</p>
+<h1 id="IPC-的五种基本方法"><a href="#IPC-的五种基本方法" class="headerlink" title="IPC 的五种基本方法"></a>IPC 的五种基本方法</h1><ol>
+<li>Pipes / FIFOs 管道</li>
+<li>Message Queues 消息队列</li>
+<li>Shared Memory 共享内存</li>
+<li>POSIX Semaphores POSIX 信号量</li>
+<li>Sockets网络套接字<h2 id="Pipes-的特性"><a href="#Pipes-的特性" class="headerlink" title="Pipes 的特性"></a>Pipes 的特性</h2></li>
+<li>兼容性问题：最早的时候都是半双工，有的系统却提供了全双工的管道</li>
+<li>适用范围的问题：只能在具有相同的祖先进程的进程间使用，多数情况是在父子进程之间使用<h3 id="Pipes-的使用"><a href="#Pipes-的使用" class="headerlink" title="Pipes 的使用"></a>Pipes 的使用</h3>　　使用pipe需要了解两个函数<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 需要包含头文件 &lt;unistd.h&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pipe</span><span class="params">(<span class="keyword">int</span> fd[<span class="number">2</span>])</span></span>; <span class="comment">// 创建两个文件描述符，fd[0] 用于读取，fd[1]用于写入</span></span><br><span class="line"><span class="comment">// 需要包含头文件 &lt;unistd.h&gt; 和 &lt;sys/types.h&gt;</span></span><br><span class="line"><span class="keyword">pid_t</span> fork(<span class="keyword">void</span>); <span class="comment">// 通过复制父进程创建子进程</span></span><br><span class="line"><span class="comment">// 标准头文件 &lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">// The  popen() function opens a process by creating a pipe, forking,</span></span><br><span class="line"><span class="comment">// and invoking the shell</span></span><br><span class="line"><span class="function">FILE *<span class="title">popen</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *command, <span class="keyword">const</span> <span class="keyword">char</span> *type)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pclose</span><span class="params">(FILE *stream)</span></span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 以下代码对 APUE 中的代码做了简化和改动</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXLINE 4096</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">int</span> fd[<span class="number">2</span>];</span><br><span class="line">    <span class="keyword">pid_t</span> pid;</span><br><span class="line">    <span class="keyword">char</span> line[MAXLINE];</span><br><span class="line">    <span class="keyword">if</span> (pipe(fd) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"pipe create error"</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    pid = fork();</span><br><span class="line">    <span class="keyword">if</span> (pid &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"fork child error"</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (pid &gt; <span class="number">0</span>) &#123; <span class="comment">// 父进程</span></span><br><span class="line">        close(fd[<span class="number">0</span>]);</span><br><span class="line">        write(fd[<span class="number">1</span>], <span class="string">"Hello child\n"</span>, <span class="keyword">sizeof</span>(<span class="string">"Hello child\n"</span>) - <span class="number">1</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"write some thing inside %u\n"</span>, getpid());</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123; <span class="comment">// 子进程</span></span><br><span class="line">        close(fd[<span class="number">1</span>]);</span><br><span class="line">        n = read(fd[<span class="number">0</span>], line, MAXLINE);</span><br><span class="line">        write(STDOUT_FILENO, line, n); </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"read some thing from %u\n"</span>, getppid());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Message-Queues-的特性"><a href="#Message-Queues-的特性" class="headerlink" title="Message Queues 的特性"></a>Message Queues 的特性</h2><h3 id="Message-Queues的使用"><a href="#Message-Queues的使用" class="headerlink" title="Message Queues的使用"></a>Message Queues的使用</h3><h2 id="Shared-Memory-的特性"><a href="#Shared-Memory-的特性" class="headerlink" title="Shared Memory 的特性"></a>Shared Memory 的特性</h2><h3 id="Shared-Memory的使用"><a href="#Shared-Memory的使用" class="headerlink" title="Shared Memory的使用"></a>Shared Memory的使用</h3><h2 id="POSIX-Semaphores-的特性"><a href="#POSIX-Semaphores-的特性" class="headerlink" title="POSIX Semaphores 的特性"></a>POSIX Semaphores 的特性</h2><h3 id="POSIX-Semaphores的使用"><a href="#POSIX-Semaphores的使用" class="headerlink" title="POSIX Semaphores的使用"></a>POSIX Semaphores的使用</h3><h2 id="Sockets-的特性"><a href="#Sockets-的特性" class="headerlink" title="Sockets 的特性"></a>Sockets 的特性</h2><h3 id="Sockets的使用"><a href="#Sockets的使用" class="headerlink" title="Sockets的使用"></a>Sockets的使用</h3>]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>about-sqlite3</title>
+    <url>/2020/03/28/about-sqlite3/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>About Lint</title>
     <url>/2020/03/07/about-lint/</url>
     <content><![CDATA[<h1 id="lint-或者-linter是-一种静态程序分析工具"><a href="#lint-或者-linter是-一种静态程序分析工具" class="headerlink" title="lint 或者 linter是 一种静态程序分析工具"></a>lint 或者 linter是 一种静态程序分析工具</h1><p>  这里的静态是指在不运行程序的情况下检查代码潜在的问题<br>  最早在Unix平台上开发用于检查C语言程序的<br>  后来被其他的语言借鉴形成了各种各样的lint工具，以提升代码的健壮性</p>
@@ -21,9 +81,18 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>extern vs static</title>
-    <url>/2020/02/25/c-cpp-extern-static/</url>
-    <content><![CDATA[]]></content>
+    <title>keywords</title>
+    <url>/2020/02/25/cpp-keywords/</url>
+    <content><![CDATA[<h1 id="关键字与标识符"><a href="#关键字与标识符" class="headerlink" title="关键字与标识符"></a>关键字与标识符</h1><h1 id="经常考察的关键字"><a href="#经常考察的关键字" class="headerlink" title="经常考察的关键字"></a>经常考察的关键字</h1><ul>
+<li>const *  常量 和指针一起 考察</li>
+<li>voliate * 容易修改，禁止编译器优化，嵌入式，和多线程环境</li>
+<li>extern * 外部引用，声明</li>
+<li>static * 本文件，或者本函数可用，本类可用</li>
+<li>auto * 自动变量、栈变量， 类型推导</li>
+<li>register * 请求编译器将 变量放到寄存器<h1 id="不常见的关键字"><a href="#不常见的关键字" class="headerlink" title="不常见的关键字"></a>不常见的关键字</h1></li>
+<li>restrict *</li>
+</ul>
+]]></content>
       <tags>
         <tag>C/C++</tag>
       </tags>
@@ -38,6 +107,8 @@
 </ol>
 <h1 id="C-编译器编译之后函数的-mangling-name-和C编译器编出来的函数名称的-namgling-name-不一样"><a href="#C-编译器编译之后函数的-mangling-name-和C编译器编出来的函数名称的-namgling-name-不一样" class="headerlink" title="C++ 编译器编译之后函数的 mangling name 和C编译器编出来的函数名称的 namgling name 不一样,"></a>C++ 编译器编译之后函数的 mangling name 和C编译器编出来的函数名称的 namgling name 不一样,</h1><p>　　当C++代码调用非标准规定的的C库(比如说FFmpeg是一个纯C的库)的时候，先包含C的头文件然后使用 </p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">""</span></span></span><br><span class="line"><span class="keyword">extern</span> <span class="string">"C"</span> &#123; c &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="C-中的-引用reference-vs-指针pointer"><a href="#C-中的-引用reference-vs-指针pointer" class="headerlink" title="C++ 中的 引用reference vs 指针pointer"></a>C++ 中的 引用reference vs 指针pointer</h1><p>　　指针是某个内存对象的地址，通过指针可以间接地修改内存对象的内容<br>　　引用是种隐式(implicit)的指针, 是某个对象的别名，通过以引用可以直接操作该对象</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="comment">// 此函数通过引用直接修改指针i, 使其自增1，指针自增或者自减的大小是指针指向的内存的基本类型的大小sizeof(int)</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span>* &amp; i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    i++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> *i = <span class="number">0</span>;</span><br><span class="line">    func(i);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, i); <span class="comment">// 结果应该是4</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>C/C++</tag>
@@ -51,7 +122,24 @@
   <entry>
     <title>About preprocess</title>
     <url>/2020/02/23/about-preprocess/</url>
-    <content><![CDATA[<h1 id="预处理是C-C-编译过程中的第一个环节-处理以-开头的文本行"><a href="#预处理是C-C-编译过程中的第一个环节-处理以-开头的文本行" class="headerlink" title="预处理是C/C++ 编译过程中的第一个环节, 处理以#开头的文本行"></a>预处理是C/C++ 编译过程中的第一个环节, 处理以#开头的文本行</h1><h1 id="使用预处理对产品进行条件编译和兼容性处理"><a href="#使用预处理对产品进行条件编译和兼容性处理" class="headerlink" title="使用预处理对产品进行条件编译和兼容性处理"></a>使用预处理对产品进行条件编译和兼容性处理</h1><h1 id="宏的作用常见的就是简单的文本替换功能"><a href="#宏的作用常见的就是简单的文本替换功能" class="headerlink" title="宏的作用常见的就是简单的文本替换功能"></a>宏的作用常见的就是简单的文本替换功能</h1><h1 id="字符串化输入"><a href="#字符串化输入" class="headerlink" title="字符串化输入"></a>字符串化输入</h1><h1 id="粘贴两个字符串"><a href="#粘贴两个字符串" class="headerlink" title="粘贴两个字符串"></a>粘贴两个字符串</h1><h1 id="宏函数的嵌套调用翻译过程"><a href="#宏函数的嵌套调用翻译过程" class="headerlink" title="宏函数的嵌套调用翻译过程"></a>宏函数的嵌套调用翻译过程</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ANDROID9 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STRINGLIZE(input)  #input</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CATSTRINGS(str1, str2) str1##str2</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content><![CDATA[<h1 id="预处理是C-C-编译过程中的第一个环节-处理以-开头的文本行"><a href="#预处理是C-C-编译过程中的第一个环节-处理以-开头的文本行" class="headerlink" title="预处理是C/C++ 编译过程中的第一个环节, 处理以#开头的文本行"></a>预处理是C/C++ 编译过程中的第一个环节, 处理以#开头的文本行</h1><ul>
+<li>比如免费版和付费版的功能多少的条件编译</li>
+<li>实现代码对于不同平台的兼容，或者对相同平台的不同版本进行兼容<h1 id="宏的作用常见的就是简单的文本替换功能，实现函数的替换，DEBUG版本加打印，release-版本不加打印"><a href="#宏的作用常见的就是简单的文本替换功能，实现函数的替换，DEBUG版本加打印，release-版本不加打印" class="headerlink" title="宏的作用常见的就是简单的文本替换功能，实现函数的替换，DEBUG版本加打印，release 版本不加打印"></a>宏的作用常见的就是简单的文本替换功能，实现函数的替换，DEBUG版本加打印，release 版本不加打印</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 此代码来自 Learn C the hard way 一书</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> __dbg_h__</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> __dbg_h__</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;errno.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> NDEBUG</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> debug(M, ...)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> debug(M, ...) fprintf(stderr, <span class="meta-string">"DEBUG %s:%d: "</span> M <span class="meta-string">"\n"</span>, __</span></span><br><span class="line">FILE__, __LINE__, ##__VA_ARGS__)</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> clean_errno() (errno == 0 ? <span class="meta-string">"None"</span> : strerror(errno))</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> log_err(M, ...) fprintf(stderr, <span class="meta-string">"[ERROR] (%s:%d: errno:</span></span></span><br><span class="line"><span class="meta"><span class="meta-string">%s) "</span> M <span class="meta-string">"\n"</span>, __FILE__, __LINE__, clean_errno(), ##__VA_ARGS__)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> log_warn(M, ...) fprintf(stderr, <span class="meta-string">"[WARN] (%s:%d: errno:</span></span></span><br><span class="line"><span class="meta"><span class="meta-string">%s) "</span> M <span class="meta-string">"\n"</span>, __FILE__, __LINE__, clean_errno(), ##__VA_ARGS__)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> log_info(M, ...) fprintf(stderr, <span class="meta-string">"[INFO] (%s:%d) "</span> M <span class="meta-string">"\n"</span></span></span><br><span class="line">, __FILE__, __LINE__, ##__VA_ARGS__)</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> check(A, M, ...) <span class="meta-keyword">if</span>(!(A)) &#123; log_err(M, ##__VA_ARGS__); e</span></span><br><span class="line">rrno=<span class="number">0</span>; <span class="keyword">goto</span> error; &#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> sentinel(M, ...) &#123; log_err(M, ##__VA_ARGS__); errno=0;</span></span><br><span class="line"><span class="keyword">goto</span> error; &#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> check_mem(A) check((A), <span class="meta-string">"Out of memory."</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> check_debug(A, M, ...) <span class="meta-keyword">if</span>(!(A)) &#123; debug(M, ##__VA_ARGS__</span></span><br><span class="line">); errno=<span class="number">0</span>; <span class="keyword">goto</span> error; &#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="字符串化输入"><a href="#字符串化输入" class="headerlink" title="字符串化输入"></a>字符串化输入</h1>　　# 可以实现将输入的内容字符串化<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STR(input)  #input</span></span><br></pre></td></tr></table></figure>
+<h1 id="粘贴两个字符串"><a href="#粘贴两个字符串" class="headerlink" title="粘贴两个字符串"></a>粘贴两个字符串</h1>　　## 可以粘贴两个字符串<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STRPASTE(str1, str2)  str1##str2</span></span><br></pre></td></tr></table></figure>
+<h1 id="宏函数的嵌套调用翻译过程"><a href="#宏函数的嵌套调用翻译过程" class="headerlink" title="宏函数的嵌套调用翻译过程"></a>宏函数的嵌套调用翻译过程</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">if</span> defined(ANDROID1) &amp;&amp; defined(ANDROID2)</span></span><br><span class="line"><span class="keyword">int</span> android = <span class="number">12</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">if</span> ANDROID2</span></span><br><span class="line"><span class="keyword">int</span> android = <span class="number">12</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line"><span class="keyword">int</span> android = <span class="number">1</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span><span class="comment">// end of android2</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> ANDROID1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> ANDROID2</span></span><br><span class="line"><span class="keyword">int</span> android  =<span class="number">12</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"><span class="keyword">int</span> android = <span class="number">1</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ANDROID9 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STRINGLIZE(input)  #input</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CATSTRINGS(str1, str2) str1##str2</span></span><br></pre></td></tr></table></figure>
+<h1 id="预处理中常见的关键字，和写法"><a href="#预处理中常见的关键字，和写法" class="headerlink" title="预处理中常见的关键字，和写法"></a>预处理中常见的关键字，和写法</h1></li>
+</ul>
+<ol>
+<li>注释代码<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">if</span> 0</span></span><br><span class="line"><span class="comment">// temperatory deleted code or debug/test code</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> DEBUG</span></span><br><span class="line"><span class="comment">//调试代码</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line"><span class="comment">//非调试代码</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="常见问题，注意事项"><a href="#常见问题，注意事项" class="headerlink" title="常见问题，注意事项"></a>常见问题，注意事项</h1></li>
+</ol>
+<ul>
+<li>不要让临时变量污染函数空间,使用do{}while(0) 的宏来做到这点</li>
+<li>定义宏函数的时候多使用括号，因为宏是简单的文本替换</li>
+</ul>
+]]></content>
       <tags>
         <tag>C/C++</tag>
       </tags>
@@ -470,7 +558,7 @@ Without question, this C program is the most obfuscated C program that has ever 
   </entry>
   <entry>
     <title>mysql</title>
-    <url>/2020/02/14/mysql/</url>
+    <url>/2020/02/14/about-mysql/</url>
     <content><![CDATA[<h1 id="mysql-是很流行的一款开源数据库软件"><a href="#mysql-是很流行的一款开源数据库软件" class="headerlink" title="mysql 是很流行的一款开源数据库软件"></a>mysql 是很流行的一款开源数据库软件</h1><p>　　mysql是跨平台的关系型数据库，安装可以参考<a href="https://dev.mysql.com/doc/mysql-sles-repo-quick-guide/en/" target="_blank" rel="noopener">mysql安装官网指导</a> <br><br>mysql好像是从5.7版本之后，安装完会有一个随机的root密码使用grep password /var/log/mysqld.log 查找密码，否则无法登陆<br>安装完成之后要用mysql_secure_instation 设置一下安全属性</p>
 <h1 id="mysql-基本指令"><a href="#mysql-基本指令" class="headerlink" title="mysql 基本指令"></a>mysql 基本指令</h1><ul>
 <li>CREATE DATABASE ssusers; 创建数据库</li>
@@ -479,7 +567,7 @@ Without question, this C program is the most obfuscated C program that has ever 
 <li>CREATE USER ‘ssmanger’@’localhost’ IDENTIFIED BY ‘123456’; 创建用户 ssmanger 本机可以访问 mysql</li>
 <li>GRANT ALL privileges  ON  ssusers.* TO ssmanger@’localhost’; 将数据库所有权限给用户 ssmanager</li>
 <li>SET PASSWORD FOR ‘username’@’host’ = PASSWORD(‘newpassword’); 更新mysql用户密码</li>
-<li>CREATE USER ‘wordpressadmin’@’%’ IDENTIFIED BY ‘123456’; 创建用户 wordpressadmin 在所有ip可以访问mysql</li>
+<li>CREATE USER ‘wordpressadmin’@’%’ IDENTIFIED BY ‘123456’; 创建用户 wordpressadmin在所有ip可以访问mysql<h1 id="mysql-多表查询"><a href="#mysql-多表查询" class="headerlink" title="mysql 多表查询"></a>mysql 多表查询</h1></li>
 </ul>
 ]]></content>
   </entry>
@@ -573,13 +661,21 @@ Without question, this C program is the most obfuscated C program that has ever 
   <entry>
     <title>About pwd</title>
     <url>/2020/01/28/about-pwd/</url>
-    <content><![CDATA[<h1 id="关于工作路径"><a href="#关于工作路径" class="headerlink" title="关于工作路径"></a>关于工作路径</h1><p>情境(situation)、任务(task)、行动(action)、结果(result)<br>　shell 命令 pwd 能显示用户的工作路径<br>C语言程序可以使用 getcwd, getwd, get_current_dir_name<br>函数获取当前工作路径，一般来说大家写代码不会关注这个东西<br>s:<br>T:<br>A:<br>R:</p>
-<h2 id="情形"><a href="#情形" class="headerlink" title="情形"></a>情形</h2><p>　　为了适配不同的厂商或者版本，想要后台程序通过读取配置文件方法来，减少某个组件编译次数, 每次厂商变更只需要改下配置文件中的厂商名字就行了，不必要在代码中写死，每次都要换个厂都要加个宏，在代码中加入一个常量</p>
-<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>　　Android(Linux变种)后台程序(为方便设置为daemon.exe位于/system/bin/目录下)daemon.exe开机启动的时候要读取/system/bin/下的product.conf文配置文件.</p>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><pre><code class="cpp"></code></pre>
-<p>，这个时候是采用绝对路径，还是相对路径<br>项目中的程序位于 /system/bin 下配置文件也在同一级文件目录中。<br>程序开机由系统脚本拉起后常驻后台，检测其他进程.</p>
-<p>首先设为绝对路径，./exe 拉起 测试ok,系统脚本拉起也ok,但是有个同事认为同一级目录下 直接读取文件名就可以了，<br>听命令改，./exe 测试ok ,然而系统脚本拉起NG,无法去读配置文件。</p>
-<p>经过测试，Android init.rc 中拉起的程序工作路径是/ ，而非程序所在目录，当使用 ./exe 拉起程序的时候工作路径在当前目录<br>使用相对路径自然找到配置文件</p>
+    <content><![CDATA[<h1 id="关于工作路径"><a href="#关于工作路径" class="headerlink" title="关于工作路径"></a>关于工作路径</h1><p>　　工作路径是进程的一个重要的属性，在pcb结构中应该是一项成员，平时和文件交互的比较少的业务很少会关注程序的工作路径的问题</p>
+<h1 id="情形"><a href="#情形" class="headerlink" title="情形"></a>情形</h1><p>　　为了适配不同的厂商或者版本，想要后台程序通过读取配置文件方法来，减少某个组件编译次数, 每次厂商变更只需要改下配置文件中的厂商名字就行了，不必要在代码中写死，每次都要换个厂都要加个宏，在代码中加入一个常量</p>
+<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>　　Android后台程序(为方便设置为daemon.exe位于/system/bin/目录下)daemon.exe开机启动的时候要读取/system/bin/下的product.conf文配置文件.</p>
+<h1 id="代码实现-主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次"><a href="#代码实现-主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次" class="headerlink" title="代码实现 主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次"></a>代码实现 主要代码就是打开文件的地方，然后调用系统的解析取配置文件的接口，读取配置文件是一个有意思的小项目，可以自己实现一次</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">Linux 环境中包含 &lt;unistd.h&gt;头文件可以使用</span><br><span class="line">getcwd, getwd, get_current_dir_name 获取程序的当前工作路径</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">char</span> *<span class="title">getcwd</span><span class="params">(<span class="keyword">char</span> *buf, <span class="keyword">size_t</span> size)</span></span>;</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">char</span> *<span class="title">getwd</span><span class="params">(<span class="keyword">char</span> *buf)</span></span>;</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">char</span> *<span class="title">get_current_dir_name</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CONFIG_FILE_PATH <span class="meta-string">"./product.conf"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">app_init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">// 省略若干行代码...</span></span><br><span class="line">  FILE *fp = fopen(CONFIG_FILE_PATH, <span class="string">"r"</span>);</span><br><span class="line">  <span class="keyword">if</span> (fp == <span class="literal">NULL</span>) &#123;</span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">"fopen error"</span>);</span><br><span class="line">     <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">char</span> *current_work_dir = get_current_dir_name();</span><br><span class="line">  <span class="keyword">if</span> (current_work_dir != <span class="literal">NULL</span>) &#123;</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"current working dir is [%s]"</span>, current_work_dir);</span><br><span class="line">      <span class="built_in">free</span>(current_work_dir);</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 省略若干行代码...</span></span><br><span class="line">  <span class="keyword">if</span> (fp != <span class="literal">NULL</span>)</span><br><span class="line">  fclose(fp);</span><br><span class="line"><span class="comment">// 省略若干行代码...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="问题出现之后我的直觉告诉先打印errno-然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径"><a href="#问题出现之后我的直觉告诉先打印errno-然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径" class="headerlink" title="问题出现之后我的直觉告诉先打印errno, 然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径"></a>问题出现之后我的直觉告诉先打印errno, 然后猜测可能是工作路径的问题就，调用系统的函数获取不同情境下的工作路径</h2><p>手里没有root权限的android 手机，就使用linux，linux中开机拉起服务的地方加入自己写的程序的路径</p>
+<p>#附加题：如何创建守护进程？ 参考 APUE</p>
+<ol>
+<li>通过fork 创建子进程</li>
+<li>子进程kill 父进程</li>
+<li>设置自己的工作路径</li>
+<li></li>
+</ol>
+<p>这个时候是采用绝对路径，还是相对路径<br>项目中的程序位于 /system/bin 下配置文件也在同一级文件目录中。<br>程序开机由系统脚本拉起后常驻后台，检测其他进程.</p>
+<p>首先设为绝对路径，./exe 拉起 测试ok,系统脚本拉起也ok,但是同事A认为同一级目录下 直接读取文件名就可以了，<br>听命令改，./exe 测试ok ,然而系统脚本拉起之后整个系统无法正常运行，因为配置文件没有读取到，程序报出错误打印<br>经过测试，Android init.rc 中拉起的程序工作路径是/ ，而非程序所在目录，当使用 ./exe 拉起程序的时候工作路径在当前目录<br>使用相对路径自然找到配置文件</p>
 ]]></content>
       <tags>
         <tag>Linux/C</tag>

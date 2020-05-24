@@ -158,7 +158,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">37</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">42</span></a>
 
   </li>
   </ul>
@@ -186,6 +186,328 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/23/about-namespace/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
+      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Linuxmint17's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/23/about-namespace/" class="post-title-link" itemprop="url">namespace</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-05-23 22:59:06" itemprop="dateCreated datePublished" datetime="2020-05-23T22:59:06+08:00">2020-05-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-05-24 11:32:05" itemprop="dateModified" datetime="2020-05-24T11:32:05+08:00">2020-05-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="命名空间-namespace-是C-的一个关键字"><a href="#命名空间-namespace-是C-的一个关键字" class="headerlink" title="命名空间 (namespace) 是C++的一个关键字"></a>命名空间 (namespace) 是C++的一个关键字</h1><p>不同的命名空间中标识符可以使用 相同名字的变量或者函数名称，而不会引起冲突</p>
+<h1 id="C-语言的标识符-也有自己的命名空间-（内容来自-C语言规范草案-6-2-3-节"><a href="#C-语言的标识符-也有自己的命名空间-（内容来自-C语言规范草案-6-2-3-节" class="headerlink" title="C 语言的标识符 也有自己的命名空间 （内容来自 C语言规范草案 6.2.3 节)"></a>C 语言的标识符 也有自己的命名空间 （内容来自 C语言规范草案 6.2.3 节)</h1><ul>
+<li>label names 标签名 包括 goto 语句 中用到的标签和  switch case中的 标签</li>
+<li>the tags name of structures, unions and enumurations<br>结构、联合、枚举的tag名</li>
+<li>the members of structures or unions; each structure or union has a seperate name space for its number;<br>结构体、联合的成员名</li>
+<li>all other identifiers,called ordinary identifiers (declared in ordinary declarators or as<br>enumeration constants)<br>其他普通的变量，或者枚举常量<h1 id="C-中使用namesapce-关键字可以构造一个命名空间"><a href="#C-中使用namesapce-关键字可以构造一个命名空间" class="headerlink" title="C++中使用namesapce 关键字可以构造一个命名空间"></a>C++中使用namesapce 关键字可以构造一个命名空间</h1><h1 id="C-C-中的-每一对花括号-是一个-命名空间"><a href="#C-C-中的-每一对花括号-是一个-命名空间" class="headerlink" title="C/C++ 中的 每一对花括号 是一个 命名空间"></a>C/C++ 中的 每一对花括号 是一个 命名空间</h1><h1 id="关与-声明-declaration-定义-definition-初始化-initalization"><a href="#关与-声明-declaration-定义-definition-初始化-initalization" class="headerlink" title="关与 声明(declaration),定义(definition),初始化(initalization)"></a>关与 声明(declaration),定义(definition),初始化(initalization)</h1>C 语言中 变量/ 函数的带初始化的声明就是定义<br>不带有初始化的全局对象或者函数 构成了一个 试探性定义</li>
+</ul>
+<h1 id="C-中类的-copy-constructor-构造函数-的执行就很有意思"><a href="#C-中类的-copy-constructor-构造函数-的执行就很有意思" class="headerlink" title="C++ 中类的 (copy) constructor 构造函数 的执行就很有意思"></a>C++ 中类的 (copy) constructor 构造函数 的执行就很有意思</h1><p>C++ 对于 将一个对象的值 赋给 另一个对象的 场景进行了细分<br>一类就是 赋值；<br>另一类就是 初始化；<br>初始化可能发生的三个场景 ：</p>
+<ol>
+<li>在声明变量的同时用另一个对象初始化</li>
+<li>对象的拷贝被当做函数参数传递</li>
+<li>临时对象产生的时候，例如返回值是一个对象的时候<h1 id="全局-局部-函数-变量-定义-声明"><a href="#全局-局部-函数-变量-定义-声明" class="headerlink" title="全局 / 局部  * 函数/ 变量  *定义 / 声明"></a>全局 / 局部  * 函数/ 变量  *定义 / 声明</h1></li>
+</ol>
+<h1 id="C语言标准规定-不应该-使用-对全局变量使用-register-修饰"><a href="#C语言标准规定-不应该-使用-对全局变量使用-register-修饰" class="headerlink" title="C语言标准规定 不应该 使用 对全局变量使用 register 修饰"></a>C语言标准规定 不应该 使用 对全局变量使用 register 修饰</h1><p>但是gnu C 标准支持这个特性, clang不支持这个特性，同样的代码使用clang编译会报错<br>uboot 代码中 有如下宏<br><a href="https://gcc.gnu.org/onlinedocs/gcc/Global-Register-Variables.html" target="_blank" rel="noopener">https://gcc.gnu.org/onlinedocs/gcc/Global-Register-Variables.html</a><br> using the volatile qualifier does not fully prevent the compiler from optimizing accesses to the register</p>
+<p>uboot-2019.07/arch/riscv/include/asm/global_data.h</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DECLARE_GLOBAL_DATA_PTR register gd_t *gd asm (<span class="meta-string">"gp"</span>)</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/31/about-Qt/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
+      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Linuxmint17's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/31/about-Qt/" class="post-title-link" itemprop="url">about-Qt</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-03-31 00:04:22" itemprop="dateCreated datePublished" datetime="2020-03-31T00:04:22+08:00">2020-03-31</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/30/about-socket/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
+      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Linuxmint17's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/30/about-socket/" class="post-title-link" itemprop="url">about-socket</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-03-30 23:50:55" itemprop="dateCreated datePublished" datetime="2020-03-30T23:50:55+08:00">2020-03-30</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/29/about-IPC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
+      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Linuxmint17's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/29/about-IPC/" class="post-title-link" itemprop="url">About IPC</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-29 10:29:29 / Modified: 22:53:43" itemprop="dateCreated datePublished" datetime="2020-03-29T10:29:29+08:00">2020-03-29</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="IPC-Inter-Porcess-Communication-进程间通信"><a href="#IPC-Inter-Porcess-Communication-进程间通信" class="headerlink" title="IPC (Inter-Porcess Communication) 进程间通信"></a>IPC (Inter-Porcess Communication) 进程间通信</h1><p>　　多个进程需要协作的时候通信必不可少</p>
+<h1 id="IPC-的五种基本方法"><a href="#IPC-的五种基本方法" class="headerlink" title="IPC 的五种基本方法"></a>IPC 的五种基本方法</h1><ol>
+<li>Pipes / FIFOs 管道</li>
+<li>Message Queues 消息队列</li>
+<li>Shared Memory 共享内存</li>
+<li>POSIX Semaphores POSIX 信号量</li>
+<li>Sockets网络套接字<h2 id="Pipes-的特性"><a href="#Pipes-的特性" class="headerlink" title="Pipes 的特性"></a>Pipes 的特性</h2></li>
+<li>兼容性问题：最早的时候都是半双工，有的系统却提供了全双工的管道</li>
+<li>适用范围的问题：只能在具有相同的祖先进程的进程间使用，多数情况是在父子进程之间使用<h3 id="Pipes-的使用"><a href="#Pipes-的使用" class="headerlink" title="Pipes 的使用"></a>Pipes 的使用</h3>　　使用pipe需要了解两个函数<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 需要包含头文件 &lt;unistd.h&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pipe</span><span class="params">(<span class="keyword">int</span> fd[<span class="number">2</span>])</span></span>; <span class="comment">// 创建两个文件描述符，fd[0] 用于读取，fd[1]用于写入</span></span><br><span class="line"><span class="comment">// 需要包含头文件 &lt;unistd.h&gt; 和 &lt;sys/types.h&gt;</span></span><br><span class="line"><span class="keyword">pid_t</span> fork(<span class="keyword">void</span>); <span class="comment">// 通过复制父进程创建子进程</span></span><br><span class="line"><span class="comment">// 标准头文件 &lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">// The  popen() function opens a process by creating a pipe, forking,</span></span><br><span class="line"><span class="comment">// and invoking the shell</span></span><br><span class="line"><span class="function">FILE *<span class="title">popen</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *command, <span class="keyword">const</span> <span class="keyword">char</span> *type)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pclose</span><span class="params">(FILE *stream)</span></span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 以下代码对 APUE 中的代码做了简化和改动</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXLINE 4096</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">int</span> fd[<span class="number">2</span>];</span><br><span class="line">    <span class="keyword">pid_t</span> pid;</span><br><span class="line">    <span class="keyword">char</span> line[MAXLINE];</span><br><span class="line">    <span class="keyword">if</span> (pipe(fd) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"pipe create error"</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    pid = fork();</span><br><span class="line">    <span class="keyword">if</span> (pid &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"fork child error"</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (pid &gt; <span class="number">0</span>) &#123; <span class="comment">// 父进程</span></span><br><span class="line">        close(fd[<span class="number">0</span>]);</span><br><span class="line">        write(fd[<span class="number">1</span>], <span class="string">"Hello child\n"</span>, <span class="keyword">sizeof</span>(<span class="string">"Hello child\n"</span>) - <span class="number">1</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"write some thing inside %u\n"</span>, getpid());</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123; <span class="comment">// 子进程</span></span><br><span class="line">        close(fd[<span class="number">1</span>]);</span><br><span class="line">        n = read(fd[<span class="number">0</span>], line, MAXLINE);</span><br><span class="line">        write(STDOUT_FILENO, line, n); </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"read some thing from %u\n"</span>, getppid());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Message-Queues-的特性"><a href="#Message-Queues-的特性" class="headerlink" title="Message Queues 的特性"></a>Message Queues 的特性</h2><h3 id="Message-Queues的使用"><a href="#Message-Queues的使用" class="headerlink" title="Message Queues的使用"></a>Message Queues的使用</h3><h2 id="Shared-Memory-的特性"><a href="#Shared-Memory-的特性" class="headerlink" title="Shared Memory 的特性"></a>Shared Memory 的特性</h2><h3 id="Shared-Memory的使用"><a href="#Shared-Memory的使用" class="headerlink" title="Shared Memory的使用"></a>Shared Memory的使用</h3><h2 id="POSIX-Semaphores-的特性"><a href="#POSIX-Semaphores-的特性" class="headerlink" title="POSIX Semaphores 的特性"></a>POSIX Semaphores 的特性</h2><h3 id="POSIX-Semaphores的使用"><a href="#POSIX-Semaphores的使用" class="headerlink" title="POSIX Semaphores的使用"></a>POSIX Semaphores的使用</h3><h2 id="Sockets-的特性"><a href="#Sockets-的特性" class="headerlink" title="Sockets 的特性"></a>Sockets 的特性</h2><h3 id="Sockets的使用"><a href="#Sockets的使用" class="headerlink" title="Sockets的使用"></a>Sockets的使用</h3>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/28/about-sqlite3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
+      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Linuxmint17's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/28/about-sqlite3/" class="post-title-link" itemprop="url">about-sqlite3</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-03-28 22:10:10" itemprop="dateCreated datePublished" datetime="2020-03-28T22:10:10+08:00">2020-03-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
         
   
   
@@ -312,7 +634,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/25/c-cpp-extern-static/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/25/cpp-keywords/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
@@ -326,7 +648,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/25/c-cpp-extern-static/" class="post-title-link" itemprop="url">extern vs static</a>
+            <a href="/2020/02/25/cpp-keywords/" class="post-title-link" itemprop="url">keywords</a>
         </h1>
 
         <div class="post-meta">
@@ -343,7 +665,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-07 21:50:15" itemprop="dateModified" datetime="2020-03-07T21:50:15+08:00">2020-03-07</time>
+                <time title="Modified: 2020-04-07 22:43:06" itemprop="dateModified" datetime="2020-04-07T22:43:06+08:00">2020-04-07</time>
               </span>
 
           
@@ -357,7 +679,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <h1 id="关键字与标识符"><a href="#关键字与标识符" class="headerlink" title="关键字与标识符"></a>关键字与标识符</h1><h1 id="经常考察的关键字"><a href="#经常考察的关键字" class="headerlink" title="经常考察的关键字"></a>经常考察的关键字</h1><ul>
+<li>const *  常量 和指针一起 考察</li>
+<li>voliate * 容易修改，禁止编译器优化，嵌入式，和多线程环境</li>
+<li>extern * 外部引用，声明</li>
+<li>static * 本文件，或者本函数可用，本类可用</li>
+<li>auto * 自动变量、栈变量， 类型推导</li>
+<li>register * 请求编译器将 变量放到寄存器<h1 id="不常见的关键字"><a href="#不常见的关键字" class="headerlink" title="不常见的关键字"></a>不常见的关键字</h1></li>
+<li>restrict *</li>
+</ul>
+
       
     </div>
 
@@ -407,7 +738,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-26 11:17:04" itemprop="dateModified" datetime="2020-02-26T11:17:04+08:00">2020-02-26</time>
+                <time title="Modified: 2020-03-10 08:19:42" itemprop="dateModified" datetime="2020-03-10T08:19:42+08:00">2020-03-10</time>
               </span>
 
           
@@ -428,6 +759,8 @@
 </ol>
 <h1 id="C-编译器编译之后函数的-mangling-name-和C编译器编出来的函数名称的-namgling-name-不一样"><a href="#C-编译器编译之后函数的-mangling-name-和C编译器编出来的函数名称的-namgling-name-不一样" class="headerlink" title="C++ 编译器编译之后函数的 mangling name 和C编译器编出来的函数名称的 namgling name 不一样,"></a>C++ 编译器编译之后函数的 mangling name 和C编译器编出来的函数名称的 namgling name 不一样,</h1><p>　　当C++代码调用非标准规定的的C库(比如说FFmpeg是一个纯C的库)的时候，先包含C的头文件然后使用 </p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">""</span></span></span><br><span class="line"><span class="keyword">extern</span> <span class="string">"C"</span> &#123; c &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="C-中的-引用reference-vs-指针pointer"><a href="#C-中的-引用reference-vs-指针pointer" class="headerlink" title="C++ 中的 引用reference vs 指针pointer"></a>C++ 中的 引用reference vs 指针pointer</h1><p>　　指针是某个内存对象的地址，通过指针可以间接地修改内存对象的内容<br>　　引用是种隐式(implicit)的指针, 是某个对象的别名，通过以引用可以直接操作该对象</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="comment">// 此函数通过引用直接修改指针i, 使其自增1，指针自增或者自减的大小是指针指向的内存的基本类型的大小sizeof(int)</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span>* &amp; i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    i++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> *i = <span class="number">0</span>;</span><br><span class="line">    func(i);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, i); <span class="comment">// 结果应该是4</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -500,361 +833,11 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/23/about-preprocess/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
-      <meta itemprop="name" content="Linuxmint17">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/23/about-preprocess/" class="post-title-link" itemprop="url">About preprocess</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-23 16:29:51" itemprop="dateCreated datePublished" datetime="2020-02-23T16:29:51+08:00">2020-02-23</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-26 14:36:08" itemprop="dateModified" datetime="2020-02-26T14:36:08+08:00">2020-02-26</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="预处理是C-C-编译过程中的第一个环节-处理以-开头的文本行"><a href="#预处理是C-C-编译过程中的第一个环节-处理以-开头的文本行" class="headerlink" title="预处理是C/C++ 编译过程中的第一个环节, 处理以#开头的文本行"></a>预处理是C/C++ 编译过程中的第一个环节, 处理以#开头的文本行</h1><h1 id="使用预处理对产品进行条件编译和兼容性处理"><a href="#使用预处理对产品进行条件编译和兼容性处理" class="headerlink" title="使用预处理对产品进行条件编译和兼容性处理"></a>使用预处理对产品进行条件编译和兼容性处理</h1><h1 id="宏的作用常见的就是简单的文本替换功能"><a href="#宏的作用常见的就是简单的文本替换功能" class="headerlink" title="宏的作用常见的就是简单的文本替换功能"></a>宏的作用常见的就是简单的文本替换功能</h1><h1 id="字符串化输入"><a href="#字符串化输入" class="headerlink" title="字符串化输入"></a>字符串化输入</h1><h1 id="粘贴两个字符串"><a href="#粘贴两个字符串" class="headerlink" title="粘贴两个字符串"></a>粘贴两个字符串</h1><h1 id="宏函数的嵌套调用翻译过程"><a href="#宏函数的嵌套调用翻译过程" class="headerlink" title="宏函数的嵌套调用翻译过程"></a>宏函数的嵌套调用翻译过程</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ANDROID9 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STRINGLIZE(input)  #input</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CATSTRINGS(str1, str2) str1##str2</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/23/about-cmd/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
-      <meta itemprop="name" content="Linuxmint17">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/23/about-cmd/" class="post-title-link" itemprop="url">about-cmd</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-23 15:44:43" itemprop="dateCreated datePublished" datetime="2020-02-23T15:44:43+08:00">2020-02-23</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/20/about-endian/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
-      <meta itemprop="name" content="Linuxmint17">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/20/about-endian/" class="post-title-link" itemprop="url">About Endianness</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-20 09:56:50" itemprop="dateCreated datePublished" datetime="2020-02-20T09:56:50+08:00">2020-02-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-09 07:22:34" itemprop="dateModified" datetime="2020-03-09T07:22:34+08:00">2020-03-09</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="大小端问题-big-endian-little-endian"><a href="#大小端问题-big-endian-little-endian" class="headerlink" title="大小端问题(big endian little endian)"></a>大小端问题(big endian little endian)</h1><p>　　In computing, endianness refers to the order of bytes (or sometimes bits) within a binary representation of a number<br>　　In its most common usage, endianness indicates the ordering of bytes within a multi-byte number. A big-endian ordering places the most significant byte first and the least significant byte last,<br>　　while a little-endian ordering does the opposite  </p>
-<p>　　Historically, various methods of endianness have been used in computing, including exotic forms such as middle-endianness. Today, however, big-endianness is the dominant ordering in networking protocols (IP, TCP, UDP). Conversely, little-endianness is the dominant ordering for processor architectures (x86, most ARM implementations) and their associated memory. File formats can use either ordering; some formats use a mixture of both.</p>
-<h1 id="大小端的定义"><a href="#大小端的定义" class="headerlink" title="大小端的定义"></a>大小端的定义</h1><p><strong>Big Endian Byte Order</strong>:<br>　　<em>The most significant byte (the “big end”) of the data is placed at the byte with the lowest address. The rest of the data is placed in order in the next three bytes in memory.</em></p>
-<p><strong>Little Endian Byte Order</strong>:  (LL)<br>　　<em>The least significant byte (the “little end”) of the data is placed at the byte with the lowest address. The rest of the data is placed in order in the next three bytes in memory.</em></p>
-<h1 id="linux-中转换大小端的函数"><a href="#linux-中转换大小端的函数" class="headerlink" title="linux 中转换大小端的函数"></a>linux 中转换大小端的函数</h1>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man endian</span><br></pre></td></tr></table></figure>
-<p>  通过以上命令可以获取到转换大小端的函数  </p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// h short for host</span></span><br><span class="line"><span class="comment">// b short for big endian</span></span><br><span class="line"><span class="comment">// l short for little endian</span></span><br><span class="line"><span class="comment">// 32 means 32 bits integer</span></span><br><span class="line">  <span class="keyword">uint32_t</span> htobe32(<span class="keyword">uint32_t</span> host_32bits);</span><br><span class="line">  <span class="keyword">uint32_t</span> htole32(<span class="keyword">uint32_t</span> host_32bits);</span><br><span class="line">  <span class="keyword">uint32_t</span> be32toh(<span class="keyword">uint32_t</span> big_endian_32bits);</span><br><span class="line">  <span class="keyword">uint32_t</span> le32toh(<span class="keyword">uint32_t</span> little_endian_32bits);</span><br></pre></td></tr></table></figure>
-<h1 id="大小端的影响范围"><a href="#大小端的影响范围" class="headerlink" title="大小端的影响范围"></a>大小端的影响范围</h1><ol>
-<li>文件系统的创建</li>
-<li>网络传输协议的字节序(一般是大端，也有小端Server_Message_Block)<h1 id="判断大小端的C代码"><a href="#判断大小端的C代码" class="headerlink" title="判断大小端的C代码"></a>判断大小端的C代码</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// from linux-5.4.3\arch\arm\kernel\setup.c 中161行的一个宏，</span></span><br><span class="line"><span class="comment">// 内核中的写法稍有不同稍加修改可以正常编译</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">checkCPUendian</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">static</span> <span class="keyword">union</span> &#123; <span class="keyword">char</span> c[<span class="number">4</span>]; <span class="keyword">unsigned</span> <span class="keyword">long</span> l; &#125; endian_test = &#123; &#123; <span class="string">'l'</span>, <span class="string">'?'</span>, <span class="string">'?'</span>, <span class="string">'b'</span> &#125; &#125;;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ENDIANNESS ((char)endian_test.l)</span></span><br><span class="line"><span class="comment">//if ENDIANNESS=='l'  the CPU is little-endian if ENDIANESS=='b' the CPU is big-endian</span></span><br><span class="line">  <span class="keyword">return</span> ENDIANNESS == <span class="string">'l'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/19/about-java/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
-      <meta itemprop="name" content="Linuxmint17">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/19/about-java/" class="post-title-link" itemprop="url">About Java</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-19 15:17:39" itemprop="dateCreated datePublished" datetime="2020-02-19T15:17:39+08:00">2020-02-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-23 16:21:55" itemprop="dateModified" datetime="2020-02-23T16:21:55+08:00">2020-02-23</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Java是啥？"><a href="#Java是啥？" class="headerlink" title="Java是啥？"></a>Java是啥？</h1><p> 　　Java是面向对象编程语言，最早是Sun公司的后来被Oracle收购了，已经有20多年的历史了，是为了针对c++的缺点</p>
-<h1 id="Java-编程环境配置"><a href="#Java-编程环境配置" class="headerlink" title="Java 编程环境配置"></a>Java 编程环境配置</h1><p> 　　java运行依赖于java虚拟机,所以要安装JDK,因为java规范和jvm 规范是公开的，所以jdk有开源实现版本openjdk，JDK 和oracle JDK<br> 　　具体步骤可以参考<a href="https://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/" target="_blank" rel="noopener">此链接</a></p>
-<ol>
-<li>安装JDK<br>　　谷歌或者百度，搜索 oracle jdk,下载安装</li>
-<li>配置 <strong>JAVA_HOME</strong>, <strong>CLASSPATH</strong> 和 <strong>PATH</strong> 等环境变量　　</li>
-</ol>
-<p>　　<strong>PATH</strong> 环境变量中是平台可执行文件的所在的路径的集合　　</p>
-<p>　　<strong>JAVA_HOME</strong> 指向JDK software 安装的地方,比如说, D:\Program Files\Java\jdk1.8.0_181　　</p>
-<p>　　<strong>CLASSPATH</strong> variable is one way to tell applications, including the JDK tools, where to look for user classes. (Classes that are part of the JRE, JDK platform, and extensions should be defined through other means, such as the bootstrap class path or the extensions directory.)</p>
-<p>　　The preferred way to specify the class path is by using the -cp command line switch. This allows the CLASSPATH to be set individually for each application without affecting other applications. Setting the CLASSPATH can be tricky and should be performed with care.</p>
-<p>　　The default value of the class path is “.”, meaning that only the current directory is searched. Specifying either the CLASSPATH variable or the -cp command line switch overrides this value.</p>
-<ol start="3">
-<li>配置之后验证　　</li>
-</ol>
-<p>　　在新打开的命令行中输入java -version 查看是否有输出版本号，如果有则成功</p>
-<h1 id="Java-强迫面向对象编程"><a href="#Java-强迫面向对象编程" class="headerlink" title="Java 强迫面向对象编程"></a>Java 强迫面向对象编程</h1><p> 　　即使想写个简单Hello world程序，也很麻烦。必须创建一个Java类，而且类名和文件名还必须一样  </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// BitOpt.java</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BitOpt</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = -<span class="number">1</span>;</span><br><span class="line">    System.out.println(<span class="string">"Hello world"</span>);</span><br><span class="line">    System.out.println(a&gt;&gt;&gt;<span class="number">30</span>);</span><br><span class="line">    System.out.println(a&gt;&gt;<span class="number">30</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="Java-之JNI-Java-Native-Interface"><a href="#Java-之JNI-Java-Native-Interface" class="headerlink" title="Java 之JNI(Java Native Interface)"></a>Java 之JNI(Java Native Interface)</h1><p>  java 为了吸收和利用现有的C和C++代码提供了JNI接口，用于使用C和C++代码提供了JNI接口，用于使用C和C++<br>  Android应用apk中的.so文件是动态库允许厂商将自己的私有算法封装进入so库，提供一定程度的密码保护.<br>  在一些比较耗时的算法场景，使用jni可以加快程序运行速度</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/19/about-ssh/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://i.loli.net/2019/10/25/FLuUNVbMTt8ecda.jpg">
-      <meta itemprop="name" content="Linuxmint17">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/19/about-ssh/" class="post-title-link" itemprop="url">about-ssh</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-19 09:52:19" itemprop="dateCreated datePublished" datetime="2020-02-19T09:52:19+08:00">2020-02-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-20 11:23:12" itemprop="dateModified" datetime="2020-02-20T11:23:12+08:00">2020-02-20</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h1><p>  Secure Shell (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network</p>
-<h1 id="ssh-也是Linux-命令之一，用于-取代telnet等不安全的协议软件-安全连接访问远程服务器"><a href="#ssh-也是Linux-命令之一，用于-取代telnet等不安全的协议软件-安全连接访问远程服务器" class="headerlink" title="ssh 也是Linux 命令之一，用于(取代telnet等不安全的协议软件)安全连接访问远程服务器."></a>ssh 也是Linux 命令之一，用于(取代telnet等不安全的协议软件)安全连接访问远程服务器.</h1><p>  ssh 基本用法 以root用户通过端口22333登录192.168.23.4主机</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh root@192.168.23.4:2233</span><br></pre></td></tr></table></figure>
-<h1 id="ssh的特殊姿势"><a href="#ssh的特殊姿势" class="headerlink" title="ssh的特殊姿势"></a>ssh的特殊姿势</h1><p>  只有你拥有台海外vps并且安装了ssh服务，可以通过ssh动态端口转发实现fq</p>
-<p>  ssh [-D [bind_address:]port root@remotehost:2233</p>
-<p>  一般bind_address 是localhost</p>
-<h1 id="netstat-nat-查看端口使用情况"><a href="#netstat-nat-查看端口使用情况" class="headerlink" title="netstat -nat 查看端口使用情况"></a>netstat -nat 查看端口使用情况</h1><h1 id="ssh-相关命令"><a href="#ssh-相关命令" class="headerlink" title="ssh 相关命令"></a>ssh 相关命令</h1><p>ssh-agent</p>
-<p>ssh-keygen</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -900,7 +883,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
