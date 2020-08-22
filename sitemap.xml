@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/02/28/about-memory/</loc>
+    
+    <lastmod>2020-08-22T09:46:32.838Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/08/22/stupid-words/</loc>
+    
+    <lastmod>2020-08-22T09:04:55.150Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/23/about-cmd/</loc>
+    
+    <lastmod>2020-06-27T15:05:05.718Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/17/explain-words/</loc>
+    
+    <lastmod>2020-06-18T14:54:49.356Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/05/23/about-namespace/</loc>
     
     <lastmod>2020-05-24T13:39:36.048Z</lastmod>
@@ -128,13 +156,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/02/28/about-memory/</loc>
-    
-    <lastmod>2020-02-28T07:23:24.860Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2020/01/24/about-thread/</loc>
     
     <lastmod>2020-02-24T11:37:25.470Z</lastmod>
@@ -152,13 +173,6 @@
     <loc>http://yoursite.com/2020/02/19/about-java/</loc>
     
     <lastmod>2020-02-23T08:21:55.656Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/02/23/about-cmd/</loc>
-    
-    <lastmod>2020-02-23T07:44:43.389Z</lastmod>
     
   </url>
   
