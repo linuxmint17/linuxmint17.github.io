@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.0.0">
+<meta name="generator" content="Hexo 5.1.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -53,11 +53,13 @@
   <meta name="description" content="什么是repoRepo 简化了跨多个代码库运行的流程，与 Git 相辅相成。请参阅源代码控制工具，了解有关 Repo 和 Git 之间关系的说明。如需详细了解 Repo，请参阅 Repo 命令参考资料和 Repo README。 repo 命令格式使用 Repo 需遵循的格式如下： repo command options 可选元素显示在方括号 [ ] 中。例如，许多命令会用到项目列表 (proj">
 <meta property="og:type" content="article">
 <meta property="og:title" content="about repo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;18&#x2F;about-repo&#x2F;index.html">
+<meta property="og:url" content="http://yoursite.com/2020/02/18/about-repo/index.html">
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
 <meta property="og:description" content="什么是repoRepo 简化了跨多个代码库运行的流程，与 Git 相辅相成。请参阅源代码控制工具，了解有关 Repo 和 Git 之间关系的说明。如需详细了解 Repo，请参阅 Repo 命令参考资料和 Repo README。 repo 命令格式使用 Repo 需遵循的格式如下： repo command options 可选元素显示在方括号 [ ] 中。例如，许多命令会用到项目列表 (proj">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-18T10:23:37.274Z">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-18T10:21:45.000Z">
+<meta property="article:modified_time" content="2020-02-18T10:23:37.274Z">
+<meta property="article:author" content="Linuxmint17">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/02/18/about-repo/">
@@ -245,7 +247,7 @@
 <p>init<br>repo init -u url [options]</p>
 <p>在当前目录中安装 Repo。这样会创建一个 .repo/ 目录，其中包含 Repo 源代码和标准 Android 清单文件的 Git 代码库。该 .repo/ 目录中还包含 manifest.xml，该文件是一个指向 .repo/manifests/ 目录中所选清单的符号链接。有关更新清单的说明，请参阅 manifest-format.md。</p>
 <p>选项：</p>
-<p>-u：指定要从中检索清单代码库的网址。您可以在 <a href="https://android.googlesource.com/platform/manifest" target="_blank" rel="noopener">https://android.googlesource.com/platform/manifest</a> 中找到通用清单。<br>-m：选择代码库中的一个清单文件。如果未选择任何清单名称，则会默认选择 default.xml。<br>-b：指定修订版本，即特定的清单分支。<br>注意：对于其余的所有 Repo 命令，当前工作目录必须是 .repo/ 的父目录或该父目录的子目录。</p>
+<p>-u：指定要从中检索清单代码库的网址。您可以在 <a target="_blank" rel="noopener" href="https://android.googlesource.com/platform/manifest">https://android.googlesource.com/platform/manifest</a> 中找到通用清单。<br>-m：选择代码库中的一个清单文件。如果未选择任何清单名称，则会默认选择 default.xml。<br>-b：指定修订版本，即特定的清单分支。<br>注意：对于其余的所有 Repo 命令，当前工作目录必须是 .repo/ 的父目录或该父目录的子目录。</p>
 <p>sync<br>repo sync [project-list]</p>
 <p>下载新的更改并更新本地环境中的工作文件。如果您在未使用任何参数的情况下运行 repo sync，则该操作会同步所有项目的文件。</p>
 <p>运行 repo sync 后，将出现以下情况：</p>
@@ -397,7 +399,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是repo"><span class="nav-number">1.</span> <span class="nav-text">什么是repo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#repo-命令格式"><span class="nav-number">2.</span> <span class="nav-text">repo 命令格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#repo-的命令使用"><span class="nav-number">3.</span> <span class="nav-text">repo 的命令使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Replacing-from-branch-foo"><span class="nav-number">4.</span> <span class="nav-text">Replacing from branch foo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Insert-change-numbers-in-the-brackets-to-add-a-new-patch-set"><span class="nav-number">5.</span> <span class="nav-text">Insert change numbers in the brackets to add a new patch set.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#To-create-a-new-change-record-leave-the-brackets-empty"><span class="nav-number">6.</span> <span class="nav-text">To create a new change record, leave the brackets empty.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#repo-上传代码-到-gerrit"><span class="nav-number">7.</span> <span class="nav-text">repo 上传代码 到 gerrit</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFrepo"><span class="nav-number">1.</span> <span class="nav-text">什么是repo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#repo-%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">repo 命令格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#repo-%E7%9A%84%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">repo 的命令使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Replacing-from-branch-foo"><span class="nav-number">4.</span> <span class="nav-text">Replacing from branch foo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Insert-change-numbers-in-the-brackets-to-add-a-new-patch-set"><span class="nav-number">5.</span> <span class="nav-text">Insert change numbers in the brackets to add a new patch set.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#To-create-a-new-change-record-leave-the-brackets-empty"><span class="nav-number">6.</span> <span class="nav-text">To create a new change record, leave the brackets empty.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#repo-%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81-%E5%88%B0-gerrit"><span class="nav-number">7.</span> <span class="nav-text">repo 上传代码 到 gerrit</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -457,7 +459,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Linuxmint17</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.0.0
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v5.1.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.2
@@ -485,9 +487,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 

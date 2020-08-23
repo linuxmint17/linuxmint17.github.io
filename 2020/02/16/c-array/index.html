@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.0.0">
+<meta name="generator" content="Hexo 5.1.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -50,14 +50,16 @@
   };
 </script>
 
-  <meta name="description" content="数组的奇葩  C语言中x[i]的计算方法 *(x + i)  x是个数组名，一般写数组的时候，x是常量指针,当x是0的时候没问题 1234int is_big_endian()&amp;#123;    int a = 0xbabe;    return 0[(unsigned char *)&amp;amp;a] == 0xbe;&amp;#125;  123456789101112int i; &#x2F;&#x2F; 未初始化的全局变">
+  <meta name="description" content="数组的奇葩  C语言中x[i]的计算方法 *(x + i)  x是个数组名，一般写数组的时候，x是常量指针,当x是0的时候没问题 1234int is_big_endian()&amp;#123;    int a &#x3D; 0xbabe;    return 0[(unsigned char *)&amp;a] &#x3D;&#x3D; 0xbe;&amp;#125;  123456789101112int i; &#x2F;&#x2F; 未初始化的全局变">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言中数组">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;16&#x2F;c-array&#x2F;index.html">
+<meta property="og:url" content="http://yoursite.com/2020/02/16/c-array/index.html">
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
-<meta property="og:description" content="数组的奇葩  C语言中x[i]的计算方法 *(x + i)  x是个数组名，一般写数组的时候，x是常量指针,当x是0的时候没问题 1234int is_big_endian()&amp;#123;    int a = 0xbabe;    return 0[(unsigned char *)&amp;amp;a] == 0xbe;&amp;#125;  123456789101112int i; &#x2F;&#x2F; 未初始化的全局变">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-16T07:43:59.228Z">
+<meta property="og:description" content="数组的奇葩  C语言中x[i]的计算方法 *(x + i)  x是个数组名，一般写数组的时候，x是常量指针,当x是0的时候没问题 1234int is_big_endian()&amp;#123;    int a &#x3D; 0xbabe;    return 0[(unsigned char *)&amp;a] &#x3D;&#x3D; 0xbe;&amp;#125;  123456789101112int i; &#x2F;&#x2F; 未初始化的全局变">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-16T04:04:57.000Z">
+<meta property="article:modified_time" content="2020-02-16T07:43:59.228Z">
+<meta property="article:author" content="Linuxmint17">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/02/16/c-array/">
@@ -234,7 +236,7 @@
         <h1 id="数组的奇葩"><a href="#数组的奇葩" class="headerlink" title="数组的奇葩"></a>数组的奇葩</h1><p>  C语言中x[i]的计算方法 *(x + i)  x是个数组名，一般写数组的时候，x是常量指针,当x是0的时候没问题</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">is_big_endian</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">0xbabe</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>[(<span class="keyword">unsigned</span> <span class="keyword">char</span> *)&amp;a] == <span class="number">0xbe</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i; <span class="comment">// 未初始化的全局变量，被初始化成0</span></span><br><span class="line">main ()</span><br><span class="line">&#123;</span><br><span class="line">  <span class="comment">// read 是自定义函数, read(0, i++ + "hello, world!\n", 1); 实际上调用了系统调用write(1,指向hello, world!的指针，每次偏移一,1);</span></span><br><span class="line">  <span class="comment">// i["]&lt;i;++i)&#123;--i;&#125;"] 是判断 *("]&lt;i;++i)&#123;--i;"的地址 偏移 i) 是否为0，"]&lt;i;++i)&#123;--i;" 的长度和 "hello, world!"的长度一样</span></span><br><span class="line">  <span class="comment">// C语言中的字符串常量和数字做运算的时候是 常量指针const char *类型</span></span><br><span class="line">  <span class="keyword">for</span> (; i[<span class="string">"]&lt;i;++i)&#123;--i;&#125;"</span>]; read (<span class="string">'-'</span> - <span class="string">'-'</span>, i++ + <span class="string">"hello, world!\n"</span>, <span class="string">'/'</span> / <span class="string">'/'</span>));</span><br><span class="line">&#125;</span><br><span class="line">read (j, i, p)</span><br><span class="line">&#123;</span><br><span class="line">  write (j / p + p, i-- - j, i / i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i; <span class="comment">// 未初始化的全局变量，被初始化成0</span></span><br><span class="line">main ()</span><br><span class="line">&#123;</span><br><span class="line">  <span class="comment">// read 是自定义函数, read(0, i++ + &quot;hello, world!\n&quot;, 1); 实际上调用了系统调用write(1,指向hello, world!的指针，每次偏移一,1);</span></span><br><span class="line">  <span class="comment">// i[&quot;]&lt;i;++i)&#123;--i;&#125;&quot;] 是判断 *(&quot;]&lt;i;++i)&#123;--i;&quot;的地址 偏移 i) 是否为0，&quot;]&lt;i;++i)&#123;--i;&quot; 的长度和 &quot;hello, world!&quot;的长度一样</span></span><br><span class="line">  <span class="comment">// C语言中的字符串常量和数字做运算的时候是 常量指针const char *类型</span></span><br><span class="line">  <span class="keyword">for</span> (; i[<span class="string">&quot;]&lt;i;++i)&#123;--i;&#125;&quot;</span>]; read (<span class="string">&#x27;-&#x27;</span> - <span class="string">&#x27;-&#x27;</span>, i++ + <span class="string">&quot;hello, world!\n&quot;</span>, <span class="string">&#x27;/&#x27;</span> / <span class="string">&#x27;/&#x27;</span>));</span><br><span class="line">&#125;</span><br><span class="line">read (j, i, p)</span><br><span class="line">&#123;</span><br><span class="line">  write (j / p + p, i-- - j, i / i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -296,7 +298,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数组的奇葩"><span class="nav-number">1.</span> <span class="nav-text">数组的奇葩</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E5%A5%87%E8%91%A9"><span class="nav-number">1.</span> <span class="nav-text">数组的奇葩</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -356,7 +358,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Linuxmint17</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.0.0
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v5.1.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.2
@@ -384,9 +386,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 

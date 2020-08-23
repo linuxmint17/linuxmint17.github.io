@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.0.0">
+<meta name="generator" content="Hexo 5.1.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -50,14 +50,16 @@
   };
 </script>
 
-  <meta name="description" content="此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题内存(RAM)分为 静态内存(SRAM)和动态内存(DRAM)特性对比表格：| Syntax      | SRAM | DRAM     | | :---        |    :----:   |          ---: | | 可用阶段      | 任意时刻均可用       |需要在初始化频率等之后 | |">
+  <meta name="description" content="此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题内存(RAM)分为 静态内存(SRAM)和动态内存(DRAM)静态随机存取存储器是随机存取存储器的一种。所谓的“静态”，是指这种存储器只要保持通电，里面储存的数据就可以恒常保持。相对之下，动态随机存取存储器里面所储存的数据就需要周期性地更新。然而，当电力供应停止时，SRAM储存的数据还是会消失 摘自[维基百科](https:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="About memory">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;28&#x2F;about-memory&#x2F;index.html">
+<meta property="og:url" content="http://yoursite.com/2020/02/28/about-memory/index.html">
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
-<meta property="og:description" content="此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题内存(RAM)分为 静态内存(SRAM)和动态内存(DRAM)特性对比表格：| Syntax      | SRAM | DRAM     | | :---        |    :----:   |          ---: | | 可用阶段      | 任意时刻均可用       |需要在初始化频率等之后 | |">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-08-22T09:46:32.838Z">
+<meta property="og:description" content="此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题内存(RAM)分为 静态内存(SRAM)和动态内存(DRAM)静态随机存取存储器是随机存取存储器的一种。所谓的“静态”，是指这种存储器只要保持通电，里面储存的数据就可以恒常保持。相对之下，动态随机存取存储器里面所储存的数据就需要周期性地更新。然而，当电力供应停止时，SRAM储存的数据还是会消失 摘自[维基百科](https:">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-28T07:23:24.000Z">
+<meta property="article:modified_time" content="2020-08-23T01:58:10.684Z">
+<meta property="article:author" content="Linuxmint17">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/02/28/about-memory/">
@@ -223,7 +225,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-22 17:46:32" itemprop="dateModified" datetime="2020-08-22T17:46:32+08:00">2020-08-22</time>
+                <time title="Modified: 2020-08-23 09:58:10" itemprop="dateModified" datetime="2020-08-23T09:58:10+08:00">2020-08-23</time>
               </span>
 
           
@@ -237,11 +239,37 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题"><a href="#此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题" class="headerlink" title="此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题"></a>此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题</h1><h2 id="内存-RAM-分为-静态内存-SRAM-和动态内存-DRAM"><a href="#内存-RAM-分为-静态内存-SRAM-和动态内存-DRAM" class="headerlink" title="内存(RAM)分为 静态内存(SRAM)和动态内存(DRAM)"></a>内存(RAM)分为 静态内存(SRAM)和动态内存(DRAM)</h2><h2 id="特性对比表格："><a href="#特性对比表格：" class="headerlink" title="特性对比表格："></a>特性对比表格：</h2><pre><code>| Syntax      | SRAM | DRAM     |
-| :---        |    :----:   |          ---: |
-| 可用阶段      | 任意时刻均可用       |需要在初始化频率等之后 |
-| 价格   | 高      | 低      |
-| 常见使用场景   | 寄存器，cache，        | 运行内存DDR     |</code></pre>
+        <h1 id="此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题"><a href="#此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题" class="headerlink" title="此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题"></a>此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题</h1><h2 id="内存-RAM-分为-静态内存-SRAM-和动态内存-DRAM"><a href="#内存-RAM-分为-静态内存-SRAM-和动态内存-DRAM" class="headerlink" title="内存(RAM)分为 静态内存(SRAM)和动态内存(DRAM)"></a>内存(RAM)分为 静态内存(SRAM)和动态内存(DRAM)</h2><pre><code>静态随机存取存储器是随机存取存储器的一种。所谓的“静态”，是指这种存储器只要保持通电，里面储存的数据就可以恒常保持。相对之下，动态随机存取存储器里面所储存的数据就需要周期性地更新。然而，当电力供应停止时，SRAM储存的数据还是会消失
+摘自[维基百科](https://zh.wikipedia.org/zh-cn/E9%9D%99%E6%80%81%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%8F%96%E5%AD%98%E5%82%A8%E5%99%A8)</code></pre><h2 id="特性对比表格："><a href="#特性对比表格：" class="headerlink" title="特性对比表格："></a>特性对比表格：</h2><table>
+<thead>
+<tr>
+<th align="center">内存类型</th>
+<th align="center">SRAM</th>
+<th align="center">DRAM</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">可用阶段</td>
+<td align="center">系统启动过程的任意时刻均可用</td>
+<td align="center">需要在初始化频率等之后</td>
+</tr>
+<tr>
+<td align="center">生产成本</td>
+<td align="center">高</td>
+<td align="center">低</td>
+</tr>
+<tr>
+<td align="center">常见使用场景</td>
+<td align="center">寄存器，cache</td>
+<td align="center">运行内存</td>
+</tr>
+<tr>
+<td align="center">组成物理器件</td>
+<td align="center">略</td>
+<td align="center">略</td>
+</tr>
+</tbody></table>
+
     </div>
 
     
@@ -303,7 +331,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题"><span class="nav-number">1.</span> <span class="nav-text">此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#内存-RAM-分为-静态内存-SRAM-和动态内存-DRAM"><span class="nav-number">1.1.</span> <span class="nav-text">内存(RAM)分为 静态内存(SRAM)和动态内存(DRAM)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特性对比表格："><span class="nav-number">1.2.</span> <span class="nav-text">特性对比表格：</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A4%E5%A4%84%E8%AE%A8%E8%AE%BA%E7%9A%84%E6%98%AF%E7%89%A9%E7%90%86%E5%86%85%E5%AD%98%EF%BC%8C%E8%AF%B4%E7%9A%84%E6%98%AF%E5%86%85%E5%AD%98%E7%9A%84%E7%89%A9%E7%90%86%E7%89%B9%E6%80%A7%EF%BC%8C%E4%B8%8D%E6%B6%89%E5%8F%8A%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%EF%BC%8C%E5%86%85%E5%AD%98%E6%98%A0%E5%B0%84%E7%AD%89%E8%AF%9D%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98-RAM-%E5%88%86%E4%B8%BA-%E9%9D%99%E6%80%81%E5%86%85%E5%AD%98-SRAM-%E5%92%8C%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98-DRAM"><span class="nav-number">1.1.</span> <span class="nav-text">内存(RAM)分为 静态内存(SRAM)和动态内存(DRAM)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%80%A7%E5%AF%B9%E6%AF%94%E8%A1%A8%E6%A0%BC%EF%BC%9A"><span class="nav-number">1.2.</span> <span class="nav-text">特性对比表格：</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -363,7 +391,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Linuxmint17</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.0.0
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v5.1.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.2
@@ -391,9 +419,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 

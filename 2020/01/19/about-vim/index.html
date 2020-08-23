@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.0.0">
+<meta name="generator" content="Hexo 5.1.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -51,14 +51,16 @@
 </script>
 
   <meta name="description" content="vim vs Emacs　　文本编辑器的圣战: vim 被称为编辑器之神，emacs被称为神之编辑器(伪装成编辑器的操作系统).这两个文本编辑器中有不同的学习曲线，vim 刚开始入坑很难，甚至都无法输入一个字符，无法退出vim,只有 alt +F4 关闭中断大法。随着熟练程度的提升，逐渐的会从不同的编辑模式中获得飞快的输入速度，也会告别上下左右四个方将箭头(Esc to death). emacs">
-<meta name="keywords" content="Tool">
 <meta property="og:type" content="article">
 <meta property="og:title" content="About Vim">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;19&#x2F;about-vim&#x2F;index.html">
+<meta property="og:url" content="http://yoursite.com/2020/01/19/about-vim/index.html">
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
 <meta property="og:description" content="vim vs Emacs　　文本编辑器的圣战: vim 被称为编辑器之神，emacs被称为神之编辑器(伪装成编辑器的操作系统).这两个文本编辑器中有不同的学习曲线，vim 刚开始入坑很难，甚至都无法输入一个字符，无法退出vim,只有 alt +F4 关闭中断大法。随着熟练程度的提升，逐渐的会从不同的编辑模式中获得飞快的输入速度，也会告别上下左右四个方将箭头(Esc to death). emacs">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-18T13:54:38.029Z">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-01-19T13:54:21.000Z">
+<meta property="article:modified_time" content="2020-02-18T13:54:38.029Z">
+<meta property="article:author" content="Linuxmint17">
+<meta property="article:tag" content="Tool">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/01/19/about-vim/">
@@ -241,7 +243,7 @@
         <h2 id="vim-vs-Emacs"><a href="#vim-vs-Emacs" class="headerlink" title="vim vs Emacs"></a>vim vs Emacs</h2><p>　　文本编辑器的圣战: vim 被称为编辑器之神，emacs被称为神之编辑器(伪装成编辑器的操作系统).<br>这两个文本编辑器中有不同的学习曲线，vim 刚开始入坑很难，甚至都无法输入一个字符，无法退出vim,只有 alt +F4 关闭中断大法。随着熟练程度的提升，逐渐的会从不同的<br>编辑模式中获得飞快的输入速度，也会告别上下左右四个方将箭头(Esc to death). emacs也学习曲线也不是很平和，刚上手的时候不知道怎么保存文件，怎么退出编辑文件。渐<br>渐的熟悉之后会ctrl到死</p>
 <h2 id="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"><a href="#本文章主要讲解vim的学习路径和常用配置及基本介绍和操作" class="headerlink" title="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"></a>本文章主要讲解vim的学习路径和常用配置及基本介绍和操作</h2><p>　　挖坑待填</p>
 <h2 id="vim-打开没有权限的文件-忘记使用sudo打开-之后如何强制保存"><a href="#vim-打开没有权限的文件-忘记使用sudo打开-之后如何强制保存" class="headerlink" title="vim 打开没有权限的文件(忘记使用sudo打开) 之后如何强制保存"></a>vim 打开没有权限的文件(忘记使用sudo打开) 之后如何强制保存</h2><p>　　在vim的命令模式中输入:w !sudo tee %</p>
-<h3 id="how-this-works-摘自stack-overflow"><a href="#how-this-works-摘自stack-overflow" class="headerlink" title="how this works 摘自stack overflow"></a>how this works 摘自<a href="https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work" target="_blank" rel="noopener">stack overflow</a></h3><p>
+<h3 id="how-this-works-摘自stack-overflow"><a href="#how-this-works-摘自stack-overflow" class="headerlink" title="how this works 摘自stack overflow"></a>how this works 摘自<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work">stack overflow</a></h3><p>
 in :w !sudo tee %...
 
 <p>% means “the current file”<br>As eugene y pointed out, % does indeed mean “the current file name”, which is passed to tee so that it knows which file to overwrite.</p>
@@ -249,7 +251,7 @@ in :w !sudo tee %...
 <p>:w isn’t updating your file<br>One confusing part of this trick is that you might think :w is modifying your file, but it isn’t. If you opened and modified file1.txt, then ran :w file2.txt, it would be a “save as”; file1.txt wouldn’t be modified, but the current buffer contents would be sent to file2.txt.</p>
 <p>Instead of file2.txt, you can substitute a shell command to receive the buffer contents. For instance, :w !cat will just display the contents.</p>
 <p>If Vim wasn’t run with sudo access, its :w can’t modify a protected file, but if it passes the buffer contents to the shell, a command in the shell can be run with sudo. In this case, we use tee.</p>
-<p>Understanding tee<br><a href="https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work" target="_blank" rel="noopener">https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work</a><br>As for tee, picture the tee command as a T-shaped pipe in a normal bash piping situation: it directs output to specified file(s) and also sends it to standard output, which can be captured by the next piped command.</p>
+<p>Understanding tee<br><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work">https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work</a><br>As for tee, picture the tee command as a T-shaped pipe in a normal bash piping situation: it directs output to specified file(s) and also sends it to standard output, which can be captured by the next piped command.</p>
 <p>For example, in ps -ax | tee processes.txt | grep ‘foo’, the list of processes will be written to a text file and passed along to grep.</p>
 <pre><code>+-----------+    tee     +------------+
 |           |  --------  |            |
@@ -332,7 +334,7 @@ in :w !sudo tee %...
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-vs-Emacs"><span class="nav-number">1.</span> <span class="nav-text">vim vs Emacs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"><span class="nav-number">2.</span> <span class="nav-text">本文章主要讲解vim的学习路径和常用配置及基本介绍和操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-打开没有权限的文件-忘记使用sudo打开-之后如何强制保存"><span class="nav-number">3.</span> <span class="nav-text">vim 打开没有权限的文件(忘记使用sudo打开) 之后如何强制保存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#how-this-works-摘自stack-overflow"><span class="nav-number">3.1.</span> <span class="nav-text">how this works 摘自stack overflow</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-vs-Emacs"><span class="nav-number">1.</span> <span class="nav-text">vim vs Emacs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E6%96%87%E7%AB%A0%E4%B8%BB%E8%A6%81%E8%AE%B2%E8%A7%A3vim%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84%E5%92%8C%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%E5%92%8C%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">本文章主要讲解vim的学习路径和常用配置及基本介绍和操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim-%E6%89%93%E5%BC%80%E6%B2%A1%E6%9C%89%E6%9D%83%E9%99%90%E7%9A%84%E6%96%87%E4%BB%B6-%E5%BF%98%E8%AE%B0%E4%BD%BF%E7%94%A8sudo%E6%89%93%E5%BC%80-%E4%B9%8B%E5%90%8E%E5%A6%82%E4%BD%95%E5%BC%BA%E5%88%B6%E4%BF%9D%E5%AD%98"><span class="nav-number">3.</span> <span class="nav-text">vim 打开没有权限的文件(忘记使用sudo打开) 之后如何强制保存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#how-this-works-%E6%91%98%E8%87%AAstack-overflow"><span class="nav-number">3.1.</span> <span class="nav-text">how this works 摘自stack overflow</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -392,7 +394,7 @@ in :w !sudo tee %...
   </span>
   <span class="author" itemprop="copyrightHolder">Linuxmint17</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.0.0
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v5.1.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.2
@@ -420,9 +422,17 @@ in :w !sudo tee %...
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 

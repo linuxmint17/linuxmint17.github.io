@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.0.0">
+<meta name="generator" content="Hexo 5.1.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -51,14 +51,16 @@
 </script>
 
   <meta name="description" content="新建虚拟机的时候有磁盘类型选择 IDE  SCSI(Recommended)  SATA  NVMe 虚拟机文件磁盘类型 qcow2  raw  vhd  vmdk 常见的虚拟机软件 VMware Workstation   Oracle VM BOX  KVM(Kernel-based Virtual Machine)  Xen  VMware虚拟机client是Linux遇到如果在Shell下">
-<meta name="keywords" content="others">
 <meta property="og:type" content="article">
 <meta property="og:title" content="About virtualmachine">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;18&#x2F;about-vm&#x2F;index.html">
+<meta property="og:url" content="http://yoursite.com/2020/02/18/about-vm/index.html">
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
 <meta property="og:description" content="新建虚拟机的时候有磁盘类型选择 IDE  SCSI(Recommended)  SATA  NVMe 虚拟机文件磁盘类型 qcow2  raw  vhd  vmdk 常见的虚拟机软件 VMware Workstation   Oracle VM BOX  KVM(Kernel-based Virtual Machine)  Xen  VMware虚拟机client是Linux遇到如果在Shell下">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-18T12:41:00.508Z">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-18T11:12:54.000Z">
+<meta property="article:modified_time" content="2020-02-18T12:41:00.508Z">
+<meta property="article:author" content="Linuxmint17">
+<meta property="article:tag" content="others">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/02/18/about-vm/">
@@ -343,7 +345,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#新建虚拟机的时候有磁盘类型选择"><span class="nav-number">1.</span> <span class="nav-text">新建虚拟机的时候有磁盘类型选择</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#虚拟机文件磁盘类型"><span class="nav-number">2.</span> <span class="nav-text">虚拟机文件磁盘类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见的虚拟机软件"><span class="nav-number">3.</span> <span class="nav-text">常见的虚拟机软件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#VMware虚拟机client是Linux遇到如果在Shell下输错命令或按TAB键补全命令系统会发出类似“嘟嘟-或-滴滴”的蜂鸣声"><span class="nav-number">3.1.</span> <span class="nav-text">VMware虚拟机client是Linux遇到如果在Shell下输错命令或按TAB键补全命令系统会发出类似“嘟嘟 或 滴滴”的蜂鸣声</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E6%97%B6%E5%80%99%E6%9C%89%E7%A3%81%E7%9B%98%E7%B1%BB%E5%9E%8B%E9%80%89%E6%8B%A9"><span class="nav-number">1.</span> <span class="nav-text">新建虚拟机的时候有磁盘类型选择</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%96%87%E4%BB%B6%E7%A3%81%E7%9B%98%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">虚拟机文件磁盘类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%BD%AF%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">常见的虚拟机软件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#VMware%E8%99%9A%E6%8B%9F%E6%9C%BAclient%E6%98%AFLinux%E9%81%87%E5%88%B0%E5%A6%82%E6%9E%9C%E5%9C%A8Shell%E4%B8%8B%E8%BE%93%E9%94%99%E5%91%BD%E4%BB%A4%E6%88%96%E6%8C%89TAB%E9%94%AE%E8%A1%A5%E5%85%A8%E5%91%BD%E4%BB%A4%E7%B3%BB%E7%BB%9F%E4%BC%9A%E5%8F%91%E5%87%BA%E7%B1%BB%E4%BC%BC%E2%80%9C%E5%98%9F%E5%98%9F-%E6%88%96-%E6%BB%B4%E6%BB%B4%E2%80%9D%E7%9A%84%E8%9C%82%E9%B8%A3%E5%A3%B0"><span class="nav-number">3.1.</span> <span class="nav-text">VMware虚拟机client是Linux遇到如果在Shell下输错命令或按TAB键补全命令系统会发出类似“嘟嘟 或 滴滴”的蜂鸣声</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -403,7 +405,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Linuxmint17</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.0.0
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v5.1.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.2
@@ -431,9 +433,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 

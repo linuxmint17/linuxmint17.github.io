@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.0.0">
+<meta name="generator" content="Hexo 5.1.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -51,19 +51,21 @@
 </script>
 
   <meta name="description" content="位运算的地位　以下内容摘自《枕边算法书》感觉对于位运算描述的很形象  　　对于程序员来说,”位” 相当于现实世界中构成水和空气的粒子。编程世界的所有东西都会从位开始，以位结束。刚步入编程世界的初学者看到整数就是整数，看到字符串就是字符串。但功力深厚的程序员眼中无论整数还是字符串，它们都是位。   　　与系统编程不同，一般应用程序的编程对位运算的要求并不高。即使如此，很少有程序员不懂位运算，因为在不">
-<meta name="keywords" content="C&#x2F;C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="位运算、原码、反码、补码">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;18&#x2F;bit-opteration&#x2F;index.html">
+<meta property="og:url" content="http://yoursite.com/2020/02/18/bit-opteration/index.html">
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
 <meta property="og:description" content="位运算的地位　以下内容摘自《枕边算法书》感觉对于位运算描述的很形象  　　对于程序员来说,”位” 相当于现实世界中构成水和空气的粒子。编程世界的所有东西都会从位开始，以位结束。刚步入编程世界的初学者看到整数就是整数，看到字符串就是字符串。但功力深厚的程序员眼中无论整数还是字符串，它们都是位。   　　与系统编程不同，一般应用程序的编程对位运算的要求并不高。即使如此，很少有程序员不懂位运算，因为在不">
-<meta property="og:locale" content="en">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;23&#x2F;PohLeXaVilHCFYq.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;22&#x2F;6YB31Gx5nUwsVbv.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;23&#x2F;qIiaTSh3ZgBfKoX.png">
-<meta property="og:updated_time" content="2020-03-05T08:51:37.810Z">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2020/02/23/PohLeXaVilHCFYq.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/22/6YB31Gx5nUwsVbv.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/23/qIiaTSh3ZgBfKoX.png">
+<meta property="article:published_time" content="2020-02-18T09:49:04.000Z">
+<meta property="article:modified_time" content="2020-03-05T08:51:37.810Z">
+<meta property="article:author" content="Linuxmint17">
+<meta property="article:tag" content="C&#x2F;C++">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;02&#x2F;23&#x2F;PohLeXaVilHCFYq.png">
+<meta name="twitter:image" content="https://i.loli.net/2020/02/23/PohLeXaVilHCFYq.png">
 
 <link rel="canonical" href="http://yoursite.com/2020/02/18/bit-opteration/">
 
@@ -318,8 +320,8 @@
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>　　1. <strong>现代计算机中存储的永远是补码</strong><br>　　2. <strong>运算的时候也是用补码在运算</strong><br>　　3. <strong>x,y均为整数, 如果有~x = y 成立,则有 x + y = -1 成立</strong></p>
 <h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><ol>
 <li>~3 = ？<br>3 = (0000 0011)按位取反得到(1111 1100) 按照2补数解释为-4</li>
-<li><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> cat = <span class="number">13</span>;</span><br><span class="line">cat - ~-cat; <span class="comment">// this experssion's value is 1</span></span><br><span class="line"><span class="built_in">putchar</span> (~-~-~-cat); <span class="comment">// this line equal to putchar('\n'); \n 的ascii code 十进制的值为 10</span></span><br></pre></td></tr></table></figure>
-<h1 id="位运算可以用来判断整数的奇偶性"><a href="#位运算可以用来判断整数的奇偶性" class="headerlink" title="位运算可以用来判断整数的奇偶性"></a>位运算可以用来判断整数的奇偶性</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输出0 ~ 100 的所有奇数</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (i &amp; <span class="number">1</span>) &#123; <span class="comment">// 基数最低bit位是1</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> cat = <span class="number">13</span>;</span><br><span class="line">cat - ~-cat; <span class="comment">// this experssion&#x27;s value is 1</span></span><br><span class="line"><span class="built_in">putchar</span> (~-~-~-cat); <span class="comment">// this line equal to putchar(&#x27;\n&#x27;); \n 的ascii code 十进制的值为 10</span></span><br></pre></td></tr></table></figure>
+<h1 id="位运算可以用来判断整数的奇偶性"><a href="#位运算可以用来判断整数的奇偶性" class="headerlink" title="位运算可以用来判断整数的奇偶性"></a>位运算可以用来判断整数的奇偶性</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输出0 ~ 100 的所有奇数</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (i &amp; <span class="number">1</span>) &#123; <span class="comment">// 基数最低bit位是1</span></span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
@@ -388,7 +390,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算的地位"><span class="nav-number">1.</span> <span class="nav-text">位运算的地位</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算的类型"><span class="nav-number">2.</span> <span class="nav-text">位运算的类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原码"><span class="nav-number">3.</span> <span class="nav-text">原码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反码-Ones’-complement-一的补码"><span class="nav-number">4.</span> <span class="nav-text">反码(Ones’ complement /一的补码)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#补码-Twos’-complement-二的补码"><span class="nav-number">5.</span> <span class="nav-text">补码(Twos’ complement /二的补码)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#补码的计算方法"><span class="nav-number">6.</span> <span class="nav-text">补码的计算方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#根据补码-2补数-求真值的方法"><span class="nav-number">7.</span> <span class="nav-text">根据补码(2补数)求真值的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">8.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#例题"><span class="nav-number">9.</span> <span class="nav-text">例题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#位运算可以用来判断整数的奇偶性"><span class="nav-number">10.</span> <span class="nav-text">位运算可以用来判断整数的奇偶性</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E5%9C%B0%E4%BD%8D"><span class="nav-number">1.</span> <span class="nav-text">位运算的地位</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">位运算的类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E7%A0%81"><span class="nav-number">3.</span> <span class="nav-text">原码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%8D%E7%A0%81-Ones%E2%80%99-complement-%E4%B8%80%E7%9A%84%E8%A1%A5%E7%A0%81"><span class="nav-number">4.</span> <span class="nav-text">反码(Ones’ complement &#x2F;一的补码)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81-Twos%E2%80%99-complement-%E4%BA%8C%E7%9A%84%E8%A1%A5%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">补码(Twos’ complement &#x2F;二的补码)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E7%9A%84%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95"><span class="nav-number">6.</span> <span class="nav-text">补码的计算方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%B9%E6%8D%AE%E8%A1%A5%E7%A0%81-2%E8%A1%A5%E6%95%B0-%E6%B1%82%E7%9C%9F%E5%80%BC%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">7.</span> <span class="nav-text">根据补码(2补数)求真值的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">8.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-number">9.</span> <span class="nav-text">例题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%9D%A5%E5%88%A4%E6%96%AD%E6%95%B4%E6%95%B0%E7%9A%84%E5%A5%87%E5%81%B6%E6%80%A7"><span class="nav-number">10.</span> <span class="nav-text">位运算可以用来判断整数的奇偶性</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -448,7 +450,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Linuxmint17</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.0.0
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v5.1.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.2
@@ -476,9 +478,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 

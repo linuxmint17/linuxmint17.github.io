@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.0.0">
+<meta name="generator" content="Hexo 5.1.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -50,15 +50,17 @@
   };
 </script>
 
-  <meta name="description" content="C++ 曾经被叫做C With class, C++ 是兼容C的，并不是100%兼容  C++ 中的C子集是C++的一部分，C语言中允许的东西到C++中可能会不允许    全局变量初始化: C语言中只能使用 constant初始化全局变量 C++可以通过函数初始化123456789101112131415#include &amp;lt;stdio.h&amp;gt;int init()&amp;#123;    pri">
-<meta name="keywords" content="C&#x2F;C++">
+  <meta name="description" content="C++ 曾经被叫做C With class, C++ 是兼容C的，并不是100%兼容  C++ 中的C子集是C++的一部分，C语言中允许的东西到C++中可能会不允许    全局变量初始化: C语言中只能使用 constant初始化全局变量 C++可以通过函数初始化123456789101112131415#include &lt;stdio.h&gt;int init()&amp;#123;    pri">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++ VS c">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;24&#x2F;about-c-cpp&#x2F;index.html">
+<meta property="og:url" content="http://yoursite.com/2020/02/24/about-c-cpp/index.html">
 <meta property="og:site_name" content="Linuxmint17&#39;s Blog">
-<meta property="og:description" content="C++ 曾经被叫做C With class, C++ 是兼容C的，并不是100%兼容  C++ 中的C子集是C++的一部分，C语言中允许的东西到C++中可能会不允许    全局变量初始化: C语言中只能使用 constant初始化全局变量 C++可以通过函数初始化123456789101112131415#include &amp;lt;stdio.h&amp;gt;int init()&amp;#123;    pri">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-10T00:19:42.123Z">
+<meta property="og:description" content="C++ 曾经被叫做C With class, C++ 是兼容C的，并不是100%兼容  C++ 中的C子集是C++的一部分，C语言中允许的东西到C++中可能会不允许    全局变量初始化: C语言中只能使用 constant初始化全局变量 C++可以通过函数初始化123456789101112131415#include &lt;stdio.h&gt;int init()&amp;#123;    pri">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-24T09:55:43.000Z">
+<meta property="article:modified_time" content="2020-03-10T00:19:42.123Z">
+<meta property="article:author" content="Linuxmint17">
+<meta property="article:tag" content="C&#x2F;C++">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/02/24/about-c-cpp/">
@@ -240,13 +242,13 @@
       
         <h1 id="C-曾经被叫做C-With-class-C-是兼容C的，并不是100-兼容"><a href="#C-曾经被叫做C-With-class-C-是兼容C的，并不是100-兼容" class="headerlink" title="C++ 曾经被叫做C With class, C++ 是兼容C的，并不是100%兼容"></a>C++ 曾经被叫做C With class, C++ 是兼容C的，并不是100%兼容</h1><p>  C++ 中的C子集是C++的一部分，C语言中允许的东西到C++中可能会不允许  </p>
 <ol>
-<li>全局变量初始化: C语言中只能使用 constant初始化全局变量 C++可以通过函数初始化<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"inside init func\n"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">100</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> global_int = init(); <span class="comment">// 此语句cpp文件能够编译执行，c文件编译失败</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Hello world\n"</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"global_int= %d\n"</span>, global_int);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>全局变量初始化: C语言中只能使用 constant初始化全局变量 C++可以通过函数初始化<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;inside init func\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">100</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> global_int = init(); <span class="comment">// 此语句cpp文件能够编译执行，c文件编译失败</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello world\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;global_int= %d\n&quot;</span>, global_int);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="C-的C子集-是更好的C，将C中的一些不严格的编译检查，变得相对更严格"><a href="#C-的C子集-是更好的C，将C中的一些不严格的编译检查，变得相对更严格" class="headerlink" title="C++的C子集 是更好的C，将C中的一些不严格的编译检查，变得相对更严格"></a>C++的C子集 是更好的C，将C中的一些不严格的编译检查，变得相对更严格</h1></li>
 </ol>
 <h1 id="C-编译器编译之后函数的-mangling-name-和C编译器编出来的函数名称的-namgling-name-不一样"><a href="#C-编译器编译之后函数的-mangling-name-和C编译器编出来的函数名称的-namgling-name-不一样" class="headerlink" title="C++ 编译器编译之后函数的 mangling name 和C编译器编出来的函数名称的 namgling name 不一样,"></a>C++ 编译器编译之后函数的 mangling name 和C编译器编出来的函数名称的 namgling name 不一样,</h1><p>　　当C++代码调用非标准规定的的C库(比如说FFmpeg是一个纯C的库)的时候，先包含C的头文件然后使用 </p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">""</span></span></span><br><span class="line"><span class="keyword">extern</span> <span class="string">"C"</span> &#123; c &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&quot;&quot;</span></span></span><br><span class="line"><span class="keyword">extern</span> <span class="string">&quot;C&quot;</span> &#123; c &#125; </span><br></pre></td></tr></table></figure>
 <h1 id="C-中的-引用reference-vs-指针pointer"><a href="#C-中的-引用reference-vs-指针pointer" class="headerlink" title="C++ 中的 引用reference vs 指针pointer"></a>C++ 中的 引用reference vs 指针pointer</h1><p>　　指针是某个内存对象的地址，通过指针可以间接地修改内存对象的内容<br>　　引用是种隐式(implicit)的指针, 是某个对象的别名，通过以引用可以直接操作该对象</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="comment">// 此函数通过引用直接修改指针i, 使其自增1，指针自增或者自减的大小是指针指向的内存的基本类型的大小sizeof(int)</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span>* &amp; i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    i++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> *i = <span class="number">0</span>;</span><br><span class="line">    func(i);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, i); <span class="comment">// 结果应该是4</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="comment">// 此函数通过引用直接修改指针i, 使其自增1，指针自增或者自减的大小是指针指向的内存的基本类型的大小sizeof(int)</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span>* &amp; i)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    i++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> *i = <span class="number">0</span>;</span><br><span class="line">    func(i);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, i); <span class="comment">// 结果应该是4</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -312,7 +314,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-曾经被叫做C-With-class-C-是兼容C的，并不是100-兼容"><span class="nav-number">1.</span> <span class="nav-text">C++ 曾经被叫做C With class, C++ 是兼容C的，并不是100%兼容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-的C子集-是更好的C，将C中的一些不严格的编译检查，变得相对更严格"><span class="nav-number">2.</span> <span class="nav-text">C++的C子集 是更好的C，将C中的一些不严格的编译检查，变得相对更严格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-编译器编译之后函数的-mangling-name-和C编译器编出来的函数名称的-namgling-name-不一样"><span class="nav-number">3.</span> <span class="nav-text">C++ 编译器编译之后函数的 mangling name 和C编译器编出来的函数名称的 namgling name 不一样,</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-中的-引用reference-vs-指针pointer"><span class="nav-number">4.</span> <span class="nav-text">C++ 中的 引用reference vs 指针pointer</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E6%9B%BE%E7%BB%8F%E8%A2%AB%E5%8F%AB%E5%81%9AC-With-class-C-%E6%98%AF%E5%85%BC%E5%AE%B9C%E7%9A%84%EF%BC%8C%E5%B9%B6%E4%B8%8D%E6%98%AF100-%E5%85%BC%E5%AE%B9"><span class="nav-number">1.</span> <span class="nav-text">C++ 曾经被叫做C With class, C++ 是兼容C的，并不是100%兼容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E7%9A%84C%E5%AD%90%E9%9B%86-%E6%98%AF%E6%9B%B4%E5%A5%BD%E7%9A%84C%EF%BC%8C%E5%B0%86C%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%8D%E4%B8%A5%E6%A0%BC%E7%9A%84%E7%BC%96%E8%AF%91%E6%A3%80%E6%9F%A5%EF%BC%8C%E5%8F%98%E5%BE%97%E7%9B%B8%E5%AF%B9%E6%9B%B4%E4%B8%A5%E6%A0%BC"><span class="nav-number">2.</span> <span class="nav-text">C++的C子集 是更好的C，将C中的一些不严格的编译检查，变得相对更严格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E7%BC%96%E8%AF%91%E5%99%A8%E7%BC%96%E8%AF%91%E4%B9%8B%E5%90%8E%E5%87%BD%E6%95%B0%E7%9A%84-mangling-name-%E5%92%8CC%E7%BC%96%E8%AF%91%E5%99%A8%E7%BC%96%E5%87%BA%E6%9D%A5%E7%9A%84%E5%87%BD%E6%95%B0%E5%90%8D%E7%A7%B0%E7%9A%84-namgling-name-%E4%B8%8D%E4%B8%80%E6%A0%B7"><span class="nav-number">3.</span> <span class="nav-text">C++ 编译器编译之后函数的 mangling name 和C编译器编出来的函数名称的 namgling name 不一样,</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E4%B8%AD%E7%9A%84-%E5%BC%95%E7%94%A8reference-vs-%E6%8C%87%E9%92%88pointer"><span class="nav-number">4.</span> <span class="nav-text">C++ 中的 引用reference vs 指针pointer</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -372,7 +374,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Linuxmint17</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.0.0
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v5.1.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.4.2
@@ -400,9 +402,17 @@
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
