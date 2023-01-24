@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://yoursite.com/2023/01/24/hexo-doc/</loc>
+    
+    <lastmod>2023-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/kernel-structs-pos/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/busybox-suid-support/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/kernel-img-formats/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/cmd-patchelf/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/git-tricks/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/network-protocol/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/cmd-sysctl/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/some-tools/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/coredump-file-fail2-produce/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/drop-cache-no-permession/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/cmds-about-linux-capabiltiys/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/embed-linux-bootargs-setup-and-mtd-autopartition/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/about-encryption/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/win-setup-boot-with-system/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/win-sys-fix-up/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/windows-configure-local-proxy/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/windows-cmd-configure-samba-client/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/GPG-export-import-Keys/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2022/03/23/about-filesystems/</loc>
+    
+    <lastmod>2022-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/09/16/linuxcmd2/</loc>
+    
+    <lastmod>2021-09-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/09/05/about-program-languages/</loc>
+    
+    <lastmod>2021-09-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/09/05/about-build-tools/</loc>
+    
+    <lastmod>2021-09-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/09/04/about-embed-software/</loc>
+    
+    <lastmod>2021-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/09/04/about-protocol/</loc>
+    
+    <lastmod>2021-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/09/04/about-bus/</loc>
+    
+    <lastmod>2021-09-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/08/26/about-vim/</loc>
+    
+    <lastmod>2021-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/08/26/about-poll-select/</loc>
+    
+    <lastmod>2021-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/08/26/about-ethernet/</loc>
+    
+    <lastmod>2021-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/08/26/about-zypper/</loc>
+    
+    <lastmod>2021-08-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/08/24/about-design-pattern/</loc>
+    
+    <lastmod>2021-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/08/24/about-tree/</loc>
+    
+    <lastmod>2021-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/08/24/about-sql/</loc>
+    
+    <lastmod>2021-08-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/08/22/debug-xp/</loc>
+    
+    <lastmod>2021-08-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/08/18/bash-grammar-cheatsheet/</loc>
+    
+    <lastmod>2021-08-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/08/17/fast-power-algorithm/</loc>
+    
+    <lastmod>2021-08-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2021/08/07/linux-software-common-used/</loc>
+    
+    <lastmod>2021-08-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/08/22/stupid-words/</loc>
+    
+    <lastmod>2020-08-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/17/explain-words/</loc>
+    
+    <lastmod>2020-06-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/05/24/about-C-Cpp-new-feature/</loc>
+    
+    <lastmod>2020-05-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/05/24/about-interrupt/</loc>
+    
+    <lastmod>2020-05-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/05/23/about-namespace/</loc>
+    
+    <lastmod>2020-05-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/03/31/about-Qt/</loc>
+    
+    <lastmod>2020-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/03/30/about-socket/</loc>
+    
+    <lastmod>2020-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/03/29/about-IPC/</loc>
+    
+    <lastmod>2020-03-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/03/28/about-sqlite3/</loc>
+    
+    <lastmod>2020-03-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/03/07/about-lint/</loc>
+    
+    <lastmod>2020-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/28/about-memory/</loc>
+    
+    <lastmod>2020-02-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/25/cpp-keywords/</loc>
+    
+    <lastmod>2020-02-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/24/about-c-cpp/</loc>
+    
+    <lastmod>2020-02-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/23/about-encoding/</loc>
+    
+    <lastmod>2020-02-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/23/about-preprocess/</loc>
+    
+    <lastmod>2020-02-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/23/about-cmd/</loc>
+    
+    <lastmod>2020-02-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/20/about-endian/</loc>
+    
+    <lastmod>2020-02-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/19/about-java/</loc>
+    
+    <lastmod>2020-02-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/19/about-ssh/</loc>
+    
+    <lastmod>2020-02-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/18/about-python/</loc>
+    
+    <lastmod>2020-02-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/18/about-vm/</loc>
+    
+    <lastmod>2020-02-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/18/about-otp/</loc>
+    
+    <lastmod>2020-02-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/18/about-repo/</loc>
+    
+    <lastmod>2020-02-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/18/about-opensuse/</loc>
+    
+    <lastmod>2020-02-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/18/bit-opteration/</loc>
+    
+    <lastmod>2020-02-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/16/c-array/</loc>
+    
+    <lastmod>2020-02-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/15/c-main/</loc>
+    
+    <lastmod>2020-02-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/14/about-bash/</loc>
+    
+    <lastmod>2020-02-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/14/about-mysql/</loc>
+    
+    <lastmod>2020-02-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/14/linux-cmd/</loc>
+    
+    <lastmod>2020-02-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/14/about-ffmpeg/</loc>
+    
+    <lastmod>2020-02-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/02/about-uml/</loc>
+    
+    <lastmod>2020-02-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/28/about-pwd/</loc>
+    
+    <lastmod>2020-01-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/24/about-thread/</loc>
+    
+    <lastmod>2020-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/24/about-codestyle/</loc>
+    
+    <lastmod>2020-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/24/about-sizeof/</loc>
+    
+    <lastmod>2020-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/24/about-makefile/</loc>
+    
+    <lastmod>2020-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/21/about-algorithm/</loc>
+    
+    <lastmod>2020-01-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/20/about-linux/</loc>
+    
+    <lastmod>2020-01-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/20/about-gcc/</loc>
+    
+    <lastmod>2020-01-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/20/about-inline/</loc>
+    
+    <lastmod>2020-01-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/19/about-shell/</loc>
+    
+    <lastmod>2020-01-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/19/about-emacs/</loc>
+    
+    <lastmod>2020-01-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/19/about-editors/</loc>
+    
+    <lastmod>2020-01-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/18/about-git/</loc>
+    
+    <lastmod>2020-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2019-10-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2019-10-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2019-10-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  <url>
+    <loc>http://yoursite.com/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>http://yoursite.com/tags/C-C/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/Linux/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/tools/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/Others/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/Tool/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/other/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/Tools/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/Tools-git/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/terms/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/Linux-C/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/others/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/sql/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/alogrithm/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/shell/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/algorithm-C-C/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+</urlset>

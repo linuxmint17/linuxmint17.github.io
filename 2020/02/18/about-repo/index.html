@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"public/search.xml"};
+  </script>
+
+  <meta name="description" content="什么是repoRepo 简化了跨多个代码库运行的流程，与 Git 相辅相成。请参阅源代码控制工具，了解有关 Repo 和 Git 之间关系的说明。如需详细了解 Repo，请参阅 Repo 命令参考资料和 Repo README。 repo 命令格式使用 Repo 需遵循的格式如下： repo command options 可选元素显示在方括号 [ ] 中。例如，许多命令会用到项目列表 (proj">
+<meta property="og:type" content="article">
+<meta property="og:title" content="about repo">
+<meta property="og:url" content="http://yoursite.com/2020/02/18/about-repo/index.html">
+<meta property="og:site_name" content="Linuxmint17&#39;s Blog">
+<meta property="og:description" content="什么是repoRepo 简化了跨多个代码库运行的流程，与 Git 相辅相成。请参阅源代码控制工具，了解有关 Repo 和 Git 之间关系的说明。如需详细了解 Repo，请参阅 Repo 命令参考资料和 Repo README。 repo 命令格式使用 Repo 需遵循的格式如下： repo command options 可选元素显示在方括号 [ ] 中。例如，许多命令会用到项目列表 (proj">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-18T10:21:45.000Z">
+<meta property="article:modified_time" content="2020-02-18T10:21:45.000Z">
+<meta property="article:author" content="Linuxmint17">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2020/02/18/about-repo/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>about repo | Linuxmint17's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Linuxmint17's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/about-repo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Linuxmint17's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          about repo
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-02-18 18:21:45" itemprop="dateCreated datePublished" datetime="2020-02-18T18:21:45+08:00">2020-02-18</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="什么是repo"><a href="#什么是repo" class="headerlink" title="什么是repo"></a>什么是repo</h1><p>Repo 简化了跨多个代码库运行的流程，与 Git 相辅相成。请参阅源代码控制工具，了解有关 Repo 和 Git 之间关系的说明。如需详细了解 Repo，请参阅 Repo 命令参考资料和 Repo README。</p>
+<h1 id="repo-命令格式"><a href="#repo-命令格式" class="headerlink" title="repo 命令格式"></a>repo 命令格式</h1><p>使用 Repo 需遵循的格式如下：</p>
+<p>repo command options</p>
+<p>可选元素显示在方括号 [ ] 中。例如，许多命令会用到项目列表 (project-list) 参数。项目列表可以是一个名称列表，也可以是一个本地源代码目录的路径列表：</p>
+<h1 id="repo-的命令使用"><a href="#repo-的命令使用" class="headerlink" title="repo 的命令使用"></a>repo 的命令使用</h1><p>repo sync [project0 project1 … projectn]<br>repo sync [&#x2F;path&#x2F;to&#x2F;project0 … &#x2F;path&#x2F;to&#x2F;projectn]</p>
+<p>help<br>安装 Repo 后，您可以通过运行以下命令找到最新文档（开头是包含所有命令的摘要）：</p>
+<p>repo help</p>
+<p>您可以通过在 Repo 树中运行以下命令来获取有关某个命令的信息：</p>
+<p>repo help command</p>
+<p>例如，以下命令会生成 Repo init 参数的说明和选项列表，该参数会在当前目录中初始化 Repo（要了解详情，请参阅 init）。</p>
+<p>repo help init</p>
+<p>init<br>repo init -u url [options]</p>
+<p>在当前目录中安装 Repo。这样会创建一个 .repo&#x2F; 目录，其中包含 Repo 源代码和标准 Android 清单文件的 Git 代码库。该 .repo&#x2F; 目录中还包含 manifest.xml，该文件是一个指向 .repo&#x2F;manifests&#x2F; 目录中所选清单的符号链接。有关更新清单的说明，请参阅 manifest-format.md。</p>
+<p>选项：</p>
+<p>-u：指定要从中检索清单代码库的网址。您可以在 <a target="_blank" rel="noopener" href="https://android.googlesource.com/platform/manifest">https://android.googlesource.com/platform/manifest</a> 中找到通用清单。<br>-m：选择代码库中的一个清单文件。如果未选择任何清单名称，则会默认选择 default.xml。<br>-b：指定修订版本，即特定的清单分支。<br>注意：对于其余的所有 Repo 命令，当前工作目录必须是 .repo&#x2F; 的父目录或该父目录的子目录。</p>
+<p>sync<br>repo sync [project-list]</p>
+<p>下载新的更改并更新本地环境中的工作文件。如果您在未使用任何参数的情况下运行 repo sync，则该操作会同步所有项目的文件。</p>
+<p>运行 repo sync 后，将出现以下情况：</p>
+<p>如果目标项目从未同步过，则 repo sync 相当于 git clone。远程代码库中的所有分支都会复制到本地项目目录中。</p>
+<p>如果目标项目以前同步过，则 repo sync 相当于以下命令：</p>
+<p>git remote update<br>git rebase origin&#x2F;branch</p>
+<p>其中 branch 是本地项目目录中当前已检出的分支。如果本地分支没有在跟踪远程代码库中的分支，则项目不会发生任何同步。</p>
+<p>如果 Git rebase 操作导致合并冲突，请使用常规 Git 命令（例如 git rebase –continue）解决冲突。</p>
+<p>repo sync 运行成功后，指定项目中的代码即处于最新状态，已与远程代码库中的代码同步。</p>
+<p>选项：</p>
+<p>-d：将指定项目切换回清单修订版本。如果项目当前属于某个主题分支，但临时需要清单修订版本，则此选项会有所帮助。</p>
+<p>-s：同步到当前清单中的 manifest-server 元素指定的一个已知良好版本。</p>
+<p>-f：即使某个项目同步失败，也继续同步其他项目。</p>
+<p>upload<br>repo upload [project-list]</p>
+<p>对于指定的项目，Repo 会将本地分支与最后一次 repo sync 时更新的远程分支进行比较。Repo 会提示您选择一个或多个尚未上传以供审核的分支。</p>
+<p>接下来，所选分支上的所有提交都会通过 HTTPS 连接传输到 Gerrit。您需要配置一个 HTTPS 密码以启用上传授权。要生成新的用户名&#x2F;密码对以用于 HTTPS 传输，请访问密码生成器。</p>
+<p>当 Gerrit 通过其服务器接收对象数据时，它会将每项提交转变成一项更改，以便审核者可以针对特定提交给出意见。要将几项“检查点”提交合并为一项提交，请使用 git rebase -i，然后再运行 upload。</p>
+<p>如果您在未使用任何参数的情况下运行 repo upload，则该操作会搜索所有项目中的更改以进行上传。</p>
+<p>要在更改上传后对其进行修改，请使用 git rebase -i 或 git commit –amend 等工具更新您的本地提交。修改完成之后，请执行以下操作：</p>
+<p>进行验证以确保更新后的分支是当前已检出的分支。<br>对于相应系列中的每项提交，请在方括号内输入 Gerrit 更改 ID：</p>
+<h1 id="Replacing-from-branch-foo"><a href="#Replacing-from-branch-foo" class="headerlink" title="Replacing from branch foo"></a>Replacing from branch foo</h1><p>[ 3021 ] 35f2596c Refactor part of GetUploadableBranches to lookup one specific…<br>[ 2829 ] ec18b4ba Update proto client to support patch set replacments</p>
+<h1 id="Insert-change-numbers-in-the-brackets-to-add-a-new-patch-set"><a href="#Insert-change-numbers-in-the-brackets-to-add-a-new-patch-set" class="headerlink" title="Insert change numbers in the brackets to add a new patch set."></a>Insert change numbers in the brackets to add a new patch set.</h1><h1 id="To-create-a-new-change-record-leave-the-brackets-empty"><a href="#To-create-a-new-change-record-leave-the-brackets-empty" class="headerlink" title="To create a new change record, leave the brackets empty."></a>To create a new change record, leave the brackets empty.</h1><p>上传完成后，这些更改将拥有一个额外的补丁程序集。</p>
+<p>如果您希望只上传当前已检出的 Git 分支，则可以使用标记 –current-branch（简称 –cbr）。</p>
+<p>diff<br>repo diff [project-list]</p>
+<p>使用 git diff 显示提交与工作树之间的明显更改。</p>
+<p>download<br>repo download target change</p>
+<p>从审核系统中下载指定更改，并放在您项目的本地工作目录中供使用。</p>
+<p>例如，要将更改 23823 下载到您的 platform&#x2F;build 目录，请运行以下命令：</p>
+<p>repo download platform&#x2F;build 23823</p>
+<p>运行 repo sync 会删除使用 repo download 检索到的任何提交。或者，您可以使用 git checkout m&#x2F;master 检出远程分支。</p>
+<p>注意：由于全球的所有服务器均存在复制延迟，因此某项更改出现在网络上（位于 Gerrit 中）的时间与所有用户可通过 repo download 找到此项更改的时间之间存在些许的镜像延迟。</p>
+<p>forall<br>repo forall [project-list] -c command</p>
+<p>在每个项目中运行指定的 shell 命令。通过 repo forall 可使用下列额外的环境变量：</p>
+<p>REPO_PROJECT 设为了项目的唯一名称。</p>
+<p>REPO_PATH 是相对于客户端根目录的路径。</p>
+<p>REPO_REMOTE 是清单中远程系统的名称。</p>
+<p>REPO_LREV 是清单中修订版本的名称，已转换为本地跟踪分支。如果您需要将清单修订版本传递到某个本地运行的 Git 命令，则可使用此变量。</p>
+<p>REPO_RREV 是清单中修订版本的名称，与清单中显示的名称完全一致。</p>
+<p>选项：</p>
+<p>-c：要运行的命令和参数。此命令会通过 &#x2F;bin&#x2F;sh 进行评估，它之后的任何参数都将作为 shell 位置参数传递。</p>
+<p>-p：在所指定命令的输出结果之前显示项目标头。这通过以下方式实现：将管道绑定到命令的 stdin、stdout 和 sterr 流，然后通过管道将所有输出结果传输到一个分页会话中显示的连续流中。</p>
+<p>-v：显示该命令向 stderr 写入的消息。</p>
+<p>prune<br>repo prune [project-list]</p>
+<p>删减（删除）已合并的主题。</p>
+<p>start<br>repo start<br>branch-name [project-list]</p>
+<p>从清单中指定的修订版本开始，创建一个新的分支进行开发。</p>
+<p>BRANCH_NAME 参数用于简要说明您尝试对项目进行的更改。如果您不知道，则不妨考虑使用名称 default。</p>
+<p>project-list 参数指定了将参与此主题分支的项目。</p>
+<p>注意：句点 (.) 是一个简写形式，用来代表当前工作目录中的项目。</p>
+<p>status<br>repo status [project-list]</p>
+<p>对于每个指定的项目，将工作树与临时区域（索引）以及此分支 (HEAD) 上的最近一次提交进行比较。在这三种状态存在差异之处显示每个文件的摘要行。</p>
+<p>要仅查看当前分支的状态，请运行 repo status。系统会按项目列出状态信息。对于项目中的每个文件，系统使用两个字母的代码来表示：</p>
+<p>在第一列中，大写字母表示临时区域与上次提交状态之间的不同之处。</p>
+<p>字母    含义    说明</p>
+<ul>
+<li>没有变化    在 HEAD 与索引中相同<br>A    已添加    不存在于 HEAD 中，但存在于索引中<br>M    已修改    存在于 HEAD 中，但索引中的文件已修改<br>D    已删除    存在于 HEAD 中，但不存在于索引中<br>R    已重命名    不存在于 HEAD 中，索引中文件的路径已更改<br>C    已复制    不存在于 HEAD 中，复制自索引中的另一个文件<br>T    模式已更改    HEAD 与索引中的内容相同，但模式已更改<br>U    未合并    HEAD 与索引之间存在冲突；需要加以解决<br>在第二列中，小写字母表示工作目录与索引之间的不同之处。</li>
+</ul>
+<p>字母    含义    说明</p>
+<ul>
+<li>新&#x2F;未知    不存在于索引中，但存在于工作树中<br>m    已修改    存在于索引中，也存在于工作树中（但已修改）<br>d    已删除    存在于索引中，但不存在于工作树中</li>
+</ul>
+<h1 id="repo-上传代码-到-gerrit"><a href="#repo-上传代码-到-gerrit" class="headerlink" title="repo 上传代码 到 gerrit"></a>repo 上传代码 到 gerrit</h1><p>新建一个 Repo 分支<br>对于您打算进行的每项更改，请在相关的 Git 存储库中新建一个分支：</p>
+<p>repo start NAME .</p>
+<p>您可以在同一存储库中同时新建多个独立的分支。“NAME”分支是您的工作区的本地分支，不会包含在 Gerrit 或最终源代码树中。</p>
+<p>进行更改<br>在您修改源代码文件（并且验证）后，请将这些更改提交到您的本地存储库：</p>
+<p>git add -A<br>git commit -s</p>
+<p>请在您的提交消息中提供相关更改的详细说明。该说明将会被推送到公开 AOSP 存储库，因此请按照我们的准则来撰写更改列表说明：</p>
+<p>以一行摘要（最多 50 个字符）开头，后跟一个空白行。 这是 Git 和 Gerrit 支持的格式，适用于各种屏幕尺寸的设备。</p>
+<p>从第三行开始输入较长的说明，说明会在达到 72 个字符时自动硬回车换行。该部分应着重说明更改解决了什么问题，以及如何解决了问题。尽管我们建议您提供第二部分的内容，但这在实现新功能时是可选内容。</p>
+<p>添加对任何假设或背景信息的简短说明，这些内容可能对下一年研究此功能的其他贡献者起到很大的帮助作用。</p>
+<p>以下是一个示例提交消息：</p>
+<p>short description on first line</p>
+<p>more detailed description of your patch,<br>which is likely to take up multiple lines.</p>
+<p>repo init 期间提供的唯一更改 ID 以及您的姓名和电子邮件将自动添加到您的提交消息中。</p>
+<p>上传到 Gerrit<br>将更改提交到您的个人历史记录后，请使用以下命令将其上传到 Gerrit：</p>
+<p>repo upload</p>
+<p>如果您在同一存储库中新建了多个分支，则系统会提示您选择要上传的分支。</p>
+<p>上传成功后，Repo 会为您提供 Gerrit 上对应新页面的网址。访问该链接可在审核服务器上查看您上传的补丁程序、添加注释，或者为您的补丁程序申请特定审核者。</p>
+<p>上传替换补丁程序<br>假设某位审核者已看过您的补丁程序，并要求您做一些小小的修改。您可以在 Git 中修改提交的内容，这会在 Gerrit 中生成一个新的补丁程序，该补丁程序与原始补丁程序具有相同的更改 ID。</p>
+<p>注意：如果您在上传该补丁程序之后进行了其他提交，那么您将需要手动移动 Git HEAD。<br>git add -A<br>git commit –amend</p>
+<p>当您上传修改后的补丁程序时，它将替换 Gerrit 和本地 Git 历史记录中的原始补丁程序。</p>
+<p>解决同步冲突<br>如果提交到源代码树的其他补丁程序与您的存在冲突，那么您需要在源代码存储库的新 HEAD 的基础上对您的补丁程序执行“衍合”(rebase) 命令。执行此操作的一种简单方法是运行以下命令：</p>
+<p>repo sync</p>
+<p>此命令首先从源代码服务器获取更新，然后尝试在新的远程 HEAD 的基础上对您的 HEAD 自动执行衍合命令。</p>
+<p>如果自动衍合命令失败，您就必须手动执行衍合。</p>
+<p>repo rebase</p>
+<p>使用 git mergetool 可帮助您处理衍合冲突。在成功合并冲突文件后，运行以下命令：</p>
+<p>git rebase –continue</p>
+<p>在自动或手动衍合完成之后，运行 repo upload 来提交衍合后的补丁程序。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/02/18/about-opensuse/" rel="prev" title="Linux中的奇葩opensuse">
+      <i class="fa fa-chevron-left"></i> Linux中的奇葩opensuse
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/02/18/about-otp/" rel="next" title="About OTP">
+      About OTP <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFrepo"><span class="nav-number">1.</span> <span class="nav-text">什么是repo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#repo-%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">repo 命令格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#repo-%E7%9A%84%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">repo 的命令使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Replacing-from-branch-foo"><span class="nav-number">4.</span> <span class="nav-text">Replacing from branch foo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Insert-change-numbers-in-the-brackets-to-add-a-new-patch-set"><span class="nav-number">5.</span> <span class="nav-text">Insert change numbers in the brackets to add a new patch set.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#To-create-a-new-change-record-leave-the-brackets-empty"><span class="nav-number">6.</span> <span class="nav-text">To create a new change record, leave the brackets empty.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#repo-%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81-%E5%88%B0-gerrit"><span class="nav-number">7.</span> <span class="nav-text">repo 上传代码 到 gerrit</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Linuxmint17</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Linuxmint17</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
