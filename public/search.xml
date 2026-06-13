@@ -330,21 +330,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>About GCC</title>
-    <url>/2020/01/20/about-gcc/</url>
-    <content><![CDATA[<h2 id="gcc"><a href="#gcc" class="headerlink" title="gcc"></a>gcc</h2><p>　　gcc 是 GNU Compiler Collection 的缩写，不仅支持 C&#x2F;C++的编译，还支持Java等</p>
-<h2 id="gcc-基本操作"><a href="#gcc-基本操作" class="headerlink" title="gcc 基本操作"></a>gcc 基本操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gcc hello.c -o hello </span><br></pre></td></tr></table></figure>
-<p>　　会编译输出 hello 可执行文件，如果不使用-o选项指定输出的文件名怎会生成 a.out文件</p>
-<h2 id="神奇的a-out"><a href="#神奇的a-out" class="headerlink" title="神奇的a.out"></a>神奇的a.out</h2><p>　　是汇编(assemble)输出(output)的意思在freebsd 中 man a.out 可以看到相关信息</p>
-<h2 id="gcc的扩展支持语法"><a href="#gcc的扩展支持语法" class="headerlink" title="gcc的扩展支持语法"></a>gcc的扩展支持语法</h2><ol>
-<li>函数内部定义函数   <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">foo</span> (<span class="type">double</span> a, <span class="type">double</span> b)</span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="type">double</span> <span class="title">square</span> <span class="params">(<span class="type">double</span> z)</span> </span>&#123; <span class="keyword">return</span> z * z; &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">square</span> (a) + <span class="built_in">square</span> (b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>Tool</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>About Git</title>
     <url>/2020/01/18/about-git/</url>
     <content><![CDATA[<h1 id="git-the-stupid-content-tracker"><a href="#git-the-stupid-content-tracker" class="headerlink" title="git - the stupid content tracker"></a>git - the stupid content tracker</h1><p>  Git is a fast, scalable, distributed revision control system<br>with an unusually rich command set that provides<br>both high-level operations and full access to internals.</p>
@@ -407,6 +392,21 @@
 ]]></content>
       <tags>
         <tag>Tools git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About GCC</title>
+    <url>/2020/01/20/about-gcc/</url>
+    <content><![CDATA[<h2 id="gcc"><a href="#gcc" class="headerlink" title="gcc"></a>gcc</h2><p>　　gcc 是 GNU Compiler Collection 的缩写，不仅支持 C&#x2F;C++的编译，还支持Java等</p>
+<h2 id="gcc-基本操作"><a href="#gcc-基本操作" class="headerlink" title="gcc 基本操作"></a>gcc 基本操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gcc hello.c -o hello </span><br></pre></td></tr></table></figure>
+<p>　　会编译输出 hello 可执行文件，如果不使用-o选项指定输出的文件名怎会生成 a.out文件</p>
+<h2 id="神奇的a-out"><a href="#神奇的a-out" class="headerlink" title="神奇的a.out"></a>神奇的a.out</h2><p>　　是汇编(assemble)输出(output)的意思在freebsd 中 man a.out 可以看到相关信息</p>
+<h2 id="gcc的扩展支持语法"><a href="#gcc的扩展支持语法" class="headerlink" title="gcc的扩展支持语法"></a>gcc的扩展支持语法</h2><ol>
+<li>函数内部定义函数   <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">foo</span> (<span class="type">double</span> a, <span class="type">double</span> b)</span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="type">double</span> <span class="title">square</span> <span class="params">(<span class="type">double</span> z)</span> </span>&#123; <span class="keyword">return</span> z * z; &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">square</span> (a) + <span class="built_in">square</span> (b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Tool</tag>
       </tags>
   </entry>
   <entry>
@@ -1366,7 +1366,7 @@ Without question, this C program is the most obfuscated C program that has ever 
   </entry>
   <entry>
     <title>Hexo Quick Manual</title>
-    <url>/2023/01/24/hexo-doc/</url>
+    <url>/2026/06/13/hexo-doc/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
