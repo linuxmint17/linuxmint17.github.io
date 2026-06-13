@@ -1,3 +1,4 @@
+http://yoursite.com/2026/06/13/contact-ways/
 http://yoursite.com/2026/06/13/hexo-doc/
 http://yoursite.com/2022/03/23/kernel-structs-pos/
 http://yoursite.com/2022/03/23/busybox-suid-support/
@@ -87,8 +88,8 @@ http://yoursite.com/
 http://yoursite.com/tags/C-C/
 http://yoursite.com/tags/Linux/
 http://yoursite.com/tags/tools/
-http://yoursite.com/tags/Others/
 http://yoursite.com/tags/Tool/
+http://yoursite.com/tags/Others/
 http://yoursite.com/tags/other/
 http://yoursite.com/tags/Tools/
 http://yoursite.com/tags/Tools-git/

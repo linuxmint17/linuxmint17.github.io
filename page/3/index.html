@@ -21,11 +21,11 @@
   </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="Linuxmint17&#39;s Blog">
+<meta property="og:title" content="Wang shaodong&#39;s Blog">
 <meta property="og:url" content="http://yoursite.com/page/3/index.html">
-<meta property="og:site_name" content="Linuxmint17&#39;s Blog">
+<meta property="og:site_name" content="Wang shaodong&#39;s Blog">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="Linuxmint17">
+<meta property="article:author" content="wang shaodong">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/page/3/">
@@ -41,7 +41,7 @@
   };
 </script>
 
-  <title>Linuxmint17's Blog</title>
+  <title>Wang shaodong's Blog</title>
   
 
 
@@ -92,7 +92,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Linuxmint17's Blog</h1>
+      <h1 class="site-title">Wang shaodong's Blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -155,16 +155,87 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/09/16/linuxcmd2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/23/about-filesystems/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/23/about-filesystems/" class="post-title-link" itemprop="url">about filesystems</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-03-23 23:34:11" itemprop="dateCreated datePublished" datetime="2022-03-23T23:34:11+08:00">2022-03-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看 linux 支持的文件系统</span></span><br><span class="line"><span class="built_in">cat</span> /proc/filesystems</span><br></pre></td></tr></table></figure>
+<p><img src="https://img2022.cnblogs.com/blog/1523623/202203/1523623-20220320235459194-1258184622.png"></p>
+<ul>
+<li>procfs  常见的 内存文件系统<br>The proc filesystem doesn’t support capabilities, ACL, or even changing basic permissions with chmod. Unix permissions determine whether the calling process gets access. Thus only root can write that file. With user namespaces, that’s the global root (the one in the original namespace); root in a container doesn’t get to change sysctl settings.</li>
+<li>sysfs<br>常见的内存文件系统</li>
+<li>tmpfs<br>支持 xattr  常见的内存文件系统</li>
+<li>jffs2<br>支持 xattr 嵌入式常用的带有日志的</li>
+<li>squashfs<br> 支持xattr 高压缩只读文件系统</li>
+<li>iso9660<br> 光盘iso格式的文件系统</li>
+<li>ext4<br>支持 xattr Linux下常见的文件系统</li>
+<li>fat32<br>或者vfat ，U盘，sdcard常见文件系统</li>
+<li>NTFS<br> Windows NTFS（英語：New Technology File System），是Microsoft公司开发的专用文件系统，从Windows NT 3.1开始成为Windows NT家族的默认文件系统。</li>
+<li>NFS<br>网络文件系统 (Network File System)<br>【参考】<br><a target="_blank" rel="noopener" href="https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html">https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/09/16/linuxcmd2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="wang shaodong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -219,12 +290,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -276,12 +347,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -333,12 +404,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -395,12 +466,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -459,12 +530,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -591,12 +662,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -685,12 +756,12 @@ in :w !sudo tee %...</li>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -743,12 +814,12 @@ in :w !sudo tee %...</li>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -778,64 +849,6 @@ in :w !sudo tee %...</li>
 
       
           <p>以太网帧的尺寸<br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/58979135">https://www.zhihu.com/question/58979135</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/08/26/about-zypper/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/08/26/about-zypper/" class="post-title-link" itemprop="url">about-zypper</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-08-26 07:44:41" itemprop="dateCreated datePublished" datetime="2021-08-26T07:44:41+08:00">2021-08-26</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>#cmd<br>zypper ar -c -t yast2 “iso:&#x2F;?iso&#x3D;&#x2F;home&#x2F;jaimin&#x2F;su1100.001.iso” “openSuSE 11”</p>
 
       
     </div>
@@ -912,7 +925,7 @@ in :w !sudo tee %...</li>
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Linuxmint17</p>
+  <p class="site-author-name" itemprop="name">wang shaodong</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -920,7 +933,7 @@ in :w !sudo tee %...</li>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-count">83</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -956,7 +969,7 @@ in :w !sudo tee %...</li>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Linuxmint17</span>
+  <span class="author" itemprop="copyrightHolder">wang shaodong</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>

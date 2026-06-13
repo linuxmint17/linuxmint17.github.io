@@ -21,11 +21,11 @@
   </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="Linuxmint17&#39;s Blog">
+<meta property="og:title" content="Wang shaodong&#39;s Blog">
 <meta property="og:url" content="http://yoursite.com/page/2/index.html">
-<meta property="og:site_name" content="Linuxmint17&#39;s Blog">
+<meta property="og:site_name" content="Wang shaodong&#39;s Blog">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="Linuxmint17">
+<meta property="article:author" content="wang shaodong">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/page/2/">
@@ -41,7 +41,7 @@
   };
 </script>
 
-  <title>Linuxmint17's Blog</title>
+  <title>Wang shaodong's Blog</title>
   
 
 
@@ -92,7 +92,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Linuxmint17's Blog</h1>
+      <h1 class="site-title">Wang shaodong's Blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -155,16 +155,91 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/23/drop-cache-no-permession/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/23/coredump-file-fail2-produce/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/23/coredump-file-fail2-produce/" class="post-title-link" itemprop="url">Linux 下无法生成 coredump 文件</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-03-23 23:47:47" itemprop="dateCreated datePublished" datetime="2022-03-23T23:47:47+08:00">2022-03-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><p>首先确认 linux内核配置支持了 coredump</p>
+</li>
+<li><p>然后 执行可执行文件的用户配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ulimit</span> -c unlimited</span><br></pre></td></tr></table></figure></li>
+<li><p>其次 确认配置了 &#x2F;proc&#x2F;sys&#x2F;kernel&#x2F;core_pattern 指定的生成core的路径，user 有写入权限</p>
+</li>
+<li><p>如果可执行文件 被chmod u+s 或者g+s 改过属性 或者setcap 添加过 capability 需要修改 节点</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> 2 &gt; /proc/sys/fs/suid_dumpable</span><br></pre></td></tr></table></figure></li>
+<li><p>配置 core_pattern</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 最简单的配置</span></span><br><span class="line"><span class="built_in">echo</span> /tmp/core_%e_%p &gt; /proc/sys/kernel/core_pattern</span><br><span class="line"><span class="comment"># 复杂一丢丢的</span></span><br><span class="line"><span class="built_in">echo</span> /core/core_%e_%p &gt; /proc/sys/kernel/core_pattern</span><br><span class="line"><span class="built_in">mkdir</span> -m 1777 /core</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>一个相关的网站</p>
+<p> <a target="_blank" rel="noopener" href="https://sysctl-explorer.net/fs/suid_dumpable/">https://sysctl-explorer.net/fs/suid_dumpable/</a></p>
+</li>
+<li><p>下方为man 5 core 的相关的摘要<br><img src="https://img2022.cnblogs.com/blog/1523623/202203/1523623-20220320234410267-1834205770.png"></p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/23/drop-cache-no-permession/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="wang shaodong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -217,12 +292,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -285,12 +360,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -349,12 +424,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -411,12 +486,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -472,12 +547,12 @@ ps: 注册表编辑器的名字 ,与标题无关<br>gpedit.msc</li>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -532,12 +607,12 @@ ps: 注册表编辑器的名字 ,与标题无关<br>gpedit.msc</li>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -592,12 +667,12 @@ ps: 注册表编辑器的名字 ,与标题无关<br>gpedit.msc</li>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -652,12 +727,12 @@ ps: 注册表编辑器的名字 ,与标题无关<br>gpedit.msc</li>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
+      <meta itemprop="name" content="wang shaodong">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
+      <meta itemprop="name" content="Wang shaodong's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -698,77 +773,6 @@ ps: 注册表编辑器的名字 ,与标题无关<br>gpedit.msc</li>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gpg --edit-key 375A500B</span><br><span class="line"><span class="comment"># 在弹出的界面中输入原来密码，新密码留空即可</span></span><br><span class="line">passwd</span><br><span class="line"><span class="comment"># 保存修改</span></span><br><span class="line">save</span><br></pre></td></tr></table></figure>
 <p>【转载】<br><a target="_blank" rel="noopener" href="https://gythialy.github.io/Howto-import-export-gpg-key/">https://gythialy.github.io/Howto-import-export-gpg-key/</a></p>
 </li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/23/about-filesystems/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Linuxmint17">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Linuxmint17's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/03/23/about-filesystems/" class="post-title-link" itemprop="url">about filesystems</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-03-23 23:34:11" itemprop="dateCreated datePublished" datetime="2022-03-23T23:34:11+08:00">2022-03-23</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看 linux 支持的文件系统</span></span><br><span class="line"><span class="built_in">cat</span> /proc/filesystems</span><br></pre></td></tr></table></figure>
-<p><img src="https://img2022.cnblogs.com/blog/1523623/202203/1523623-20220320235459194-1258184622.png"></p>
-<ul>
-<li>procfs  常见的 内存文件系统<br>The proc filesystem doesn’t support capabilities, ACL, or even changing basic permissions with chmod. Unix permissions determine whether the calling process gets access. Thus only root can write that file. With user namespaces, that’s the global root (the one in the original namespace); root in a container doesn’t get to change sysctl settings.</li>
-<li>sysfs<br>常见的内存文件系统</li>
-<li>tmpfs<br>支持 xattr  常见的内存文件系统</li>
-<li>jffs2<br>支持 xattr 嵌入式常用的带有日志的</li>
-<li>squashfs<br> 支持xattr 高压缩只读文件系统</li>
-<li>iso9660<br> 光盘iso格式的文件系统</li>
-<li>ext4<br>支持 xattr Linux下常见的文件系统</li>
-<li>fat32<br>或者vfat ，U盘，sdcard常见文件系统</li>
-<li>NTFS<br> Windows NTFS（英語：New Technology File System），是Microsoft公司开发的专用文件系统，从Windows NT 3.1开始成为Windows NT家族的默认文件系统。</li>
-<li>NFS<br>网络文件系统 (Network File System)<br>【参考】<br><a target="_blank" rel="noopener" href="https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html">https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html</a></li>
 </ul>
 
       
@@ -846,7 +850,7 @@ ps: 注册表编辑器的名字 ,与标题无关<br>gpedit.msc</li>
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Linuxmint17</p>
+  <p class="site-author-name" itemprop="name">wang shaodong</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -854,7 +858,7 @@ ps: 注册表编辑器的名字 ,与标题无关<br>gpedit.msc</li>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-count">83</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -890,7 +894,7 @@ ps: 注册表编辑器的名字 ,与标题无关<br>gpedit.msc</li>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Linuxmint17</span>
+  <span class="author" itemprop="copyrightHolder">wang shaodong</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
