@@ -1,976 +1,227 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"linuxmint17.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"public/search.xml"};
-  </script>
-
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Wang shaodong's Blog</title><meta name="author" content="wang shaodong"><meta name="copyright" content="wang shaodong"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Wang shaodong&#39;s Blog">
 <meta property="og:url" content="http://linuxmint17.github.io/page/5/index.html">
 <meta property="og:site_name" content="Wang shaodong&#39;s Blog">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://linuxmint17.github.io/img/butterfly-icon.png">
 <meta property="article:author" content="wang shaodong">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://linuxmint17.github.io/page/5/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'en'
-  };
-</script>
-
-  <title>Wang shaodong's Blog</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Wang shaodong's Blog</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
+<meta name="twitter:image" content="http://linuxmint17.github.io/img/butterfly-icon.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://linuxmint17.github.io/page/5/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.5"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"><script>
+    (() => {
       
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/05/24/about-C-Cpp-new-feature/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/24/about-C-Cpp-new-feature/" class="post-title-link" itemprop="url">C++ 11/14/17/20 new feature</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-05-24 18:28:35" itemprop="dateCreated datePublished" datetime="2020-05-24T18:28:35+08:00">2020-05-24</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="自从C-11以来的新特性"><a href="#自从C-11以来的新特性" class="headerlink" title="自从C++11以来的新特性"></a>自从C++11以来的新特性</h1><ul>
-<li>auto 自动类型推导</li>
-<li>constexpr</li>
-<li>nullptr 关键字, 用于取代 NULL, 代表空指针</li>
-<li>for 循环中的 语法糖 for ( a : array) { }</li>
-<li>lambda 表达式， 也就是匿名函数</li>
-</ul>
-<h1 id="自从C99以来的新特性"><a href="#自从C99以来的新特性" class="headerlink" title="自从C99以来的新特性"></a>自从C99以来的新特性</h1><ul>
-<li>变长数组 VLA;</li>
-<li>结构体 按成员初始化</li>
-<li>restrict 关键字</li>
-<li>bool 类型</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/05/24/about-interrupt/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/24/about-interrupt/" class="post-title-link" itemprop="url">about-interrupt</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-05-24 11:54:44" itemprop="dateCreated datePublished" datetime="2020-05-24T11:54:44+08:00">2020-05-24</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/05/23/about-namespace/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/23/about-namespace/" class="post-title-link" itemprop="url">namespace</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-05-23 22:59:06" itemprop="dateCreated datePublished" datetime="2020-05-23T22:59:06+08:00">2020-05-23</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="namespace-命名空间-是C-的一个关键字"><a href="#namespace-命名空间-是C-的一个关键字" class="headerlink" title="namespace (命名空间) 是C++的一个关键字"></a>namespace (命名空间) 是C++的一个关键字</h1><p>　　不同的命名空间中相同的标识符在编译的时候不会产生错误<br>　　在不同的命名空间中可以使用相同名字的变量或者函数名称</p>
-<h1 id="C-语言的标识符-也有命名空间-（内容来自-C语言规范草案-6-2-3-节"><a href="#C-语言的标识符-也有命名空间-（内容来自-C语言规范草案-6-2-3-节" class="headerlink" title="C 语言的标识符 也有命名空间 （内容来自 C语言规范草案 6.2.3 节)"></a>C 语言的标识符 也有命名空间 （内容来自 C语言规范草案 6.2.3 节)</h1><ul>
-<li>label names<br>标签名 包括 goto 语句 中用到的标签和  switch case中的 标签</li>
-<li>the tags name of structures, unions and enumurations<br>结构、联合、枚举的tag名</li>
-<li>the members of structures or unions; each structure or union has a seperate name space for its number;<br>结构体、联合的成员名</li>
-<li>all other identifiers,called ordinary identifiers (declared in ordinary declarators or as<br>enumeration constants)<br>其他普通的变量，或者枚举常量<h1 id="C-中使用namesapce-关键字可以构造一个命名空间"><a href="#C-中使用namesapce-关键字可以构造一个命名空间" class="headerlink" title="C++中使用namesapce 关键字可以构造一个命名空间"></a>C++中使用namesapce 关键字可以构造一个命名空间</h1> C&#x2F;C++ 中的 每一对花括号 是一个 命名空间</li>
-</ul>
-<p>#变量的声明(declaration),定义(definition),初始化(initalization)<br>　　C 语言中变量的带初始化的声明就是定义<br>不带有初始化的全局对象构成了一个 试探性定义<br>这个Tentative definitions 特性仅仅C语言只有，C++是不支持的</p>
-<p>　　在两个C文件中同时声明两个一模一样的未初始化的全局变量的时候，<br>C语言能够编译通过的C++不支持这样的</p>
-<h1 id="C-类copy-constructor-的执行时机就很有趣"><a href="#C-类copy-constructor-的执行时机就很有趣" class="headerlink" title="C++ 类copy constructor 的执行时机就很有趣"></a>C++ 类copy constructor 的执行时机就很有趣</h1><p>C++ 对于 将一个对象的值 赋给 另一个对象的 场景进行了细分<br>一类就是 赋值；赋值的时候使用的是 &#x3D; 的重载函数<br>另一类就是 初始化；<br>初始化可能发生的三个场景 ：</p>
-<ol>
-<li>在声明变量的同时用另一个对象初始化</li>
-<li>对象的拷贝被当做函数参数传递</li>
-<li>临时对象产生的时候，例如返回值是一个对象的时候</li>
-</ol>
-<h1 id="C语言标准规定-不应该-使用-对全局变量使用-register-修饰"><a href="#C语言标准规定-不应该-使用-对全局变量使用-register-修饰" class="headerlink" title="C语言标准规定 不应该 使用 对全局变量使用 register 修饰"></a>C语言标准规定 不应该 使用 对全局变量使用 register 修饰</h1><p>但是gnu C 标准支持这个特性, clang不支持这个特性，同样的代码使用clang编译会报错<br>uboot 代码中 有如下宏<br><a target="_blank" rel="noopener" href="https://gcc.gnu.org/onlinedocs/gcc/Global-Register-Variables.html">https://gcc.gnu.org/onlinedocs/gcc/Global-Register-Variables.html</a><br> using the volatile qualifier does not fully prevent the compiler from optimizing accesses to the register<br>在文件 uboot-2019.07&#x2F;arch&#x2F;riscv&#x2F;include&#x2F;asm&#x2F;global_data.h 有如下宏,</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> DECLARE_GLOBAL_DATA_PTR register gd_t *gd asm (<span class="string">&quot;gp&quot;</span>)</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/03/31/about-Qt/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/31/about-Qt/" class="post-title-link" itemprop="url">about-Qt</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-03-31 00:04:22" itemprop="dateCreated datePublished" datetime="2020-03-31T00:04:22+08:00">2020-03-31</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/03/30/about-socket/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/30/about-socket/" class="post-title-link" itemprop="url">about-socket</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-03-30 23:50:55" itemprop="dateCreated datePublished" datetime="2020-03-30T23:50:55+08:00">2020-03-30</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/03/29/about-IPC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/29/about-IPC/" class="post-title-link" itemprop="url">About IPC</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-03-29 10:29:29" itemprop="dateCreated datePublished" datetime="2020-03-29T10:29:29+08:00">2020-03-29</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="IPC-Inter-Porcess-Communication-进程间通信"><a href="#IPC-Inter-Porcess-Communication-进程间通信" class="headerlink" title="IPC (Inter-Porcess Communication) 进程间通信"></a>IPC (Inter-Porcess Communication) 进程间通信</h1><p>　　多个进程需要协作的时候通信必不可少</p>
-<h1 id="IPC-的五种基本方法"><a href="#IPC-的五种基本方法" class="headerlink" title="IPC 的五种基本方法"></a>IPC 的五种基本方法</h1><ol>
-<li>Pipes &#x2F; FIFOs 管道</li>
-<li>Message Queues 消息队列</li>
-<li>Shared Memory 共享内存</li>
-<li>POSIX Semaphores POSIX 信号量</li>
-<li>Sockets 套接字<h2 id="Pipes-的特性"><a href="#Pipes-的特性" class="headerlink" title="Pipes 的特性"></a>Pipes 的特性</h2></li>
-<li>兼容性问题：最早的时候都是半双工，有的系统却提供了全双工的管道</li>
-<li>适用范围的问题：只能在具有相同的祖先进程的进程间使用，多数情况是在父子进程之间使用<h3 id="Pipes-的使用"><a href="#Pipes-的使用" class="headerlink" title="Pipes 的使用"></a>Pipes 的使用</h3>　　使用pipe需要了解两个函数<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 需要包含头文件 &lt;unistd.h&gt;</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">pipe</span><span class="params">(<span class="type">int</span> fd[<span class="number">2</span>])</span></span>; <span class="comment">// 创建两个文件描述符，fd[0] 用于读取，fd[1]用于写入</span></span><br><span class="line"><span class="comment">// 需要包含头文件 &lt;unistd.h&gt; 和 &lt;sys/types.h&gt;</span></span><br><span class="line"><span class="function"><span class="type">pid_t</span> <span class="title">fork</span><span class="params">(<span class="type">void</span>)</span></span>; <span class="comment">// 通过复制父进程创建子进程</span></span><br><span class="line"><span class="comment">// 标准头文件 &lt;stdio.h&gt;</span></span><br><span class="line"><span class="comment">// The  popen() function opens a process by creating a pipe, forking,</span></span><br><span class="line"><span class="comment">// and invoking the shell</span></span><br><span class="line"><span class="function">FILE *<span class="title">popen</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *command, <span class="type">const</span> <span class="type">char</span> *type)</span></span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">pclose</span><span class="params">(FILE *stream)</span></span>;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 以下代码对 APUE 中的代码做了简化和改动</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAXLINE 4096</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="type">int</span> fd[<span class="number">2</span>];</span><br><span class="line">    <span class="type">pid_t</span> pid;</span><br><span class="line">    <span class="type">char</span> line[MAXLINE];</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">pipe</span>(fd) &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;pipe create error&quot;</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    pid = fork();</span><br><span class="line">    <span class="keyword">if</span> (pid &lt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;fork child error&quot;</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (pid &gt; <span class="number">0</span>) &#123; <span class="comment">// 父进程</span></span><br><span class="line">        <span class="built_in">close</span>(fd[<span class="number">0</span>]);</span><br><span class="line">        <span class="built_in">write</span>(fd[<span class="number">1</span>], <span class="string">&quot;Hello child\n&quot;</span>, <span class="built_in">sizeof</span>(<span class="string">&quot;Hello child\n&quot;</span>) - <span class="number">1</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;write some thing inside %u\n&quot;</span>, <span class="built_in">getpid</span>());</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123; <span class="comment">// 子进程</span></span><br><span class="line">        <span class="built_in">close</span>(fd[<span class="number">1</span>]);</span><br><span class="line">        n = <span class="built_in">read</span>(fd[<span class="number">0</span>], line, MAXLINE);</span><br><span class="line">        <span class="built_in">write</span>(STDOUT_FILENO, line, n); </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;read some thing from %u\n&quot;</span>, <span class="built_in">getppid</span>());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Message-Queues-的特性"><a href="#Message-Queues-的特性" class="headerlink" title="Message Queues 的特性"></a>Message Queues 的特性</h2><h2 id="Message-Queues-的使用"><a href="#Message-Queues-的使用" class="headerlink" title="Message Queues 的使用"></a>Message Queues 的使用</h2><h2 id="Shared-Memory-的特性"><a href="#Shared-Memory-的特性" class="headerlink" title="Shared Memory 的特性"></a>Shared Memory 的特性</h2><p>  共享内存不提供同步机制，user需要使用消息队列，信号量或者sockets提供的消息机制</p>
-<h2 id="Shared-Memory-的使用"><a href="#Shared-Memory-的使用" class="headerlink" title="Shared Memory 的使用"></a>Shared Memory 的使用</h2><h2 id="POSIX-Semaphores-的特性"><a href="#POSIX-Semaphores-的特性" class="headerlink" title="POSIX Semaphores 的特性"></a>POSIX Semaphores 的特性</h2><h2 id="POSIX-Semaphores-的使用"><a href="#POSIX-Semaphores-的使用" class="headerlink" title="POSIX Semaphores 的使用"></a>POSIX Semaphores 的使用</h2><h2 id="Sockets-的特性"><a href="#Sockets-的特性" class="headerlink" title="Sockets 的特性"></a>Sockets 的特性</h2><h2 id="Sockets-的使用"><a href="#Sockets-的使用" class="headerlink" title="Sockets 的使用"></a>Sockets 的使用</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/03/28/about-sqlite3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/28/about-sqlite3/" class="post-title-link" itemprop="url">about-sqlite3</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-03-28 22:10:10" itemprop="dateCreated datePublished" datetime="2020-03-28T22:10:10+08:00">2020-03-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/03/07/about-lint/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/07/about-lint/" class="post-title-link" itemprop="url">About Lint</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-03-07 12:01:50" itemprop="dateCreated datePublished" datetime="2020-03-07T12:01:50+08:00">2020-03-07</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="lint-或者-linter是-一种静态程序分析工具"><a href="#lint-或者-linter是-一种静态程序分析工具" class="headerlink" title="lint 或者 linter是 一种静态程序分析工具"></a>lint 或者 linter是 一种静态程序分析工具</h1><p>  这里的静态是指在不运行程序的情况下检查代码潜在的问题<br>  最早在Unix平台上开发用于检查C语言程序的<br>  后来被其他的语言借鉴形成了各种各样的lint工具，以提升代码的健壮性</p>
-<h1 id="splint-是现在的-linux上的lint工具-安装方法-如下"><a href="#splint-是现在的-linux上的lint工具-安装方法-如下" class="headerlink" title="splint 是现在的 linux上的lint工具 安装方法 如下"></a>splint 是现在的 linux上的lint工具 安装方法 如下</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># apt-get install -y splint</span></span><br></pre></td></tr></table></figure>
-<h1 id="splint-从哪里知道的？"><a href="#splint-从哪里知道的？" class="headerlink" title="splint 从哪里知道的？"></a>splint 从哪里知道的？</h1><p>  来自《C专家编程》中的某个章节</p>
-<h1 id="简单用法"><a href="#简单用法" class="headerlink" title="简单用法"></a>简单用法</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// func.c</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">func</span><span class="params">(<span class="type">int</span> <span class="comment">/*@unused@*/</span>a,<span class="type">char</span> **b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  splint func.c </span><br></pre></td></tr></table></figure>
-<p>会输出警告信息</p>
-<h1 id="详细用法可以参考"><a href="#详细用法可以参考" class="headerlink" title="详细用法可以参考"></a>详细用法可以参考</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man splint</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/02/28/about-memory/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/28/about-memory/" class="post-title-link" itemprop="url">About memory</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-28 15:23:24" itemprop="dateCreated datePublished" datetime="2020-02-28T15:23:24+08:00">2020-02-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题"><a href="#此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题" class="headerlink" title="此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题"></a>此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题</h1><h2 id="内存-RAM-分为-静态内存-SRAM-和动态内存-DRAM"><a href="#内存-RAM-分为-静态内存-SRAM-和动态内存-DRAM" class="headerlink" title="内存(RAM)分为 静态内存(SRAM)和动态内存(DRAM)"></a>内存(RAM)分为 静态内存(SRAM)和动态内存(DRAM)</h2><pre><code>静态随机存取存储器是随机存取存储器的一种。所谓的“静态”，是指这种存储器只要保持通电，里面储存的数据就可以恒常保持。相对之下，动态随机存取存储器里面所储存的数据就需要周期性地更新。然而，当电力供应停止时，SRAM储存的数据还是会消失
-摘自[维基百科](https://zh.wikipedia.org/zh-cn/E9%9D%99%E6%80%81%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%8F%96%E5%AD%98%E5%82%A8%E5%99%A8)
-</code></pre>
-<h2 id="特性对比表格："><a href="#特性对比表格：" class="headerlink" title="特性对比表格："></a>特性对比表格：</h2><table>
-<thead>
-<tr>
-<th align="center">内存类型</th>
-<th align="center">SRAM</th>
-<th align="center">DRAM</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">可用阶段</td>
-<td align="center">系统启动过程的任意时刻均可用</td>
-<td align="center">需要在初始化频率等之后</td>
-</tr>
-<tr>
-<td align="center">生产成本</td>
-<td align="center">高</td>
-<td align="center">低</td>
-</tr>
-<tr>
-<td align="center">常见使用场景</td>
-<td align="center">寄存器，cache</td>
-<td align="center">运行内存</td>
-</tr>
-<tr>
-<td align="center">组成物理器件</td>
-<td align="center">略</td>
-<td align="center">略</td>
-</tr>
-</tbody></table>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/02/25/cpp-keywords/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/25/cpp-keywords/" class="post-title-link" itemprop="url">keywords</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-25 09:23:16" itemprop="dateCreated datePublished" datetime="2020-02-25T09:23:16+08:00">2020-02-25</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="关键字与标识符"><a href="#关键字与标识符" class="headerlink" title="关键字与标识符"></a>关键字与标识符</h1><h1 id="经常考察的关键字"><a href="#经常考察的关键字" class="headerlink" title="经常考察的关键字"></a>经常考察的关键字</h1><ul>
-<li>const *  常量 和指针一起 考察</li>
-<li>voliate * 容易修改，禁止编译器优化，嵌入式，和多线程环境</li>
-<li>extern * 外部引用，声明</li>
-<li>static * 本文件，或者本函数可用，本类可用</li>
-<li>auto * 自动变量、栈变量， 类型推导</li>
-<li>register * 请求编译器将 变量放到寄存器<h1 id="不常见的关键字"><a href="#不常见的关键字" class="headerlink" title="不常见的关键字"></a>不常见的关键字</h1></li>
-<li>restrict *</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
       }
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 
-        </div>
-          
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">wang shaodong</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
         
-          <span class="site-state-item-count">83</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">15</span>
-        <span class="site-state-item-name">tags</span>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Wang shaodong\'s Blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Wang shaodong's Blog</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">Wang shaodong's Blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/05/24/about-C-Cpp-new-feature/" title="C++ 11/14/17/20 new feature">C++ 11/14/17/20 new feature</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-05-24T10:28:35.000Z" title="Created 2020-05-24 18:28:35">2020-05-24</time></span></div><div class="content">自从C++11以来的新特性 auto 自动类型推导 constexpr nullptr 关键字, 用于取代 NULL, 代表空指针 for 循环中的 语法糖 for ( a : array) { } lambda 表达式， 也就是匿名函数  自从C99以来的新特性 变长数组 VLA; 结构体 按成员初始化 restrict 关键字 bool 类型  </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/05/24/about-interrupt/" title="about-interrupt">about-interrupt</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-05-24T03:54:44.000Z" title="Created 2020-05-24 11:54:44">2020-05-24</time></span></div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/05/23/about-namespace/" title="namespace">namespace</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-05-23T14:59:06.000Z" title="Created 2020-05-23 22:59:06">2020-05-23</time></span></div><div class="content">namespace (命名空间) 是C++的一个关键字　　不同的命名空间中相同的标识符在编译的时候不会产生错误　　在不同的命名空间中可以使用相同名字的变量或者函数名称 C 语言的标识符 也有命名空间 （内容来自 C语言规范草案 6.2.3 节) label names标签名 包括 goto 语句 中用到的标签和  switch case中的 标签 the tags name of structures, unions and enumurations结构、联合、枚举的tag名 the members of structures or unions; each structure or union has a seperate name space for its number;结构体、联合的成员名 all other identifiers,called ordinary identifiers (declared in ordinary declarators or asenumeration constants)其他普通的变量，或者枚举常量  C++中使用namesapce ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/03/31/about-Qt/" title="about-Qt">about-Qt</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-03-30T16:04:22.000Z" title="Created 2020-03-31 00:04:22">2020-03-31</time></span></div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/03/30/about-socket/" title="about-socket">about-socket</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-03-30T15:50:55.000Z" title="Created 2020-03-30 23:50:55">2020-03-30</time></span></div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/03/29/about-IPC/" title="About IPC">About IPC</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-03-29T02:29:29.000Z" title="Created 2020-03-29 10:29:29">2020-03-29</time></span></div><div class="content">IPC (Inter-Porcess Communication) 进程间通信　　多个进程需要协作的时候通信必不可少 IPC 的五种基本方法 Pipes &#x2F; FIFOs 管道 Message Queues 消息队列 Shared Memory 共享内存 POSIX Semaphores POSIX 信号量 Sockets 套接字  Pipes 的特性 兼容性问题：最早的时候都是半双工，有的系统却提供了全双工的管道 适用范围的问题：只能在具有相同的祖先进程的进程间使用，多数情况是在父子进程之间使用  Pipes 的使用　　使用pipe需要了解两个函数 123456789// 需要包含头文件 &lt;unistd.h&gt;int pipe(int fd[2]); // 创建两个文件描述符，fd[0] 用于读取，fd[1]用于写入// 需要包含头文件 &lt;unistd.h&gt; 和 &lt;sys/types.h&gt;pid_t fork(void); // 通过复制父进程创建子进程// 标准头文件 &lt;stdio.h&gt;// The  popen() fu...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/03/28/about-sqlite3/" title="about-sqlite3">about-sqlite3</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-03-28T14:10:10.000Z" title="Created 2020-03-28 22:10:10">2020-03-28</time></span></div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/03/07/about-lint/" title="About Lint">About Lint</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-03-07T04:01:50.000Z" title="Created 2020-03-07 12:01:50">2020-03-07</time></span></div><div class="content">lint 或者 linter是 一种静态程序分析工具  这里的静态是指在不运行程序的情况下检查代码潜在的问题  最早在Unix平台上开发用于检查C语言程序的  后来被其他的语言借鉴形成了各种各样的lint工具，以提升代码的健壮性 splint 是现在的 linux上的lint工具 安装方法 如下1# apt-get install -y splint splint 从哪里知道的？  来自《C专家编程》中的某个章节 简单用法12345// func.cint func(int /*@unused@*/a,char **b)&#123;    return 0;&#125;  1$  splint func.c  会输出警告信息 详细用法可以参考1man splint</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/02/28/about-memory/" title="About memory">About memory</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-02-28T07:23:24.000Z" title="Created 2020-02-28 15:23:24">2020-02-28</time></span></div><div class="content">此处讨论的是物理内存，说的是内存的物理特性，不涉及虚拟内存，内存映射等话题内存(RAM)分为 静态内存(SRAM)和动态内存(DRAM)静态随机存取存储器是随机存取存储器的一种。所谓的“静态”，是指这种存储器只要保持通电，里面储存的数据就可以恒常保持。相对之下，动态随机存取存储器里面所储存的数据就需要周期性地更新。然而，当电力供应停止时，SRAM储存的数据还是会消失 摘自[维基百科](https://zh.wikipedia.org/zh-cn/E9%9D%99%E6%80%81%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%8F%96%E5%AD%98%E5%82%A8%E5%99%A8)  特性对比表格：   内存类型 SRAM DRAM    可用阶段 系统启动过程的任意时刻均可用 需要在初始化频率等之后   生产成本 高 低   常见使用场景 寄存器，cache 运行内存   组成物理器件 略 略   </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/02/25/cpp-keywords/" title="keywords">keywords</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-02-25T01:23:16.000Z" title="Created 2020-02-25 09:23:16">2020-02-25</time></span></div><div class="content">关键字与标识符经常考察的关键字 const *  常量 和指针一起 考察 voliate * 容易修改，禁止编译器优化，嵌入式，和多线程环境 extern * 外部引用，声明 static * 本文件，或者本函数可用，本类可用 auto * 自动变量、栈变量， 类型推导 register * 请求编译器将 变量放到寄存器  不常见的关键字 restrict *  </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/4/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/#content-inner">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/#content-inner">9</a><a class="extend next" rel="next" href="/page/6/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">wang shaodong</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">83</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/13/contact-ways/" title="Contact ways">Contact ways</a><time datetime="2026-06-13T06:18:09.000Z" title="Created 2026-06-13 14:18:09">2026-06-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/24/hexo-doc/" title="Hexo Quick Manual">Hexo Quick Manual</a><time datetime="2023-01-24T04:04:24.000Z" title="Created 2023-01-24 12:04:24">2023-01-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/23/kernel-structs-pos/" title="kernel structs pos">kernel structs pos</a><time datetime="2022-03-23T15:53:55.000Z" title="Created 2022-03-23 23:53:55">2022-03-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/23/busybox-suid-support/" title="busybox SUID support">busybox SUID support</a><time datetime="2022-03-23T15:53:12.000Z" title="Created 2022-03-23 23:53:12">2022-03-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/23/kernel-img-formats/" title="kernel image formats">kernel image formats</a><time datetime="2022-03-23T15:52:17.000Z" title="Created 2022-03-23 23:52:17">2022-03-23</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/Tool/" style="font-size: 1.3em; color: #99a1ac">Tool</a> <a href="/tags/Others/" style="font-size: 1.1em; color: #999">Others</a> <a href="/tags/sql/" style="font-size: 1.1em; color: #999">sql</a> <a href="/tags/shell/" style="font-size: 1.1em; color: #999">shell</a> <a href="/tags/Tools-git/" style="font-size: 1.1em; color: #999">Tools git</a> <a href="/tags/terms/" style="font-size: 1.1em; color: #999">terms</a> <a href="/tags/Tools/" style="font-size: 1.1em; color: #999">Tools</a> <a href="/tags/algorithm-C-C/" style="font-size: 1.1em; color: #999">algorithm C/C++</a> <a href="/tags/other/" style="font-size: 1.1em; color: #999">other</a> <a href="/tags/alogrithm/" style="font-size: 1.1em; color: #999">alogrithm</a> <a href="/tags/Linux-C/" style="font-size: 1.1em; color: #999">Linux/C</a> <a href="/tags/C-C/" style="font-size: 1.4em; color: #99a5b6">C/C++</a> <a href="/tags/Linux/" style="font-size: 1.5em; color: #99a9bf">Linux</a> <a href="/tags/tools/" style="font-size: 1.2em; color: #999da3">tools</a> <a href="/tags/others/" style="font-size: 1.2em; color: #999da3">others</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      <a class="card-more-btn" href="/archives/"
+            title="View More">
+            <i class="fas fa-angle-right"></i>
+          </a>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2026</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">wang shaodong</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-</body>
-</html>
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/06/">
+            <span class="card-archive-list-date">
+              June 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/01/">
+            <span class="card-archive-list-date">
+              January 2023
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/03/">
+            <span class="card-archive-list-date">
+              March 2022
+            </span>
+            <span class="card-archive-list-count">19</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2021/09/">
+            <span class="card-archive-list-date">
+              September 2021
+            </span>
+            <span class="card-archive-list-count">6</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2021/08/">
+            <span class="card-archive-list-date">
+              August 2021
+            </span>
+            <span class="card-archive-list-count">11</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2020/08/">
+            <span class="card-archive-list-date">
+              August 2020
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2020/06/">
+            <span class="card-archive-list-date">
+              June 2020
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2020/05/">
+            <span class="card-archive-list-date">
+              May 2020
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">83</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-06-14T11:42:49.207Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By wang shaodong</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.5</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.5"></script><script src="/js/main.js?v=5.5.5"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

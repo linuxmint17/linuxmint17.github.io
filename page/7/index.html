@@ -1,1178 +1,227 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"linuxmint17.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"public/search.xml"};
-  </script>
-
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Wang shaodong's Blog</title><meta name="author" content="wang shaodong"><meta name="copyright" content="wang shaodong"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Wang shaodong&#39;s Blog">
 <meta property="og:url" content="http://linuxmint17.github.io/page/7/index.html">
 <meta property="og:site_name" content="Wang shaodong&#39;s Blog">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://linuxmint17.github.io/img/butterfly-icon.png">
 <meta property="article:author" content="wang shaodong">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://linuxmint17.github.io/page/7/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'en'
-  };
-</script>
-
-  <title>Wang shaodong's Blog</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Wang shaodong's Blog</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
+<meta name="twitter:image" content="http://linuxmint17.github.io/img/butterfly-icon.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://linuxmint17.github.io/page/7/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.5"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"><script>
+    (() => {
       
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/02/18/about-repo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/18/about-repo/" class="post-title-link" itemprop="url">about repo</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-18 18:21:45" itemprop="dateCreated datePublished" datetime="2020-02-18T18:21:45+08:00">2020-02-18</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="什么是repo"><a href="#什么是repo" class="headerlink" title="什么是repo"></a>什么是repo</h1><p>Repo 简化了跨多个代码库运行的流程，与 Git 相辅相成。请参阅源代码控制工具，了解有关 Repo 和 Git 之间关系的说明。如需详细了解 Repo，请参阅 Repo 命令参考资料和 Repo README。</p>
-<h1 id="repo-命令格式"><a href="#repo-命令格式" class="headerlink" title="repo 命令格式"></a>repo 命令格式</h1><p>使用 Repo 需遵循的格式如下：</p>
-<p>repo command options</p>
-<p>可选元素显示在方括号 [ ] 中。例如，许多命令会用到项目列表 (project-list) 参数。项目列表可以是一个名称列表，也可以是一个本地源代码目录的路径列表：</p>
-<h1 id="repo-的命令使用"><a href="#repo-的命令使用" class="headerlink" title="repo 的命令使用"></a>repo 的命令使用</h1><p>repo sync [project0 project1 … projectn]<br>repo sync [&#x2F;path&#x2F;to&#x2F;project0 … &#x2F;path&#x2F;to&#x2F;projectn]</p>
-<p>help<br>安装 Repo 后，您可以通过运行以下命令找到最新文档（开头是包含所有命令的摘要）：</p>
-<p>repo help</p>
-<p>您可以通过在 Repo 树中运行以下命令来获取有关某个命令的信息：</p>
-<p>repo help command</p>
-<p>例如，以下命令会生成 Repo init 参数的说明和选项列表，该参数会在当前目录中初始化 Repo（要了解详情，请参阅 init）。</p>
-<p>repo help init</p>
-<p>init<br>repo init -u url [options]</p>
-<p>在当前目录中安装 Repo。这样会创建一个 .repo&#x2F; 目录，其中包含 Repo 源代码和标准 Android 清单文件的 Git 代码库。该 .repo&#x2F; 目录中还包含 manifest.xml，该文件是一个指向 .repo&#x2F;manifests&#x2F; 目录中所选清单的符号链接。有关更新清单的说明，请参阅 manifest-format.md。</p>
-<p>选项：</p>
-<p>-u：指定要从中检索清单代码库的网址。您可以在 <a target="_blank" rel="noopener" href="https://android.googlesource.com/platform/manifest">https://android.googlesource.com/platform/manifest</a> 中找到通用清单。<br>-m：选择代码库中的一个清单文件。如果未选择任何清单名称，则会默认选择 default.xml。<br>-b：指定修订版本，即特定的清单分支。<br>注意：对于其余的所有 Repo 命令，当前工作目录必须是 .repo&#x2F; 的父目录或该父目录的子目录。</p>
-<p>sync<br>repo sync [project-list]</p>
-<p>下载新的更改并更新本地环境中的工作文件。如果您在未使用任何参数的情况下运行 repo sync，则该操作会同步所有项目的文件。</p>
-<p>运行 repo sync 后，将出现以下情况：</p>
-<p>如果目标项目从未同步过，则 repo sync 相当于 git clone。远程代码库中的所有分支都会复制到本地项目目录中。</p>
-<p>如果目标项目以前同步过，则 repo sync 相当于以下命令：</p>
-<p>git remote update<br>git rebase origin&#x2F;branch</p>
-<p>其中 branch 是本地项目目录中当前已检出的分支。如果本地分支没有在跟踪远程代码库中的分支，则项目不会发生任何同步。</p>
-<p>如果 Git rebase 操作导致合并冲突，请使用常规 Git 命令（例如 git rebase –continue）解决冲突。</p>
-<p>repo sync 运行成功后，指定项目中的代码即处于最新状态，已与远程代码库中的代码同步。</p>
-<p>选项：</p>
-<p>-d：将指定项目切换回清单修订版本。如果项目当前属于某个主题分支，但临时需要清单修订版本，则此选项会有所帮助。</p>
-<p>-s：同步到当前清单中的 manifest-server 元素指定的一个已知良好版本。</p>
-<p>-f：即使某个项目同步失败，也继续同步其他项目。</p>
-<p>upload<br>repo upload [project-list]</p>
-<p>对于指定的项目，Repo 会将本地分支与最后一次 repo sync 时更新的远程分支进行比较。Repo 会提示您选择一个或多个尚未上传以供审核的分支。</p>
-<p>接下来，所选分支上的所有提交都会通过 HTTPS 连接传输到 Gerrit。您需要配置一个 HTTPS 密码以启用上传授权。要生成新的用户名&#x2F;密码对以用于 HTTPS 传输，请访问密码生成器。</p>
-<p>当 Gerrit 通过其服务器接收对象数据时，它会将每项提交转变成一项更改，以便审核者可以针对特定提交给出意见。要将几项“检查点”提交合并为一项提交，请使用 git rebase -i，然后再运行 upload。</p>
-<p>如果您在未使用任何参数的情况下运行 repo upload，则该操作会搜索所有项目中的更改以进行上传。</p>
-<p>要在更改上传后对其进行修改，请使用 git rebase -i 或 git commit –amend 等工具更新您的本地提交。修改完成之后，请执行以下操作：</p>
-<p>进行验证以确保更新后的分支是当前已检出的分支。<br>对于相应系列中的每项提交，请在方括号内输入 Gerrit 更改 ID：</p>
-<h1 id="Replacing-from-branch-foo"><a href="#Replacing-from-branch-foo" class="headerlink" title="Replacing from branch foo"></a>Replacing from branch foo</h1><p>[ 3021 ] 35f2596c Refactor part of GetUploadableBranches to lookup one specific…<br>[ 2829 ] ec18b4ba Update proto client to support patch set replacments</p>
-<h1 id="Insert-change-numbers-in-the-brackets-to-add-a-new-patch-set"><a href="#Insert-change-numbers-in-the-brackets-to-add-a-new-patch-set" class="headerlink" title="Insert change numbers in the brackets to add a new patch set."></a>Insert change numbers in the brackets to add a new patch set.</h1><h1 id="To-create-a-new-change-record-leave-the-brackets-empty"><a href="#To-create-a-new-change-record-leave-the-brackets-empty" class="headerlink" title="To create a new change record, leave the brackets empty."></a>To create a new change record, leave the brackets empty.</h1><p>上传完成后，这些更改将拥有一个额外的补丁程序集。</p>
-<p>如果您希望只上传当前已检出的 Git 分支，则可以使用标记 –current-branch（简称 –cbr）。</p>
-<p>diff<br>repo diff [project-list]</p>
-<p>使用 git diff 显示提交与工作树之间的明显更改。</p>
-<p>download<br>repo download target change</p>
-<p>从审核系统中下载指定更改，并放在您项目的本地工作目录中供使用。</p>
-<p>例如，要将更改 23823 下载到您的 platform&#x2F;build 目录，请运行以下命令：</p>
-<p>repo download platform&#x2F;build 23823</p>
-<p>运行 repo sync 会删除使用 repo download 检索到的任何提交。或者，您可以使用 git checkout m&#x2F;master 检出远程分支。</p>
-<p>注意：由于全球的所有服务器均存在复制延迟，因此某项更改出现在网络上（位于 Gerrit 中）的时间与所有用户可通过 repo download 找到此项更改的时间之间存在些许的镜像延迟。</p>
-<p>forall<br>repo forall [project-list] -c command</p>
-<p>在每个项目中运行指定的 shell 命令。通过 repo forall 可使用下列额外的环境变量：</p>
-<p>REPO_PROJECT 设为了项目的唯一名称。</p>
-<p>REPO_PATH 是相对于客户端根目录的路径。</p>
-<p>REPO_REMOTE 是清单中远程系统的名称。</p>
-<p>REPO_LREV 是清单中修订版本的名称，已转换为本地跟踪分支。如果您需要将清单修订版本传递到某个本地运行的 Git 命令，则可使用此变量。</p>
-<p>REPO_RREV 是清单中修订版本的名称，与清单中显示的名称完全一致。</p>
-<p>选项：</p>
-<p>-c：要运行的命令和参数。此命令会通过 &#x2F;bin&#x2F;sh 进行评估，它之后的任何参数都将作为 shell 位置参数传递。</p>
-<p>-p：在所指定命令的输出结果之前显示项目标头。这通过以下方式实现：将管道绑定到命令的 stdin、stdout 和 sterr 流，然后通过管道将所有输出结果传输到一个分页会话中显示的连续流中。</p>
-<p>-v：显示该命令向 stderr 写入的消息。</p>
-<p>prune<br>repo prune [project-list]</p>
-<p>删减（删除）已合并的主题。</p>
-<p>start<br>repo start<br>branch-name [project-list]</p>
-<p>从清单中指定的修订版本开始，创建一个新的分支进行开发。</p>
-<p>BRANCH_NAME 参数用于简要说明您尝试对项目进行的更改。如果您不知道，则不妨考虑使用名称 default。</p>
-<p>project-list 参数指定了将参与此主题分支的项目。</p>
-<p>注意：句点 (.) 是一个简写形式，用来代表当前工作目录中的项目。</p>
-<p>status<br>repo status [project-list]</p>
-<p>对于每个指定的项目，将工作树与临时区域（索引）以及此分支 (HEAD) 上的最近一次提交进行比较。在这三种状态存在差异之处显示每个文件的摘要行。</p>
-<p>要仅查看当前分支的状态，请运行 repo status。系统会按项目列出状态信息。对于项目中的每个文件，系统使用两个字母的代码来表示：</p>
-<p>在第一列中，大写字母表示临时区域与上次提交状态之间的不同之处。</p>
-<p>字母    含义    说明</p>
-<ul>
-<li>没有变化    在 HEAD 与索引中相同<br>A    已添加    不存在于 HEAD 中，但存在于索引中<br>M    已修改    存在于 HEAD 中，但索引中的文件已修改<br>D    已删除    存在于 HEAD 中，但不存在于索引中<br>R    已重命名    不存在于 HEAD 中，索引中文件的路径已更改<br>C    已复制    不存在于 HEAD 中，复制自索引中的另一个文件<br>T    模式已更改    HEAD 与索引中的内容相同，但模式已更改<br>U    未合并    HEAD 与索引之间存在冲突；需要加以解决<br>在第二列中，小写字母表示工作目录与索引之间的不同之处。</li>
-</ul>
-<p>字母    含义    说明</p>
-<ul>
-<li>新&#x2F;未知    不存在于索引中，但存在于工作树中<br>m    已修改    存在于索引中，也存在于工作树中（但已修改）<br>d    已删除    存在于索引中，但不存在于工作树中</li>
-</ul>
-<h1 id="repo-上传代码-到-gerrit"><a href="#repo-上传代码-到-gerrit" class="headerlink" title="repo 上传代码 到 gerrit"></a>repo 上传代码 到 gerrit</h1><p>新建一个 Repo 分支<br>对于您打算进行的每项更改，请在相关的 Git 存储库中新建一个分支：</p>
-<p>repo start NAME .</p>
-<p>您可以在同一存储库中同时新建多个独立的分支。“NAME”分支是您的工作区的本地分支，不会包含在 Gerrit 或最终源代码树中。</p>
-<p>进行更改<br>在您修改源代码文件（并且验证）后，请将这些更改提交到您的本地存储库：</p>
-<p>git add -A<br>git commit -s</p>
-<p>请在您的提交消息中提供相关更改的详细说明。该说明将会被推送到公开 AOSP 存储库，因此请按照我们的准则来撰写更改列表说明：</p>
-<p>以一行摘要（最多 50 个字符）开头，后跟一个空白行。 这是 Git 和 Gerrit 支持的格式，适用于各种屏幕尺寸的设备。</p>
-<p>从第三行开始输入较长的说明，说明会在达到 72 个字符时自动硬回车换行。该部分应着重说明更改解决了什么问题，以及如何解决了问题。尽管我们建议您提供第二部分的内容，但这在实现新功能时是可选内容。</p>
-<p>添加对任何假设或背景信息的简短说明，这些内容可能对下一年研究此功能的其他贡献者起到很大的帮助作用。</p>
-<p>以下是一个示例提交消息：</p>
-<p>short description on first line</p>
-<p>more detailed description of your patch,<br>which is likely to take up multiple lines.</p>
-<p>repo init 期间提供的唯一更改 ID 以及您的姓名和电子邮件将自动添加到您的提交消息中。</p>
-<p>上传到 Gerrit<br>将更改提交到您的个人历史记录后，请使用以下命令将其上传到 Gerrit：</p>
-<p>repo upload</p>
-<p>如果您在同一存储库中新建了多个分支，则系统会提示您选择要上传的分支。</p>
-<p>上传成功后，Repo 会为您提供 Gerrit 上对应新页面的网址。访问该链接可在审核服务器上查看您上传的补丁程序、添加注释，或者为您的补丁程序申请特定审核者。</p>
-<p>上传替换补丁程序<br>假设某位审核者已看过您的补丁程序，并要求您做一些小小的修改。您可以在 Git 中修改提交的内容，这会在 Gerrit 中生成一个新的补丁程序，该补丁程序与原始补丁程序具有相同的更改 ID。</p>
-<p>注意：如果您在上传该补丁程序之后进行了其他提交，那么您将需要手动移动 Git HEAD。<br>git add -A<br>git commit –amend</p>
-<p>当您上传修改后的补丁程序时，它将替换 Gerrit 和本地 Git 历史记录中的原始补丁程序。</p>
-<p>解决同步冲突<br>如果提交到源代码树的其他补丁程序与您的存在冲突，那么您需要在源代码存储库的新 HEAD 的基础上对您的补丁程序执行“衍合”(rebase) 命令。执行此操作的一种简单方法是运行以下命令：</p>
-<p>repo sync</p>
-<p>此命令首先从源代码服务器获取更新，然后尝试在新的远程 HEAD 的基础上对您的 HEAD 自动执行衍合命令。</p>
-<p>如果自动衍合命令失败，您就必须手动执行衍合。</p>
-<p>repo rebase</p>
-<p>使用 git mergetool 可帮助您处理衍合冲突。在成功合并冲突文件后，运行以下命令：</p>
-<p>git rebase –continue</p>
-<p>在自动或手动衍合完成之后，运行 repo upload 来提交衍合后的补丁程序。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/02/18/about-opensuse/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/18/about-opensuse/" class="post-title-link" itemprop="url">Linux中的奇葩opensuse</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-18 18:18:36" itemprop="dateCreated datePublished" datetime="2020-02-18T18:18:36+08:00">2020-02-18</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="安装完成之后的软件源切换"><a href="#安装完成之后的软件源切换" class="headerlink" title="安装完成之后的软件源切换"></a>安装完成之后的软件源切换</h2><ol>
-<li>禁用所有软件源<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo zypper mr -da</span><br></pre></td></tr></table></figure></li>
-<li>添加阿里镜像源<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo zypper ar -<span class="built_in">fc</span> https://mirrors.aliyun.com/opensuse/distribution/leap/15.1/repo/oss openSUSE-Aliyun-OSS ;</span><br><span class="line">$ sudo zypper ar -<span class="built_in">fc</span> https://mirrors.aliyun.com/opensuse/distribution/leap/15.1/repo/non-oss openSUSE-Aliyun-NON-OSS ;</span><br><span class="line">$ sudo zypper ar -<span class="built_in">fc</span> https://mirrors.aliyun.com/opensuse/update/leap/15.1/oss openSUSE-Aliyun-UPDATE-OSS ;</span><br><span class="line">$ sudo zypper ar -<span class="built_in">fc</span> https://mirrors.aliyun.com/opensuse/update/leap/15.1/non-oss openSUSE-Aliyun-UPDATE-NON-OSS ;</span><br></pre></td></tr></table></figure></li>
-<li>手动刷新软件源<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo zypper ref</span><br></pre></td></tr></table></figure>
-<h2 id="core-file-无法生成"><a href="#core-file-无法生成" class="headerlink" title="core file 无法生成"></a>core file 无法生成</h2>opensuse 默认无法产生 core file 需要查找官方文档 设置<h2 id="git-commit-failed"><a href="#git-commit-failed" class="headerlink" title="git commit failed"></a>git commit failed</h2>openusse  git 默认无配置文件， git commit 阻塞， 或者是使用了 奇怪的 编辑器。</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/02/18/bit-opteration/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/18/bit-opteration/" class="post-title-link" itemprop="url">位运算、原码、反码、补码</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-18 17:49:04" itemprop="dateCreated datePublished" datetime="2020-02-18T17:49:04+08:00">2020-02-18</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="位运算的地位"><a href="#位运算的地位" class="headerlink" title="位运算的地位"></a>位运算的地位</h1><p>　以下内容摘自《枕边算法书》感觉对于位运算描述的很形象</p>
-<blockquote>
-<p>　　对于程序员来说,”位” 相当于现实世界中构成水和空气的粒子。<br>编程世界的所有东西都会从位开始，以位结束。刚步入编程世界的<br>初学者看到整数就是整数，看到字符串就是字符串。但功力深厚的<br>程序员眼中无论整数还是字符串，它们都是位。</p>
-</blockquote>
-<blockquote>
-<p>　　与系统编程不同，一般应用程序的编程对位运算的要求并不高。<br>即使如此，很少有程序员不懂位运算，因为在不懂位运算的情况下<br>编程写程序，就像在现实世界中不呼吸、不喝水一样，几乎不可能。</p>
-</blockquote>
-<h1 id="位运算的类型"><a href="#位运算的类型" class="headerlink" title="位运算的类型"></a>位运算的类型</h1><table>
-<thead>
-<tr>
-<th align="center">运算符</th>
-<th align="center">含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">&amp;</td>
-<td align="center">按位与:全1才1,否则都0</td>
-</tr>
-<tr>
-<td align="center">|</td>
-<td align="center">按位或:有1得1,全0才0</td>
-</tr>
-<tr>
-<td align="center">^</td>
-<td align="center">按位异或:相异为真,相同为假</td>
-</tr>
-<tr>
-<td align="center">&gt;&gt;</td>
-<td align="center">右移:对于有符号数的右移分为算术右移和逻辑右移</td>
-</tr>
-<tr>
-<td align="center">&lt;&lt;</td>
-<td align="center">左移:比较简单不论是否有符号整数</td>
-</tr>
-<tr>
-<td align="center">~</td>
-<td align="center">取反:每个位1变0,0变1</td>
-</tr>
-<tr>
-<td align="center"><strong>对于正整数而言，左移1位就是x2,右移就是除2</strong></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center"><strong>下图来自《Computer Systems - A Programmer’s Perspective》</strong></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center"><img src="/images/bit-right-shift.PNG" alt="bit-right-shift.PNG"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">算术右移:直接右移n位,左侧空出来的n位全补0</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">逻辑右移:对于有符号数有些不同，对于无符号数没有区别</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">可惜对于右移而言标准c没有规定，应该使用哪种，大多数的编译器都使用算术右移</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">java中明确规定x&gt;&gt;k运算符表示x算术右移k位, x&gt;&gt;&gt;k表示逻辑右移</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<h1 id="原码"><a href="#原码" class="headerlink" title="原码"></a>原码</h1><p>  一个数的二进制表示加上正负号</p>
-<h1 id="反码-Ones’-complement-x2F-一的补码"><a href="#反码-Ones’-complement-x2F-一的补码" class="headerlink" title="反码(Ones’ complement &#x2F;一的补码)"></a>反码(Ones’ complement &#x2F;一的补码)</h1><p>定义<br><img src="/images/bit-fanma.png" alt="bit-fanma.png"><br>式中，N为真值，n为编码的位数</p>
-<p>反码，正数的反码等于其原码，而负数的反码则可以通过保留其符号位，将原码的数值位取反得到。 </p>
-<h1 id="补码-Twos’-complement-x2F-二的补码"><a href="#补码-Twos’-complement-x2F-二的补码" class="headerlink" title="补码(Twos’ complement &#x2F;二的补码)"></a>补码(Twos’ complement &#x2F;二的补码)</h1><p>　　<img src="/images/bit-buma.PNG" alt="bit-buma.PNG"><br>　　计算机中采用补码的原因是原码和反码的时候，0的表示不唯一</p>
-<h1 id="补码的计算方法"><a href="#补码的计算方法" class="headerlink" title="补码的计算方法"></a>补码的计算方法</h1><p>　　正数的补码和原码一致，辅助的补码用用其绝对值的原码按位取反，然后(从LSB(最低有效位))+1</p>
-<h1 id="根据补码-2补数-求真值的方法"><a href="#根据补码-2补数-求真值的方法" class="headerlink" title="根据补码(2补数)求真值的方法"></a>根据补码(2补数)求真值的方法</h1><p>　　设1100为补码, 拿到补码最高位是-(2^3), 然后 + 2^2 得到 -4 </p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>　　1. <strong>现代计算机中存储的永远是补码</strong><br>　　2. <strong>运算的时候也是用补码在运算</strong><br>　　3. <strong>x,y均为整数, 如果有~x &#x3D; y 成立,则有 x + y &#x3D; -1 成立</strong></p>
-<h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><ol>
-<li>~3 &#x3D; ？<br> 3 &#x3D; (0000 0011)按位取反得到(1111 1100) 按照2补数解释为-4</li>
-<li><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> cat = <span class="number">13</span>;</span><br><span class="line">cat - ~-cat; <span class="comment">// this experssion&#x27;s value is 1</span></span><br><span class="line"><span class="built_in">putchar</span> (~-~-~-cat); <span class="comment">// this line equal to putchar(&#x27;\n&#x27;); \n 的ascii code 十进制的值为 10</span></span><br></pre></td></tr></table></figure>
-<h1 id="位运算可以用来判断整数的奇偶性"><a href="#位运算可以用来判断整数的奇偶性" class="headerlink" title="位运算可以用来判断整数的奇偶性"></a>位运算可以用来判断整数的奇偶性</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输出0 ~ 100 的所有奇数</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (i &amp; <span class="number">1</span>) &#123; <span class="comment">// 基数最低bit位是1</span></span><br><span class="line">    std::cout&lt;&lt;i&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">std::cout&lt;&lt; std::endl;</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/02/16/c-array/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/16/c-array/" class="post-title-link" itemprop="url">C语言中数组</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-16 12:04:57" itemprop="dateCreated datePublished" datetime="2020-02-16T12:04:57+08:00">2020-02-16</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="数组的奇葩"><a href="#数组的奇葩" class="headerlink" title="数组的奇葩"></a>数组的奇葩</h1><p>  C语言中x[i]的计算方法 *(x + i)  x是个数组名，一般写数组的时候，x是常量指针,当x是0的时候没问题</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">is_big_endian</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0xbabe</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>[(<span class="type">unsigned</span> <span class="type">char</span> *)&amp;a] == <span class="number">0xbe</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i; <span class="comment">// 未初始化的全局变量，被初始化成0</span></span><br><span class="line"><span class="built_in">main</span> ()</span><br><span class="line">&#123;</span><br><span class="line">  <span class="comment">// read 是自定义函数, read(0, i++ + &quot;hello, world!\n&quot;, 1); 实际上调用了系统调用write(1,指向hello, world!的指针，每次偏移一,1);</span></span><br><span class="line">  <span class="comment">// i[&quot;]&lt;i;++i)&#123;--i;&#125;&quot;] 是判断 *(&quot;]&lt;i;++i)&#123;--i;&quot;的地址 偏移 i) 是否为0，&quot;]&lt;i;++i)&#123;--i;&quot; 的长度和 &quot;hello, world!&quot;的长度一样</span></span><br><span class="line">  <span class="comment">// C语言中的字符串常量和数字做运算的时候是 常量指针const char *类型</span></span><br><span class="line">  <span class="keyword">for</span> (; i[<span class="string">&quot;]&lt;i;++i)&#123;--i;&#125;&quot;</span>]; <span class="built_in">read</span> (<span class="string">&#x27;-&#x27;</span> - <span class="string">&#x27;-&#x27;</span>, i++ + <span class="string">&quot;hello, world!\n&quot;</span>, <span class="string">&#x27;/&#x27;</span> / <span class="string">&#x27;/&#x27;</span>));</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">read</span> (j, i, p)</span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">write</span> (j / p + p, i-- - j, i / i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/02/15/c-main/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/15/c-main/" class="post-title-link" itemprop="url">C 语言中的main函数</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-15 23:48:28" itemprop="dateCreated datePublished" datetime="2020-02-15T23:48:28+08:00">2020-02-15</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="C语言中main写法"><a href="#C语言中main写法" class="headerlink" title="C语言中main写法"></a>C语言中main写法</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 接受任意参数但不起作用</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 明确不接受任何参数</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// argc 参数的个数， argv 指向参数字符的首地址</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> **argv)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 同上，第二个参数的不同写法</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 此版本可以打印出环境变量</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[], <span class="type">char</span> *env)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="关于main函数"><a href="#关于main函数" class="headerlink" title="关于main函数"></a>关于main函数</h2><ol>
-<li>main函数并非必须存在，只是约定俗成的一个程序启动入口罢了,main函数被crt(C语言运行时)调用可以通过编译器指令来替换入口函数<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// entry.c</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">entry</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello world\n&quot;</span>);</span><br><span class="line"><span class="comment">//  return 0; // this will cause coredump ,因为程序直接entry 开始没有运行环境</span></span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>); <span class="comment">// this works fine</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ gcc -nostartfiles -e entry entry.c -o helloword</span><br><span class="line">$ ./helloword</span><br></pre></td></tr></table></figure></li>
-<li>main 在c语言中还可以自己调用自己<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> counter = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line">    counter++;</span><br><span class="line">    <span class="built_in">main</span>();</span><br><span class="line">    <span class="keyword">if</span> (counter == <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>main是个符号而已<br>1984年的IOCCC(International Obfuscated C Code Contest&#x2F;国际C代码混淆大赛)的两位牛人(Sjoerd Mullender</li>
-</ol>
-<p>Robbert van Renesse)通过下面的代码获得了特等奖The Grand Prize, 影响到后来的比赛规则，不鼓励写依赖硬件的代码</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">short</span> main[] = &#123;</span><br><span class="line">	<span class="number">277</span>, <span class="number">04735</span>, <span class="number">-4129</span>, <span class="number">25</span>, <span class="number">0</span>, <span class="number">477</span>, <span class="number">1019</span>, <span class="number">0xbef</span>, <span class="number">0</span>, <span class="number">12800</span>,</span><br><span class="line">	<span class="number">-113</span>, <span class="number">21119</span>, <span class="number">0x52d7</span>, <span class="number">-1006</span>, <span class="number">-7151</span>, <span class="number">0</span>, <span class="number">0x4bc</span>, <span class="number">020004</span>,</span><br><span class="line">	<span class="number">14880</span>, <span class="number">10541</span>, <span class="number">2056</span>, <span class="number">04010</span>, <span class="number">4548</span>, <span class="number">3044</span>, <span class="number">-6716</span>, <span class="number">0x9</span>,</span><br><span class="line">	<span class="number">4407</span>, <span class="number">6</span>, <span class="number">5568</span>, <span class="number">1</span>, <span class="number">-30460</span>, <span class="number">0</span>, <span class="number">0x9</span>, <span class="number">5570</span>, <span class="number">512</span>, <span class="number">-30419</span>,</span><br><span class="line">	<span class="number">0x7e82</span>, <span class="number">0760</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">02400</span>, <span class="number">15</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">1280</span>, <span class="number">4</span>, <span class="number">0</span>,</span><br><span class="line">	<span class="number">4</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0x8</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">0</span>, <span class="string">&#x27;,&#x27;</span>, <span class="number">0</span>, <span class="number">12</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">0</span>, <span class="string">&#x27;#&#x27;</span>,</span><br><span class="line">	<span class="number">0</span>, <span class="number">020</span>, <span class="number">0</span>, <span class="number">4</span>, <span class="number">0</span>, <span class="number">30</span>, <span class="number">0</span>, <span class="number">026</span>, <span class="number">0</span>, <span class="number">0x6176</span>, <span class="number">120</span>, <span class="number">25712</span>,</span><br><span class="line">	<span class="string">&#x27;p&#x27;</span>, <span class="number">072163</span>, <span class="string">&#x27;r&#x27;</span>, <span class="number">29303</span>, <span class="number">29801</span>, <span class="string">&#x27;e&#x27;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="下面是裁判的评论"><a href="#下面是裁判的评论" class="headerlink" title="下面是裁判的评论"></a>下面是裁判的评论</h3><p>
-Judges' comments:
-Without question, this C program is the most obfuscated C program that has ever been received! Like all great contest entries, they result in a change of rules for the following year. To prevent a flood of similar programs, we requested that programs be non machine specific.
-
-<p>This program was selected for the 1987 t-shirt collection.</p>
-<p>NOTE: If your machine is not a Vax-11 or pdp-11, this program will not execute correctly. In later years, machine dependent code was discouraged.</p>
-<p>The C startup routine (via crt0.o) transfers control to a location named main. In this case, main just happens to be in the data area. The array of shorts, which has been further obfuscated by use of different data types, just happens to form a meaningful set of PDP-11 and Vax instructions. The first word is a PDP-11 branch instruction that branches to the rest of the PDP code. On the Vax main is called with the calls instruction which uses the first word of the subroutine as a mask of registers to be saved. So on the Vax the first word can be anything. The real Vax code starts with the second word. This small program makes direct calls to the write() Unix system call to produce a message on the screen. Can you guess what is printed? We knew you couldn’t! :-)</p>
-</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/02/14/about-bash/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/14/about-bash/" class="post-title-link" itemprop="url">About Bash</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-14 18:10:06" itemprop="dateCreated datePublished" datetime="2020-02-14T18:10:06+08:00">2020-02-14</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="Bash的环境变量"><a href="#Bash的环境变量" class="headerlink" title="Bash的环境变量"></a>Bash的环境变量</h2><ul>
-<li>PROMPT_DIRTRIM<br>修改PS1中dir的个数 trim 留下几层目录<h2 id="bashrc-检查错误"><a href="#bashrc-检查错误" class="headerlink" title="bashrc 检查错误"></a>bashrc 检查错误</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bash -n ~/.bashrc</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/02/14/about-mysql/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/14/about-mysql/" class="post-title-link" itemprop="url">mysql</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-14 17:20:24" itemprop="dateCreated datePublished" datetime="2020-02-14T17:20:24+08:00">2020-02-14</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="mysql-是很流行的一款开源数据库软件"><a href="#mysql-是很流行的一款开源数据库软件" class="headerlink" title="mysql 是很流行的一款开源数据库软件"></a>mysql 是很流行的一款开源数据库软件</h1><p>　　mysql是跨平台的关系型数据库，安装可以参考<a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/mysql-sles-repo-quick-guide/en/">mysql安装官网指导</a> <br><br>mysql好像是从5.7版本之后，安装完会有一个随机的root密码使用grep password &#x2F;var&#x2F;log&#x2F;mysqld.log 查找密码，否则无法登陆<br>安装完成之后要用mysql_secure_instation 设置一下安全属性</p>
-<h1 id="mysql-基本指令"><a href="#mysql-基本指令" class="headerlink" title="mysql 基本指令"></a>mysql 基本指令</h1><ul>
-<li>CREATE DATABASE ssusers; 创建数据库</li>
-<li>DROP DATABASE ssusers; 删除数据库</li>
-<li>SHOW DATABASES; 显示数据库</li>
-<li>CREATE USER ‘ssmanger‘@’localhost’ IDENTIFIED BY ‘123456’; 创建用户 ssmanger 本机可以访问 mysql</li>
-<li>GRANT ALL privileges  ON  ssusers.* TO ssmanger@’localhost’; 将数据库所有权限给用户 ssmanager</li>
-<li>SET PASSWORD FOR ‘username‘@’host’ &#x3D; PASSWORD(‘newpassword’); 更新mysql用户密码</li>
-<li>CREATE USER ‘wordpressadmin‘@’%’ IDENTIFIED BY ‘123456’; 创建用户 wordpressadmin在所有ip可以访问mysql<h1 id="mysql-多表查询"><a href="#mysql-多表查询" class="headerlink" title="mysql 多表查询"></a>mysql 多表查询</h1></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/02/14/linux-cmd/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/14/linux-cmd/" class="post-title-link" itemprop="url">Linux commands</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-14 16:06:06" itemprop="dateCreated datePublished" datetime="2020-02-14T16:06:06+08:00">2020-02-14</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="linux-命令列表"><a href="#linux-命令列表" class="headerlink" title="linux 命令列表"></a>linux 命令列表</h1><ol>
-<li><p>systemctl (Control the systemd system and service manager)</p>
-<p> systemd 系统用来替代之前的linux 中的system V 目的在于统一系统服务,<br> 并行启动系统服务程序,加快系统启动,大部分现代linux使用此程序引导系统.<br> <strong>常用命令如下</strong></p>
-</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#    systemctl enable service_name</span></span><br><span class="line"><span class="comment">#    systemctl start service_name</span></span><br><span class="line"><span class="comment">#    systemctl status service_name</span></span><br><span class="line"><span class="comment">#    systemctl restart service_name</span></span><br><span class="line"><span class="comment">#    systemctl disable service_name</span></span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>pushd  popd</li>
-</ol>
-<p>　　pushd dir_name 切换目录的同时把当前目录圧入栈,方便后续使用popd 弹出栈切换目录  </p>
-<p>　　popd 弹出上一次的目录栈，相当于cd -<br>    popd 可以多次使用，直到目录栈为空，cd - 多次使用只会在两个目录之间来回切换</p>
-<ol start="3">
-<li><p>grep  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ grep -nrw getPower --include=<span class="string">&quot;*.h,*.c&quot;</span></span><br></pre></td></tr></table></figure>
-<p>　　递归的查找当前目录中c文件和头文件，全词匹配 getPower -n 显示行号， -w 全词匹配 -r递归</p>
-</li>
-<li><p>sed(stream editor for filtering and transforming text)  </p>
-<p> 流文本编辑器，执行格式匹配和替换 -i 输出到源文件</p>
-</li>
-<li><p>firewall-cmd 取代 ipfilter</p>
-</li>
-</ol>
-<p>　　debian系的 可以通过sudo apt-get -y install firewalld安装<br>    * 开放端口<br>sudo firewall-cmd –permanent –add-port&#x3D;22444&#x2F;udp &amp;&amp; sudo firewall-cmd –permanent –add-port&#x3D;22444&#x2F;tcp &amp;&amp; sudo firewall-cmd –reload<br>    * 关闭端口<br>sudo firewall-cmd –permanent –remove-port&#x3D;22444&#x2F;udp &amp;&amp; sudo firewall-cmd –permanent –remove-port&#x3D;22444&#x2F;tcp &amp;&amp; sudo firewall-cmd –reload<br>    * 将80端口的流量转发至192.168.0.1的8080端口<br>sudo firewall-cmd –permanent –add-forward-port&#x3D;port&#x3D;80:proto&#x3D;tcp:toaddr&#x3D;192.168.0.1:toport&#x3D;8080<br>    *使防火墙规则生效 </br><br>    firewall-cmd –reload<br>    * 列出所有的防火墙规则 </br><br>    firewall-cmd  –list-all<br>    * 列出所有的防火墙允许通过的服务规则</br><br>    firewall-cmd –list-services<br>    * 列出所有的防火墙开放端口规则</br> firewall-cmd –list-ports<br>6. yum install python-pip python34-pip </br><br>　　centos 安装pip 管理python包</p>
-<h2 id="cetnos-selinux-下开启-x2F-变更-ssh-端口"><a href="#cetnos-selinux-下开启-x2F-变更-ssh-端口" class="headerlink" title="cetnos selinux 下开启&#x2F;变更 ssh 端口"></a>cetnos selinux 下开启&#x2F;变更 ssh 端口</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum provides semanage 查询哪个软件包提供 semanage ,debian系的 用apt-cache search semanage</span></span><br><span class="line"><span class="comment"># yum -y install policycoreutils-python</span></span><br><span class="line"><span class="comment"># semanage port -a -t ssh_port_t -p tcp #PORTNUMBER</span></span><br></pre></td></tr></table></figure>
-<h2 id="linux-安装-libsodium"><a href="#linux-安装-libsodium" class="headerlink" title="linux 安装 libsodium"></a>linux 安装 libsodium</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz</span><br><span class="line">tar xfz LATEST.tar.gz &amp;&amp; <span class="built_in">cd</span> libsodium-stable/</span><br></pre></td></tr></table></figure>
-<h2 id="centos-安装epel软件源"><a href="#centos-安装epel软件源" class="headerlink" title="centos 安装epel软件源"></a>centos 安装epel软件源</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum -y update &amp;&amp; yum -y install epel-release</span></span><br></pre></td></tr></table></figure>
-<h2 id="opensuse-搜索软件组"><a href="#opensuse-搜索软件组" class="headerlink" title="opensuse 搜索软件组"></a>opensuse 搜索软件组</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># zypper install -t pattern</span></span><br></pre></td></tr></table></figure>
-<h2 id="opensuse-中文指导文档"><a href="#opensuse-中文指导文档" class="headerlink" title="opensuse 中文指导文档"></a>opensuse 中文指导文档</h2><p><a target="_blank" rel="noopener" href="https://opensuse-guide.ustclug.org/srvlamp.php">文档链接</a></p>
-<h2 id="查看linux运行级别"><a href="#查看linux运行级别" class="headerlink" title="查看linux运行级别"></a>查看linux运行级别</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">who</span> -r</span><br><span class="line">$ runlevel</span><br></pre></td></tr></table></figure>
-<h2 id="查看linux的默认网关"><a href="#查看linux的默认网关" class="headerlink" title="查看linux的默认网关"></a>查看linux的默认网关</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ route -n</span><br><span class="line">$ netstat -nr</span><br></pre></td></tr></table></figure>
-<h1 id="install-ssh"><a href="#install-ssh" class="headerlink" title="install ssh"></a>install ssh</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install ssh</span><br></pre></td></tr></table></figure>
-<h1 id="install-man-pages"><a href="#install-man-pages" class="headerlink" title="install man pages"></a>install man pages</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install manpages-posix-dev</span><br><span class="line">apt-get install glibc-doc</span><br></pre></td></tr></table></figure>
-<h1 id="install-git"><a href="#install-git" class="headerlink" title="install git"></a>install git</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install git-core gitk</span><br></pre></td></tr></table></figure>
-<h1 id="install-build-essential"><a href="#install-build-essential" class="headerlink" title="install build-essential"></a>install build-essential</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">atp-get install build-essential gcc-doc</span><br></pre></td></tr></table></figure>
-<h1 id="change-all-files-permession-current-dir"><a href="#change-all-files-permession-current-dir" class="headerlink" title="change all files permession  current dir"></a>change all files permession  current dir</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ./ -<span class="built_in">type</span> d -<span class="built_in">exec</span> <span class="built_in">chmod</span> 644 &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-<h1 id="change-all-dir-permession-in-current-dir"><a href="#change-all-dir-permession-in-current-dir" class="headerlink" title="change all dir permession in  current dir"></a>change all dir permession in  current dir</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find path -<span class="built_in">type</span> d -<span class="built_in">exec</span> <span class="built_in">chmod</span> 755 &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-<h1 id="what-todo-whit-DHCP-timeout-is-taking-so-long"><a href="#what-todo-whit-DHCP-timeout-is-taking-so-long" class="headerlink" title="what todo whit DHCP timeout is taking so long."></a>what todo whit DHCP timeout is taking so long.</h1><p> Edit /etc&#x2F;sysconfig&#x2F;network&#x2F;dhcp and change the values for DHCLIENT_WAIT_AT_BOOT and DHCLIENT6 WAIT AT BOOT</p>
-<h1 id="目录介绍"><a href="#目录介绍" class="headerlink" title="目录介绍"></a>目录介绍</h1><ol>
-<li>/usr&#x2F;local&#x2F; 一般安装自己编译的软件</li>
-<li>debian系的&#x2F;lib&#x2F;systemd&#x2F;system 目录下有各种service文件和系统运行级别的target文件</li>
-<li>debian系的 /usr&#x2F;lib&#x2F;systemd&#x2F;usr&#x2F; 目录一般存放用户定义的service</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/02/14/about-ffmpeg/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/14/about-ffmpeg/" class="post-title-link" itemprop="url">About FFmpeg</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-14 15:55:52" itemprop="dateCreated datePublished" datetime="2020-02-14T15:55:52+08:00">2020-02-14</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="FFmpeg-是开源音视频解码库"><a href="#FFmpeg-是开源音视频解码库" class="headerlink" title="FFmpeg 是开源音视频解码库"></a>FFmpeg 是开源音视频解码库</h1><p>　　很多音视频软件都使用到了ffmpeg的解码库</p>
-<h1 id="把图片从raw-data-转换成jpg的命令"><a href="#把图片从raw-data-转换成jpg的命令" class="headerlink" title="把图片从raw data 转换成jpg的命令"></a>把图片从raw data 转换成jpg的命令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ffmpeg -i inputrawdata -s 512x800  -f rgb565   -f image2 -o out.jpeg</span><br></pre></td></tr></table></figure>
-<h1 id="音视频合并-从网站上下载的视频可能音频和视频分开的为了方便观看需要合并"><a href="#音视频合并-从网站上下载的视频可能音频和视频分开的为了方便观看需要合并" class="headerlink" title="音视频合并 从网站上下载的视频可能音频和视频分开的为了方便观看需要合并"></a>音视频合并 从网站上下载的视频可能音频和视频分开的为了方便观看需要合并</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ffmpeg -i inputaudio -i inputvideo  output.mp4</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2020/02/02/about-uml/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/02/about-uml/" class="post-title-link" itemprop="url">About UML</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-02-02 20:47:07" itemprop="dateCreated datePublished" datetime="2020-02-02T20:47:07+08:00">2020-02-02</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="UML-是啥"><a href="#UML-是啥" class="headerlink" title="UML 是啥"></a>UML 是啥</h1><p>　　The Unified Modeling Language (UML) is a general-purpose, developmental, modeling language in the field of software engineering<br>that is intended to provide a standard way to visualize the design of a system.</p>
-<h1 id="UML-中的十种图"><a href="#UML-中的十种图" class="headerlink" title="UML 中的十种图"></a>UML 中的十种图</h1><ul>
-<li>静态模型图： 描述系统的静态结构<ul>
-<li><strong>类图</strong></li>
-<li>对象图</li>
-<li>包图</li>
-<li>组件图</li>
-<li>部署图</li>
-</ul>
-</li>
-<li>动态模型图： 描述系统行为的各个方面<ul>
-<li><strong>用例图</strong></li>
-<li><strong>时序图</strong></li>
-<li><strong>活动图</strong></li>
-<li>协作图</li>
-<li>状态图</li>
-</ul>
-</li>
-</ul>
-<h1 id="UML-中的四种关系"><a href="#UML-中的四种关系" class="headerlink" title="UML 中的四种关系"></a>UML 中的四种关系</h1><ul>
-<li><strong>关联关系(association)</strong></li>
-<li><strong>依赖关系(dependency)</strong></li>
-<li><strong>泛化关系(generalization)</strong></li>
-<li><strong>实现关系(realization&#x2F;implementation)</strong></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
       }
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 
-        </div>
-          
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">wang shaodong</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
         
-          <span class="site-state-item-count">83</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">15</span>
-        <span class="site-state-item-name">tags</span>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Wang shaodong\'s Blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Wang shaodong's Blog</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">Wang shaodong's Blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/02/18/about-repo/" title="about repo">about repo</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-02-18T10:21:45.000Z" title="Created 2020-02-18 18:21:45">2020-02-18</time></span></div><div class="content">什么是repoRepo 简化了跨多个代码库运行的流程，与 Git 相辅相成。请参阅源代码控制工具，了解有关 Repo 和 Git 之间关系的说明。如需详细了解 Repo，请参阅 Repo 命令参考资料和 Repo README。 repo 命令格式使用 Repo 需遵循的格式如下： repo command options 可选元素显示在方括号 [ ] 中。例如，许多命令会用到项目列表 (project-list) 参数。项目列表可以是一个名称列表，也可以是一个本地源代码目录的路径列表： repo 的命令使用repo sync [project0 project1 … projectn]repo sync [&#x2F;path&#x2F;to&#x2F;project0 … &#x2F;path&#x2F;to&#x2F;projectn] help安装 Repo 后，您可以通过运行以下命令找到最新文档（开头是包含所有命令的摘要）： repo help 您可以通过在 Repo 树中运行以下命令来获取有关某个命令的信息： repo help command 例如，以下命令会生成 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/02/18/about-opensuse/" title="Linux中的奇葩opensuse">Linux中的奇葩opensuse</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-02-18T10:18:36.000Z" title="Created 2020-02-18 18:18:36">2020-02-18</time></span></div><div class="content">安装完成之后的软件源切换 禁用所有软件源1$ sudo zypper mr -da 添加阿里镜像源1234$ sudo zypper ar -fc https://mirrors.aliyun.com/opensuse/distribution/leap/15.1/repo/oss openSUSE-Aliyun-OSS ;$ sudo zypper ar -fc https://mirrors.aliyun.com/opensuse/distribution/leap/15.1/repo/non-oss openSUSE-Aliyun-NON-OSS ;$ sudo zypper ar -fc https://mirrors.aliyun.com/opensuse/update/leap/15.1/oss openSUSE-Aliyun-UPDATE-OSS ;$ sudo zypper ar -fc https://mirrors.aliyun.com/opensuse/update/leap/15.1/non-oss openSUSE-Aliyun-UPDATE-NON-O...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/02/18/bit-opteration/" title="位运算、原码、反码、补码">位运算、原码、反码、补码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-02-18T09:49:04.000Z" title="Created 2020-02-18 17:49:04">2020-02-18</time></span></div><div class="content">位运算的地位　以下内容摘自《枕边算法书》感觉对于位运算描述的很形象  　　对于程序员来说,”位” 相当于现实世界中构成水和空气的粒子。编程世界的所有东西都会从位开始，以位结束。刚步入编程世界的初学者看到整数就是整数，看到字符串就是字符串。但功力深厚的程序员眼中无论整数还是字符串，它们都是位。   　　与系统编程不同，一般应用程序的编程对位运算的要求并不高。即使如此，很少有程序员不懂位运算，因为在不懂位运算的情况下编程写程序，就像在现实世界中不呼吸、不喝水一样，几乎不可能。  位运算的类型   运算符 含义    &amp; 按位与:全1才1,否则都0   | 按位或:有1得1,全0才0   ^ 按位异或:相异为真,相同为假   &gt;&gt; 右移:对于有符号数的右移分为算术右移和逻辑右移   &lt;&lt; 左移:比较简单不论是否有符号整数   ~ 取反:每个位1变0,0变1   对于正整数而言，左移1位就是x2,右移就是除2    下图来自《Computer Systems - A Programmer’s Perspective》        算术右移:直接右移n位,...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/02/16/c-array/" title="C语言中数组">C语言中数组</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-02-16T04:04:57.000Z" title="Created 2020-02-16 12:04:57">2020-02-16</time></span></div><div class="content">数组的奇葩  C语言中x[i]的计算方法 *(x + i)  x是个数组名，一般写数组的时候，x是常量指针,当x是0的时候没问题 1234int is_big_endian()&#123;    int a = 0xbabe;    return 0[(unsigned char *)&amp;a] == 0xbe;&#125;  123456789101112int i; // 未初始化的全局变量，被初始化成0main ()&#123;  // read 是自定义函数, read(0, i++ + &quot;hello, world!\n&quot;, 1); 实际上调用了系统调用write(1,指向hello, world!的指针，每次偏移一,1);  // i[&quot;]&lt;i;++i)&#123;--i;&#125;&quot;] 是判断 *(&quot;]&lt;i;++i)&#123;--i;&quot;的地址 偏移 i) 是否为0，&quot;]&lt;i;++i)&#123;--i;&quot; 的长度和 &quot;hello, world!&quot...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/02/15/c-main/" title="C 语言中的main函数">C 语言中的main函数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-02-15T15:48:28.000Z" title="Created 2020-02-15 23:48:28">2020-02-15</time></span></div><div class="content">C语言中main写法12345678910111213141516171819202122232425// 接受任意参数但不起作用int main()&#123;    return 0;&#125;// 明确不接受任何参数int main(void)&#123;    return 0;&#125;// argc 参数的个数， argv 指向参数字符的首地址int main(int argc, char **argv)&#123;    return 0;&#125;// 同上，第二个参数的不同写法int main(int argc, char *argv[])&#123;    return 0;&#125;// 此版本可以打印出环境变量int main(int argc, char *argv[], char *env)&#123;    return 0;&#125; 关于main函数 main函数并非必须存在，只是约定俗成的一个程序启动入口罢了,main函数被crt(C语言运行时)调用可以通过编译器指令来替换入口函数12345678// entry.c#include ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/02/14/about-bash/" title="About Bash">About Bash</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-02-14T10:10:06.000Z" title="Created 2020-02-14 18:10:06">2020-02-14</time></span></div><div class="content">Bash的环境变量 PROMPT_DIRTRIM修改PS1中dir的个数 trim 留下几层目录  bashrc 检查错误1$ bash -n ~/.bashrc</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/02/14/about-mysql/" title="mysql">mysql</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-02-14T09:20:24.000Z" title="Created 2020-02-14 17:20:24">2020-02-14</time></span></div><div class="content">mysql 是很流行的一款开源数据库软件　　mysql是跨平台的关系型数据库，安装可以参考mysql安装官网指导 mysql好像是从5.7版本之后，安装完会有一个随机的root密码使用grep password &#x2F;var&#x2F;log&#x2F;mysqld.log 查找密码，否则无法登陆安装完成之后要用mysql_secure_instation 设置一下安全属性 mysql 基本指令 CREATE DATABASE ssusers; 创建数据库 DROP DATABASE ssusers; 删除数据库 SHOW DATABASES; 显示数据库 CREATE USER ‘ssmanger‘@’localhost’ IDENTIFIED BY ‘123456’; 创建用户 ssmanger 本机可以访问 mysql GRANT ALL privileges  ON  ssusers.* TO ssmanger@’localhost’; 将数据库所有权限给用户 ssmanager SET PASSWORD FOR ‘username‘@’host’ &#x3D; P...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/02/14/linux-cmd/" title="Linux commands">Linux commands</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-02-14T08:06:06.000Z" title="Created 2020-02-14 16:06:06">2020-02-14</time></span></div><div class="content">linux 命令列表 systemctl (Control the systemd system and service manager)  systemd 系统用来替代之前的linux 中的system V 目的在于统一系统服务, 并行启动系统服务程序,加快系统启动,大部分现代linux使用此程序引导系统. 常用命令如下   12345#    systemctl enable service_name#    systemctl start service_name#    systemctl status service_name#    systemctl restart service_name#    systemctl disable service_name   pushd  popd  　　pushd dir_name 切换目录的同时把当前目录圧入栈,方便后续使用popd 弹出栈切换目录   　　popd 弹出上一次的目录栈，相当于cd -    popd 可以多次使用，直到目录栈为空，cd - 多次使用只会在两个目录之间来回切换  grep   1$ grep...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/02/14/about-ffmpeg/" title="About FFmpeg">About FFmpeg</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-02-14T07:55:52.000Z" title="Created 2020-02-14 15:55:52">2020-02-14</time></span></div><div class="content">FFmpeg 是开源音视频解码库　　很多音视频软件都使用到了ffmpeg的解码库 把图片从raw data 转换成jpg的命令1$ ffmpeg -i inputrawdata -s 512x800  -f rgb565   -f image2 -o out.jpeg 音视频合并 从网站上下载的视频可能音频和视频分开的为了方便观看需要合并1$ ffmpeg -i inputaudio -i inputvideo  output.mp4</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2020/02/02/about-uml/" title="About UML">About UML</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2020-02-02T12:47:07.000Z" title="Created 2020-02-02 20:47:07">2020-02-02</time></span></div><div class="content">UML 是啥　　The Unified Modeling Language (UML) is a general-purpose, developmental, modeling language in the field of software engineeringthat is intended to provide a standard way to visualize the design of a system. UML 中的十种图 静态模型图： 描述系统的静态结构 类图 对象图 包图 组件图 部署图   动态模型图： 描述系统行为的各个方面 用例图 时序图 活动图 协作图 状态图    UML 中的四种关系 关联关系(association) 依赖关系(dependency) 泛化关系(generalization) 实现关系(realization&#x2F;implementation)  </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/6/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/#content-inner">8</a><a class="page-number" href="/page/9/#content-inner">9</a><a class="extend next" rel="next" href="/page/8/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">wang shaodong</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">83</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/13/contact-ways/" title="Contact ways">Contact ways</a><time datetime="2026-06-13T06:18:09.000Z" title="Created 2026-06-13 14:18:09">2026-06-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/24/hexo-doc/" title="Hexo Quick Manual">Hexo Quick Manual</a><time datetime="2023-01-24T04:04:24.000Z" title="Created 2023-01-24 12:04:24">2023-01-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/23/kernel-structs-pos/" title="kernel structs pos">kernel structs pos</a><time datetime="2022-03-23T15:53:55.000Z" title="Created 2022-03-23 23:53:55">2022-03-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/23/busybox-suid-support/" title="busybox SUID support">busybox SUID support</a><time datetime="2022-03-23T15:53:12.000Z" title="Created 2022-03-23 23:53:12">2022-03-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/23/kernel-img-formats/" title="kernel image formats">kernel image formats</a><time datetime="2022-03-23T15:52:17.000Z" title="Created 2022-03-23 23:52:17">2022-03-23</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/Tool/" style="font-size: 1.3em; color: #99a1ac">Tool</a> <a href="/tags/Others/" style="font-size: 1.1em; color: #999">Others</a> <a href="/tags/sql/" style="font-size: 1.1em; color: #999">sql</a> <a href="/tags/shell/" style="font-size: 1.1em; color: #999">shell</a> <a href="/tags/Tools-git/" style="font-size: 1.1em; color: #999">Tools git</a> <a href="/tags/terms/" style="font-size: 1.1em; color: #999">terms</a> <a href="/tags/Tools/" style="font-size: 1.1em; color: #999">Tools</a> <a href="/tags/algorithm-C-C/" style="font-size: 1.1em; color: #999">algorithm C/C++</a> <a href="/tags/other/" style="font-size: 1.1em; color: #999">other</a> <a href="/tags/alogrithm/" style="font-size: 1.1em; color: #999">alogrithm</a> <a href="/tags/Linux-C/" style="font-size: 1.1em; color: #999">Linux/C</a> <a href="/tags/C-C/" style="font-size: 1.4em; color: #99a5b6">C/C++</a> <a href="/tags/Linux/" style="font-size: 1.5em; color: #99a9bf">Linux</a> <a href="/tags/tools/" style="font-size: 1.2em; color: #999da3">tools</a> <a href="/tags/others/" style="font-size: 1.2em; color: #999da3">others</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      <a class="card-more-btn" href="/archives/"
+            title="View More">
+            <i class="fas fa-angle-right"></i>
+          </a>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
   
-  &copy; 
-  <span itemprop="copyrightYear">2026</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">wang shaodong</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-</body>
-</html>
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/06/">
+            <span class="card-archive-list-date">
+              June 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/01/">
+            <span class="card-archive-list-date">
+              January 2023
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/03/">
+            <span class="card-archive-list-date">
+              March 2022
+            </span>
+            <span class="card-archive-list-count">19</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2021/09/">
+            <span class="card-archive-list-date">
+              September 2021
+            </span>
+            <span class="card-archive-list-count">6</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2021/08/">
+            <span class="card-archive-list-date">
+              August 2021
+            </span>
+            <span class="card-archive-list-count">11</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2020/08/">
+            <span class="card-archive-list-date">
+              August 2020
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2020/06/">
+            <span class="card-archive-list-date">
+              June 2020
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2020/05/">
+            <span class="card-archive-list-date">
+              May 2020
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">83</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-06-14T11:42:49.207Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By wang shaodong</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.5</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.5"></script><script src="/js/main.js?v=5.5.5"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

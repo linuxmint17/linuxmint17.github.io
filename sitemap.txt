@@ -1,5 +1,5 @@
 http://linuxmint17.github.io/2026/06/13/contact-ways/
-http://linuxmint17.github.io/2026/06/13/hexo-doc/
+http://linuxmint17.github.io/2023/01/24/hexo-doc/
 http://linuxmint17.github.io/2022/03/23/kernel-structs-pos/
 http://linuxmint17.github.io/2022/03/23/busybox-suid-support/
 http://linuxmint17.github.io/2022/03/23/kernel-img-formats/
@@ -96,7 +96,7 @@ http://linuxmint17.github.io/tags/Tools-git/
 http://linuxmint17.github.io/tags/terms/
 http://linuxmint17.github.io/tags/Linux-C/
 http://linuxmint17.github.io/tags/others/
-http://linuxmint17.github.io/tags/sql/
 http://linuxmint17.github.io/tags/alogrithm/
 http://linuxmint17.github.io/tags/shell/
+http://linuxmint17.github.io/tags/sql/
 http://linuxmint17.github.io/tags/algorithm-C-C/

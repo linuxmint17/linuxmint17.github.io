@@ -1,215 +1,179 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"linuxmint17.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"public/search.xml"};
-  </script>
-
-  <meta name="description" content="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作模式切换，此处的模式不一定是vim官方的叫法，主要是我自己的理解浏览模式（只能使用hjkl进行上下左右光标切换）到编辑模式（可以输入字符）   键盘上的小写字符（a,i,o)   a（append)光标的后边位置加入字符   i（insert)光标当前位置插入字符   o (open) 在光标的下一行新插入一行空行   键盘上的大写字符（A,">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>about-vim | Wang shaodong's Blog</title><meta name="author" content="wang shaodong"><meta name="copyright" content="wang shaodong"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作模式切换，此处的模式不一定是vim官方的叫法，主要是我自己的理解浏览模式（只能使用hjkl进行上下左右光标切换）到编辑模式（可以输入字符）   键盘上的小写字符（a,i,o)   a（append)光标的后边位置加入字符   i（insert)光标当前位置插入字符   o (open) 在光标的下一行新插入一行空行   键盘上的大写字符（A,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="about-vim">
 <meta property="og:url" content="http://linuxmint17.github.io/2021/08/26/about-vim/index.html">
 <meta property="og:site_name" content="Wang shaodong&#39;s Blog">
 <meta property="og:description" content="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作模式切换，此处的模式不一定是vim官方的叫法，主要是我自己的理解浏览模式（只能使用hjkl进行上下左右光标切换）到编辑模式（可以输入字符）   键盘上的小写字符（a,i,o)   a（append)光标的后边位置加入字符   i（insert)光标当前位置插入字符   o (open) 在光标的下一行新插入一行空行   键盘上的大写字符（A,">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://linuxmint17.github.io/img/butterfly-icon.png">
 <meta property="article:published_time" content="2021-08-25T23:51:06.000Z">
 <meta property="article:modified_time" content="2021-08-25T23:51:06.000Z">
 <meta property="article:author" content="wang shaodong">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://linuxmint17.github.io/2021/08/26/about-vim/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script>
-
-  <title>about-vim | Wang shaodong's Blog</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Wang shaodong's Blog</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
-    
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://linuxmint17.github.io/2021/08/26/about-vim/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wang shaodong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wang shaodong's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          about-vim
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-08-26 07:51:06" itemprop="dateCreated datePublished" datetime="2021-08-26T07:51:06+08:00">2021-08-26</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+<meta name="twitter:image" content="http://linuxmint17.github.io/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "about-vim",
+  "url": "http://linuxmint17.github.io/2021/08/26/about-vim/",
+  "image": "http://linuxmint17.github.io/img/butterfly-icon.png",
+  "datePublished": "2021-08-25T23:51:06.000Z",
+  "dateModified": "2021-08-25T23:51:06.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "wang shaodong",
+      "url": "http://linuxmint17.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://linuxmint17.github.io/2021/08/26/about-vim/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.5"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"><script>
+    (() => {
       
-        <h1 id="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"><a href="#本文章主要讲解vim的学习路径和常用配置及基本介绍和操作" class="headerlink" title="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"></a>本文章主要讲解vim的学习路径和常用配置及基本介绍和操作</h1><h1 id="模式切换，此处的模式不一定是vim官方的叫法，主要是我自己的理解"><a href="#模式切换，此处的模式不一定是vim官方的叫法，主要是我自己的理解" class="headerlink" title="模式切换，此处的模式不一定是vim官方的叫法，主要是我自己的理解"></a>模式切换，此处的模式不一定是vim官方的叫法，主要是我自己的理解</h1><h2 id="浏览模式（只能使用hjkl进行上下左右光标切换）到编辑模式（可以输入字符）"><a href="#浏览模式（只能使用hjkl进行上下左右光标切换）到编辑模式（可以输入字符）" class="headerlink" title="浏览模式（只能使用hjkl进行上下左右光标切换）到编辑模式（可以输入字符）"></a>浏览模式（只能使用hjkl进行上下左右光标切换）到编辑模式（可以输入字符）</h2><p>   键盘上的小写字符（a,i,o)<br>   a（append)光标的后边位置加入字符<br>   i（insert)光标当前位置插入字符<br>   o (open) 在光标的下一行新插入一行空行<br>   键盘上的大写字符（A,I,O)<br>   A（Append)在行尾加入字符<br>   I（Insert)在行首插入字符<br>   O (Open) 在光标的上一行新插入一行空行</p>
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'about-vim',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Wang shaodong's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">about-vim</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">about-vim</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-08-25T23:51:06.000Z" title="Created 2021-08-26 07:51:06">2021-08-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-08-25T23:51:06.000Z" title="Updated 2021-08-26 07:51:06">2021-08-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"><a href="#本文章主要讲解vim的学习路径和常用配置及基本介绍和操作" class="headerlink" title="本文章主要讲解vim的学习路径和常用配置及基本介绍和操作"></a>本文章主要讲解vim的学习路径和常用配置及基本介绍和操作</h1><h1 id="模式切换，此处的模式不一定是vim官方的叫法，主要是我自己的理解"><a href="#模式切换，此处的模式不一定是vim官方的叫法，主要是我自己的理解" class="headerlink" title="模式切换，此处的模式不一定是vim官方的叫法，主要是我自己的理解"></a>模式切换，此处的模式不一定是vim官方的叫法，主要是我自己的理解</h1><h2 id="浏览模式（只能使用hjkl进行上下左右光标切换）到编辑模式（可以输入字符）"><a href="#浏览模式（只能使用hjkl进行上下左右光标切换）到编辑模式（可以输入字符）" class="headerlink" title="浏览模式（只能使用hjkl进行上下左右光标切换）到编辑模式（可以输入字符）"></a>浏览模式（只能使用hjkl进行上下左右光标切换）到编辑模式（可以输入字符）</h2><p>   键盘上的小写字符（a,i,o)<br>   a（append)光标的后边位置加入字符<br>   i（insert)光标当前位置插入字符<br>   o (open) 在光标的下一行新插入一行空行<br>   键盘上的大写字符（A,I,O)<br>   A（Append)在行尾加入字符<br>   I（Insert)在行首插入字符<br>   O (Open) 在光标的上一行新插入一行空行</p>
 <h2 id="退出任意-命令模式，编辑模式，列编辑模式-模式到浏览模式"><a href="#退出任意-命令模式，编辑模式，列编辑模式-模式到浏览模式" class="headerlink" title="退出任意(命令模式，编辑模式，列编辑模式)模式到浏览模式"></a>退出任意(命令模式，编辑模式，列编辑模式)模式到浏览模式</h2><p>   按键盘上的Esc键一次不行，按两次<br>　 ## 从浏览模式到命令模式，英文冒号<br>   ： wq(保存退出)</p>
 <h2 id="浏览模式到行编辑模式"><a href="#浏览模式到行编辑模式" class="headerlink" title="浏览模式到行编辑模式"></a>浏览模式到行编辑模式</h2><ul>
-<li>V (大写字母v)，可以选中多行进行批量操作<h2 id="浏览模式下其他不常用的命令"><a href="#浏览模式下其他不常用的命令" class="headerlink" title="浏览模式下其他不常用的命令"></a>浏览模式下其他不常用的命令</h2><pre><code>J(大写字母j)可以合并当前行和下一行，当前行的行尾和下一行的首部合并到当前行
-</code></pre>
-</li>
+<li>V (大写字母v)，可以选中多行进行批量操作</li>
 </ul>
+<h2 id="浏览模式下其他不常用的命令"><a href="#浏览模式下其他不常用的命令" class="headerlink" title="浏览模式下其他不常用的命令"></a>浏览模式下其他不常用的命令</h2><pre><code>J(大写字母j)可以合并当前行和下一行，当前行的行尾和下一行的首部合并到当前行
+</code></pre>
 <h1 id="命令模式的常用命令"><a href="#命令模式的常用命令" class="headerlink" title="命令模式的常用命令"></a>命令模式的常用命令</h1><h2 id="x-保存并退出"><a href="#x-保存并退出" class="headerlink" title="x (保存并退出)"></a>x (保存并退出)</h2><h2 id="q-没有编辑，直接退出"><a href="#q-没有编辑，直接退出" class="headerlink" title="q (没有编辑，直接退出)"></a>q (没有编辑，直接退出)</h2><h2 id="q-已经编辑了，放弃修改退出"><a href="#q-已经编辑了，放弃修改退出" class="headerlink" title="q! (已经编辑了，放弃修改退出)"></a>q! (已经编辑了，放弃修改退出)</h2><h2 id="w-把编辑内容从缓存写入磁盘文件，即存盘"><a href="#w-把编辑内容从缓存写入磁盘文件，即存盘" class="headerlink" title="w (把编辑内容从缓存写入磁盘文件，即存盘)"></a>w (把编辑内容从缓存写入磁盘文件，即存盘)</h2><h2 id="！ls-（执行shell命令ls"><a href="#！ls-（执行shell命令ls" class="headerlink" title="！ls  （执行shell命令ls)"></a>！ls  （执行shell命令ls)</h2><h1 id="vim-redo"><a href="#vim-redo" class="headerlink" title="vim redo"></a>vim redo</h1><p>ctrl + R</p>
 <h1 id="学习vim的方法"><a href="#学习vim的方法" class="headerlink" title="学习vim的方法"></a>学习vim的方法</h1><ul>
 <li>vimtutor </li>
-<li>: help topic<h1 id="vim-打开没有权限的文件-忘记使用sudo打开-之后如何强制保存"><a href="#vim-打开没有权限的文件-忘记使用sudo打开-之后如何强制保存" class="headerlink" title="vim 打开没有权限的文件(忘记使用sudo打开) 之后如何强制保存"></a>vim 打开没有权限的文件(忘记使用sudo打开) 之后如何强制保存</h1>　　在vim的命令模式中输入:w !sudo tee %<h3 id="how-this-works-摘自stack-overflow"><a href="#how-this-works-摘自stack-overflow" class="headerlink" title="how this works 摘自stack overflow"></a>how this works 摘自<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work">stack overflow</a></h3><p>
-in :w !sudo tee %...</li>
+<li>: help topic</li>
 </ul>
+<h1 id="vim-打开没有权限的文件-忘记使用sudo打开-之后如何强制保存"><a href="#vim-打开没有权限的文件-忘记使用sudo打开-之后如何强制保存" class="headerlink" title="vim 打开没有权限的文件(忘记使用sudo打开) 之后如何强制保存"></a>vim 打开没有权限的文件(忘记使用sudo打开) 之后如何强制保存</h1><p>　　在vim的命令模式中输入:w !sudo tee %</p>
+<h3 id="how-this-works-摘自stack-overflow"><a href="#how-this-works-摘自stack-overflow" class="headerlink" title="how this works 摘自stack overflow"></a>how this works 摘自<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/2600783/how-does-the-vim-write-with-sudo-trick-work">stack overflow</a></h3><p>
+in :w !sudo tee %...
+
 <p>% means “the current file”<br>As eugene y pointed out, % does indeed mean “the current file name”, which is passed to tee so that it knows which file to overwrite.</p>
 <p>(In substitution commands, it’s slightly different; as :help :% shows, it’s equal to 1,$ (the entire file) (thanks to @Orafu for pointing out that this does not evaluate to the filename). For example, :%s&#x2F;foo&#x2F;bar means “in the current file, replace occurrences of foo with bar.” If you highlight some text before typing :s, you’ll see that the highlighted lines take the place of % as your substitution range.)</p>
 <p>:w isn’t updating your file<br>One confusing part of this trick is that you might think :w is modifying your file, but it isn’t. If you opened and modified file1.txt, then ran :w file2.txt, it would be a “save as”; file1.txt wouldn’t be modified, but the current buffer contents would be sent to file2.txt.</p>
@@ -234,191 +198,4 @@ in :w !sudo tee %...</li>
 <p>Tee as a hack<br>In the situation your question describes, using tee is a hack because we’re ignoring half of what it does. sudo tee writes to our file and also sends the buffer contents to standard output, but we ignore standard output. We don’t need to pass anything to another piped command in this case; we’re just using tee as an alternate way of writing a file and so that we can call it with sudo.</p>
 <p>Making this trick easy<br>You can add this to your .vimrc to make this trick easy-to-use: just type :w!!.</p>
 <p>“ Allow saving of files as sudo when I forgot to start vim using sudo.<br>cmap w!! w !sudo tee &gt; &#x2F;dev&#x2F;null %<br>The &gt; &#x2F;dev&#x2F;null part explicitly throws away the standard output, since, as I said, we don’t need to pass anything to another piped command.</p>
-</p>
-    </div>
-
-    
-    
-    
-
-      <footer class="post-footer">
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2021/08/26/about-poll-select/" rel="prev" title="about-poll-seletc">
-      <i class="fa fa-chevron-left"></i> about-poll-seletc
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/09/04/about-bus/" rel="next" title="about bus">
-      about bus <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%AC%E6%96%87%E7%AB%A0%E4%B8%BB%E8%A6%81%E8%AE%B2%E8%A7%A3vim%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84%E5%92%8C%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%E5%92%8C%E6%93%8D%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">本文章主要讲解vim的学习路径和常用配置及基本介绍和操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2%EF%BC%8C%E6%AD%A4%E5%A4%84%E7%9A%84%E6%A8%A1%E5%BC%8F%E4%B8%8D%E4%B8%80%E5%AE%9A%E6%98%AFvim%E5%AE%98%E6%96%B9%E7%9A%84%E5%8F%AB%E6%B3%95%EF%BC%8C%E4%B8%BB%E8%A6%81%E6%98%AF%E6%88%91%E8%87%AA%E5%B7%B1%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">2.</span> <span class="nav-text">模式切换，此处的模式不一定是vim官方的叫法，主要是我自己的理解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E6%A8%A1%E5%BC%8F%EF%BC%88%E5%8F%AA%E8%83%BD%E4%BD%BF%E7%94%A8hjkl%E8%BF%9B%E8%A1%8C%E4%B8%8A%E4%B8%8B%E5%B7%A6%E5%8F%B3%E5%85%89%E6%A0%87%E5%88%87%E6%8D%A2%EF%BC%89%E5%88%B0%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F%EF%BC%88%E5%8F%AF%E4%BB%A5%E8%BE%93%E5%85%A5%E5%AD%97%E7%AC%A6%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">浏览模式（只能使用hjkl进行上下左右光标切换）到编辑模式（可以输入字符）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%80%E5%87%BA%E4%BB%BB%E6%84%8F-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%EF%BC%8C%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F%EF%BC%8C%E5%88%97%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F-%E6%A8%A1%E5%BC%8F%E5%88%B0%E6%B5%8F%E8%A7%88%E6%A8%A1%E5%BC%8F"><span class="nav-number">2.2.</span> <span class="nav-text">退出任意(命令模式，编辑模式，列编辑模式)模式到浏览模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E6%A8%A1%E5%BC%8F%E5%88%B0%E8%A1%8C%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F"><span class="nav-number">2.3.</span> <span class="nav-text">浏览模式到行编辑模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E6%A8%A1%E5%BC%8F%E4%B8%8B%E5%85%B6%E4%BB%96%E4%B8%8D%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-number">2.4.</span> <span class="nav-text">浏览模式下其他不常用的命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">3.</span> <span class="nav-text">命令模式的常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#x-%E4%BF%9D%E5%AD%98%E5%B9%B6%E9%80%80%E5%87%BA"><span class="nav-number">3.1.</span> <span class="nav-text">x (保存并退出)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#q-%E6%B2%A1%E6%9C%89%E7%BC%96%E8%BE%91%EF%BC%8C%E7%9B%B4%E6%8E%A5%E9%80%80%E5%87%BA"><span class="nav-number">3.2.</span> <span class="nav-text">q (没有编辑，直接退出)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#q-%E5%B7%B2%E7%BB%8F%E7%BC%96%E8%BE%91%E4%BA%86%EF%BC%8C%E6%94%BE%E5%BC%83%E4%BF%AE%E6%94%B9%E9%80%80%E5%87%BA"><span class="nav-number">3.3.</span> <span class="nav-text">q! (已经编辑了，放弃修改退出)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#w-%E6%8A%8A%E7%BC%96%E8%BE%91%E5%86%85%E5%AE%B9%E4%BB%8E%E7%BC%93%E5%AD%98%E5%86%99%E5%85%A5%E7%A3%81%E7%9B%98%E6%96%87%E4%BB%B6%EF%BC%8C%E5%8D%B3%E5%AD%98%E7%9B%98"><span class="nav-number">3.4.</span> <span class="nav-text">w (把编辑内容从缓存写入磁盘文件，即存盘)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%81ls-%EF%BC%88%E6%89%A7%E8%A1%8Cshell%E5%91%BD%E4%BB%A4ls"><span class="nav-number">3.5.</span> <span class="nav-text">！ls  （执行shell命令ls)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vim-redo"><span class="nav-number">4.</span> <span class="nav-text">vim redo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%A6%E4%B9%A0vim%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">5.</span> <span class="nav-text">学习vim的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vim-%E6%89%93%E5%BC%80%E6%B2%A1%E6%9C%89%E6%9D%83%E9%99%90%E7%9A%84%E6%96%87%E4%BB%B6-%E5%BF%98%E8%AE%B0%E4%BD%BF%E7%94%A8sudo%E6%89%93%E5%BC%80-%E4%B9%8B%E5%90%8E%E5%A6%82%E4%BD%95%E5%BC%BA%E5%88%B6%E4%BF%9D%E5%AD%98"><span class="nav-number">6.</span> <span class="nav-text">vim 打开没有权限的文件(忘记使用sudo打开) 之后如何强制保存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#how-this-works-%E6%91%98%E8%87%AAstack-overflow"><span class="nav-number">6.0.1.</span> <span class="nav-text">how this works 摘自stack overflow</span></a></li></ol></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">wang shaodong</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">83</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">15</span>
-        <span class="site-state-item-name">tags</span>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2026</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">wang shaodong</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-</body>
-</html>
+</p></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://linuxmint17.github.io">wang shaodong</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://linuxmint17.github.io/2021/08/26/about-vim/">http://linuxmint17.github.io/2021/08/26/about-vim/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2021/09/04/about-bus/" title="about bus"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">about bus</div></div><div class="info-2"><div class="info-item-1">总线,  计算机的组成部件间用于传输数据或者指令的物理（软件逻辑）线路，以下列举一些嵌入式中常见的总线和其他总线 MIPIHDMISPI  　　标准的SPI总线是有CS（chip select)&#x2F;SS(slave select), CLOCK, MISO(Master IN Slave out), MOSI 四条线，用于nor flash的扩展的SPI额外多了两条引脚 WP（write protect）,HOLD(用于禁止主机和flash器件的所有通讯)  　　常见的1-wire(只用一条数据线，bitbang,只能单工), 2-wire（可以双工）, 4-wire(使用WP和HOLD脚作为额外的两条数据线) 都是说用来传输数据的线的数量  标准的是2-wire, 1-wire 为了节约引脚，4-wire为了提升速率　　SPI通信的开始总是以CS引脚电平拉低开始，拉高而结束  SPI clock的极性（ploar）和相位(phase) 各有0，1两种排列组合出来共有4种，所以spi有4种工作模式　　 四种模式的差异在于读取数据的时机是在第一个还是第二个跳变沿，是上升沿还...</div></div></div></a><a class="pagination-related" href="/2021/08/26/about-poll-select/" title="about-poll-seletc"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">about-poll-seletc</div></div><div class="info-2"><div class="info-item-1">平台特性linux : select poll epoolwindows: select </div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">wang shaodong</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">83</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E6%96%87%E7%AB%A0%E4%B8%BB%E8%A6%81%E8%AE%B2%E8%A7%A3vim%E7%9A%84%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84%E5%92%8C%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E5%8F%8A%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%E5%92%8C%E6%93%8D%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">本文章主要讲解vim的学习路径和常用配置及基本介绍和操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2%EF%BC%8C%E6%AD%A4%E5%A4%84%E7%9A%84%E6%A8%A1%E5%BC%8F%E4%B8%8D%E4%B8%80%E5%AE%9A%E6%98%AFvim%E5%AE%98%E6%96%B9%E7%9A%84%E5%8F%AB%E6%B3%95%EF%BC%8C%E4%B8%BB%E8%A6%81%E6%98%AF%E6%88%91%E8%87%AA%E5%B7%B1%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">2.</span> <span class="toc-text">模式切换，此处的模式不一定是vim官方的叫法，主要是我自己的理解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E6%A8%A1%E5%BC%8F%EF%BC%88%E5%8F%AA%E8%83%BD%E4%BD%BF%E7%94%A8hjkl%E8%BF%9B%E8%A1%8C%E4%B8%8A%E4%B8%8B%E5%B7%A6%E5%8F%B3%E5%85%89%E6%A0%87%E5%88%87%E6%8D%A2%EF%BC%89%E5%88%B0%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F%EF%BC%88%E5%8F%AF%E4%BB%A5%E8%BE%93%E5%85%A5%E5%AD%97%E7%AC%A6%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">浏览模式（只能使用hjkl进行上下左右光标切换）到编辑模式（可以输入字符）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%80%E5%87%BA%E4%BB%BB%E6%84%8F-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%EF%BC%8C%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F%EF%BC%8C%E5%88%97%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F-%E6%A8%A1%E5%BC%8F%E5%88%B0%E6%B5%8F%E8%A7%88%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.2.</span> <span class="toc-text">退出任意(命令模式，编辑模式，列编辑模式)模式到浏览模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E6%A8%A1%E5%BC%8F%E5%88%B0%E8%A1%8C%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.3.</span> <span class="toc-text">浏览模式到行编辑模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E6%A8%A1%E5%BC%8F%E4%B8%8B%E5%85%B6%E4%BB%96%E4%B8%8D%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="toc-number">2.4.</span> <span class="toc-text">浏览模式下其他不常用的命令</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text">命令模式的常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#x-%E4%BF%9D%E5%AD%98%E5%B9%B6%E9%80%80%E5%87%BA"><span class="toc-number">3.1.</span> <span class="toc-text">x (保存并退出)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#q-%E6%B2%A1%E6%9C%89%E7%BC%96%E8%BE%91%EF%BC%8C%E7%9B%B4%E6%8E%A5%E9%80%80%E5%87%BA"><span class="toc-number">3.2.</span> <span class="toc-text">q (没有编辑，直接退出)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#q-%E5%B7%B2%E7%BB%8F%E7%BC%96%E8%BE%91%E4%BA%86%EF%BC%8C%E6%94%BE%E5%BC%83%E4%BF%AE%E6%94%B9%E9%80%80%E5%87%BA"><span class="toc-number">3.3.</span> <span class="toc-text">q! (已经编辑了，放弃修改退出)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#w-%E6%8A%8A%E7%BC%96%E8%BE%91%E5%86%85%E5%AE%B9%E4%BB%8E%E7%BC%93%E5%AD%98%E5%86%99%E5%85%A5%E7%A3%81%E7%9B%98%E6%96%87%E4%BB%B6%EF%BC%8C%E5%8D%B3%E5%AD%98%E7%9B%98"><span class="toc-number">3.4.</span> <span class="toc-text">w (把编辑内容从缓存写入磁盘文件，即存盘)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EF%BC%81ls-%EF%BC%88%E6%89%A7%E8%A1%8Cshell%E5%91%BD%E4%BB%A4ls"><span class="toc-number">3.5.</span> <span class="toc-text">！ls  （执行shell命令ls)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vim-redo"><span class="toc-number">4.</span> <span class="toc-text">vim redo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0vim%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">学习vim的方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vim-%E6%89%93%E5%BC%80%E6%B2%A1%E6%9C%89%E6%9D%83%E9%99%90%E7%9A%84%E6%96%87%E4%BB%B6-%E5%BF%98%E8%AE%B0%E4%BD%BF%E7%94%A8sudo%E6%89%93%E5%BC%80-%E4%B9%8B%E5%90%8E%E5%A6%82%E4%BD%95%E5%BC%BA%E5%88%B6%E4%BF%9D%E5%AD%98"><span class="toc-number">6.</span> <span class="toc-text">vim 打开没有权限的文件(忘记使用sudo打开) 之后如何强制保存</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#how-this-works-%E6%91%98%E8%87%AAstack-overflow"><span class="toc-number">6.1.</span> <span class="toc-text">how this works 摘自stack overflow</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/13/contact-ways/" title="Contact ways">Contact ways</a><time datetime="2026-06-13T06:18:09.000Z" title="Created 2026-06-13 14:18:09">2026-06-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/24/hexo-doc/" title="Hexo Quick Manual">Hexo Quick Manual</a><time datetime="2023-01-24T04:04:24.000Z" title="Created 2023-01-24 12:04:24">2023-01-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/23/kernel-structs-pos/" title="kernel structs pos">kernel structs pos</a><time datetime="2022-03-23T15:53:55.000Z" title="Created 2022-03-23 23:53:55">2022-03-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/23/busybox-suid-support/" title="busybox SUID support">busybox SUID support</a><time datetime="2022-03-23T15:53:12.000Z" title="Created 2022-03-23 23:53:12">2022-03-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/23/kernel-img-formats/" title="kernel image formats">kernel image formats</a><time datetime="2022-03-23T15:52:17.000Z" title="Created 2022-03-23 23:52:17">2022-03-23</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By wang shaodong</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.5</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.5"></script><script src="/js/main.js?v=5.5.5"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
