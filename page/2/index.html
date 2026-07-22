@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Wang shaodong's Blog</title><meta name="author" content="wang shaodong"><meta name="copyright" content="wang shaodong"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Wang shaodong&#39;s Blog">
+<meta property="og:url" content="http://linuxmint17.github.io/page/2/index.html">
+<meta property="og:site_name" content="Wang shaodong&#39;s Blog">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://linuxmint17.github.io/img/butterfly-icon.png">
+<meta property="article:author" content="wang shaodong">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://linuxmint17.github.io/img/butterfly-icon.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://linuxmint17.github.io/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        const data = { value }
+
+        if (ttl != null) {
+          data.expiry = Date.now() + ttl * 86400000
+        }
+
+        localStorage.setItem(key, JSON.stringify(data))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Wang shaodong\'s Blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Wang shaodong's Blog</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">Wang shaodong's Blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/03/23/some-tools/" title="some tools">some tools</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-03-23T15:48:40.000Z" title="Created 2022-03-23 23:48:40">2022-03-23</time></span></div><div class="content"> 硬盘克隆软件再生龙 (Clonezilla)https://clonezilla.org/ 文件恢复软件Diskgeniushttps://www.diskgenius.com/ 系统启动盘软件Ventoy 支持多个iso, 可以启动的时候选择iso镜像文件https://www.ventoy.net/en/index.html  </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/03/23/coredump-file-fail2-produce/" title="Linux 下无法生成 coredump 文件">Linux 下无法生成 coredump 文件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-03-23T15:47:47.000Z" title="Created 2022-03-23 23:47:47">2022-03-23</time></span></div><div class="content"> 首先确认 linux内核配置支持了 coredump 然后 执行可执行文件的用户配置  1ulimit -c unlimited  其次 确认配置了 &#x2F;proc&#x2F;sys&#x2F;kernel&#x2F;core_pattern 指定的生成core的路径，user 有写入权限 如果可执行文件 被chmod u+s 或者g+s 改过属性 或者setcap 添加过 capability 需要修改 节点  1echo 2 &gt; /proc/sys/fs/suid_dumpable  配置 core_pattern  12345# 最简单的配置echo /tmp/core_%e_%p &gt; /proc/sys/kernel/core_pattern# 复杂一丢丢的echo /core/core_%e_%p &gt; /proc/sys/kernel/core_patternmkdir -m 1777 /core   一个相关的网站  https://sysctl-explorer.net/fs/suid_dumpable/  下方为man 5 core 的相...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/03/23/drop-cache-no-permession/" title="sudo echo 3 &gt; /proc/sys/vm/drop_caches 权限不足">sudo echo 3 &gt; /proc/sys/vm/drop_caches 权限不足</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-03-23T15:46:43.000Z" title="Created 2022-03-23 23:46:43">2022-03-23</time></span></div><div class="content">1234# 以下命令可以解决 sudo 权限不够的问题sudo bash -c &quot;echo 3 &gt; /proc/sys/vm/drop_caches&quot;# 以下命令也可以sudo sysctl -w vm.drop_caches=3 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/03/23/cmds-about-linux-capabiltiys/" title="Linux capabilities 相关的命令">Linux capabilities 相关的命令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-03-23T15:45:40.000Z" title="Created 2022-03-23 23:45:40">2022-03-23</time></span></div><div class="content"> 可以通过一些命令设置 可执行文件的capabilities 或者查看进程或者文件的capabilites  1234# opensuse 安装命令sudo zypper install  -y libcap-ng-utils libcap-progs# debian 安装命令sudo apt install libcap2-bin libcap-ng-utils 12# 查看当前有特殊capabilites的所有进程pscap -a  12# 查看指定进程的capababilitiesgetpcaps  1252  12# 显示文件系统中支持capabilities的 文件filecap  12345# 给 可执行文件赋予 capabilitysudo setcap  &#x27;cap_net_admin,cap_sys_admin&#x27;+eip /bin/busyboxsudo setcap &#x27;0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/03/23/embed-linux-bootargs-setup-and-mtd-autopartition/" title="嵌入式 bootargs mtd自动分区的设置">嵌入式 bootargs mtd自动分区的设置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-03-23T15:44:38.000Z" title="Created 2022-03-23 23:44:38">2022-03-23</time></span></div><div class="content"> 内核mtd子模块 需要开启 cmdline partition parse的支持  bootargs 要配置正确的分区表   uboot# setenv bootargs console=ttyS0,115200 root=/dev/mtdblock2 rootfstype=jffs2  init=/init mem=64M mtdparts=spi0.0:704k(boot),2048k(kernel),2432k(rootfs),1664k(drv),-(app) uboot# sa uboot# reset *  </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/03/23/about-encryption/" title="加密算法">加密算法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-03-23T15:43:12.000Z" title="Created 2022-03-23 23:43:12">2022-03-23</time></span></div><div class="content"> Sm3 国密加密华为的openEuler20 安装的时候 用户密码的加密存储支持  此算法 aes-ecb最简单的加密模式即为电子密码本（Electronic codebook，ECB）模式, 需要加密的消息按照块密码的块大小被分为数个块，并对每个块进行独立加密 aes-cbc1976年，IBM发明了密码分组链接（CBC，Cipher-block chaining）模式,在CBC模式中，每个明文块先与前一个密文块进行异或后，再进行加密。在这种方法中，每个密文块都依赖于它前面的所有明文块。同时，为了保证每条消息的唯一性，在第一个块中需要使用初始化向量.  </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/03/23/win-setup-boot-with-system/" title="windows 添加开机启动的位置">windows 添加开机启动的位置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-03-23T15:41:54.000Z" title="Created 2022-03-23 23:41:54">2022-03-23</time></span></div><div class="content">widows 添加开机启动的方法 可以通过把可执行文件的快捷方式拖拽到  shell:startup 路径中实现开机启动  12windows + R的运行窗口输入 shell:startup# C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup ps: 注册表编辑器的名字 ,与标题无关gpedit.msc </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/03/23/win-sys-fix-up/" title="windows 系统修复">windows 系统修复</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-03-23T15:40:49.000Z" title="Created 2022-03-23 23:40:49">2022-03-23</time></span></div><div class="content"> windows 修复  12345sfc /SCANNOW rem  上一条命令发现问题才执行后续命令Dism /Online /Cleanup-Image /ScanHealthDISM /Online /Cleanup-image /RestoreHealthsfc /SCANNOW </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/03/23/windows-configure-local-proxy/" title="windows 配置本地转发">windows 配置本地转发</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-03-23T15:39:33.000Z" title="Created 2022-03-23 23:39:33">2022-03-23</time></span></div><div class="content"> windows 配置本地转发  12345678netsh interface portproxy add v4tov4 listenaddress=127.0.0.1 listenport=445 connectaddress=114.114.114.114 connectport=1445# 监听本地 到445端口（samba)的 访问转发到 远端的 1445netsh interface portproxy delete v4tov4  listenaddress=127.0.0.1 listenport=445 protocol=tcp# 删除本地转发规则netsh interface portproxy show v4tov4#显示本地转发规则 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/03/23/windows-cmd-configure-samba-client/" title="windows 命令行 配置samba client">windows 命令行 配置samba client</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-03-23T15:38:02.000Z" title="Created 2022-03-23 23:38:02">2022-03-23</time></span></div><div class="content"> windows 命令行 配置samba  12345678910net use# 查看所有 samba 连接net use /delete *# 移除所有sambanet use z: /delete# 删除 z:盘映射net use z: \\192.168.28.22\wang  /user:username passwd# 挂载samba共享为 z:盘 </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/#content-inner">9</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">wang shaodong</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">84</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">15</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/linuxmint17"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/07/22/hexo-doc/" title="Hexo Quick Manual">Hexo Quick Manual</a><time datetime="2026-07-22T13:18:32.506Z" title="Created 2026-07-22 21:18:32">2026-07-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/07/22/hello-world/" title="Hello World">Hello World</a><time datetime="2026-07-22T13:15:56.661Z" title="Created 2026-07-22 21:15:56">2026-07-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/13/contact-ways/" title="Contact ways">Contact ways</a><time datetime="2026-06-13T06:18:09.000Z" title="Created 2026-06-13 14:18:09">2026-06-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/23/kernel-structs-pos/" title="kernel structs pos">kernel structs pos</a><time datetime="2022-03-23T15:53:55.000Z" title="Created 2022-03-23 23:53:55">2022-03-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/23/busybox-suid-support/" title="busybox SUID support">busybox SUID support</a><time datetime="2022-03-23T15:53:12.000Z" title="Created 2022-03-23 23:53:12">2022-03-23</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/tools/" style="font-size: 1.2em; color: #999da3">tools</a> <a href="/tags/others/" style="font-size: 1.2em; color: #999da3">others</a> <a href="/tags/terms/" style="font-size: 1.1em; color: #999">terms</a> <a href="/tags/other/" style="font-size: 1.1em; color: #999">other</a> <a href="/tags/Tools-git/" style="font-size: 1.1em; color: #999">Tools git</a> <a href="/tags/Linux/" style="font-size: 1.5em; color: #99a9bf">Linux</a> <a href="/tags/Others/" style="font-size: 1.1em; color: #999">Others</a> <a href="/tags/algorithm-C-C/" style="font-size: 1.1em; color: #999">algorithm C/C++</a> <a href="/tags/sql/" style="font-size: 1.1em; color: #999">sql</a> <a href="/tags/shell/" style="font-size: 1.1em; color: #999">shell</a> <a href="/tags/Linux-C/" style="font-size: 1.1em; color: #999">Linux/C</a> <a href="/tags/alogrithm/" style="font-size: 1.1em; color: #999">alogrithm</a> <a href="/tags/Tool/" style="font-size: 1.3em; color: #99a1ac">Tool</a> <a href="/tags/C-C/" style="font-size: 1.4em; color: #99a5b6">C/C++</a> <a href="/tags/Tools/" style="font-size: 1.1em; color: #999">Tools</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      <a class="card-more-btn" href="/archives/"
+            title="View More">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/07/">
+            <span class="card-archive-list-date">
+              July 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/06/">
+            <span class="card-archive-list-date">
+              June 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/03/">
+            <span class="card-archive-list-date">
+              March 2022
+            </span>
+            <span class="card-archive-list-count">19</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2021/09/">
+            <span class="card-archive-list-date">
+              September 2021
+            </span>
+            <span class="card-archive-list-count">6</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2021/08/">
+            <span class="card-archive-list-date">
+              August 2021
+            </span>
+            <span class="card-archive-list-count">11</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2020/08/">
+            <span class="card-archive-list-date">
+              August 2020
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2020/06/">
+            <span class="card-archive-list-date">
+              June 2020
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2020/05/">
+            <span class="card-archive-list-date">
+              May 2020
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">84</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-07-22T23:40:21.790Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By wang shaodong</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.6.1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.6.1"></script><script src="/js/main.js?v=5.6.1"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
